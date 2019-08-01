@@ -79,6 +79,8 @@
         
             <li><a class="toctree-l5" href="#properties">Properties</a></li>
         
+            <li><a class="toctree-l5" href="#methods">Methods</a></li>
+        
         </ul>
     
 
@@ -713,125 +715,122 @@
 <td>Position</td>
 <td align="center">get, set</td>
 </tr>
+</tbody>
+</table>
+<h2 id="methods">Methods</h2>
+<table>
+<thead>
 <tr>
-<td align="right">## Methods</td>
-<td></td>
-<td align="center"></td>
+<th align="right">Return Type</th>
+<th>Name</th>
+<th>Parameters</th>
 </tr>
-<tr>
-<td align="right">Return Type</td>
-<td>Name</td>
-<td align="center">Parameters</td>
-</tr>
-<tr>
-<td align="right">----------:</td>
-<td>----</td>
-<td align="center">----------</td>
-</tr>
+</thead>
+<tbody>
 <tr>
 <td align="right"><a href="../SpaceUsurper.BulletPattern/">BulletPattern</a></td>
 <td>AddPattern</td>
-<td align="center"><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.PatternData/">PatternData</a>&gt; <em>path</em>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>pos</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>angle</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>mirrorPatternRotation</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>mirrorBulletAngles</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>sizeMultiplier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>loopNum</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>level</em>, <a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.StatusEffectData/">StatusEffectData</a>&gt;[] <em>statusPaths</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>[] <em>statusIndices</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>shouldReact</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>dontReplace</em></td>
+<td><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.PatternData/">PatternData</a>&gt; <em>path</em>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>pos</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>angle</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>mirrorPatternRotation</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>mirrorBulletAngles</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>sizeMultiplier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>loopNum</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>level</em>, <a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.StatusEffectData/">StatusEffectData</a>&gt;[] <em>statusPaths</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>[] <em>statusIndices</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>shouldReact</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>dontReplace</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>ChargePattern</td>
-<td align="center"><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.PatternData/">PatternData</a>&gt;[] <em>paths</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>pathIndex</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>randomDegrees</em>, <a href="../SpaceUsurper.MirrorMode/">MirrorMode</a> <em>mirrorMode</em>, <a href="../SpaceUsurper.FlipPatternMode/">FlipPatternMode</a> <em>flip</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>chargeTime</em>, ScriptFunc&lt;<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt; <em>dir</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>sizeMultiplier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numVolleysAddition</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numBulletsAddition</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>shootDelayModifier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>loopNum</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>level</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netframework-4.5">List</a>&lt;<a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.StatusEffectData/">StatusEffectData</a>&gt;&gt; <em>overrideStatusEffects</em></td>
+<td><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.PatternData/">PatternData</a>&gt;[] <em>paths</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>pathIndex</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>randomDegrees</em>, <a href="../SpaceUsurper.MirrorMode/">MirrorMode</a> <em>mirrorMode</em>, <a href="../SpaceUsurper.FlipPatternMode/">FlipPatternMode</a> <em>flip</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>chargeTime</em>, ScriptFunc&lt;<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt; <em>dir</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>sizeMultiplier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numVolleysAddition</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numBulletsAddition</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>shootDelayModifier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>loopNum</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>level</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netframework-4.5">List</a>&lt;<a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.StatusEffectData/">StatusEffectData</a>&gt;&gt; <em>overrideStatusEffects</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>ChargePattern</td>
-<td align="center"><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.PatternData/">PatternData</a>&gt; <em>path</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>randomDegrees</em>, <a href="../SpaceUsurper.MirrorMode/">MirrorMode</a> <em>mirrorMode</em>, <a href="../SpaceUsurper.FlipPatternMode/">FlipPatternMode</a> <em>flip</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>chargeTime</em>, ScriptFunc&lt;<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt; <em>dir</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>sizeMultiplier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numVolleysAddition</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numBulletsAddition</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>shootDelayModifier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>loopNum</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>level</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netframework-4.5">List</a>&lt;<a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.StatusEffectData/">StatusEffectData</a>&gt;&gt; <em>overrideStatusEffects</em></td>
+<td><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.PatternData/">PatternData</a>&gt; <em>path</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>randomDegrees</em>, <a href="../SpaceUsurper.MirrorMode/">MirrorMode</a> <em>mirrorMode</em>, <a href="../SpaceUsurper.FlipPatternMode/">FlipPatternMode</a> <em>flip</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>chargeTime</em>, ScriptFunc&lt;<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt; <em>dir</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>sizeMultiplier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numVolleysAddition</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numBulletsAddition</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>shootDelayModifier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>loopNum</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>level</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netframework-4.5">List</a>&lt;<a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.StatusEffectData/">StatusEffectData</a>&gt;&gt; <em>overrideStatusEffects</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>Destroy</td>
-<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>shouldRemovePixels</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>forceDestroy</em></td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>shouldRemovePixels</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>forceDestroy</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>Flash</td>
-<td align="center"><a href="../SpaceUsurper.CoreColorType/">CoreColorType</a> <em>type</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>percent</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+<td><a href="../SpaceUsurper.CoreColorType/">CoreColorType</a> <em>type</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>percent</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>Look</td>
-<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>direction</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lookPercent</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lookLerpPercent</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>priority</em></td>
+<td><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>direction</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lookPercent</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lookLerpPercent</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>priority</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>PlayAnim</td>
-<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>name</em></td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>name</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>Remove</td>
-<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>shouldRemovePixels</em></td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>shouldRemovePixels</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>RemoveSpeechBubbles</td>
-<td align="center"></td>
+<td></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>SetAnimSpeed</td>
-<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>speed</em></td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>speed</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>SetColorBlinkTime</td>
-<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em></td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>SetColors</td>
-<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>colorA</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>colorB</em></td>
+<td><a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>colorA</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>colorB</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>SetCore</td>
-<td align="center"><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.CoreData/">CoreData</a>&gt; <em>path</em></td>
+<td><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.CoreData/">CoreData</a>&gt; <em>path</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>SetDamagedColorBlinkTime</td>
-<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em></td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>SetDamagedColors</td>
-<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>colorA</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>colorB</em></td>
+<td><a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>colorA</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>colorB</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>SetHitFlashColor</td>
-<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em></td>
+<td><a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>SetHitFlashColorDamaged</td>
-<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em></td>
+<td><a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>SetLookTarget</td>
-<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>vector</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lookPercent</em></td>
+<td><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>vector</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lookPercent</em></td>
 </tr>
 <tr>
 <td align="right"><a href="../SpaceUsurper.UI.SpeechBubble/">SpeechBubble</a></td>
 <td>SpawnBubble</td>
-<td align="center"><a href="../SpaceUsurper.LocalizedString/">LocalizedString</a> <em>text</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lifetime</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=netframework-4.5">Func</a>&lt;<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt; <em>fillColor</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=netframework-4.5">Func</a>&lt;<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt; <em>borderColor</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=netframework-4.5">Func</a>&lt;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>&gt; <em>borderWidth</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=netframework-4.5">Func</a>&lt;<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt; <em>textColor</em>, <a href="../SpaceUsurper.FloatingTextFont/">FloatingTextFont</a> <em>font</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>fontSize</em></td>
+<td><a href="../SpaceUsurper.LocalizedString/">LocalizedString</a> <em>text</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lifetime</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=netframework-4.5">Func</a>&lt;<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt; <em>fillColor</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=netframework-4.5">Func</a>&lt;<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt; <em>borderColor</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=netframework-4.5">Func</a>&lt;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>&gt; <em>borderWidth</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=netframework-4.5">Func</a>&lt;<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt; <em>textColor</em>, <a href="../SpaceUsurper.FloatingTextFont/">FloatingTextFont</a> <em>font</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>fontSize</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>StopChargingPatterns</td>
-<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>path</em></td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>path</em></td>
 </tr>
 <tr>
 <td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
 <td>StopPatterns</td>
-<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>path</em></td>
+<td><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>path</em></td>
 </tr>
 </tbody>
 </table>
