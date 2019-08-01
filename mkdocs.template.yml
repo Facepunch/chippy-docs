@@ -1,0 +1,5 @@
+site_name: Chippy Documentation
+theme: readthedocs
+
+nav:
+### GENERATED_NAV_ITEMS ###

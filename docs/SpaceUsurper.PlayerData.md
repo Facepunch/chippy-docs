@@ -1,0 +1,53 @@
+# SpaceUsurper.PlayerData
+## Properties
+| Type | Name |
+| ---: | ---- |
+| [DataPath](SpaceUsurper.DataPath.md)&lt;[PlayerData](SpaceUsurper.PlayerData.md)&gt;[] | #include |
+| [DataPath](SpaceUsurper.DataPath.md)&lt;[FsmData](SpaceUsurper.FsmData.md)&gt; | behaviour |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | bodyAimSpeed |
+| ScriptFunc&lt;[Color](https://docs.unity3d.com/ScriptReference/Color.html)&gt; | bodyColorA |
+| ScriptFunc&lt;[Color](https://docs.unity3d.com/ScriptReference/Color.html)&gt; | bodyColorB |
+| ScriptFunc&lt;[Color](https://docs.unity3d.com/ScriptReference/Color.html)&gt; | bodyColorC |
+| ScriptFunc&lt;[Vector2](https://docs.unity3d.com/ScriptReference/Vector2.html)&gt; | bodyOffset |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | bodyOpacity |
+| ScriptFunc&lt;[Vector2](https://docs.unity3d.com/ScriptReference/Vector2.html)&gt; | bodySize |
+| ScriptFunc&lt;[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5)&gt; | bodySpriteNum |
+| ScriptFunc&lt;[Vector2](https://docs.unity3d.com/ScriptReference/Vector2.html)&gt; | bodyWidthModifiers |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | bulletHitboxLeniency |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | bulletPushPercent |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | camLerpSpeed |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | camViewSize |
+| [DataPath](SpaceUsurper.DataPath.md)&lt;[CoreData](SpaceUsurper.CoreData.md)&gt; | corePath |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | deathTime |
+| [List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netframework-4.5)&lt;[DataPath](SpaceUsurper.DataPath.md)&lt;[StatusEffectData](SpaceUsurper.StatusEffectData.md)&gt;&gt; | debugStatusEffects |
+| ScriptFunc&lt;[String](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5)&gt; | debugText |
+| ScriptFunc&lt;[Vector2](https://docs.unity3d.com/ScriptReference/Vector2.html)&gt; | debugVector |
+| [DataPath](SpaceUsurper.DataPath.md)&lt;[PlayerGunData](SpaceUsurper.PlayerGunData.md)&gt; | gun |
+| ScriptFunc&lt;[Vector2](https://docs.unity3d.com/ScriptReference/Vector2.html)&gt; | hitboxLookDir |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | hitboxLookPercent |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | hitboxOpacity |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | hitboxRadius |
+| [MovementData](SpaceUsurper.MovementData.md) | movement |
+| [ActionList](SpaceUsurper.ActionList.md) | onActivateStatus |
+| [ActionList](SpaceUsurper.ActionList.md) | onChunkExplode |
+| [ActionList](SpaceUsurper.ActionList.md) | onDeathFinish |
+| [ActionList](SpaceUsurper.ActionList.md) | onDeathStart |
+| [ActionList](SpaceUsurper.ActionList.md) | onDisconnectChunk |
+| [ActionList](SpaceUsurper.ActionList.md) | onHit |
+| [ActionList](SpaceUsurper.ActionList.md) | onHitPixel |
+| [ActionList](SpaceUsurper.ActionList.md) | onSpawn |
+| [ActionList](SpaceUsurper.ActionList.md) | onUpdate |
+| [Dictionary](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.5)&lt;[String](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5), [PhysicsElementData](SpaceUsurper.PhysicsElementData.md)&gt; | physicsElements |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | pixelAvoidStrength |
+| [Dictionary](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=netframework-4.5)&lt;[String](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5), [PropertyData](SpaceUsurper.PropertyData.md)&gt; | properties |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | recoveryInvulnTime |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | resetTime |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | reverseAccelerationFactor |
+| ScriptFunc&lt;[Color](https://docs.unity3d.com/ScriptReference/Color.html)&gt; | trailColor |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | trailDistancePerPoint |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | trailMaxWidth |
+| ScriptFunc&lt;[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5)&gt; | trailNumPoints |
+| ScriptFunc&lt;[Vector2](https://docs.unity3d.com/ScriptReference/Vector2.html)&gt; | trailOffset |
+| ScriptFunc&lt;[EasingType](SpaceUsurper.EasingType.md)&gt; | trailOpacityEasingType |
+| ScriptFunc&lt;[float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5)&gt; | trailRemovePointTime |
+| ScriptFunc&lt;[EasingType](SpaceUsurper.EasingType.md)&gt; | trailWidthEasingType |
