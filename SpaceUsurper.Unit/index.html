@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Unit - Chippy Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Unit";
+    var mkdocs_page_input_path = "SpaceUsurper.Unit.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Chippy Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">SpaceUsurper</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <span class="caption-text">Class</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Bullet/">Bullet</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PropertyData/">PropertyData</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Unit</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#spaceusurperunit">SpaceUsurper.Unit</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#properties">Properties</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PixelGroup/">PixelGroup</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Laser/">Laser</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.BulletPattern/">BulletPattern</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PxcFrameData/">PxcFrameData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.SpriteAnimData/">SpriteAnimData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PixelData/">PixelData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.MovementController/">MovementController</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.AnimatedSpriteController/">AnimatedSpriteController</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.RotationController/">RotationController</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.ProgressionManager/">ProgressionManager</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.CampaignStageData/">CampaignStageData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Player_Body/">Player_Body</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Player_Guns/">Player_Guns</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PlayerGun/">PlayerGun</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Player_Health/">Player_Health</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Player_Input/">Player_Input</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Player_StatusEffects/">Player_StatusEffects</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Player_Vibration/">Player_Vibration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Player/">Player</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.StatusEffect/">StatusEffect</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Rand/">Rand</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Song/">Song</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.SongLayer/">SongLayer</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.EaseTestStage/">EaseTestStage</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Stage_Behaviour/">Stage_Behaviour</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Stage_Camera/">Stage_Camera</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Stage_Song/">Stage_Song</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Stage_Speech/">Stage_Speech</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.IPositional/">IPositional</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Stage_Text/">Stage_Text</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Stage_TimeScale/">Stage_TimeScale</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Stage_Units/">Stage_Units</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.GameStage/">GameStage</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.MenuStage/">MenuStage</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Stage/">Stage</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.IPropertyContainer/">IPropertyContainer</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Struct</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.DataPath/">DataPath</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Rotation/">Rotation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.IntRect/">IntRect</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.LocalizedString/">LocalizedString</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PxcAnimDataCompressed/">PxcAnimDataCompressed</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PxcSourceDataCompressed/">PxcSourceDataCompressed</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PxcPixelImportData/">PxcPixelImportData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.IntRange/">IntRange</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.TimerHandle/">TimerHandle</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.StageID/">StageID</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Resource</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.BulletData/">BulletData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.KeyframeProperty/">KeyframeProperty</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PatternData/">PatternData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.FsmData/">FsmData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.ActionList/">ActionList</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.StatusEffectData/">StatusEffectData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.StatusEffectCategoryData/">StatusEffectCategoryData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.StatusEffectData+PlayerModifierData/">StatusEffectData+PlayerModifierData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.BulletKeyframeData/">BulletKeyframeData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.CoreData/">CoreData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.FormData/">FormData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.FormData+AnimData/">FormData+AnimData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PxcAnimData/">PxcAnimData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.FormData+PartData/">FormData+PartData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.FormData+BorderWarningData/">FormData+BorderWarningData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.LaserData/">LaserData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.FormData+PartData+PlacementData/">FormData+PartData+PlacementData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.SpriteData/">SpriteData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.FormData+PixelJsonData/">FormData+PixelJsonData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PxcSourceData/">PxcSourceData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.FormData+RepulsionCircleData/">FormData+RepulsionCircleData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.FormData+TextureData/">FormData+TextureData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.FormData+TextureData+ShaderData/">FormData+TextureData+ShaderData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.UnitData/">UnitData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.MovementData/">MovementData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PhysicsElementData/">PhysicsElementData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.CampaignData/">CampaignData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.StageData/">StageData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.StageData+ArenaData/">StageData+ArenaData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.StageData+MedalData/">StageData+MedalData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.StageData+PlayerData/">StageData+PlayerData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PlayerData/">PlayerData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PlayerGunData/">PlayerGunData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.SongConfigData/">SongConfigData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.SongConfigData+LayerData/">SongConfigData+LayerData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.SongConfigData+LayerData+SegmentData/">SongConfigData+LayerData+SegmentData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.StageData+UnitData/">StageData+UnitData</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.StageData+UnitData+RequirementData/">StageData+UnitData+RequirementData</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Enum</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.EasingType/">EasingType</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.KeyframePropertyMode/">KeyframePropertyMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.DepthLevel/">DepthLevel</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.DespawnStyle/">DespawnStyle</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PatternAimMode/">PatternAimMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PatternShape/">PatternShape</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.BulletFacingMode/">BulletFacingMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.BulletMoveMode/">BulletMoveMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.BulletVelocityMode/">BulletVelocityMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.ShapeType/">ShapeType</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.MirrorMode/">MirrorMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.FloatingTextFont/">FloatingTextFont</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.BulletTextAlignment/">BulletTextAlignment</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.FlipPatternMode/">FlipPatternMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.CoreColorType/">CoreColorType</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.LoopMode/">LoopMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.UnitFacingMode/">UnitFacingMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.UnitMovementMode/">UnitMovementMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PixelJsonTransformation/">PixelJsonTransformation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PixelType/">PixelType</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.PartSelectMode/">PartSelectMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Direction/">Direction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.SmallArenaCameraClampingMode/">SmallArenaCameraClampingMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.GameMode/">GameMode</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.Medal/">Medal</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.RadialDirectionMode/">RadialDirectionMode</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">SpaceUsurper.UI</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Class</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../SpaceUsurper.UI.SpeechBubble/">SpeechBubble</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">GameAnalyticsSDK</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Enum</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../GameAnalyticsSDK.GAProgressionStatus/">GAProgressionStatus</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Chippy Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Class &raquo;</li>
+        
+      
+        
+          <li>SpaceUsurper &raquo;</li>
+        
+      
+    
+    <li>Unit</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="spaceusurperunit">SpaceUsurper.Unit</h1>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th align="right">Type</th>
+<th>Name</th>
+<th align="center">Get Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>CoreHpPercent</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></td>
+<td>CorePos</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a></td>
+<td>CurrAnimName</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="../SpaceUsurper.PixelGroup/">PixelGroup</a></td>
+<td>CurrentCore</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a></td>
+<td>CurrentState</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="../SpaceUsurper.FormData/">FormData</a></td>
+<td>CurrFormData</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a></td>
+<td>CurrFormNum</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a></td>
+<td>CurrPxcFrameNum</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.UnitData/">UnitData</a>&gt;</td>
+<td>DataPath</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>ElapsedFormTime</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>ElapsedTime</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a></td>
+<td>ExistingPixelCount</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>ExistingPixelPercent</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="../SpaceUsurper.Rotation/">Rotation</a></td>
+<td>FacingAngle</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></td>
+<td>FacingVector</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>HasFullyEnteredBounds</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>HasFullyEnteredLevel</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>HidePercent</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>ImplodeProgress</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsActive</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsAnimPlaying</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsDestroyed</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsFullyInBounds</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsFullyInLevel</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsHidden</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsHiding</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsImploding</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsPartiallyInBounds</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsPartiallyInLevel</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsRevealing</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsRotatingToFace</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>IsSpawning</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="../SpaceUsurper.MovementController/">MovementController</a></td>
+<td>Movement</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a></td>
+<td>NumActiveParts</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a></td>
+<td>NumDestroyedParts</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a></td>
+<td>NumDestroyedPixels</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a></td>
+<td>NumShotPatterns</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a></td>
+<td>NumShotPatternsThisForm</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a></td>
+<td>NumSpeechBubbles</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>Opacity</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></td>
+<td>OriginalSpawnPos</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>OutOfBoundsPercent</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></td>
+<td>Position</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>Radius</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>SpawnPercent</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></td>
+<td>SpawnPos</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>TimeScale</td>
+<td align="center">get, set</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>TimeSinceCoreHit</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a></td>
+<td>TotalPixelCount</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></td>
+<td>TotalVelocity</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></td>
+<td>Velocity</td>
+<td align="center">get</td>
+</tr>
+<tr>
+<td align="right">## Methods</td>
+<td></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right">Return Type</td>
+<td>Name</td>
+<td align="center">Parameters</td>
+</tr>
+<tr>
+<td align="right">----------:</td>
+<td>----</td>
+<td align="center">----------</td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>AddForce</td>
+<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>force</em></td>
+</tr>
+<tr>
+<td align="right"><a href="../SpaceUsurper.BulletPattern/">BulletPattern</a></td>
+<td>AddPattern</td>
+<td align="center"><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.PatternData/">PatternData</a>&gt; <em>path</em>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>pos</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>angle</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>mirrorPatternRotation</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>mirrorBulletAngles</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>sizeMultiplier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>loopNum</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>level</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>AddRotationForce</td>
+<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>hitPos</em>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>forceDir</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>strength</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>AddTimeScale</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>timeScale</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>AddVelocity</td>
+<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>vel</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>AdjustPartCounter</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>partType</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>AimTowards</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>facingAngle</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>rotPercent</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>CalculateBaseFormProgress</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>formNum</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>CancelRotateToFace</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>ChargePattern</td>
+<td align="center"><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.PatternData/">PatternData</a>&gt;[] <em>paths</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>pathIndex</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>partType</em>, <a href="../SpaceUsurper.PartSelectMode/">PartSelectMode</a> <em>partSelect</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>randomDegrees</em>, <a href="../SpaceUsurper.MirrorMode/">MirrorMode</a> <em>mirrorMode</em>, <a href="../SpaceUsurper.FlipPatternMode/">FlipPatternMode</a> <em>flip</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>chargeTime</em>, ScriptFunc&lt;<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt; <em>dir</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>sizeMultiplier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numVolleysAddition</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numBulletsAddition</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>shootDelayModifier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>loopNum</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>level</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netframework-4.5">List</a>&lt;<a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.StatusEffectData/">StatusEffectData</a>&gt;&gt; <em>statusPaths</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>maxDist</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>ChargePattern</td>
+<td align="center"><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.PatternData/">PatternData</a>&gt; <em>path</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>partType</em>, <a href="../SpaceUsurper.PartSelectMode/">PartSelectMode</a> <em>partSelect</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>randomDegrees</em>, <a href="../SpaceUsurper.MirrorMode/">MirrorMode</a> <em>mirrorMode</em>, <a href="../SpaceUsurper.FlipPatternMode/">FlipPatternMode</a> <em>flip</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>chargeTime</em>, ScriptFunc&lt;<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt; <em>dir</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>sizeMultiplier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numVolleysAddition</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numBulletsAddition</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>shootDelayModifier</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>loopNum</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>level</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netframework-4.5">List</a>&lt;<a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.StatusEffectData/">StatusEffectData</a>&gt;&gt; <em>statusPaths</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>maxDist</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ClearAccelVectorFunc</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ClearAnimQueue</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ClearAutoRotateSpeedFunc</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ClearCoreLookFunc</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ClearCoreLookSpeed</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ClearFacingLerpSpeedFunc</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ClearFacingModeFunc</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ClearMovementModeFunc</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ClearPosLerpSpeedFunc</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ClearTargetFacingAngleFunc</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ClearTargetPosFunc</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>DestroyPart</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>partType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>DestroyPixels</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>category</em>, ScriptFunc&lt;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>&gt; <em>numDebrisFunc</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>Disable</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>DisconnectPixelChunk</td>
+<td align="center"><a href="../SpaceUsurper.IntRange/">IntRange</a> <em>range</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>DisconnectPixels</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>category</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>DoesPartExist</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>type</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>DoesPixelExist</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>pixelNum</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>Flash</td>
+<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>percent</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>FlashEdgePixels</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>category</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>diagonal</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>nextToDestroyed</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>FlashPart</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>percent</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em>, <a href="../SpaceUsurper.CoreColorType/">CoreColorType</a> <em>colorType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>FlashPixel</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>pixelNum</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>FlashPixels</td>
+<td align="center"><a href="../SpaceUsurper.IntRange/">IntRange</a> <em>range</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ForcePixelConnectionCheck</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a></td>
+<td>GetLaserAngle</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>partType</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>index</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a></td>
+<td>GetNumParts</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>type</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>includeInactive</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a></td>
+<td>GetNumReqs</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>type</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>includeInactive</em></td>
+</tr>
+<tr>
+<td align="right"><a href="../SpaceUsurper.PixelGroup/">PixelGroup</a></td>
+<td>GetPart</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>partType</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>index</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></td>
+<td>GetPartPos</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>partType</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>index</em></td>
+</tr>
+<tr>
+<td align="right"><a href="../SpaceUsurper.PixelData/">PixelData</a></td>
+<td>GetPixel</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>pixelNum</em></td>
+</tr>
+<tr>
+<td align="right"><a href="../SpaceUsurper.PixelData/">PixelData</a></td>
+<td>GetPixel</td>
+<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>worldPos</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>allowPart</em></td>
+</tr>
+<tr>
+<td align="right"><a href="../SpaceUsurper.PixelData/">PixelData</a></td>
+<td>GetRandomPixel</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>HealParts</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>HealPixels</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>category</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>Implode</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>Look</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>partType</em>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>direction</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lookPercent</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lookLerpPercent</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>priority</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>Nudge</td>
+<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>vector</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>PixelBoundsContainsPos</td>
+<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>pos</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>PlayAnim</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>name</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>reverse</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>forceChange</em>, <a href="../SpaceUsurper.LoopMode/">LoopMode</a> <em>loopMode</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>playNext</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></td>
+<td>Raycast</td>
+<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>a</em>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>b</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>ignoreStartingOnPixels</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>findEmpty</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>RefreshEdgePixelColor</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>category</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>diagonal</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>nextToDestroyed</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>RemovePixels</td>
+<td align="center"><a href="../SpaceUsurper.IntRange/">IntRange</a> <em>range</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>RemoveSpeechBubbles</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>partType</em>, <a href="../SpaceUsurper.PartSelectMode/">PartSelectMode</a> <em>partSelect</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>RemoveSpeechBubbles</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a></td>
+<td>RepulsionCirclesContainPos</td>
+<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>pos</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>Respawn</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>timeMin</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>timeMax</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numRespawns</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>Respawn</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>category</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>timeMin</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>timeMax</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>numRespawns</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>Rotate180Degrees</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>RotateClockwise</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>RotateClockwiseOnlyDiagonal</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>RotateCounterClockwise</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>RotateCounterClockwiseOnlyDiagonal</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="../SpaceUsurper.TimerHandle/">TimerHandle</a></td>
+<td>RotateToFace</td>
+<td align="center"><a href="../SpaceUsurper.Direction/">Direction</a> <em>dir</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ScriptFuncParamTest</td>
+<td align="center">ScriptFunc&lt;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>&gt; <em>func</em></td>
+</tr>
+<tr>
+<td align="right"><a href="../SpaceUsurper.PixelGroup/">PixelGroup</a></td>
+<td>SelectPart</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>partType</em>, <a href="../SpaceUsurper.PartSelectMode/">PartSelectMode</a> <em>partSelect</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetAccelVectorFunc</td>
+<td align="center">ScriptFunc&lt;<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt; <em>func</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetAnimSpeed</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>speed</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetAutoRotateSpeedFunc</td>
+<td align="center">ScriptFunc&lt;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>&gt; <em>func</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetAvoidUnitStrength</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>strength</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetBehaviour</td>
+<td align="center"><a href="../SpaceUsurper.DataPath/">DataPath</a>&lt;<a href="../SpaceUsurper.FsmData/">FsmData</a>&gt; <em>path</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetColorBlinkTimes</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>timeOn</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>timeOff</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetCoreLookFunc</td>
+<td align="center">ScriptFunc&lt;<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt; <em>func</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetCoreLookSpeed</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>speed</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetDormant</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>dormant</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetEdgePixelColor</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>category</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>diagonal</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>nextToDestroyed</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetEdgePixelOriginalType</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>diagonal</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>nextToDestroyed</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetEdgePixelType</td>
+<td align="center"><a href="../SpaceUsurper.PixelType/">PixelType</a> <em>pixelType</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>diagonal</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>nextToDestroyed</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetFacingAngle</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>facingAngle</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetFacingDirection</td>
+<td align="center"><a href="../SpaceUsurper.Direction/">Direction</a> <em>direction</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetFacingLerpSpeedFunc</td>
+<td align="center">ScriptFunc&lt;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>&gt; <em>func</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetFacingModeFunc</td>
+<td align="center">ScriptFunc&lt;<a href="../SpaceUsurper.UnitFacingMode/">UnitFacingMode</a>&gt; <em>func</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetHidden</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>hidden</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetInvulnerable</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>invulnerable</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserActive</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>active</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserAimSpeed</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>aimSpeed</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserAnimSpeeds</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>animSpeedOn</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>animSpeedOff</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserAutoRotate</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>autoRotate</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserAutoRotateSpeed</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>autoRotateSpeed</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserDangerous</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a> <em>dangerous</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserDps</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>dps</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserLength</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>length</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserLengthLerpSpeed</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lengthLerpSpeed</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserOffColors</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>colorOffA</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>colorOffB</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserOnColors</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>colorOnA</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>colorOnB</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserTargetAngle</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>angle</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLaserWidths</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>widthAMin</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>widthAMax</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>widthBMin</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>widthBMax</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetLookTarget</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>partType</em>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>vector</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lookPercent</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetMovementModeFunc</td>
+<td align="center">ScriptFunc&lt;<a href="../SpaceUsurper.UnitMovementMode/">UnitMovementMode</a>&gt; <em>func</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetOpacity</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>opacity</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetPixelColors</td>
+<td align="center"><a href="../SpaceUsurper.IntRange/">IntRange</a> <em>range</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>color</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetPosition</td>
+<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>pos</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetPosLerpSpeedFunc</td>
+<td align="center">ScriptFunc&lt;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>&gt; <em>func</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetRepelUnitStrength</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>strength</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetRotationForce</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>force</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetScale</td>
+<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>scale</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetShaderDepthX</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetShaderDepthY</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetShaderFreqX</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetShaderFreqY</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetShaderIntensity</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetShaderSpeedX</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetShaderSpeedY</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetShaderTimeFactor1</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetShaderTimeFactor2</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetShaderTimeFactor3</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>amount</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetState</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>state</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetTargetFacingAngleFunc</td>
+<td align="center">ScriptFunc&lt;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>&gt; <em>func</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetTargetPosFunc</td>
+<td align="center">ScriptFunc&lt;<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>&gt; <em>func</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SetVelocity</td>
+<td align="center"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a> <em>vel</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>Shake</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>strength</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SpawnBubble</td>
+<td align="center"><a href="../SpaceUsurper.LocalizedString/">LocalizedString</a> <em>text</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>partType</em>, <a href="../SpaceUsurper.PartSelectMode/">PartSelectMode</a> <em>partSelect</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>lifetime</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=netframework-4.5">Func</a>&lt;<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt; <em>fillColor</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=netframework-4.5">Func</a>&lt;<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt; <em>borderColor</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=netframework-4.5">Func</a>&lt;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>&gt; <em>borderWidth</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=netframework-4.5">Func</a>&lt;<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt; <em>textColor</em>, <a href="../SpaceUsurper.FloatingTextFont/">FloatingTextFont</a> <em>font</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a> <em>fontSize</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>SpawnNextForm</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>StopChargingPatterns</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>path</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>StopPatterns</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>path</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>StopRespawning</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>category</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>TintPixels</td>
+<td align="center"><a href="../SpaceUsurper.IntRange/">IntRange</a> <em>range</em>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a> <em>tint</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ToggleHidden</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ToggleLaserActive</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>ToggleLaserDangerous</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a> <em>part</em></td>
+</tr>
+<tr>
+<td align="right"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5">void</a></td>
+<td>Twist</td>
+<td align="center"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>degrees</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a> <em>time</em>, <a href="../SpaceUsurper.EasingType/">EasingType</a> <em>easingType</em></td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../SpaceUsurper.PixelGroup/" class="btn btn-neutral float-right" title="PixelGroup">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../SpaceUsurper.PropertyData/" class="btn btn-neutral" title="PropertyData"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../SpaceUsurper.PropertyData/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../SpaceUsurper.PixelGroup/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
