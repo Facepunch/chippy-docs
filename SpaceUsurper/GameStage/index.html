@@ -1,0 +1,1789 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>GameStage - Chippy Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/styles.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#gamestage-class" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Chippy Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Chippy Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
+                GameStage
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Chippy Documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Chippy Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      SpaceUsurper
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        SpaceUsurper
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1">
+    
+    <label class="md-nav__link" for="nav-1-1">
+      Enums
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        Enums
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BulletTextAlignment/" title="BulletTextAlignment" class="md-nav__link">
+      BulletTextAlignment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CoreColorType/" title="CoreColorType" class="md-nav__link">
+      CoreColorType
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DepthLevel/" title="DepthLevel" class="md-nav__link">
+      DepthLevel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DespawnStyle/" title="DespawnStyle" class="md-nav__link">
+      DespawnStyle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Direction/" title="Direction" class="md-nav__link">
+      Direction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../EasingType/" title="EasingType" class="md-nav__link">
+      EasingType
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FlipPatternMode/" title="FlipPatternMode" class="md-nav__link">
+      FlipPatternMode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FloatingTextFont/" title="FloatingTextFont" class="md-nav__link">
+      FloatingTextFont
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../LoopMode/" title="LoopMode" class="md-nav__link">
+      LoopMode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Medal/" title="Medal" class="md-nav__link">
+      Medal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MirrorMode/" title="MirrorMode" class="md-nav__link">
+      MirrorMode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PartSelectMode/" title="PartSelectMode" class="md-nav__link">
+      PartSelectMode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PixelType/" title="PixelType" class="md-nav__link">
+      PixelType
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RadialDirectionMode/" title="RadialDirectionMode" class="md-nav__link">
+      RadialDirectionMode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UnitFacingMode/" title="UnitFacingMode" class="md-nav__link">
+      UnitFacingMode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UnitMovementMode/" title="UnitMovementMode" class="md-nav__link">
+      UnitMovementMode
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+    
+    <label class="md-nav__link" for="nav-1-2">
+      Structs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        Structs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DataPath/" title="DataPath" class="md-nav__link">
+      DataPath
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IntRange/" title="IntRange" class="md-nav__link">
+      IntRange
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../LocalizedString/" title="LocalizedString" class="md-nav__link">
+      LocalizedString
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Rotation/" title="Rotation" class="md-nav__link">
+      Rotation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StageID/" title="StageID" class="md-nav__link">
+      StageID
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
+    
+    <label class="md-nav__link" for="nav-1-3">
+      Resources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
+        Resources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ActionList/" title="ActionList" class="md-nav__link">
+      ActionList
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BulletData/" title="BulletData" class="md-nav__link">
+      BulletData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CampaignData/" title="CampaignData" class="md-nav__link">
+      CampaignData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CoreData/" title="CoreData" class="md-nav__link">
+      CoreData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FsmData/" title="FsmData" class="md-nav__link">
+      FsmData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../KeyframeProperty/" title="KeyframeProperty" class="md-nav__link">
+      KeyframeProperty
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PatternData/" title="PatternData" class="md-nav__link">
+      PatternData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PlayerData/" title="PlayerData" class="md-nav__link">
+      PlayerData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PlayerGunData/" title="PlayerGunData" class="md-nav__link">
+      PlayerGunData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SpriteData/" title="SpriteData" class="md-nav__link">
+      SpriteData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StatusEffectData/" title="StatusEffectData" class="md-nav__link">
+      StatusEffectData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StatusEffectData+PlayerModifierData/" title="StatusEffectData+PlayerModifierData" class="md-nav__link">
+      StatusEffectData+PlayerModifierData
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" checked>
+    
+    <label class="md-nav__link" for="nav-1-4">
+      Classes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
+        Classes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AnimatedSpriteController/" title="AnimatedSpriteController" class="md-nav__link">
+      AnimatedSpriteController
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Bullet/" title="Bullet" class="md-nav__link">
+      Bullet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BulletPattern/" title="BulletPattern" class="md-nav__link">
+      BulletPattern
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Drawable/" title="Drawable" class="md-nav__link">
+      Drawable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../EaseTestStage/" title="EaseTestStage" class="md-nav__link">
+      EaseTestStage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        GameStage
+      </label>
+    
+    <a href="./" title="GameStage" class="md-nav__link md-nav__link--active">
+      GameStage
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" title="Properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" title="Methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IPositional/" title="IPositional" class="md-nav__link">
+      IPositional
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IPropertyContainer/" title="IPropertyContainer" class="md-nav__link">
+      IPropertyContainer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Laser/" title="Laser" class="md-nav__link">
+      Laser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MenuStage/" title="MenuStage" class="md-nav__link">
+      MenuStage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MovementController/" title="MovementController" class="md-nav__link">
+      MovementController
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PixelData/" title="PixelData" class="md-nav__link">
+      PixelData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PixelGroup/" title="PixelGroup" class="md-nav__link">
+      PixelGroup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Player/" title="Player" class="md-nav__link">
+      Player
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Player_Body/" title="Player_Body" class="md-nav__link">
+      Player_Body
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Player_Guns/" title="Player_Guns" class="md-nav__link">
+      Player_Guns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Player_Health/" title="Player_Health" class="md-nav__link">
+      Player_Health
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Player_Input/" title="Player_Input" class="md-nav__link">
+      Player_Input
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Player_StatusEffects/" title="Player_StatusEffects" class="md-nav__link">
+      Player_StatusEffects
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Player_Vibration/" title="Player_Vibration" class="md-nav__link">
+      Player_Vibration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PlayerComponent/" title="PlayerComponent" class="md-nav__link">
+      PlayerComponent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PlayerGun/" title="PlayerGun" class="md-nav__link">
+      PlayerGun
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ProgressionManager/" title="ProgressionManager" class="md-nav__link">
+      ProgressionManager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Rand/" title="Rand" class="md-nav__link">
+      Rand
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RotationController/" title="RotationController" class="md-nav__link">
+      RotationController
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Song/" title="Song" class="md-nav__link">
+      Song
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SongLayer/" title="SongLayer" class="md-nav__link">
+      SongLayer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Stage/" title="Stage" class="md-nav__link">
+      Stage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Stage_Behaviour/" title="Stage_Behaviour" class="md-nav__link">
+      Stage_Behaviour
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Stage_Camera/" title="Stage_Camera" class="md-nav__link">
+      Stage_Camera
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Stage_Song/" title="Stage_Song" class="md-nav__link">
+      Stage_Song
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Stage_Speech/" title="Stage_Speech" class="md-nav__link">
+      Stage_Speech
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Stage_Text/" title="Stage_Text" class="md-nav__link">
+      Stage_Text
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Stage_TimeScale/" title="Stage_TimeScale" class="md-nav__link">
+      Stage_TimeScale
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Stage_Units/" title="Stage_Units" class="md-nav__link">
+      Stage_Units
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StatusEffect/" title="StatusEffect" class="md-nav__link">
+      StatusEffect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Unit/" title="Unit" class="md-nav__link">
+      Unit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      SpaceUsurper.UI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        SpaceUsurper.UI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Classes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Classes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper.UI/SpeechBubble/" title="SpeechBubble" class="md-nav__link">
+      SpeechBubble
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" title="Properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" title="Methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="gamestage-class">GameStage Class</h1>
+<p><small><strong>Namespace</strong>: SpaceUsurper</small></p>
+<p><small><strong>Inheritance</strong>: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.object?view=netframework-4.5">Object</a> → <a href="../Stage/">Stage</a> → GameStage</small></p>
+<h2 id="properties">Properties</h2>
+<div class="member-table">
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">BaseBgColor</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">BehaviourHandler</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">BgColor</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">BossFormCount</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">BossFormNumber</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Bounds</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">CameraHandler</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">FixedDeltaTime</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">FixedElapsedTime</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">IsMenuStage</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">IsPaused</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">MiscDebugToggle</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">NumBullets</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">NumShotPatterns</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">NumSpawnedPatterns</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">RawFixedDeltaTime</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">RawFixedElapsedTime</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SongHandler</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SpeechHandler</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">StageProgress</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">TextHandler</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">TimeScaleHandler</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">UnitHandler</td>
+<td align="left"><br>(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="methods">Methods</h2>
+<div class="member-table">
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">AddFlatTimeScale(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">AddForceToBullets(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>, <a href="../RadialDirectionMode/">RadialDirectionMode</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="../Bullet/">Bullet</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">AddPattern(<a href="../DataPath/">DataPath</a>&lt;<a href="../PatternData/">PatternData</a>&gt;, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="../DataPath/">DataPath</a>&lt;<a href="../StatusEffectData/">StatusEffectData</a>&gt;[], <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>[])</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">AddSprite(<a href="../DataPath/">DataPath</a>&lt;<a href="../SpriteData/">SpriteData</a>&gt;, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="../DepthLevel/">DepthLevel</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">AddTimeScale(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">AffectBulletsInRadius(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../ActionList/">ActionList</a>, ParameterCollection, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">AffectPlayer(<a href="../ActionList/">ActionList</a>, ParameterCollection)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">AffectTouchingBullets(<a href="../Bullet/">Bullet</a>, <a href="../ActionList/">ActionList</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, ParameterCollection, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">AffectTouchingUnits(<a href="../Bullet/">Bullet</a>, <a href="../ActionList/">ActionList</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, ParameterCollection)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">AffectUnitsInRadius(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../ActionList/">ActionList</a>, ParameterCollection)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">ClearAccelVectorFunc()</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">ClearGridColorFunc()</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">ClearNumTimesShot(<a href="../DataPath/">DataPath</a>&lt;<a href="../PatternData/">PatternData</a>&gt;)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">DespawnAddedPatterns(<a href="../DataPath/">DataPath</a>&lt;<a href="../PatternData/">PatternData</a>&gt;)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">DespawnPatterns(<a href="../DataPath/">DataPath</a>&lt;<a href="../PatternData/">PatternData</a>&gt;)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">DestroyBullets(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../Bullet/">Bullet</a>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">DestroyUnit(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">DoesUnitExist(<a href="../Unit/">Unit</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">DrawDebugLine(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">DrawDebugLine(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">Get(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">GetClosestUnit(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">GetDistanceToUnit(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">GetNumBullets(<a href="../DataPath/">DataPath</a>&lt;<a href="../BulletData/">BulletData</a>&gt;)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">GetNumNearbyUnits(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">GetNumTimesShot(<a href="../DataPath/">DataPath</a>&lt;<a href="../PatternData/">PatternData</a>&gt;)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">GetNumUnits(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">GetUnit(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">GetUnits(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">IsRaycastHit(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="../Unit/">Unit</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">LerpBounds(<a href="https://docs.unity3d.com/ScriptReference/Rect.html">Rect</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">PlaySfx(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">PlaySfx(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">Raycast(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="../Unit/">Unit</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">RemoteControlNearbyUnits(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../ActionList/">ActionList</a>, <a href="../DataPath/">DataPath</a>&lt;<a href="../BulletData/">BulletData</a>&gt;, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">RepelBullets(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>, <a href="../RadialDirectionMode/">RadialDirectionMode</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="../DataPath/">DataPath</a>&lt;<a href="../BulletData/">BulletData</a>&gt;, <a href="../Bullet/">Bullet</a>, <a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">RepelPlayer(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">RepelUnits(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>, <a href="../RadialDirectionMode/">RadialDirectionMode</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>, <a href="../DataPath/">DataPath</a>&lt;<a href="../BulletData/">BulletData</a>&gt;)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetBgColor(<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetBgColorFunc(ScriptFunc&lt;<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt;)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SetBounds(<a href="https://docs.unity3d.com/ScriptReference/Rect.html">Rect</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SetCameraSize(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetChromaticAberration(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetColorFilter(<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetContrast(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetDebrisForce(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetGridColor(<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SetGridColorFunc(ScriptFunc&lt;<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>&gt;)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SetGridEdgeScale(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SetGridEdgeWarp(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SetGridEdgeWidth(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SetGridSpacing(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SetGridThickness(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SetHueShift(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetLetterboxColor(<a href="https://docs.unity3d.com/ScriptReference/Color.html">Color</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SetLoopingSfxMaxDistance(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetLoopingSfxPitch(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetLoopingSfxPosition(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetLoopingSfxVolume(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetPlayer(<a href="../DataPath/">DataPath</a>&lt;<a href="../PlayerData/">PlayerData</a>&gt;)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SetSaturation(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetState(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetTemperature(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SetViewSizeLerpSpeed(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">ShakeCamera(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SpawnBullet(<a href="../DataPath/">DataPath</a>&lt;<a href="../BulletData/">BulletData</a>&gt;, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SpawnBullet(<a href="../DataPath/">DataPath</a>&lt;<a href="../BulletData/">BulletData</a>&gt;, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SpawnPattern(<a href="../DataPath/">DataPath</a>&lt;<a href="../PatternData/">PatternData</a>&gt;, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="../DataPath/">DataPath</a>&lt;<a href="../StatusEffectData/">StatusEffectData</a>&gt;[], <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>[])</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SpawnPattern(<a href="../DataPath/">DataPath</a>&lt;<a href="../PatternData/">PatternData</a>&gt;[], <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="../DataPath/">DataPath</a>&lt;<a href="../StatusEffectData/">StatusEffectData</a>&gt;[], <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>[])</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SpawnPattern(<a href="../DataPath/">DataPath</a>&lt;<a href="../PatternData/">PatternData</a>&gt;, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="../DataPath/">DataPath</a>&lt;<a href="../StatusEffectData/">StatusEffectData</a>&gt;[], <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>[])</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SpawnPattern(<a href="../DataPath/">DataPath</a>&lt;<a href="../PatternData/">PatternData</a>&gt;[], <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>, <a href="../DataPath/">DataPath</a>&lt;<a href="../StatusEffectData/">StatusEffectData</a>&gt;[], <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>[])</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">SpawnUnit(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="../Direction/">Direction</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">StartLoopingSfx(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a>, <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">StopLoopingSfx(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">int</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">TransformBullets(<a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../Bullet/">Bullet</a>, <a href="../DataPath/">DataPath</a>&lt;<a href="../BulletData/">BulletData</a>&gt;, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+<tr>
+<td align="left">ZoomCamera(<a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">float</a>, <a href="../EasingType/">EasingType</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=netframework-4.5">bool</a>)</td>
+<td align="left">(Inherited from <a href="../Stage/">Stage</a>)</td>
+</tr>
+</tbody>
+</table>
+</div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../EaseTestStage/" title="EaseTestStage" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                EaseTestStage
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../IPositional/" title="IPositional" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                IPositional
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

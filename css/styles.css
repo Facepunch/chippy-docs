@@ -1,0 +1,11 @@
+.member-table .md-typeset__table, .member-table  table {
+    width: 100%;
+}
+
+.member-table thead tr th:first-child,
+.member-table tbody tr td:first-child {
+  width: 16em;
+  min-width: 16em;
+  max-width: 16em;
+  word-break: break-all;
+}
