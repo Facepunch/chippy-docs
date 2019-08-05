@@ -1,7 +1,0 @@
-# SpaceUsurper.Player_Vibration
-## Methods
-| Return Type | Name | Parameters |
-| ----------: | ---- | ---------- |
-| [void](https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5) | Vibrate | [Vector2](https://docs.unity3d.com/ScriptReference/Vector2.html) *pos*, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5) *strength*, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5) *maxDist*, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5) *time*, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5) *horizThreshold*, [EasingType](SpaceUsurper.EasingType.md) *easingType*|
-| [void](https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5) | Vibrate | [float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5) *strength*, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5) *time*, [EasingType](SpaceUsurper.EasingType.md) *easingType*|
-| [void](https://docs.microsoft.com/en-us/dotnet/api/system.void?view=netframework-4.5) | Vibrate | [float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5) *left*, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5) *right*, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5) *time*, [EasingType](SpaceUsurper.EasingType.md) *easingType*|

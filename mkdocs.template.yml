@@ -1,5 +1,10 @@
-site_name: Chippy Documentation
-theme: readthedocs
+site_name: 'Chippy Documentation'
+theme: 'material'
+extra_css:
+  - 'css/styles.css'
+
+markdown_extensions:
+  - pymdownx.extra
 
 nav:
 ### GENERATED_NAV_ITEMS ###
