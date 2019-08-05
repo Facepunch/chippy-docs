@@ -4,7 +4,8 @@ extra_css:
   - 'css/styles.css'
 
 markdown_extensions:
-  - pymdownx.extra
+  - 'pymdownx.extra'
 
 nav:
+  - 'index.md'
 ### GENERATED_NAV_ITEMS ###
