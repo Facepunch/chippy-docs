@@ -15,4 +15,5 @@ markdown_extensions:
 
 nav:
   - 'index.md'
+  - 'Tutorials/index.md'
 ### GENERATED_NAV_ITEMS ###
