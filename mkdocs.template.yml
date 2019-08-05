@@ -15,5 +15,7 @@ markdown_extensions:
 
 nav:
   - 'index.md'
-  - 'Tutorials/index.md'
+  - Tutorials:
+    - 'Tutorials/index.md'
+    - 'Tutorials/quickstart.md'
 ### GENERATED_NAV_ITEMS ###
