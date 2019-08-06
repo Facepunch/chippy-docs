@@ -1,10 +1,14 @@
 site_name: 'Chippy Documentation'
-theme: 'material'
+theme:
+  name: 'material'
+  custom_dir: 'theme/'
+
 extra_css:
   - 'css/styles.css'
 
 repo_name: 'Facepunch/chippy-docs'
 repo_url: 'https://github.com/Facepunch/chippy-docs'
+site_url: 'https://facepunch.github.io/chippy-docs/'
 
 copyright: 'Copyright &copy; 2019 Facepunch Studios LTD'
 

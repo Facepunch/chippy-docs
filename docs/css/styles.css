@@ -9,3 +9,7 @@
   max-width: 16em;
   word-break: break-all;
 }
+
+.member-table tbody tr:nth-child(odd) {
+  background-color: rgba(0,0,0,.0175);
+}
