@@ -22,4 +22,5 @@ nav:
   - Tutorials:
     - 'Tutorials/index.md'
     - 'Tutorials/quickstart.md'
+    - 'Tutorials/pattern/pattern.md'
 ### GENERATED_NAV_ITEMS ###
