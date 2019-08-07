@@ -2,8 +2,7 @@
 
 {% block content %}
     <!-- Edit button, if URL was defined -->
-    {% if page.edit_url %}
-        Test!
+    {% if page.edit_url and not '/docs/SpaceUsurper/' in page.edit_url and not '/docs/SpaceUsurper.UI/' in page.edit_url %}
         <a href="{{ page.edit_url }}"
             title="{{ lang.t('edit.link.title') }}"
             class="md-icon md-content__icon">&#xE3C9;<!-- edit --></a>
