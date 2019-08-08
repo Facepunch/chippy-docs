@@ -14,7 +14,8 @@ copyright: 'Copyright &copy; 2019 Facepunch Studios LTD'
 
 markdown_extensions:
   - 'admonition'
-  - 'codehilite'
+  - codehilite:
+      linenums: True
   - 'pymdownx.extra'
 
 nav:
