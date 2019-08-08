@@ -20,7 +20,10 @@ markdown_extensions:
 nav:
   - 'index.md'
   - Tutorials:
-    - 'Tutorials/index.md'
+    - 'Tutorials/tutorials.md'
     - 'Tutorials/quickstart.md'
-    - 'Tutorials/pattern/pattern.md'
+    - 'Tutorials/pattern.md'
+    - 'Tutorials/bullet.md'
+    - 'Tutorials/unit.md'
+    - 'Tutorials/stage.md'
 ### GENERATED_NAV_ITEMS ###
