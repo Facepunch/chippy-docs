@@ -17,6 +17,16 @@ markdown_extensions:
   - codehilite:
       linenums: True
   - 'pymdownx.extra'
+  - 'pymdownx.details'
+  - 'pymdownx.inlinehilite'
+  - 'pymdownx.keys'
+  - 'pymdownx.magiclink'
+  - 'pymdownx.mark'
+  - 'pymdownx.progressbar'
+  - 'pymdownx.smartsymbols'
+  - 'pymdownx.superfences'
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 nav:
   - 'index.md'

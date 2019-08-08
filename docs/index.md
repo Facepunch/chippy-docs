@@ -6,10 +6,37 @@ Here is the tutorial page: [Tutorials](Tutorials/tutorials.md)
 
 <!---
 
-
-
--->
 ## Cheatsheet
+
+~~Delete me~~
+
+- [X] item 1
+    * [X] item A
+    * [ ] item B
+        more text
+        + [x] item a
+        + [ ] item b
+        + [x] item c
+    * [X] item C
+- [ ] item 2
+- [ ] item 3
+
+<-- 1/4 1st 2nd +/- (tm) =/=
+
+[=0%]{: .thin}
+[=5%]{: .thin}
+[=25%]{: .thin}
+[=45%]{: .thin}
+[=65%]{: .thin}
+[=85%]{: .thin}
+[=100%]{: .thin}
+
+==marked text==
+
+https://facelessuser.github.io/pymdown-extensions/extensions/keys/
+++ctrl+alt+delete++ <br>
+++ctrl+alt+"My Special Key"++ <br>
+++cmd+alt+"&Uuml;"++ <br>
 
 !!! note
     Note
@@ -19,7 +46,7 @@ Here is the tutorial page: [Tutorials](Tutorials/tutorials.md)
 
 !!! info
     Info with code
-    ```json hl_lines="3 4"
+    ```json hl_lines="3 4" linenums="12"
     "simpleAttack": {
       "numVolleys": 15,
       "numBulletsInVolley":5,
@@ -30,7 +57,7 @@ Here is the tutorial page: [Tutorials](Tutorials/tutorials.md)
     ```
 
 
-??? note
+??? info "Collapsible"
     Text text
 
 
@@ -52,4 +79,8 @@ This is a [link][1] without the url needing to be in the middle of the Markdown 
 
 [1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
 
+`#!json "numBulletsInVolley":5,`
+
 [^1]:Footnote text
+
+-->
