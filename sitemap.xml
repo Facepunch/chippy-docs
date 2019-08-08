@@ -6,7 +6,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/Tutorials/</loc>
+     <loc>https://facepunch.github.io/chippy-docs/Tutorials/tutorials/</loc>
      <lastmod>2019-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -16,7 +16,22 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/Tutorials/pattern/pattern/</loc>
+     <loc>https://facepunch.github.io/chippy-docs/Tutorials/pattern/</loc>
+     <lastmod>2019-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/Tutorials/bullet/</loc>
+     <lastmod>2019-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/Tutorials/unit/</loc>
+     <lastmod>2019-08-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/Tutorials/stage/</loc>
      <lastmod>2019-08-08</lastmod>
      <changefreq>daily</changefreq>
     </url>

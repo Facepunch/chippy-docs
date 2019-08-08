@@ -249,8 +249,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tutorials/" title="Tutorials" class="md-nav__link">
-      Tutorials
+    <a href="../../Tutorials/tutorials/" title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -273,8 +273,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tutorials/pattern/pattern/" title="Bullet Patterns" class="md-nav__link">
+    <a href="../../Tutorials/pattern/" title="Bullet Patterns" class="md-nav__link">
       Bullet Patterns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Tutorials/bullet/" title="Bullets" class="md-nav__link">
+      Bullets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Tutorials/unit/" title="Units" class="md-nav__link">
+      Units
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Tutorials/stage/" title="Stages" class="md-nav__link">
+      Stages
     </a>
   </li>
 
@@ -4992,6 +5028,13 @@
       
         <li class="md-nav__item">
   <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples_1" title="Examples" class="md-nav__link">
     Examples
   </a>
   
@@ -26509,6 +26552,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples_1" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#properties" title="Properties" class="md-nav__link">
     Properties
   </a>
@@ -26548,29 +26598,16 @@
 <h2 id="examples">Examples</h2>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>The following example prints <code>"You got lucky!"</code> with a 20% chance, and
-otherwise prints <code>"Better luck next time!"</code>.
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">...</span>
-<span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;rand.Chance(0.2)&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Log&quot;</span><span class="p">,</span> <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;You got lucky!&quot;</span> <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;false&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Log&quot;</span><span class="p">,</span> <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Better luck next time!&quot;</span> <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span><span class="err">,</span>
-<span class="err">...</span>
-</pre></div>
-</td></tr></table></p>
+<p>The following example prints <code class="codehilite"><span class="ss">&quot;You got lucky!&quot;</span></code> with a 20% chance, and
+otherwise prints <code class="codehilite"><span class="s2">&quot;</span><span class="s">Better luck next time!</span><span class="s2">&quot;</span></code>.
+<code class="codehilite"><span class="nv">json</span>...{ <span class="s2">&quot;</span><span class="s">action</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">Condition</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">condition</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">rand.Chance(0.2)</span><span class="s2">&quot;</span>,<span class="s2">&quot;</span><span class="s">true</span><span class="s2">&quot;</span>: [{ <span class="s2">&quot;</span><span class="s">action</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">Log</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">message</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">You got lucky!</span><span class="s2">&quot;</span> }],<span class="s2">&quot;</span><span class="s">false</span><span class="s2">&quot;</span>: [{ <span class="s2">&quot;</span><span class="s">action</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">Log</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">message</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">Better luck next time!</span><span class="s2">&quot;</span> }]},...</code></p>
+</div>
+<h2 id="examples_1">Examples</h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The following example prints <code class="codehilite"><span class="ss">&quot;You got lucky!&quot;</span></code> with a 20% chance, and
+otherwise prints <code class="codehilite"><span class="s2">&quot;</span><span class="s">Better luck next time!</span><span class="s2">&quot;</span></code>.
+<code class="codehilite"><span class="nv">json</span>...{ <span class="s2">&quot;</span><span class="s">action</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">Condition</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">condition</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">rand.Chance(0.2)</span><span class="s2">&quot;</span>,<span class="s2">&quot;</span><span class="s">true</span><span class="s2">&quot;</span>: [{ <span class="s2">&quot;</span><span class="s">action</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">Log</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">message</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">You got lucky!</span><span class="s2">&quot;</span> }],<span class="s2">&quot;</span><span class="s">false</span><span class="s2">&quot;</span>: [{ <span class="s2">&quot;</span><span class="s">action</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">Log</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">message</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">Better luck next time!</span><span class="s2">&quot;</span> }]},...</code></p>
 </div>
 <h2 id="properties">Properties</h2>
 <div class="member-table">
@@ -26583,16 +26620,16 @@ otherwise prints <code>"Better luck next time!"</code>.
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="condition/"><code>condition</code></a></td>
+<td align="left"><a href="condition/"><code class="codehilite"><span class="n">condition</span></code></a></td>
 <td>Condition to evaluate, the result of which will decide which set of actions to perform.</td>
 </tr>
 <tr>
-<td align="left"><a href="false/"><code>false</code></a></td>
-<td>Optional actions to run if the <code>condition</code> evaluated to <code>false</code>.</td>
+<td align="left"><a href="false/"><code class="codehilite"><span class="k">false</span></code></a></td>
+<td>Optional actions to run if the <code class="codehilite"><span class="n">condition</span></code> evaluated to <code class="codehilite"><span class="k">false</span></code>.</td>
 </tr>
 <tr>
-<td align="left"><a href="true/"><code>true</code></a></td>
-<td>Optional actions to run if the <code>condition</code> evaluated to <code>true</code>.</td>
+<td align="left"><a href="true/"><code class="codehilite"><span class="k">true</span></code></a></td>
+<td>Optional actions to run if the <code class="codehilite"><span class="n">condition</span></code> evaluated to <code class="codehilite"><span class="k">true</span></code>.</td>
 </tr>
 </tbody>
 </table>

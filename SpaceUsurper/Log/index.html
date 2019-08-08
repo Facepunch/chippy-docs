@@ -249,8 +249,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tutorials/" title="Tutorials" class="md-nav__link">
-      Tutorials
+    <a href="../../Tutorials/tutorials/" title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -273,8 +273,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Tutorials/pattern/pattern/" title="Bullet Patterns" class="md-nav__link">
+    <a href="../../Tutorials/pattern/" title="Bullet Patterns" class="md-nav__link">
       Bullet Patterns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Tutorials/bullet/" title="Bullets" class="md-nav__link">
+      Bullets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Tutorials/unit/" title="Units" class="md-nav__link">
+      Units
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Tutorials/stage/" title="Stages" class="md-nav__link">
+      Stages
     </a>
   </li>
 
@@ -6756,6 +6792,13 @@
       
         <li class="md-nav__item">
   <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples_1" title="Examples" class="md-nav__link">
     Examples
   </a>
   
@@ -26509,6 +26552,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples_1" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#properties" title="Properties" class="md-nav__link">
     Properties
   </a>
@@ -26549,15 +26599,13 @@
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>The following example prints a greeting, then the current player position.
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">...</span>
-<span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Log&quot;</span><span class="p">,</span> <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello world!&quot;</span> <span class="p">}</span><span class="err">,</span>
-<span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Log&quot;</span><span class="p">,</span> <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The player is at: ${playerPos}&quot;</span> <span class="p">}</span><span class="err">,</span>
-<span class="err">...</span>
-</pre></div>
-</td></tr></table></p>
+<code class="codehilite">json...{ &quot;action&quot;: &quot;Log&quot;, &quot;message&quot;: &quot;Hello world!&quot; },{ &quot;action&quot;: &quot;Log&quot;, &quot;message&quot;: &quot;The player is at: <span class="cp">${</span><span class="n">playerPos</span><span class="cp">}</span>&quot; },...</code></p>
+</div>
+<h2 id="examples_1">Examples</h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The following example prints a greeting, then the current player position.
+<code class="codehilite">json...{ &quot;action&quot;: &quot;Log&quot;, &quot;message&quot;: &quot;Hello world!&quot; },{ &quot;action&quot;: &quot;Log&quot;, &quot;message&quot;: &quot;The player is at: <span class="cp">${</span><span class="n">playerPos</span><span class="cp">}</span>&quot; },...</code></p>
 </div>
 <h2 id="properties">Properties</h2>
 <div class="member-table">
@@ -26570,7 +26618,7 @@
 </thead>
 <tbody>
 <tr>
-<td align="left"><a href="message/"><code>message</code></a></td>
+<td align="left"><a href="message/"><code class="codehilite"><span class="n">message</span></code></a></td>
 <td>Message to write.</td>
 </tr>
 </tbody>
