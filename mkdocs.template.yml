@@ -2,6 +2,7 @@ site_name: 'Chippy Documentation'
 theme:
   name: 'material'
   custom_dir: 'theme/'
+  hljs_style: 'agate'
 
 extra_css:
   - 'css/styles.css'
@@ -27,14 +28,21 @@ markdown_extensions:
   - 'pymdownx.superfences'
   - pymdownx.tasklist:
       custom_checkbox: true
+  - 'pymdownx.tilde'
 
 nav:
   - 'index.md'
   - Tutorials:
-    - 'Tutorials/tutorials.md'
+    - 'tutorials.md'
     - 'Tutorials/quickstart.md'
     - 'Tutorials/pattern.md'
     - 'Tutorials/bullet.md'
+    - 'Tutorials/actions.md'
     - 'Tutorials/unit.md'
+    - 'Tutorials/unit_parts.md'
     - 'Tutorials/stage.md'
+    - 'Tutorials/player.md'
+    - 'Tutorials/status.md'
+    - 'Tutorials/pxc_editor.md'
+    - 'Tutorials/workshop.md'
 ### GENERATED_NAV_ITEMS ###

@@ -2,11 +2,15 @@
 This is a work in progress! We'll have some guides on how to get started here
 in the future.
 
-Here is the tutorial page: [Tutorials](Tutorials/tutorials.md)
+Here is the tutorial page: [Tutorials](tutorials.md)
 
 <!---
+-->
+
 
 ## Cheatsheet
+
+[Here's](../SpaceUsurper/Stage.md#methods) Stage methods.
 
 ~~Delete me~~
 
@@ -60,8 +64,11 @@ https://facelessuser.github.io/pymdown-extensions/extensions/keys/
 ??? info "Collapsible"
     Text text
 
+!!! todo
 
 !!! tip
+
+!!! abstract
 
 !!! success
 
@@ -69,9 +76,15 @@ https://facelessuser.github.io/pymdown-extensions/extensions/keys/
 
 !!! warning
 
+!!! failure
+
 !!! danger
 
+!!! bug
+
 !!! example
+
+!!! quote
 
 ![](https://files.facepunch.com/ryleigh/1b0711b1/chrome_2019-08-07_22-06-50.png)
 
@@ -83,4 +96,3 @@ This is a [link][1] without the url needing to be in the middle of the Markdown 
 
 [^1]:Footnote text
 
--->
