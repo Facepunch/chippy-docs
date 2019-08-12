@@ -76,3 +76,18 @@
 .progress-0plus .progress-bar {
   background-color: #f50057;
 }
+
+.h2 {
+  font-style: italic;
+}
+
+.light_text {
+  opacity:0.66;
+  font-size: 0.875em;
+}
+
+/* code highlighting comments */
+.codehilite .err { 
+  opacity:0.33;
+  font-style: italic;
+}
