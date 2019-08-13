@@ -2,6 +2,10 @@
 
 A bullet pattern is made up of **volleys**, each shooting a number of **bullets** from a certain position and angle.
 
+## Data
+
+
+
 ## A Simple Pattern
 
 ```json
@@ -72,8 +76,8 @@ With `"arcAngle":90` we changed the angle that all the bullets are distributed b
 
 <img src="https://files.facepunch.com/ryleigh/1b0611b1/Photo_2019-08-06_8_14_23_PM.jpg" width="300"/>
 
-??? info "This is the entire json file for our example pattern, located at `octopus/pattern/simplePattern.json`"
-	When the pattern wants to refer to the bullet, since it's in the same json object (the braces that enclose the whole file) it can simply use `.bullet`, though `octopus/pattern/simplePattern.bullet` would work as well. Any name can be used instead of "bullet".
+??? info "The entire json file for our example pattern, located at `octopus/pattern/simplePattern.json`"
+	When the pattern refers to the bullet, it can simply use `.bullet` since it's in the same json object (the braces that enclose the whole file), though `octopus/pattern/simplePattern.bullet` would work as well. Any name can be used instead of "bullet".
 	```json
 	{
 	  "simpleAttack": {
@@ -150,7 +154,7 @@ Let's expand that line to make it more clear:
 ```
 
 ??? abstract "Common methods for spawning patterns"
-	These are the most common use-cases for making bullet patterns appear in-game. There are more optional parameters than shown here, however.
+	These are the most common use-cases for making bullet patterns appear. There are more optional parameters than shown here, however.
 
 	??? abstract "Spawning anywhere"
 		This method, the same as seen above, can be called from anywhere actions are valid: from a unit, the player, the stage itself, etc.
@@ -158,7 +162,7 @@ Let's expand that line to make it more clear:
 		{ "action": "CallMethod", "target":"stage", "method": "SpawnPattern", "params": { "path": "octopus/pattern/simplePattern.simpleAttack", "pos":"playerPos + vec2(0f, 10f)", "dir":"vec2(0f, 1f)", }},
 		```
 	??? abstract "Charging from a unit part"
-		This example doesn't specify the `target`, as it's normally called from a unit itself.
+		This example doesn't specify the `target`, as it's not necessary when called from a unit itself.
 		```json
 		{ "action": "CallMethod", "method": "ChargePattern", "params": { "path": "octopus/pattern/simplePattern.simpleAttack", "partType": "core", "chargeTime":1, "dir":"(playerPos + playerVel * 1f) - partPos", }},
 		```
@@ -199,8 +203,6 @@ Let's expand that line to make it more clear:
 
 ## Params
 
-## Debugging Patterns
-
 ## Workflow
 
 ??? tip "Extending other patterns"
@@ -213,3 +215,17 @@ Let's expand that line to make it more clear:
 	},
 	```
 	<video controls> <source src="https://files.facepunch.com/ryleigh/1b0811b1/2019-08-08_23-33-03.mp4" type="video/mp4"> </video>
+
+## Debugging
+
+`debugVector`: draws a 2d vector from the pattern position <br>
+`debugText`: displays a string above the pattern position (use `${NAME}` for properties)
+```json
+"simpleAttack": {
+  ...
+  "debugVector":"patternDir * 30f",
+  "debugText":"volleyNum: ${volleyNum}, angle: ${patternAngle}",
+  "waitForBulletsToDespawn":true, // pattern persists until all its bullets have despawned (normally, patterns end when all have been fired)
+},
+```
+<video controls> <source src="https://files.facepunch.com/ryleigh/1b0911b1/2019-08-09_00-57-28.mp4" type="video/mp4"> </video>

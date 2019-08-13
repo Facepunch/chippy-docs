@@ -6,9 +6,9 @@
  
 ### Level Boundary
 
-## Pixels
+## Forms
 
-### Using the Editor
+## Pixels
 
 ### Importing Pixels
 
@@ -23,8 +23,12 @@
 
 ### Pixel Chunks
 
+## Animations
+
 ## Callbacks
 
 ## Params
 
-## Debugging Units
+## Speech Bubbles
+
+## Debugging

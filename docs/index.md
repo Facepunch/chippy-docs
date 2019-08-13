@@ -64,6 +64,9 @@ https://facelessuser.github.io/pymdown-extensions/extensions/keys/
 ??? info "Collapsible"
     Text text
 
+???+ info "Collapsible"
+    But defaults open
+
 !!! todo
 
 !!! tip
@@ -87,6 +90,11 @@ https://facelessuser.github.io/pymdown-extensions/extensions/keys/
 !!! quote
 
 ![](https://files.facepunch.com/ryleigh/1b0711b1/chrome_2019-08-07_22-06-50.png)
+
+First Header | Second Header
+:----------- |:-------------
+`1`         | 2     
+`11111111111111`         | 2222222222222222
 
 This is a [link][1] without the url needing to be in the middle of the Markdown text.
 

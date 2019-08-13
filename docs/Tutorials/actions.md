@@ -1,7 +1,13 @@
 # Actions
 
-- CallMethod
-	- TimeScale
+## Stage Methods
+
+- TimeScale
+- Shake Camera
+
+## Player Methods
+
+- Vibrate
 
 ## State Machine Control
 
