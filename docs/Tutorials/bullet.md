@@ -531,7 +531,91 @@ Property | Summary
 	
 ## Script Functions
 
+Up until now, most of the bullet properties we've seen have been used like this, with simple numbers:
+```json
+"acceleration":150,
+```
+
+Instead these values can be expressed as string "script functions" that will be baked into C# code later.
+
+```json
+"acceleration":"map(volleyNum, 0, 99, 150f, 400f)",
+```
+
+Each bullet knows which volley it was fired in, by its parent pattern, and that value can be accessed with `volleyNum`. 
+
+The `map` function is used to map a number from one range to another. 
+
+In this case, the bullet's `acceleration` will be `150` if it was part of the pattern's first volley (#0), and will be `400` on the pattern's 100th+ volley.
+
+The end result is that later bullets move faster:
+
+<video width="650" controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1511b1/2019-08-15_01-25-13.mp4" type="video/mp4" > </video>
+
+??? info "Full json file"
+    ```json
+    {
+      "1": {
+        "numVolleys": 100,
+        "numBulletsInVolley":3,
+        "shootDelay": "volleyNum % 8 == 0 ? 0.1f : 0.05f",
+        "bullets": [".bullet"],
+        "sfxVolley": "ShootSoftWomp",
+        "rotationSpeed":-50,
+      },
+
+      "bullet": {
+        "keyframes": [
+        {
+          "duration":0.5,
+          "acceleration":5,
+          "frictionPercent":0.25,
+          "crossDistance":0.66,
+          "sprite":"sprites/diamond/simple",
+          "glowA": 2.5,
+          "glowB": 0.5,
+          "glowC": 1,
+          "colorBlinkTime":0.25,
+          "opacity":0,
+          "easingType":"QuadOut",
+          "facingSpeedPercent":0.1,
+          "loopEnd":1,
+        },
+        {
+          "duration":1,
+          "acceleration":"map(volleyNum, 0, 100, 100f, 1000f)",
+          "frictionPercent":0.15,
+          "colorA1":{ "value": {"r":1,"g":0,"b":0.2,"a":0.9}},
+          "colorA2":{ "value": {"r":1,"g":0.05,"b":0.1,"a":0.7}},
+          "colorB1":{ "value": {"r":1,"g":0,"b":0.3,"a":0.8}},
+          "colorB2":{ "value": {"r":1,"g":0,"b":0.6,"a":0.6}},
+          "colorC1":{ "value": {"r":1,"g":0.1,"b":0.2,"a":0.5}},
+          "colorC2":{ "value": {"r":1,"g":0.25,"b":0.2,"a":0.4}},
+          "glowA": 5,
+          "opacity":1,
+          "easingType":"Linear",
+          "moveAngle":45,
+          "length":7,
+          "crossWidth":2,
+        },
+        ],
+        "startSpeed":120,
+        "lifetime":30,
+        "depthLevel": "Bullet",
+        "shapeType": "Diamond",
+        "despawnTime":0.15,
+      },
+    }
+    ```
+
 ### PerUpdate Functions
+
+Script functions determine their values once, like a snapshot.
+
+```json
+
+```
+
 
 ## Pixel Collision
 
