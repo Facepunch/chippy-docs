@@ -4,23 +4,23 @@
 
 ## Basic
 >
-[Quick Start](Tutorials/quickstart.md)<br>
-[Bullet Patterns](Tutorials/pattern.md)<br>
-[Bullets](Tutorials/bullet.md)<br>
-[Actions](Tutorials/actions.md)<br>
-[Units](Tutorials/unit.md)<br>
+[Quick Start](tutorials/quickstart.md)<br>
+[Bullet Patterns](tutorials/pattern.md)<br>
+[Bullets](tutorials/bullet.md)<br>
+[Actions](tutorials/actions.md)<br>
+[Units](tutorials/unit.md)<br>
 Unit Parts<br>
-[Stages](Tutorials/stage.md)<br>
-[Player](Tutorials/player.md)<br>
-[Powerups & Status Effects](Tutorials/status.md)<br>
+[Stages](tutorials/stage.md)<br>
+[Player](tutorials/player.md)<br>
+[Powerups & Status Effects](tutorials/status.md)<br>
 Music & Sfx<br>
 Speech Bubbles<br>
 Floating Text<br>
 Sprites<br>
 ---
 >
-[Pixel Editor](Tutorials/pxc_editor.md)<br>
-[Workshop](Tutorials/workshop.md)<br>
+[Pixel Editor](tutorials/pxc_editor.md)<br>
+[Workshop](tutorials/workshop.md)<br>
 ---
 > 
 Utility Functions<br>
