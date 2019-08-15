@@ -226,15 +226,310 @@ Keyframe Property | Summary
 
 <img src="https://files.facepunch.com/ryleigh/1b1311b1/Photo_2019-08-13_1_33_28_AM.jpg" width="600"/>
 
-### Color
-
 ### Sprite
 
-### Movement
+Bullets need to specify a sprite in their first keyframe. If a different sprite is specified in the next kefyrame, the bullet will blend into it over the current keyframe's duration. All the sprites used by a bullet need to have the same dimensions.
+
+```json
+"keyframes": [
+    {
+      // ...
+      "sprite":"sprites/circle/simple",
+    },
+    {
+      // ...
+      "sprite":"sprites/circle/triangle2",
+    },
+]
+```
+
+### Color
+
+Bullets don't reproduce their sprites exactly - instead they use color substitution to replace the red, blue, and green elements of the sprite with their own colors.
+
+<img src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1311b1/simple.png" width="150"/>
+
+When using the above sprite, a bullet would choose what color they want to replace red with, green with, and blue with.
+
+```json
+"bullet": {
+  "keyframes": [
+    {
+      // ...
+      "sprite":"sprites/circle/simple",
+      "colorA1":{ "value": {"r":1,"g":0,"b":0,"a":0.9}},
+      "colorA2":{ "value": {"r":1,"g":0.2,"b":0,"a":0.7}},
+      "colorB1":{ "value": {"r":1,"g":0,"b":0.1,"a":0.8}},
+      "colorB2":{ "value": {"r":1,"g":0,"b":0.2,"a":0.6}},
+      "colorC1":{ "value": {"r":1,"g":0.3,"b":0,"a":0.2}},
+      "colorC2":{ "value": {"r":1,"g":0.4,"b":0,"a":0.1}},
+      "glowA": 4,
+      "glowB": 0.5,
+      "glowC": 0,
+      "colorBlinkTime":0.15,
+    },
+    // ...
+  ],
+},
+```
+
+In the above example, `colorA1` and `colorA2` will be used to replace the red portion of the sprite. `colorB1` and `colorB2` will be used to replace green, and `colorC1` and `colorC2` will replace blue.
+
+So instead of appearing with red/green/blue rings, the bullet would be drawn like this:
+<video controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1311b1/2019-08-13_23-26-46.mp4" type="video/mp4"> </video>
+
+`glowA` is simply an additional factor that changes the strength of `colorA1` and `colorA2`. Alternatively, the colors themselves could be declared like this for the same effect:
+
+```json
+"colorA1":"color(1f, 0f, 0f, 0.9f) * 4f",
+```
+
+`colorBlinkTime` determines how rapidly the color pairs alternate - how quickly the red portion of the sprite blinks between `colorA1` and `colorA2`, etc.
+
+### Movement 
+
+A bullet's starting velocity is set with the non-keyframe property `startSpeed`. <br>
+The keyframe property `acceleration` controls how fast they accelerate each frame <br>
+The keyframe property `frictionPercent` is a value from `0-1` that controls how much of the bullet's speed is lost. A value of `0.1` means that the bullet will lose 10% of its velocity each frame.
+
+#### Changing Direction
+
+By default, bullets simply move forward in the direction their pattern spawns them in. Changing the keyframe property `moveAngle` will adjust the direction the bullet's `acceleration` moves them in.
+
+The following bullet sets `"moveAngle":-90` on its third keyframe, which causes the bullet to turn 90° to the right, relative to its starting angle.
+
+The blue line shows the bullet's current move direction, and the red line shows the bullet's current facing direction.
+
+<video width="650" controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1411b1/2019-08-14_13-14-46.mp4" type="video/mp4" > </video>
+
+??? info "Full json file"
+    ```json
+    {
+      "1": {
+        "numVolleys": 15,
+        "numBulletsInVolley":3,
+        "shootDelay": 0.5,
+        "bullets": [".bullet"],
+        "sfxVolley": "ShootSoftWomp",
+        "rotationSpeed":-50,
+      },
+
+      "bullet": {
+        "keyframes": [
+        {
+          "duration":0.5,
+          "acceleration":5,
+          "frictionPercent":0.25,
+          "length":10,
+          "crossWidth":4,
+          "crossDistance":0.66,
+          "sprite":"sprites/diamond/simple",
+          "colorA1":{ "value": {"r":1,"g":0,"b":0,"a":0.9}},
+          "colorA2":{ "value": {"r":1,"g":0.2,"b":0,"a":0.7}},
+          "colorB1":{ "value": {"r":1,"g":0,"b":0.3,"a":0.8}},
+          "colorB2":{ "value": {"r":1,"g":0,"b":0.6,"a":0.6}},
+          "colorC1":{ "value": {"r":1,"g":0.3,"b":0.2,"a":0.5}},
+          "colorC2":{ "value": {"r":1,"g":0.4,"b":0.2,"a":0.4}},
+          "glowA": 2.5,
+          "glowB": 0.5,
+          "glowC": 1,
+          "colorBlinkTime":0.25,
+          "opacity":0,
+          "easingType":"QuadOut",
+          "facingSpeedPercent":0.1,
+        },
+        {
+          "duration":1.5,
+          "acceleration":66,
+          "frictionPercent":0.05,
+          "glowA": 3.5,
+          "opacity":1,
+          "easingType":"QuadIn",
+        },
+        {
+          "duration":2.5,
+          "moveAngle":-90,
+        },
+        ],
+        "startSpeed":120,
+        "lifetime":30,
+        "depthLevel": "Bullet",
+        "shapeType": "Diamond",
+        "despawnTime":0.15,
+        "onUpdate":[
+          { "action": "CallMethod", "target":"stage", "method": "DrawDebugLine", "params": { "a": "bulletPos", "b":"bulletPos + facingDir * 12f", "color":"color(1f, 0f, 0f) * 2f"}},
+          { "action": "CallMethod", "target":"stage", "method": "DrawDebugLine", "params": { "a": "bulletPos", "b":"bulletPos + angleToVec(moveAngle) * 7f", "color":"color(0.1f, 0.1f, 1f) * 3f"}},
+        ],
+      },
+    }
+    ```
+
+#### Absolute Angles
+
+If you want a bullet to interpret `"moveAngle":-90` as an absolute instead of relative angle, you can set the non-keyframe property `useAbsoluteAngles` to `true`.
+
+```json
+{
+	"keyframes": [
+	    // ...
+	    {
+	      // ...
+	      "moveAngle":-90,
+	    },
+    ],
+    // ...
+    "useAbsoluteAngles":true,
+}
+```
+
+<video controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1411b1/2019-08-14_15-10-35.mp4" type="video/mp4"> </video>
+
+Now, the same bullets as before are all moving to the right on their third keyframe, instead of moving 90° to the right of their current angle.
+
+For the record, this is the way angles are set up in Chippy:
+<img src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1411b1/Photo_2019-08-14_3_21_56_PM.jpg" width="450"/>
+
+#### Direct Movement
+
+It's possible to control a bullet's position directly, instead of relying on the physics of acceleration/velocity/deceleration.
+
+```json
+"keyframes": [
+	// ...
+	{
+	  //...
+	  "moveMode":"Target",
+	  "targetPos":"playerPos",
+	  "posLerpSpeed":0.01,
+	},
+],
+```
+
+When the bullet enters this keyframe, it will set its target position to the player's current location. From then on, its `posLerpSpeed` of `0.01` will move the bullet 1% of the remaining distance to the target per frame.
+
+### Facing
+
+By default, bullets don't rotate at all. By specifying a value from `0-1` for the keyframe property `facingSpeedPercent`, the bullet will ease toward a certain direction - normally the same direction as their velocity.
+
+```json
+"keyframes": [
+	{
+	  // ...
+	  "facingSpeedPercent":0.1,
+	},
+],
+```
+
+For a bullet that rotates automatically instead of trying to face a certain direction, you can set the `facingMode` to `AutoRotate`, and setting the `rotationSpeed`.
+
+```json
+"keyframes": [
+	{
+	  // ...
+	  "facingMode":"AutoRotate",
+	  "rotationSpeed":"rand.Float(-100f, -500f)",
+	},
+],
+```
+
+<video controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1411b1/2019-08-14_15-59-56.mp4" type="video/mp4"> </video>
+
+There are several other values for `facingMode`:
+
+facingMode | Summary
+:----------- |:-------------
+`Velocity` | face toward velocity direction using `facingSpeedPercent`
+`MoveAngle` | face toward current moveAngle using `facingSpeedPercent`
+`Position` | face toward position delta using `facingSpeedPercent`
+`Target` | face toward `targetFacingAngle` using `facingSpeedPercent`
+`AutoRotate` | rotate using `rotationSpeed`
 
 ### Looping
 
-<!-- ## Script Functions -->
+Sometimes it's useful for a bullet to repeat keyframes multiple times. By setting the non-keyframe property `shouldLoop` to true, a bullet will continue looping through each keyframe unless told otherwise.
+
+???+ info "Looping bullet definition"
+	```json hl_lines="16 51"
+	"bullet": {
+	  "keyframes": [
+		  {
+		  	// KEYFRAME 0
+		    "duration":0.5,
+		    "acceleration":5,
+		    "frictionPercent":0.25,
+		    "crossDistance":0.66,
+		    "sprite":"sprites/diamond/simple",
+		    "glowA": 2.5,
+		    "glowB": 0.5,
+		    "glowC": 1,
+		    "colorBlinkTime":0.25,
+		    "opacity":0,
+		    "easingType":"QuadOut",
+		    "facingSpeedPercent":0.1,
+		    "loopEnd":1, // keyframe ignored on loops greater or equal than 1
+		  },
+		  {
+		  	// KEYFRAME 1
+		    "duration":1,
+		    "acceleration":150,
+		    "frictionPercent":0.15,
+		    "colorA1":{ "value": {"r":1,"g":0,"b":0.2,"a":0.9}},
+		    "colorA2":{ "value": {"r":1,"g":0.05,"b":0.1,"a":0.7}},
+		    "colorB1":{ "value": {"r":1,"g":0,"b":0.3,"a":0.8}},
+		    "colorB2":{ "value": {"r":1,"g":0,"b":0.6,"a":0.6}},
+		    "colorC1":{ "value": {"r":1,"g":0.1,"b":0.2,"a":0.5}},
+		    "colorC2":{ "value": {"r":1,"g":0.25,"b":0.2,"a":0.4}},
+		    "glowA": 5,
+		    "opacity":1,
+		    "easingType":"Linear",
+		    "moveAngle":45,
+		    "length":10,
+		    "crossWidth":4,
+		  },
+		  {
+		  	// KEYFRAME 2
+		    "duration":1,
+		    "colorA1":{ "value": {"r":0.5,"g":0.3,"b":0,"a":0.9}},
+		    "colorA2":{ "value": {"r":0.5,"g":0.2,"b":0,"a":0.7}},
+		    "colorB1":{ "value": {"r":0.5,"g":0.6,"b":0.3,"a":0.8}},
+		    "colorB2":{ "value": {"r":0.5,"g":0.5,"b":0.6,"a":0.6}},
+		    "colorC1":{ "value": {"r":0.5,"g":0.6,"b":0.2,"a":0.5}},
+		    "colorC2":{ "value": {"r":0.5,"g":0.8,"b":0.2,"a":0.4}},
+		    "glowA": 3,
+		    "moveAngle":-45,
+		    "length":8,
+		    "crossWidth":5,
+		  },
+	  ],
+	  "startSpeed":120,
+	  "lifetime":30,
+	  "shouldLoop":true, // loop keyframes
+	  "depthLevel": "Bullet",
+	  "shapeType": "Diamond",
+	  "despawnTime":0.15,
+	},
+	```
+
+<video width="650" controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1411b1/2019-08-14_23-42-12.mp4" type="video/mp4" > </video>
+
+This bullet loops its second and third keyframe, but only plays its first keyframe once, thanks to `"loopEnd":1`. This means that the first keyframe (Keyframe 0) will be skipped when the number of times we've looped over this bullet's keyframes is >= 1, so it will be skipped the second time through.
+
+The sequence of keyframes this bullet will follow is `0, 1, 2, 1, 2, 1, 2...`
+
+The bullet wobbles back and forth, since its `moveAngle` constantly changes from `-45` to `45`. <br>
+Its color and size changes too.
+
+Some other properties that keyframes can use to change how bullet state flows:
+
+Property | Summary
+:----------- |:-------------
+`loopStart` | Keyframe will be ignored until we are on loop number N or greater
+`loopEnd` | Keyframe will be ignored if we are on or past loop number N (non-inclusive)
+`loopModulus` | Keyframe active every N loops
+`chance` | Chance of using keyframe (from 0 to 1)
+`next` | Go to that frame number instead of the next one
+	
+## Script Functions
 
 ### PerUpdate Functions
 
