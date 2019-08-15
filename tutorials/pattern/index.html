@@ -251,8 +251,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../tutorials/" title="Contents" class="md-nav__link">
-      Contents
+    <a href="../../tutorials/" title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -300,6 +300,13 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data" title="Data" class="md-nav__link">
+    Data
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#a-simple-pattern" title="A Simple Pattern" class="md-nav__link">
@@ -378,15 +385,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#debugging-patterns" title="Debugging Patterns" class="md-nav__link">
-    Debugging Patterns
+  <a href="#workflow" title="Workflow" class="md-nav__link">
+    Workflow
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#workflow" title="Workflow" class="md-nav__link">
-    Workflow
+  <a href="#debugging" title="Debugging" class="md-nav__link">
+    Debugging
   </a>
   
 </li>
@@ -26684,6 +26691,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#data" title="Data" class="md-nav__link">
+    Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#a-simple-pattern" title="A Simple Pattern" class="md-nav__link">
     A Simple Pattern
   </a>
@@ -26760,15 +26774,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#debugging-patterns" title="Debugging Patterns" class="md-nav__link">
-    Debugging Patterns
+  <a href="#workflow" title="Workflow" class="md-nav__link">
+    Workflow
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#workflow" title="Workflow" class="md-nav__link">
-    Workflow
+  <a href="#debugging" title="Debugging" class="md-nav__link">
+    Debugging
   </a>
   
 </li>
@@ -26805,6 +26819,7 @@
     <!-- Content -->
     <h1 id="bullet-patterns">Bullet Patterns</h1>
 <p>A bullet pattern is made up of <strong>volleys</strong>, each shooting a number of <strong>bullets</strong> from a certain position and angle.</p>
+<h2 id="data">Data</h2>
 <h2 id="a-simple-pattern">A Simple Pattern</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -26878,7 +26893,7 @@ Setting <code class="codehilite"><span class="ss">&quot;aimMode&quot;</span><spa
 
 <p>With <code class="codehilite"><span class="ss">&quot;arcAngle&quot;</span><span class="p">:</span><span class="mi">90</span></code> we changed the angle that all the bullets are distributed between from 360° to 90°.</p>
 <p><img src="https://files.facepunch.com/ryleigh/1b0611b1/Photo_2019-08-06_8_14_23_PM.jpg" width="300"/></p>
-<details class="info"><summary>This is the entire json file for our example pattern, located at <code class="codehilite"><span class="n">octopus</span><span class="o">/</span><span class="n">pattern</span><span class="o">/</span><span class="n">simplePattern</span><span class="p">.</span><span class="n">json</span></code></summary><p>When the pattern wants to refer to the bullet, since it's in the same json object (the braces that enclose the whole file) it can simply use <code class="codehilite"><span class="na">.bullet</span></code>, though <code class="codehilite"><span class="n">octopus</span><span class="o">/</span><span class="n">pattern</span><span class="o">/</span><span class="n">simplePattern</span><span class="p">.</span><span class="n">bullet</span></code> would work as well. Any name can be used instead of "bullet".
+<details class="info"><summary>The entire json file for our example pattern, located at <code class="codehilite"><span class="n">octopus</span><span class="o">/</span><span class="n">pattern</span><span class="o">/</span><span class="n">simplePattern</span><span class="p">.</span><span class="n">json</span></code></summary><p>When the pattern refers to the bullet, it can simply use <code class="codehilite"><span class="na">.bullet</span></code> since it's in the same json object (the braces that enclose the whole file), though <code class="codehilite"><span class="n">octopus</span><span class="o">/</span><span class="n">pattern</span><span class="o">/</span><span class="n">simplePattern</span><span class="p">.</span><span class="n">bullet</span></code> would work as well. Any name can be used instead of "bullet".
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -27008,13 +27023,13 @@ Setting <code class="codehilite"><span class="ss">&quot;aimMode&quot;</span><spa
 </pre></div>
 </td></tr></table>
 
-<details class="abstract"><summary>Common methods for spawning patterns</summary><p>These are the most common use-cases for making bullet patterns appear in-game. There are more optional parameters than shown here, however.</p>
+<details class="abstract"><summary>Common methods for spawning patterns</summary><p>These are the most common use-cases for making bullet patterns appear. There are more optional parameters than shown here, however.</p>
 <details class="abstract"><summary>Spawning anywhere</summary><p>This method, the same as seen above, can be called from anywhere actions are valid: from a unit, the player, the stage itself, etc.
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SpawnPattern&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;octopus/pattern/simplePattern.simpleAttack&quot;</span><span class="p">,</span> <span class="nt">&quot;pos&quot;</span><span class="p">:</span><span class="s2">&quot;playerPos + vec2(0f, 10f)&quot;</span><span class="p">,</span> <span class="nt">&quot;dir&quot;</span><span class="p">:</span><span class="s2">&quot;vec2(0f, 1f)&quot;</span><span class="p">,</span> <span class="p">}}</span><span class="err">,</span>
 </pre></div>
 </td></tr></table></p>
 </details>
-<details class="abstract"><summary>Charging from a unit part</summary><p>This example doesn't specify the <code class="codehilite"><span class="n">target</span></code>, as it's normally called from a unit itself.
+<details class="abstract"><summary>Charging from a unit part</summary><p>This example doesn't specify the <code class="codehilite"><span class="n">target</span></code>, as it's not necessary when called from a unit itself.
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;ChargePattern&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;octopus/pattern/simplePattern.simpleAttack&quot;</span><span class="p">,</span> <span class="nt">&quot;partType&quot;</span><span class="p">:</span> <span class="s2">&quot;core&quot;</span><span class="p">,</span> <span class="nt">&quot;chargeTime&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;dir&quot;</span><span class="p">:</span><span class="s2">&quot;(playerPos + playerVel * 1f) - partPos&quot;</span><span class="p">,</span> <span class="p">}}</span><span class="err">,</span>
 </pre></div>
 </td></tr></table>
@@ -27068,7 +27083,6 @@ Setting <code class="codehilite"><span class="ss">&quot;aimMode&quot;</span><spa
 <h2 id="visual-effects">Visual Effects</h2>
 <h2 id="callbacks">Callbacks</h2>
 <h2 id="params">Params</h2>
-<h2 id="debugging-patterns">Debugging Patterns</h2>
 <h2 id="workflow">Workflow</h2>
 <details class="tip"><summary>Extending other patterns</summary><p>Patterns can <strong>include</strong> other patterns and change only specifed properties, keeping the rest the same as the original.
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -27084,6 +27098,23 @@ Setting <code class="codehilite"><span class="ss">&quot;aimMode&quot;</span><spa
 </td></tr></table>
 <video controls> <source src="https://files.facepunch.com/ryleigh/1b0811b1/2019-08-08_23-33-03.mp4" type="video/mp4"> </video></p>
 </details>
+<h2 id="debugging">Debugging</h2>
+<p><code class="codehilite"><span class="n">debugVector</span></code>: draws a 2d vector from the pattern position <br>
+<code class="codehilite"><span class="n">debugText</span></code>: displays a string above the pattern position (use <code class="codehilite"><span class="cp">${</span><span class="n">NAME</span><span class="cp">}</span></code> for properties)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;simpleAttack&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&quot;debugVector&quot;</span><span class="p">:</span><span class="s2">&quot;patternDir * 30f&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;debugText&quot;</span><span class="p">:</span><span class="s2">&quot;volleyNum: ${volleyNum}, angle: ${patternAngle}&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;waitForBulletsToDespawn&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">pattern</span> <span class="err">persists</span> <span class="err">until</span> <span class="err">all</span> <span class="err">its</span> <span class="err">bullets</span> <span class="err">have</span> <span class="err">despawned</span> <span class="err">(normally,</span> <span class="err">patterns</span> <span class="err">end</span> <span class="err">when</span> <span class="err">all</span> <span class="err">have</span> <span class="err">been</span> <span class="err">fired)</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+<video controls> <source src="https://files.facepunch.com/ryleigh/1b0911b1/2019-08-09_00-57-28.mp4" type="video/mp4"> </video></p>
 
     <!-- Source files -->
     
