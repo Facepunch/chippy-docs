@@ -4,8 +4,6 @@ A bullet pattern is made up of **volleys**, each shooting a number of **bullets*
 
 ## Data
 
-
-
 ## A Simple Pattern
 
 ```json
@@ -195,13 +193,204 @@ Let's expand that line to make it more clear:
 		```
 ## Other Pattern Shapes
 
+Instead of having patterns shoot outward from a central point, you may want to spawn bullets in precise or odd configurations. 
+
+### Custom
+
+Setting the `patternShape` to `Custom` lets you decide the position and orientation of each bullet.
+
+```json hl_lines="2 5 8"
+"1": {
+  "patternShape":"Custom",
+
+  // spawn the bullets in a circle arount the player
+  "customBulletPos": "playerPos + angleToVec((volleyNum / float(numVolleys)) * 360f) * 40f",
+
+  // spawn them aiming towards the player
+  "customBulletAngle":"vecToAngle(playerPos - bulletPos)",
+
+  "numVolleys": 40,
+  "numBulletsInVolley":1,
+  "shootDelay": 0.01,
+  "bullets": [".bullet"],
+  "sfxVolley": "ShootSoftWomp",
+},
+```
+
+<video controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1611b1/2019-08-16_00-05-48.mp4" type="video/mp4"> </video>
+
+### Manual
+
+Setting the `patternType` to `Manual` means the pattern will wait for you to manually call Actions to shoot volleys or end the pattern.
+
+<video controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1611b1/2019-08-16_00-11-35.mp4" type="video/mp4"> </video>
+
+That type of pattern would have been challenging to express as a single `customBulletPos` function, so the actions were called manually.
+
+??? info "Full json file"
+	  ```json hl_lines="3 11 104"
+	  {
+	    "1":{
+	      "patternShape": "Manual",
+	      "properties": {
+	        "size": { "type": "Float", },
+	        "startPos": { "type": "Vector2", },
+	        "pos": { "type": "Vector2", },
+	        "count": { "type": "Int", },
+	        "amount": { "type": "Int", },
+	      },
+	      "behaviour": ".fsm",
+	      "bulletIndex": 0,
+	      "arcAngle": "360f",
+	      "dragBullets": false,
+	      "chargeColor": "color(1f, 0f, 0f) * 10f",
+	      "shootColor": "color(1f, 0f, 0f) * 8f",
+	      "shootColorTime":0.25,
+	      "shootColorEasingType": "QuadIn",
+	      "vibrationStrength":"0.33f",
+	      "maxVibrationDist":10,
+	      "vibrationHorizThreshold":5,
+	      "sfxVolley": "ShootPump",
+	      "numVolleysPerShootSfx": 1,
+	    },
+
+	    // =============================================================================================================================================================================
+	    "bullet": {
+	      "keyframes": [
+	      {
+	        "duration":0.5,
+	        "acceleration":0,
+	        "frictionPercent":0,
+	        "colorA1":{"r":0,"g":0,"b":1,"a":0.9},
+	        "colorA2":{"r":0,"g":0,"b":1,"a":0.7},
+	        "colorB1":{"r":0,"g":0,"b":1,"a":0.8},
+	        "colorB2":{"r":0,"g":0,"b":1,"a":0.6},
+	        "colorC1":{"r":0,"g":0,"b":1,"a":0.8},
+	        "colorC2":{"r":0,"g":0,"b":1,"a":0.6},
+	        "colorBlinkTime":0.5,
+	        "easingType":"QuadOut",
+	        "loopEnd": 1,
+	        "glowA": 6,
+	        "glowB": 6,
+	        "glowC": 6,
+	        "opacity":0,
+	        "facingSpeedPercent": 0.5,
+	        "sprite":"sprites/circle/thinEdge",
+	        "ignorePlayerCollision":true,
+	        "radius":4,
+	      },
+	      {
+	        "duration":1.5,
+	        "frictionPercent":0.035,
+	        "radius": { "mode": "PerUpdate", "value": "1.66f + fastSin(bulletTime * 25f) * map(lifetimeProgress, 0f, 1f, 0f, 0.2f, 'ExpoOut')" },
+	        "glowA": 0.66,
+	        "glowB": 0.33,
+	        "glowC": 0.5,
+	        "loopEnd": 1,
+	        "opacity":0.75,
+	        "ignorePlayerCollision":false,
+	        "colorA1":{"r":1,"g":0.5,"b":0.25,"a":0.9},
+	        "colorA2":{"r":1,"g":0.25,"b":0.25,"a":0.7},
+	        "colorB1":{"r":0.8,"g":0.4,"b":0.25,"a":0.8},
+	        "colorB2":{"r":0.9,"g":0.2,"b":0.25,"a":0.6},
+	        "colorC1":{"r":1,"g":0.25,"b":0.25,"a":0.8},
+	        "colorC2":{"r":1,"g":0,"b":0.25,"a":0.6},
+	      },
+	      {
+	        "duration":0.15,
+	        "colorBlinkTime":0.05,
+	        "glowA": 2.66,
+	        "glowB": 0.33,
+	        "glowC": 0.33,
+	        "colorA1":{"r":1,"g":0.15,"b":0,"a":0.9},
+	        "colorA2":{"r":1,"g":0.25,"b":0,"a":0.8},
+	        "colorB1":{"r":0.8,"g":0.4,"b":0,"a":0.8},
+	        "colorB2":{"r":0.9,"g":0.2,"b":0,"a":0.6},
+	        "colorC1":{"r":1,"g":0.25,"b":0,"a":0.8},
+	        "colorC2":{"r":1,"g":0,"b":0,"a":0.6},
+	        "onKeyframe":[
+	          { "action": "CallMethod", "target":"stage", "method": "PlaySfx", "params": { "sfxType":"InvasionXAttack", "pos":"bulletPos", }},
+	        ],
+	      },
+	      {
+	        "duration":0,
+	        "acceleration":300,
+	        "moveAngle":"vecToAngle(playerPos - bulletPos)",
+	      },
+	      ],
+	      "startSpeed":0,
+	      "lifetime":30,
+	      "shouldLoop":false,
+	      "despawnAfterKeyframes":false,
+	      "depthLevel": "BulletBottom",
+	      "shapeType": "Circle",
+	      "impulseFrictionPercent":0.05,
+	      "despawnTime":0.15,
+	      "useAbsoluteAngles":true,
+	      "circleSkew":0.5,
+	      "circleSkewDist":1,
+	    },
+
+	    // =============================================================================================================================================================================
+	    "fsm": {
+	      "0": [
+	        { "action": "SetValue", "name": "size", "value": 3 },
+	        { "action": "SetValue", "name": "startPos", "value": "playerPos + (playerPos.y < 0f ? vec2(0f, 20f) : vec2(0f, -20f))" },
+	        { "action": "SetValue", "name": "amount", "value": "roundToInt(map(patternNum, 0, 7, 6f, 12f, 'SineInOut'))" },
+
+	        { "action": "SetValue", "name": "pos", "value": "startPos" },
+	        { "action": "SetValue", "name": "count", "value": 0 },
+	        { "action": "Repeat", "count": "amount", "delay": 0.02, "inner": [
+	          { "action": "SetValue", "name": "pos", "value": "pos + rotateAround(vec2(0.7f, 0.7f), (map((nspc * patternNum) % 5, 0, 4, 0f, 45f) + rand.Float(0f, map(patternNum, 0, 6, 0f, 100f))) * (patternNum % 2 == 0 ? -1f : 1f)) * size" },
+	          { "action": "CallMethod", "method": "AddBullet", "params": { "pos": "pos", "path": ".bullet", }}, 
+	          { "action": "CallMethod", "target":"stage", "method": "PlaySfx", "params": { "sfxType":"InvasionXSpawn", "pos":"pos", "pitchModifier":"map(count, 0, float(amount), 0.8f, 1.5f, 'QuadIn')" }},
+	          { "action": "SetValue", "name": "count", "value": "count + 1" },
+	        ]},
+
+	        { "action": "SetValue", "name": "pos", "value": "startPos" },
+	        { "action": "SetValue", "name": "count", "value": 0 },
+	        { "action": "Repeat", "count": "amount", "delay": 0.02, "inner": [
+	          { "action": "SetValue", "name": "pos", "value": "pos + rotateAround(vec2(0.7f, -0.7f), (map((nspc * patternNum) % 5, 0, 4, 0f, 45f) + rand.Float(0f, map(patternNum, 0, 6, 0f, 100f))) * (patternNum % 2 == 0 ? -1f : 1f)) * size" },
+	          { "action": "CallMethod", "method": "AddBullet", "params": { "pos": "pos", "path": ".bullet", }},
+	          { "action": "CallMethod", "target":"stage", "method": "PlaySfx", "params": { "sfxType":"InvasionXSpawn", "pos":"pos", "pitchModifier":"map(count, 0, float(amount), 0.8f, 1.5f, 'QuadIn')" }},
+	          { "action": "SetValue", "name": "count", "value": "count + 1" },
+	        ]},
+
+	        { "action": "SetValue", "name": "pos", "value": "startPos" },
+	        { "action": "SetValue", "name": "count", "value": 0 },
+	        { "action": "Repeat", "count": "amount", "delay": 0.02, "inner": [
+	          { "action": "SetValue", "name": "pos", "value": "pos + rotateAround(vec2(-0.7f, 0.7f), (map((nspc * patternNum) % 5, 0, 4, 0f, 45f) + rand.Float(0f, map(patternNum, 0, 6, 0f, 100f))) * (patternNum % 2 == 0 ? -1f : 1f)) * size" },
+	          { "action": "CallMethod", "method": "AddBullet", "params": { "pos": "pos", "path": ".bullet", }},
+	          { "action": "CallMethod", "target":"stage", "method": "PlaySfx", "params": { "sfxType":"InvasionXSpawn", "pos":"pos", "pitchModifier":"map(count, 0, float(amount), 0.8f, 1.5f, 'QuadIn')" }},
+	          { "action": "SetValue", "name": "count", "value": "count + 1" },
+	        ]},
+
+	        { "action": "SetValue", "name": "pos", "value": "startPos" },
+	        { "action": "SetValue", "name": "count", "value": 0 },
+	        { "action": "Repeat", "count": "amount", "delay": 0.02, "inner": [
+	          { "action": "SetValue", "name": "pos", "value": "pos + rotateAround(vec2(-0.7f, -0.7f), (map((nspc * patternNum) % 5, 0, 4, 0f, 45f) + rand.Float(0f, map(patternNum, 0, 6, 0f, 100f))) * (patternNum % 2 == 0 ? -1f : 1f)) * size" },
+	          { "action": "CallMethod", "method": "AddBullet", "params": { "pos": "pos", "path": ".bullet", }},
+	          { "action": "CallMethod", "target":"stage", "method": "PlaySfx", "params": { "sfxType":"InvasionXSpawn", "pos":"pos", "pitchModifier":"map(count, 0, float(amount), 0.8f, 1.5f, 'QuadIn')" }},
+	          { "action": "SetValue", "name": "count", "value": "count + 1" },
+	        ]},
+
+	        { "action": "CallMethod", "method": "Finish", },
+	      ],
+	    },
+	  }
+	  ```
+
 ## Affecting Child Bullets
 
 ## Visual Effects
 
 ## Callbacks
 
+## Behaviour
+
 ## Params
+
+## Custom Variables
 
 ## Workflow
 

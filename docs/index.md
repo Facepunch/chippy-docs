@@ -10,7 +10,7 @@ Here is the tutorial page: [Tutorials](tutorials.md)
 
 ## Cheatsheet
 
-[Here's](../SpaceUsurper/Stage.md#methods) Stage methods.
+[Here's](../SpaceUsurper/Stage#methods) Stage methods.
 
 ~~Delete me~~
 

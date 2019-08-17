@@ -63,7 +63,7 @@ Property | Summary
 `shapeType` | the shape of the bullet (`Circle`, `Diamond`, or `Rect`)     
 `lifetime` | despawn after this many seconds
 `startSpeed` | spawn with this velocity
-`depthLevel` | the layer to draw the bullet on ([DepthLevel -->](../../SpaceUsurper/DepthLevel.md))
+`depthLevel` | the layer to draw the bullet on ([DepthLevel -->](../../SpaceUsurper/DepthLevel))
 
 ## Keyframes
 
@@ -182,13 +182,13 @@ Keyframe Property | Summary
   	      // ...
   	      "length":2, // default is 0
   	      "crossWidth":1, // default is 0
-  	      "cross":0.33, // default is 0.5
+  	      "crossDistance":0.33, // default is 0.5
   	    },
   	    {
   	      // ...
   	      "length":4,
   	      "crossWidth":1.5,
-  	      "cross":0.66,
+  	      "crossDistance":0.66,
   	    },
     ],
     // ...
@@ -196,14 +196,15 @@ Keyframe Property | Summary
 },
 ```
 
-<img src="https://files.facepunch.com/ryleigh/1b1311b1/Photo_2019-08-13_1_18_22_AM.jpg" width="600"/>
+<!-- <img src="https://files.facepunch.com/ryleigh/1b1311b1/Photo_2019-08-13_1_18_22_AM.jpg" width="600"/> -->
+<img src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1511b1/Photo_2019-08-15_9_23_50_PM.jpg" width="100%"/>
 
 #### Rect
 
 Keyframe Property | Summary
 :----------- |:-------------
-`rectSize` | the width and length of the rectangle - `vec2(width, length)`
-`rectWidthMods` | scaling applied to widths - `vec2(back width scale, front width scale)`
+`rectSize` | the width and length of the rectangle: `vec2(width, length)`
+`rectWidthMods` | scaling applied to widths: `vec2(back width scale, front width scale)`
 
 ```json
 "rectBullet": {
@@ -610,18 +611,189 @@ The end result is that later bullets move faster:
 
 ### PerUpdate Functions
 
-Script functions determine their values once, like a snapshot.
+Normally, script functions determine their values once, like a snapshot.
+
+If you want a keyframe property to be continually updated every frame, you can use a "PerUpdate" function.
 
 ```json
-
+"radius": { "mode": "PerUpdate", "value": "4f + fastSin(bulletTime * 8f) * 0.5f" },
 ```
+Each frame, the bullet will evaluate this function and set the result to its `radius`, causing it to oscillate between `3.5` and `4.5`.<br>
+`bulletTime` returns the amount of time since the bullet spawned.<br>
+`fastSin` is like `sin`, but faster and less accurate.
 
+<video controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1511b1/2019-08-15_18-33-16.mp4" type="video/mp4"> </video>
+
+??? info "Full json file"
+    ```json hl_lines="26"
+    {
+      "1": {
+        "numVolleys": 40,
+        "numBulletsInVolley":3,
+        "shootDelay": "volleyNum % 8 == 0 ? 0.3f : 0.15f",
+        "bullets": [".bullet"],
+        "sfxVolley": "ShootSoftWomp",
+        "rotationSpeed":-50,
+      },
+
+      "bullet": {
+        "keyframes": [
+        {
+          "duration":1,
+          "acceleration":5,
+          "frictionPercent":0.25,
+          "crossDistance":0.66,
+          "sprite":"sprites/circle/simple",
+          "glowA": 0,
+          "glowB": 0.5,
+          "glowC": 0.5,
+          "colorBlinkTime":0.5,
+          "opacity":0,
+          "easingType":"QuadOut",
+          "facingSpeedPercent":0.1,
+          "radius": { "mode": "PerUpdate", "value": "4f + fastSin(bulletTime * 8f) * 0.5f" },
+        },
+        {
+          "duration":0,
+          "acceleration":66,
+          "frictionPercent":0.1,
+          "colorA1":{ "value": {"r":1,"g":0,"b":0.2,"a":0.9}},
+          "colorA2":{ "value": {"r":1,"g":0.05,"b":0.1,"a":0.7}},
+          "colorB1":{ "value": {"r":1,"g":0,"b":0.3,"a":0.8}},
+          "colorB2":{ "value": {"r":1,"g":0,"b":0.6,"a":0.6}},
+          "colorC1":{ "value": {"r":1,"g":0.1,"b":0.2,"a":0.5}},
+          "colorC2":{ "value": {"r":1,"g":0.25,"b":0.2,"a":0.4}},
+          "opacity":1,
+        },
+        ],
+        "startSpeed":200,
+        "lifetime":30,
+        "depthLevel": "Bullet",
+        "shapeType": "Circle",
+        "despawnTime":0.15,
+      },
+    }
+    ```
 
 ## Pixel Collision
 
+If you want a certain bullet to collide with pixels, you must set the non-keyframe property `collideWithPixels` to true.
+
+Generally you'll also want to set a value for the non-keyframe properties `totalPixelDamage` for the amount of damage the bullet has available, and `impactPattern` for the path of a visual effect bullet pattern that will emit when the bullet runs out of damage.
+
+```json
+"pattern": {
+  // ...
+  "bullets": [".bullet"],
+  "hitSelfPixels":true, // by default, bullets fired by enemies dont collide with their own pixels
+},
+
+"bullet": {
+  "keyframes":[ 
+    {
+      "ignorePixelCollision":true, // don't collide with pixels for now
+    },
+    // ...
+    {
+      "moveAngle":180, // move backwards
+      "ignorePixelCollision":false, // re-enable pixel collision
+    },
+  ],
+  "collideWithPixels":true, // bullet is eligible for pixel collision
+  "totalPixelDamage":50,
+  "impactPattern":"misc/pattern/effect/defaultBulletImpact",
+  "despawnStyle":"ShrinkToFront", // shrink forward when despawning
+},
+```
+
+<video controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1511b1/2019-08-15_19-34-17.mp4" type="video/mp4"> </video>
+
+??? info "Full json file"
+    ```json hl_lines="9 29 55 70 71 72"
+    {
+      "1": {
+        "numVolleys": 40,
+        "numBulletsInVolley":3,
+        "shootDelay": "volleyNum % 8 == 0 ? 0.3f : 0.15f",
+        "bullets": [".bullet"],
+        "sfxVolley": "ShootSoftWomp",
+        "rotationSpeed":-50,
+        "hitSelfPixels":true,
+      },
+
+      "bullet": {
+        "keyframes": [
+        {
+          "duration":1,
+          "acceleration":5,
+          "frictionPercent":0.25,
+          "sprite":"sprites/diamond/simple",
+          "glowA": 3,
+          "glowB": 1.5,
+          "glowC": 1.5,
+          "colorBlinkTime":0.5,
+          "opacity":0,
+          "easingType":"QuadOut",
+          "facingSpeedPercent":0.1,
+          "length":7,
+          "crossWidth":3,
+          "crossDistance":0.33,
+          "ignorePixelCollision":true,
+        },
+        {
+          "duration":2,
+          "acceleration":120,
+          "frictionPercent":0.1,
+          "colorA1":{ "value": {"r":1,"g":0,"b":0.2,"a":0.9}},
+          "colorA2":{ "value": {"r":1,"g":0.05,"b":0.1,"a":0.7}},
+          "colorB1":{ "value": {"r":1,"g":0,"b":0.3,"a":0.8}},
+          "colorB2":{ "value": {"r":1,"g":0,"b":0.6,"a":0.6}},
+          "colorC1":{ "value": {"r":1,"g":0.1,"b":0.2,"a":0.5}},
+          "colorC2":{ "value": {"r":1,"g":0.25,"b":0.2,"a":0.4}},
+          "opacity":1,
+          "glowA": 0,
+          "glowB": 0.5,
+          "glowC": 0.5,
+        },
+        {
+          "duration":0.25,
+        },
+        {
+          "moveAngle":180,
+          "acceleration":200,
+          "length":5,
+          "crossWidth":1.5,
+          "crossDistance":0.66,
+          "ignorePixelCollision":false,
+          "colorA1":{ "value": {"r":1,"g":0,"b":0,"a":0.9}},
+          "colorA2":{ "value": {"r":1,"g":0.05,"b":0,"a":0.7}},
+          "colorB1":{ "value": {"r":1,"g":0,"b":0,"a":0.8}},
+          "colorB2":{ "value": {"r":1,"g":0,"b":0,"a":0.6}},
+          "colorC1":{ "value": {"r":1,"g":0.1,"b":0,"a":0.5}},
+          "colorC2":{ "value": {"r":1,"g":0.25,"b":0,"a":0.4}},
+          "colorBlinkTime":0.1,
+        },
+        ],
+        "startSpeed":200,
+        "lifetime":30,
+        "depthLevel": "Bullet",
+        "shapeType": "Diamond",
+        "despawnTime":0.15,
+        "collideWithPixels":true,
+        "totalPixelDamage":50,
+        "impactPattern":"misc/pattern/effect/defaultBulletImpact",
+        "despawnStyle":"ShrinkToFront",
+      },
+    }
+    ```
+
 ## Player Collision
 
+## Child Patterns
+
 ## Visual Effect Bullets
+
+- isStrictlyVisual
 
 ## Callbacks
 
