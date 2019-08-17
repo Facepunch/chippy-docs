@@ -14863,6 +14863,54 @@
 
 
   <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../SpaceUsurper/Stage/Get/" title="Get" class="md-nav__link">
       Get
     </a>
@@ -26790,6 +26838,9 @@
 
     <!-- Content -->
     <h1 id="actions">Actions</h1>
+<p><strong>Actions</strong> are special whitelisted C# methods that can be run from json. </p>
+<p>They can do useful things such as spawning objects, triggering visual effects, changing the size of the arena, and more.</p>
+<p>They can be run from stages, units, bullets, patterns, status effects, and even guns.</p>
 <h2 id="stage-methods">Stage Methods</h2>
 <ul>
 <li>TimeScale</li>
@@ -26800,10 +26851,163 @@
 <li>Vibrate</li>
 </ul>
 <h2 id="state-machine-control">State Machine Control</h2>
+<p>These actions can be used to change the flow through a behaviour state machine.</p>
 <h3 id="wait">Wait</h3>
+<p>Wait for an amount of time before continuing the state machine.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;state 0&quot;</span><span class="err">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Wait&quot;</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span> <span class="p">},</span>  
+<span class="p">]</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>To wait indefinitely, don't provide a value for <code class="codehilite"><span class="n">time</span></code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;state_0&quot;</span><span class="err">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Wait&quot;</span><span class="p">,</span> <span class="p">},</span>  
+<span class="p">]</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only use <code class="codehilite"><span class="k">Wait</span></code> actions in behaviour state machines, not in callbacks like <code class="codehilite"><span class="n">onHitPixel</span></code>, <code class="codehilite"><span class="n">onPlayerHit</span></code>, etc.</p>
+</div>
 <h3 id="condition">Condition</h3>
+<p>Use <code class="codehilite"><span class="n">Condition</span></code> actions like if-else statements, to run certain actions based on the result of a condition function.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;state_1&quot;</span><span class="err">:</span><span class="p">[</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;playerPos.y &gt; 0f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;player&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;Vibrate&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;strength&quot;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span> <span class="p">}},</span>
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Goto&quot;</span><span class="p">,</span> <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;state_2&quot;</span> <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;false&quot;</span><span class="p">:[</span>
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Goto&quot;</span><span class="p">,</span> <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;state_3&quot;</span> <span class="p">},</span>
+        <span class="p">]},</span>
+<span class="p">]</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>You can omit the <code class="codehilite"><span class="k">false</span></code> branch if it's not needed.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;5b&quot;</span><span class="err">:</span><span class="p">[</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;player.GetStatusLevel(&#39;status/passive/shield&#39;) &gt; 0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SpawnPattern&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;octopus/pattern/bubbleGrid.1&quot;</span><span class="p">,</span> <span class="p">}},</span>
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;player&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;Vibrate&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;strength&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="p">}},</span>
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;ShakeCamera&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;strength&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span> <span class="p">}},</span>
+        <span class="p">],},</span>
+<span class="p">]</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
 <h3 id="repeat">Repeat</h3>
+<p>Use the <code class="codehilite"><span class="n">Repeat</span></code> action to loop actions multiple times.</p>
+<p>The <code class="codehilite"><span class="k">count</span></code> parameter controls the number of times to loop the actions.<br>
+The <code class="codehilite"><span class="n">delay</span></code> parameter is the time to wait after each loop.<br>
+The <code class="codehilite"><span class="k">inner</span></code> parameter is the list of actions to loop.<br></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;state_6&quot;</span><span class="err">:</span><span class="p">[</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Repeat&quot;</span><span class="p">,</span> <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="s2">&quot;6 + min(loopNum, 4)&quot;</span><span class="p">,</span> <span class="nt">&quot;delay&quot;</span><span class="p">:</span> <span class="s2">&quot;map(loopNum, 0, 6, 1.5f, 1.25f, &#39;QuadIn&#39;)&quot;</span><span class="p">,</span> <span class="nt">&quot;inner&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;ChargePattern&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;claw/pattern/orbiter.1&quot;</span><span class="p">,</span> <span class="nt">&quot;partType&quot;</span><span class="p">:</span> <span class="s2">&quot;core&quot;</span><span class="p">,</span> <span class="nt">&quot;chargeTime&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;dir&quot;</span><span class="p">:</span><span class="s2">&quot;(playerPos + playerVel * 2f) - partPos&quot;</span><span class="p">,</span> <span class="p">}},</span>
+    <span class="p">]},</span>
+
+    <span class="err">//</span> <span class="err">or</span><span class="p">,</span> <span class="err">spread</span> <span class="err">out</span> <span class="err">for</span> <span class="err">clarity:</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Repeat&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="s2">&quot;6 + min(loopNum, 4)&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;delay&quot;</span><span class="p">:</span> <span class="s2">&quot;map(loopNum, 0, 6, 1.5f, 1.25f, &#39;QuadIn&#39;)&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;inner&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;ChargePattern&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> 
+                <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;claw/pattern/orbiter.1&quot;</span><span class="p">,</span> 
+                <span class="nt">&quot;partType&quot;</span><span class="p">:</span> <span class="s2">&quot;core&quot;</span><span class="p">,</span> <span class="nt">&quot;chargeTime&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> 
+                <span class="nt">&quot;dir&quot;</span><span class="p">:</span><span class="s2">&quot;(playerPos + playerVel * 2f) - partPos&quot;</span><span class="p">,</span> 
+            <span class="p">}},</span>
+        <span class="p">]},</span>
+<span class="p">]</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
 <h3 id="switch">Switch</h3>
+<p>Use a <code class="codehilite"><span class="n">Switch</span></code> action when your branching logic has too many conditions.</p>
+<p>The <code class="codehilite"><span class="n">value</span></code> parameter should be an Int variable.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;attack_num&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Int&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="mi">1</span> <span class="p">},</span>
+    <span class="p">},</span>
+
+    <span class="err">//</span> <span class="err">...</span>
+
+    <span class="nt">&quot;fsm&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;form0&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;choose_next_attack&quot;</span><span class="p">:[</span>
+                <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Switch&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;attack_num&quot;</span><span class="p">,</span> <span class="nt">&quot;cases&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Log&quot;</span><span class="p">,</span> <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Shoot small attack!&quot;</span><span class="p">,</span> <span class="p">},],</span>
+                    <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Log&quot;</span><span class="p">,</span> <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Shoot medium attack!!&quot;</span><span class="p">,</span> <span class="p">},],</span>
+                    <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Log&quot;</span><span class="p">,</span> <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Shoot big attack!!!&quot;</span><span class="p">,</span> <span class="p">},</span>
+                        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;PlaySfx&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;sfxType&quot;</span><span class="p">:</span><span class="s2">&quot;BombExplode&quot;</span><span class="p">,</span> <span class="nt">&quot;pos&quot;</span><span class="p">:</span><span class="s2">&quot;unitPos&quot;</span><span class="p">,</span> <span class="p">}},</span>                
+                    <span class="p">],</span>
+                <span class="p">}},</span>
+            <span class="p">],</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <h3 id="goto">Goto</h3>
 <h3 id="yield">Yield</h3>
 <h2 id="setvalue">SetValue</h2>

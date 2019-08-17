@@ -381,15 +381,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overriding-default-player" title="Overriding Default Player" class="md-nav__link">
-    Overriding Default Player
+  <a href="#config" title="Config" class="md-nav__link">
+    Config
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#config" title="Config" class="md-nav__link">
-    Config
+  <a href="#overriding-default-player" title="Overriding Default Player" class="md-nav__link">
+    Overriding Default Player
   </a>
   
     <nav class="md-nav">
@@ -404,6 +404,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behaviour" title="Behaviour" class="md-nav__link">
+    Behaviour
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-variables" title="Custom Variables" class="md-nav__link">
+    Custom Variables
+  </a>
   
 </li>
       
@@ -14848,6 +14862,54 @@
 
 
   <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../SpaceUsurper/Stage/Get/" title="Get" class="md-nav__link">
       Get
     </a>
@@ -26669,15 +26731,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overriding-default-player" title="Overriding Default Player" class="md-nav__link">
-    Overriding Default Player
+  <a href="#config" title="Config" class="md-nav__link">
+    Config
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#config" title="Config" class="md-nav__link">
-    Config
+  <a href="#overriding-default-player" title="Overriding Default Player" class="md-nav__link">
+    Overriding Default Player
   </a>
   
     <nav class="md-nav">
@@ -26692,6 +26754,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behaviour" title="Behaviour" class="md-nav__link">
+    Behaviour
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-variables" title="Custom Variables" class="md-nav__link">
+    Custom Variables
+  </a>
   
 </li>
       
@@ -26761,9 +26837,33 @@
     <!-- Content -->
     <h1 id="player">Player</h1>
 <h2 id="spawning">Spawning</h2>
-<h2 id="overriding-default-player">Overriding Default Player</h2>
+<p>In the stage config, you can declare a <code class="codehilite"><span class="n">player</span></code> structure with the data path and position of the player ship.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;player&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;player/defaultPlayer&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;spawnPos&quot;</span><span class="p">:</span> <span class="s2">&quot;vec2(0f, -40f)&quot;</span><span class="p">,</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
 <h2 id="config">Config</h2>
+<h2 id="overriding-default-player">Overriding Default Player</h2>
+<p>To create a custom player that only changes certain things, you can <code class="codehilite">#<span class="k">include</span></code> the default player and override specific properties.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;#include&quot;</span><span class="p">:</span><span class="s2">&quot;player/defaultPlayer&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;gun&quot;</span><span class="p">:</span><span class="s2">&quot;player/gun/double&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">override</span> <span class="err">the</span> <span class="err">default</span> <span class="err">gun</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <h3 id="body">Body</h3>
+<h2 id="behaviour">Behaviour</h2>
+<h2 id="custom-variables">Custom Variables</h2>
 <h2 id="params">Params</h2>
 <h2 id="guns">Guns</h2>
 <h3 id="gun-params">Gun Params</h3>

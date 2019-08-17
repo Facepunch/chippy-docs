@@ -471,6 +471,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#child-patterns" title="Child Patterns" class="md-nav__link">
+    Child Patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#visual-effect-bullets" title="Visual Effect Bullets" class="md-nav__link">
     Visual Effect Bullets
   </a>
@@ -14972,6 +14979,54 @@
 
 
   <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../SpaceUsurper/Stage/Get/" title="Get" class="md-nav__link">
       Get
     </a>
@@ -26943,6 +26998,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#child-patterns" title="Child Patterns" class="md-nav__link">
+    Child Patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#visual-effect-bullets" title="Visual Effect Bullets" class="md-nav__link">
     Visual Effect Bullets
   </a>
@@ -27112,7 +27174,7 @@ When referencing this bullet from a different file, the <code class="codehilite"
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">depthLevel</span></code></td>
-<td align="left">the layer to draw the bullet on (<a href="../../SpaceUsurper/DepthLevel.md">DepthLevel &rarr;</a>)</td>
+<td align="left">the layer to draw the bullet on (<a href="../../SpaceUsurper/DepthLevel">DepthLevel &rarr;</a>)</td>
 </tr>
 </tbody>
 </table>
@@ -27350,13 +27412,13 @@ When referencing this bullet from a different file, the <code class="codehilite"
           <span class="err">//</span> <span class="err">...</span>
           <span class="nt">&quot;length&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="err">//</span> <span class="err">default</span> <span class="err">is</span> <span class="err">0</span>
           <span class="nt">&quot;crossWidth&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="err">//</span> <span class="err">default</span> <span class="err">is</span> <span class="err">0</span>
-          <span class="nt">&quot;cross&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">,</span> <span class="err">//</span> <span class="err">default</span> <span class="err">is</span> <span class="err">0.5</span>
+          <span class="nt">&quot;crossDistance&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">,</span> <span class="err">//</span> <span class="err">default</span> <span class="err">is</span> <span class="err">0.5</span>
         <span class="p">},</span>
         <span class="p">{</span>
           <span class="err">//</span> <span class="err">...</span>
           <span class="nt">&quot;length&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
           <span class="nt">&quot;crossWidth&quot;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">,</span>
-          <span class="nt">&quot;cross&quot;</span><span class="p">:</span><span class="mf">0.66</span><span class="p">,</span>
+          <span class="nt">&quot;crossDistance&quot;</span><span class="p">:</span><span class="mf">0.66</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">],</span>
     <span class="err">//</span> <span class="err">...</span>
@@ -27365,7 +27427,9 @@ When referencing this bullet from a different file, the <code class="codehilite"
 </pre></div>
 </td></tr></table>
 
-<p><img src="https://files.facepunch.com/ryleigh/1b1311b1/Photo_2019-08-13_1_18_22_AM.jpg" width="600"/></p>
+<!-- <img src="https://files.facepunch.com/ryleigh/1b1311b1/Photo_2019-08-13_1_18_22_AM.jpg" width="600"/> -->
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1511b1/Photo_2019-08-15_9_23_50_PM.jpg" width="100%"/></p>
 <h4 id="rect">Rect</h4>
 <table>
 <thead>
@@ -27377,11 +27441,11 @@ When referencing this bullet from a different file, the <code class="codehilite"
 <tbody>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">rectSize</span></code></td>
-<td align="left">the width and length of the rectangle - <code class="codehilite"><span class="n">vec2</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="k">length</span><span class="p">)</span></code></td>
+<td align="left">the width and length of the rectangle: <code class="codehilite"><span class="n">vec2</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="k">length</span><span class="p">)</span></code></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">rectWidthMods</span></code></td>
-<td align="left">scaling applied to widths - <code class="codehilite"><span class="n">vec2</span><span class="p">(</span><span class="n">back</span> <span class="n">width</span> <span class="k">scale</span><span class="p">,</span> <span class="n">front</span> <span class="n">width</span> <span class="k">scale</span><span class="p">)</span></code></td>
+<td align="left">scaling applied to widths: <code class="codehilite"><span class="n">vec2</span><span class="p">(</span><span class="n">back</span> <span class="n">width</span> <span class="k">scale</span><span class="p">,</span> <span class="n">front</span> <span class="n">width</span> <span class="k">scale</span><span class="p">)</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -28028,14 +28092,323 @@ Its color and size changes too.</p>
 
 </details>
 <h3 id="perupdate-functions">PerUpdate Functions</h3>
-<p>Script functions determine their values once, like a snapshot.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>
+<p>Normally, script functions determine their values once, like a snapshot.</p>
+<p>If you want a keyframe property to be continually updated every frame, you can use a "PerUpdate" function.</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;radius&quot;</span><span class="err">:</span> <span class="p">{</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;PerUpdate&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;4f + fastSin(bulletTime * 8f) * 0.5f&quot;</span> <span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+Each frame, the bullet will evaluate this function and set the result to its <code class="codehilite"><span class="n">radius</span></code>, causing it to oscillate between <code class="codehilite"><span class="mi">3</span><span class="p">.</span><span class="mi">5</span></code> and <code class="codehilite"><span class="mi">4</span><span class="p">.</span><span class="mi">5</span></code>.<br>
+<code class="codehilite"><span class="n">bulletTime</span></code> returns the amount of time since the bullet spawned.<br>
+<code class="codehilite"><span class="n">fastSin</span></code> is like <code class="codehilite"><span class="n">sin</span></code>, but faster and less accurate.</p>
+<video controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1511b1/2019-08-15_18-33-16.mp4" type="video/mp4"> </video>
+
+<details class="info"><summary>Full json file</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;numVolleys&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+    <span class="nt">&quot;numBulletsInVolley&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;shootDelay&quot;</span><span class="p">:</span> <span class="s2">&quot;volleyNum % 8 == 0 ? 0.3f : 0.15f&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bullets&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.bullet&quot;</span><span class="p">],</span>
+    <span class="nt">&quot;sfxVolley&quot;</span><span class="p">:</span> <span class="s2">&quot;ShootSoftWomp&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rotationSpeed&quot;</span><span class="p">:</span><span class="mi">-50</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="nt">&quot;bullet&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;keyframes&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;acceleration&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;frictionPercent&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span>
+      <span class="nt">&quot;crossDistance&quot;</span><span class="p">:</span><span class="mf">0.66</span><span class="p">,</span>
+      <span class="nt">&quot;sprite&quot;</span><span class="p">:</span><span class="s2">&quot;sprites/circle/simple&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;glowA&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;glowB&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+      <span class="nt">&quot;glowC&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+      <span class="nt">&quot;colorBlinkTime&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span>
+      <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;easingType&quot;</span><span class="p">:</span><span class="s2">&quot;QuadOut&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;facingSpeedPercent&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span>
+<span class="hll">      <span class="nt">&quot;radius&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;PerUpdate&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;4f + fastSin(bulletTime * 8f) * 0.5f&quot;</span> <span class="p">},</span>
+</span>    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;acceleration&quot;</span><span class="p">:</span><span class="mi">66</span><span class="p">,</span>
+      <span class="nt">&quot;frictionPercent&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span>
+      <span class="nt">&quot;colorA1&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.2</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.9</span><span class="p">}},</span>
+      <span class="nt">&quot;colorA2&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.7</span><span class="p">}},</span>
+      <span class="nt">&quot;colorB1&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.3</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.8</span><span class="p">}},</span>
+      <span class="nt">&quot;colorB2&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.6</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.6</span><span class="p">}},</span>
+      <span class="nt">&quot;colorC1&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.2</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">}},</span>
+      <span class="nt">&quot;colorC2&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.2</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.4</span><span class="p">}},</span>
+      <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;startSpeed&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span>
+    <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span>
+    <span class="nt">&quot;depthLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;Bullet&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;shapeType&quot;</span><span class="p">:</span> <span class="s2">&quot;Circle&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;despawnTime&quot;</span><span class="p">:</span><span class="mf">0.15</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
+</details>
 <h2 id="pixel-collision">Pixel Collision</h2>
+<p>If you want a certain bullet to collide with pixels, you must set the non-keyframe property <code class="codehilite"><span class="n">collideWithPixels</span></code> to true.</p>
+<p>Generally you'll also want to set a value for the non-keyframe properties <code class="codehilite"><span class="n">totalPixelDamage</span></code> for the amount of damage the bullet has available, and <code class="codehilite"><span class="n">impactPattern</span></code> for the path of a visual effect bullet pattern that will emit when the bullet runs out of damage.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;pattern&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="err">//</span> <span class="err">...</span>
+  <span class="nt">&quot;bullets&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.bullet&quot;</span><span class="p">],</span>
+  <span class="nt">&quot;hitSelfPixels&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">by</span> <span class="err">default,</span> <span class="err">bullets</span> <span class="err">fired</span> <span class="err">by</span> <span class="err">enemies</span> <span class="err">dont</span> <span class="err">collide</span> <span class="err">with</span> <span class="err">their</span> <span class="err">own</span> <span class="err">pixels</span>
+<span class="p">}</span><span class="err">,</span>
+
+<span class="s2">&quot;bullet&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="nt">&quot;keyframes&quot;</span><span class="p">:[</span> 
+    <span class="p">{</span>
+      <span class="nt">&quot;ignorePixelCollision&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">don&#39;t</span> <span class="err">collide</span> <span class="err">with</span> <span class="err">pixels</span> <span class="err">for</span> <span class="err">now</span>
+    <span class="p">},</span>
+    <span class="err">//</span> <span class="err">...</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;moveAngle&quot;</span><span class="p">:</span><span class="mi">180</span><span class="p">,</span> <span class="err">//</span> <span class="err">move</span> <span class="err">backwards</span>
+      <span class="nt">&quot;ignorePixelCollision&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span> <span class="err">//</span> <span class="err">re-enable</span> <span class="err">pixel</span> <span class="err">collision</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;collideWithPixels&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">bullet</span> <span class="err">is</span> <span class="err">eligible</span> <span class="err">for</span> <span class="err">pixel</span> <span class="err">collision</span>
+  <span class="nt">&quot;totalPixelDamage&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span>
+  <span class="nt">&quot;impactPattern&quot;</span><span class="p">:</span><span class="s2">&quot;misc/pattern/effect/defaultBulletImpact&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;despawnStyle&quot;</span><span class="p">:</span><span class="s2">&quot;ShrinkToFront&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">shrink</span> <span class="err">forward</span> <span class="err">when</span> <span class="err">despawning</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<video controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1511b1/2019-08-15_19-34-17.mp4" type="video/mp4"> </video>
+
+<details class="info"><summary>Full json file</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;numVolleys&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+    <span class="nt">&quot;numBulletsInVolley&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;shootDelay&quot;</span><span class="p">:</span> <span class="s2">&quot;volleyNum % 8 == 0 ? 0.3f : 0.15f&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bullets&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.bullet&quot;</span><span class="p">],</span>
+    <span class="nt">&quot;sfxVolley&quot;</span><span class="p">:</span> <span class="s2">&quot;ShootSoftWomp&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rotationSpeed&quot;</span><span class="p">:</span><span class="mi">-50</span><span class="p">,</span>
+<span class="hll">    <span class="nt">&quot;hitSelfPixels&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+</span>  <span class="p">},</span>
+
+  <span class="nt">&quot;bullet&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;keyframes&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;acceleration&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;frictionPercent&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span>
+      <span class="nt">&quot;sprite&quot;</span><span class="p">:</span><span class="s2">&quot;sprites/diamond/simple&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;glowA&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="nt">&quot;glowB&quot;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span>
+      <span class="nt">&quot;glowC&quot;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span>
+      <span class="nt">&quot;colorBlinkTime&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span>
+      <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;easingType&quot;</span><span class="p">:</span><span class="s2">&quot;QuadOut&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;facingSpeedPercent&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span>
+      <span class="nt">&quot;length&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span>
+      <span class="nt">&quot;crossWidth&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+      <span class="nt">&quot;crossDistance&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">,</span>
+<span class="hll">      <span class="nt">&quot;ignorePixelCollision&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+</span>    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;acceleration&quot;</span><span class="p">:</span><span class="mi">120</span><span class="p">,</span>
+      <span class="nt">&quot;frictionPercent&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span>
+      <span class="nt">&quot;colorA1&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.2</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.9</span><span class="p">}},</span>
+      <span class="nt">&quot;colorA2&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.7</span><span class="p">}},</span>
+      <span class="nt">&quot;colorB1&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.3</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.8</span><span class="p">}},</span>
+      <span class="nt">&quot;colorB2&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.6</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.6</span><span class="p">}},</span>
+      <span class="nt">&quot;colorC1&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.2</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">}},</span>
+      <span class="nt">&quot;colorC2&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.2</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.4</span><span class="p">}},</span>
+      <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;glowA&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;glowB&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+      <span class="nt">&quot;glowC&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;moveAngle&quot;</span><span class="p">:</span><span class="mi">180</span><span class="p">,</span>
+      <span class="nt">&quot;acceleration&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span>
+      <span class="nt">&quot;length&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;crossWidth&quot;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">,</span>
+      <span class="nt">&quot;crossDistance&quot;</span><span class="p">:</span><span class="mf">0.66</span><span class="p">,</span>
+<span class="hll">      <span class="nt">&quot;ignorePixelCollision&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+</span>      <span class="nt">&quot;colorA1&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.9</span><span class="p">}},</span>
+      <span class="nt">&quot;colorA2&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.7</span><span class="p">}},</span>
+      <span class="nt">&quot;colorB1&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.8</span><span class="p">}},</span>
+      <span class="nt">&quot;colorB2&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.6</span><span class="p">}},</span>
+      <span class="nt">&quot;colorC1&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">}},</span>
+      <span class="nt">&quot;colorC2&quot;</span><span class="p">:{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.4</span><span class="p">}},</span>
+      <span class="nt">&quot;colorBlinkTime&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;startSpeed&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span>
+    <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span>
+    <span class="nt">&quot;depthLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;Bullet&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;shapeType&quot;</span><span class="p">:</span> <span class="s2">&quot;Diamond&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;despawnTime&quot;</span><span class="p">:</span><span class="mf">0.15</span><span class="p">,</span>
+<span class="hll">    <span class="nt">&quot;collideWithPixels&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+</span><span class="hll">    <span class="nt">&quot;totalPixelDamage&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span>
+</span><span class="hll">    <span class="nt">&quot;impactPattern&quot;</span><span class="p">:</span><span class="s2">&quot;misc/pattern/effect/defaultBulletImpact&quot;</span><span class="p">,</span>
+</span>    <span class="nt">&quot;despawnStyle&quot;</span><span class="p">:</span><span class="s2">&quot;ShrinkToFront&quot;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+</details>
 <h2 id="player-collision">Player Collision</h2>
+<h2 id="child-patterns">Child Patterns</h2>
 <h2 id="visual-effect-bullets">Visual Effect Bullets</h2>
+<ul>
+<li>isStrictlyVisual</li>
+</ul>
 <h2 id="callbacks">Callbacks</h2>
 <h2 id="params">Params</h2>
 <h2 id="floating-text">Floating Text</h2>

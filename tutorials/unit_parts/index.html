@@ -350,8 +350,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cores" title="Cores" class="md-nav__link">
-    Cores
+  <a href="#config" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#placing" title="Placing" class="md-nav__link">
+    Placing
   </a>
   
 </li>
@@ -377,8 +384,62 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#callbacks" title="Callbacks" class="md-nav__link">
+    Callbacks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#params" title="Params" class="md-nav__link">
     Params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cores" title="Cores" class="md-nav__link">
+    Cores
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config_1" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprites" title="Sprites" class="md-nav__link">
+    Sprites
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config_2" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-rectangle-parts" title="Non-Rectangle Parts" class="md-nav__link">
+    Non-Rectangle Parts
   </a>
   
 </li>
@@ -14814,6 +14875,54 @@
 
 
   <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
+      DrawText
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../SpaceUsurper/Stage/Get/" title="Get" class="md-nav__link">
       Get
     </a>
@@ -26628,8 +26737,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cores" title="Cores" class="md-nav__link">
-    Cores
+  <a href="#config" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#placing" title="Placing" class="md-nav__link">
+    Placing
   </a>
   
 </li>
@@ -26655,8 +26771,62 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#callbacks" title="Callbacks" class="md-nav__link">
+    Callbacks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#params" title="Params" class="md-nav__link">
     Params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cores" title="Cores" class="md-nav__link">
+    Cores
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config_1" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprites" title="Sprites" class="md-nav__link">
+    Sprites
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config_2" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-rectangle-parts" title="Non-Rectangle Parts" class="md-nav__link">
+    Non-Rectangle Parts
   </a>
   
 </li>
@@ -26692,10 +26862,33 @@
 
     <!-- Content -->
     <h1 id="unit-parts">Unit Parts</h1>
-<h2 id="cores">Cores</h2>
+<p>A section of pixels can be grouped together as a "part" or "pixelgroup". Parts have a single health pool and can only be destroyed as a whole.</p>
+<h2 id="config">Config</h2>
+<ul>
+<li>corePath</li>
+<li>spritePath</li>
+<li>hp</li>
+</ul>
+<h2 id="placing">Placing</h2>
+<ul>
+<li>size</li>
+<li>placements</li>
+<li>different sizes for same core</li>
+</ul>
 <h2 id="requirements">Requirements</h2>
 <h3 id="ropes">Ropes</h3>
+<h2 id="callbacks">Callbacks</h2>
+<ul>
+<li>onHit</li>
+<li>onHitProtected</li>
+<li>onDestroy</li>
+</ul>
 <h2 id="params">Params</h2>
+<h2 id="cores">Cores</h2>
+<h3 id="config_1">Config</h3>
+<h2 id="sprites">Sprites</h2>
+<h3 id="config_2">Config</h3>
+<h2 id="non-rectangle-parts">Non-Rectangle Parts</h2>
 
     <!-- Source files -->
     
