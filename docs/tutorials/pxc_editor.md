@@ -232,6 +232,6 @@ On the far right of the toolbar:<br>
 Press ` / ` to toggle diamond-shaped canvas.<br>
 Press `FLT` to flatten all layers.<br>
 Press ` # ` to toggle grid lines.<br>
-Press ` = ` to toggle showing selected pixel ranges.<br>
+Press ` = ` or use ++"Middle Mouse"++ to toggle showing selected pixel ranges.<br>
 <img src="https://files.facepunch.com/ryleigh/1b1911b1/PxcEditor_2019-08-19_20-54-40.png" /><br>
 

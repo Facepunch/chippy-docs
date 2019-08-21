@@ -67,6 +67,7 @@ Property | Summary
 
 ## Keyframes
 
+
 Bullets have one or more keyframes, containing properties you can change over time.
 
 ???+ example "Diamond pattern example"
@@ -797,9 +798,59 @@ Generally you'll also want to set a value for the non-keyframe properties `total
 
 ## Callbacks
 
+You may want to call Actions at certain points during a bullet's lifetime.
+
+```json
+"pattern":{
+  "keyframes": [ 
+    // ... 
+  ],
+  // ...
+  "onStart":[
+    // called when the bullet spawns
+    { "action": "CallMethod", "target":"stage", "method": "ShakeCamera", "params": { "strength": 3, "time": 0.5, "easingType": "QuadOut" }},
+  ],    
+
+  "onHitPlayer":[
+    // called when the bullet hits a player
+    // (if onHitPlayer is declared, the bullet won't automatically damage the player like it normally does)
+  ],
+
+  "onUpdate":[ /* called each frame the bullet is active */ ],
+  "onHitPixel":[ /* called when the bullet hits a pixel and fails to destroy it */ ],
+  "onDestroyPixel":[ /* called when the bullet destroys a pixel and still has damage remaining */ ],
+  "onHitPart":[ /* called when the bullet hits a part */ ],
+  "onHitPartProtected":[ /* called when the bullet hits a part that is shielded by another part */ ],
+  "onLifetimeFinished":[ /* called when the bullet's lifetime elapses */ ],
+  "onRemove":[ /* called when the bullet finishes despawning */ ],
+  "onOutOfBounds":[ /* called when the bullet leaves the arena bounds */ ],
+},
+```
+
+Some of the callbacks set the values of useful properties when they call their actions.<br>
+
+`onHitPixel`, `onDestroyPixel`, `onHitPart`, and `onHitPartProtected` set the following properties:
+
+Property | Summary
+:----------- |:-------------
+`hitPos` | the position of the collision
+`hitNormal` | the normal of the collision (the direction the hit pixel's edge was facing)
+`hitPixel` | the PixelData of the hit pixel
+`hitPart` | the PixelGroup of the hit pixel (only set for `onHitPart` and `onHitPartProtected`)
+`hitUnit` | the Unit that owns the hit pixel
+
+`onOutOfBounds` sets the following properties:
+
+Property | Summary
+:----------- |:-------------
+`outOfBoundsPos` | the position where the bullet left bounds
+`outOfBoundsNormal` | the normal of the arena edge the bullet passed (eg, `vec2(-1f, 0f)` for the right edge)
+
 ## Params
 
 ## Floating Text
+
+## Other Volley Bullets
 
 ## Debugging
 

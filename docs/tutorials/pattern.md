@@ -382,9 +382,246 @@ That type of pattern would have been challenging to express as a single `customB
 
 ## Affecting Child Bullets
 
+Patterns have their own position and angle, and their movement can be applied to bullets they've fired.
+
+```json
+"childPattern": {
+	// ...
+	"dragBullets": true, // affect bullet position as pattern position changes
+	"rotateBullets": true, // affect bullet position as pattern rotation changes
+	"rotateBulletAngles":true, // affect bullet rotation as pattern rotation changes
+	"waitForBulletsToDespawn":true, // dont despawn until all bullets have despawned
+},
+```
+
+<video controls> <source src="https://files.facepunch.com/ryleigh/1b2011b1/2019-08-20_16-12-32.mp4" type="video/mp4"> </video>
+
+On the left, `dragBullets` is true.<br>
+In the center, `dragBullets` and `rotateBullets` are true.<br>
+On the right,  `dragBullets` and `rotateBullets` and `rotateBulletAngles` are true.<br>
+
+<img src="https://files.facepunch.com/ryleigh/1b2011b1/Chippy_2019-08-20_18-49-15.png"/><br>
+To produce the attack in the image above:
+> 1) A very simple pattern shoots the faded blue bullet, then the pattern despawns
+
+> 2) On its first keyframe, the blue bullet shoots a second pattern and anchors it to itself
+
+> 3) The second pattern fires the red diamond bullets, and drags them along as the blue bullet drags *it*
+
+??? info "Full json file"
+	```json
+	{
+		"1":{
+			"patternShape": "Spokes",
+			"numVolleys": 1,
+			"numBulletsInVolley": "1",
+			"shootDelay": "0f",
+			"rotationSpeed": "-80f - ((patternNum % 3) * 20f)",
+			"arcAngle": "360f",
+			"bullets": [".parentBullet1"],
+			"dragBullets": false,
+			"chargeColor":"color(1f, 0f, 0f) * 8f",
+			"shootColor":"color(1f, 0f, 0f) * 10f",
+			"shootColorTime":0.25,
+			"shootColorEasingType": "QuadIn",
+			"vibrationStrength":"0.33f",
+			"maxVibrationDist":10,
+			"vibrationHorizThreshold":5,
+			"sfxCharge":"OctopusF1OrbCharge",
+			"sfxVolley": "OctopusF1OrbShoot",
+			"numVolleysPerShootSfx": 1,
+		},
+
+		"2":{
+			"#include":".1",
+			"bullets": [".parentBullet2"],
+		},
+
+		"3":{
+			"#include":".1",
+			"bullets": [".parentBullet3"],
+		},
+		
+		"parentBullet1": {
+			"keyframes": [
+			{
+			"duration":0,
+			"acceleration":6,
+			"frictionPercent":0.025,
+			"opacity":0.2,
+			"radius":5,
+			"sprite":"sprites/circle/simple",
+			"colorA1":{"r":1,"g":0,"b":1,"a":0.9},
+			"colorA2":{"r":1,"g":0,"b":1,"a":0.8},
+			"colorB1":{"r":0,"g":0,"b":1,"a":0.33},
+			"colorB2":{"r":0,"g":0,"b":1,"a":0.5},
+			"colorC1":{"r":1,"g":0.33,"b":1,"a":0.5},
+			"colorC2":{"r":1,"g":0.22,"b":1,"a":0.66},
+			"onKeyframe":[{ "action": "CallMethod", "method": "AddPattern", "params": { "path": ".childPattern1", }},],
+			},
+			],
+			"startSpeed":0,
+			"lifetime":200,
+			"shouldLoop":false,
+			"despawnAfterKeyframes":false,
+			"depthLevel": "Bullet",
+			"shapeType": "Circle",
+			"despawnTime":0.05,
+			"outOfBoundsRadiusFactor":5,
+			"mass":2,
+			"ignorePlayerCollision":true,
+		},
+
+		"parentBullet2":{
+			"#include":".parentBullet1",
+			"keyframes": [
+				{
+				"#include": ".parentBullet1.keyframes[0]",
+				"onKeyframe":[{ "action": "CallMethod", "method": "AddPattern", "params": { "path": ".childPattern2", }},],
+				},
+			],
+		},
+
+		"parentBullet3":{
+			"#include":".parentBullet1",
+			"keyframes": [
+				{
+				"#include": ".parentBullet1.keyframes[0]",
+				"onKeyframe":[{ "action": "CallMethod", "method": "AddPattern", "params": { "path": ".childPattern3", }},],
+				},
+			],
+		},
+
+		"childPattern1": {
+			"patternShape": "Custom",
+			"numVolleys": 1,
+			"numBulletsInVolley": "5",
+			"customBulletPos": "patternPos + vec2(0f, 1f) * bulletNum * 5f",
+			"customBulletAngle": 0,
+			"shootDelay": "0f",
+			"bulletIndex": 0,
+			"rotationSpeed": "-50f",
+			"arcAngle": "360f",
+			"bullets": [".childBullet"],
+			"dragBullets": true,  
+			"rotateBullets": false,
+			"rotateBulletAngles":false,
+			"waitForBulletsToDespawn":true,
+			"constantRotation":true,
+			"chargeColor":"color(1f, 0f, 0f) * 8f",
+			"shootColor":"color(1f, 0f, 0f) * 10f",
+			"shootColorTime":0.25,
+			"shootColorEasingType": "QuadIn",
+			"vibrationStrength":"0.33f",
+			"maxVibrationDist":10,
+			"vibrationHorizThreshold":5,
+			"sfxVolley": "ShipShoot",
+			"numVolleysPerShootSfx": 1,
+			"debugVector":"patternDir * 5f",
+		},
+
+		"childPattern2":{
+			"#include":".childPattern1",
+			"dragBullets": true,  
+			"rotateBullets": true,
+			"rotateBulletAngles":false,
+		},
+
+		"childPattern3":{
+			"#include":".childPattern1",
+			"dragBullets": true,  
+			"rotateBullets": true,
+			"rotateBulletAngles":true,
+		},
+
+		"childBullet": {
+			"keyframes": [
+			{
+			"duration":0.5,
+			"frictionPercent":0.05,
+			"colorA1":{"r":1,"g":0,"b":0.1,"a":0.9},
+			"colorA2":{"r":1,"g":0,"b":0.05,"a":0.8},
+			"colorB1":{"r":0,"g":0,"b":0.075,"a":0.33},
+			"colorB2":{"r":0,"g":0,"b":0.1,"a":0.5},
+			"colorC1":{"r":1,"g":0.33,"b":0,"a":0.5},
+			"colorC2":{"r":1,"g":0.22,"b":0,"a":0.66},
+			"colorBlinkTime":0.5,
+			"easingType":"ExpoOut",
+			"loopEnd": 1,
+			"glowA": 8,
+			"glowB": 8,
+			"glowC": 8,
+			"opacity":0,
+			"sprite":"sprites/diamond/simple",
+			},
+			{
+			"duration":2,
+			"length":5,
+			"crossWidth":4,
+			"crossDistance":0.66,
+			"easingType":"ExpoInOut",
+			"glowA": 3.75,
+			"glowB": 0.33,
+			"glowC": 0.33,
+			"opacity":1,
+			},
+			],
+			"startSpeed":0,
+			"lifetime":200,
+			"shouldLoop":false,
+			"despawnAfterKeyframes":false,
+			"depthLevel": "Bullet",
+			"shapeType": "Diamond",
+			"despawnTime":1,
+			"mass":99,
+			"anchored":true,
+		},
+	}
+	```
+
+### Linking Volley Bullets
+
+A pattern can choose to **link** all bullets in a volley.
+
+```json
+"linkedPattern": {
+	"linkVolleyBullets":true,
+},
+```
+
+If one linked bullet despawns, all other bullets in the linked volley will despawn - this is useful for powerup patterns, among other things.
+
 ## Visual Effects
 
+Patterns can declare another pattern to be spawned as their "shoot effect":
+
+```json
+"attack":{
+	// ...
+	"shootEffectPattern": "misc/pattern/shoot/fanRedRound",
+},
+```
+
+This will spawn the effect at the position of the shooting pattern, and pointed in the same direction.
+
 ## Callbacks
+
+You may want to call Actions at certain points during a pattern.
+
+```json
+"pattern":{
+	// ...
+	"onStart":[
+		// called when the pattern begins
+		{ "action": "CallMethod", "target":"stage", "method": "ShakeCamera", "params": { "strength": 2, "time": 0.75, "easingType": "QuadOut" }},
+	],    
+
+	"onVolley":[ /* called when the pattern starts a volley */ ],
+	"onBullet":[ /* called when the pattern fires a bullet */ ],
+	"onUpdate":[ /* called each frame the pattern is active */ ],
+	"onFinish":[ /* called when the pattern despawns */ ],
+},
+```
 
 ## Behaviour
 
