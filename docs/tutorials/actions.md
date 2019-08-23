@@ -6,15 +6,6 @@ They can do useful things such as spawning objects, triggering visual effects, c
 
 They can be run from stages, units, bullets, patterns, status effects, and even guns.
 
-## Stage Methods
-
-- TimeScale
-- Shake Camera
-
-## Player Methods
-
-- Vibrate
-
 ## State Machine Control
 
 These actions can be used to change the flow through a behaviour state machine.
@@ -134,6 +125,19 @@ The `value` parameter should be an Int variable.
 ### Yield
 
 ## SetValue
+
+## Stage Methods
+
+- TimeScale
+- Shake Camera
+
+## Player Methods
+
+- Vibrate
+
+## Unit Methods
+
+- Respawn Pixels
 
 ## Subroutines
 

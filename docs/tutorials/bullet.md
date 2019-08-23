@@ -852,6 +852,18 @@ Property | Summary
 
 ## Other Volley Bullets
 
+Bullets can ask for information on other bullets fired in the same volley.
+
+The following statement will get the position of the next bullet in the volley:
+```json
+"bullet.GetVolleyBullet(bulletNum + 1).Position"
+```
+
+Bullets can get a reference to **themselves** with the `bullet` property.<br>
+
 ## Debugging
+
+`debugVector`: draws a 2d vector from the bullet's position <br>
+`debugText`: displays a string at the bullet's position (use `${NAME}` for properties)
 
 - bubble example
