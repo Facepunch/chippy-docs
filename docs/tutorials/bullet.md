@@ -409,6 +409,10 @@ It's possible to control a bullet's position directly, instead of relying on the
 
 When the bullet enters this keyframe, it will set its target position to the player's current location. From then on, its `posLerpSpeed` of `0.01` will move the bullet 1% of the remaining distance to the target per frame.
 
+#### Velocity Mode
+
+
+
 ### Facing
 
 By default, bullets don't rotate at all. By specifying a value from `0-1` for the keyframe property `facingSpeedPercent`, the bullet will ease toward a certain direction - normally the same direction as their velocity.
@@ -683,28 +687,30 @@ If you want a certain bullet to collide with pixels, you must set the non-keyfra
 Generally you'll also want to set a value for the non-keyframe properties `totalPixelDamage` for the amount of damage the bullet has available, and `impactPattern` for the path of a visual effect bullet pattern that will emit when the bullet runs out of damage.
 
 ```json
-"pattern": {
-  // ...
-  "bullets": [".bullet"],
-  "hitSelfPixels":true, // by default, bullets fired by enemies dont collide with their own pixels
-},
-
-"bullet": {
-  "keyframes":[ 
-    {
-      "ignorePixelCollision":true, // don't collide with pixels for now
-    },
+{
+  "pattern": {
     // ...
-    {
-      "moveAngle":180, // move backwards
-      "ignorePixelCollision":false, // re-enable pixel collision
-    },
-  ],
-  "collideWithPixels":true, // bullet is eligible for pixel collision
-  "totalPixelDamage":50,
-  "impactPattern":"misc/pattern/effect/defaultBulletImpact",
-  "despawnStyle":"ShrinkToFront", // shrink forward when despawning
-},
+    "bullets": [".bullet"],
+    "hitSelfPixels":true, // by default, bullets fired by enemies dont collide with their own pixels
+  },
+
+  "bullet": {
+    "keyframes":[ 
+      {
+        "ignorePixelCollision":true, // don't collide with pixels for now
+      },
+      // ...
+      {
+        "moveAngle":180, // move backwards
+        "ignorePixelCollision":false, // re-enable pixel collision
+      },
+    ],
+    "collideWithPixels":true, // bullet is eligible for pixel collision
+    "totalPixelDamage":50,
+    "impactPattern":"misc/pattern/effect/defaultBulletImpact",
+    "despawnStyle":"ShrinkToFront", // shrink forward when despawning
+  },
+}
 ```
 
 <video controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1511b1/2019-08-15_19-34-17.mp4" type="video/mp4"> </video>
@@ -790,18 +796,107 @@ Generally you'll also want to set a value for the non-keyframe properties `total
 
 ## Player Collision
 
+By default, players deal deal damage to the player on collision, either removing a shield or killing them. The bullet is destroyed by the impact unless specified otherwise.
+
+To change what happens on player collision, define the `onHitPlayer` callback:
+```json
+"bullet": {
+  // ...
+  "onHitPlayer":[
+    { "action": "CallMethod", "target": "stage", "method": "ShakeCamera", "params": { "strength": 5, "time": 0.3, "easingType": "QuadOut" }},
+    
+    // without calling this, bullet will despawn without hurting player
+    { "action": "CallMethod", "method": "DamagePlayer", },
+  ],
+},
+```
+
+Once `onHitPlayer` is defined, the bullet no longer automatically damages the player.
+
+If you don't want the bullet to despawn when it collides with the player, set `despawnOnPlayerHit` to `false`.
+```json
+"bullet":{
+  // ...
+  "despawnOnPlayerHit":false,
+},
+```
+
+To ignore collision with the player altogether, there are a couple options: `ignorePlayerCollision` is **both** a keyframe property and a non-keyframe property.
+
+Set the non-keyframe property to `true` if you never want the bullet to collide with the player.<br>
+Set the keyframe property to `true` if you temporarily want to disable player collision.
+
+```json
+{
+  "bullet0": {
+    "keyframes":[ /* ... */ ],
+
+    // this bullet will NEVER be considered for player collision
+    "ignorePlayerCollision":true,
+  },
+
+  "bullet1": {
+    "keyframes":[
+      {
+        "duration":1,
+
+        // ignore player collision until told otherwise
+        "ignorePlayerCollision":true,  
+      },
+      {
+        "duration":0,
+
+        // player collision is now re-enabled
+        "ignorePlayerCollision":false,  
+      },
+    ],
+  },
+}
+```
+
 ## Child Patterns
+
+Bullets that spawn other bullets can create very interesting attacks. Bullets can either call the stage's `SpawnPattern` method to simply create a pattern, or they can call their own `AddPattern` method to drag a pattern along with it.
+
+```json
+{
+  // child pattern automatically created at bullet's location, and anchored to it
+  { "action": "CallMethod", "method": "AddPattern", "params": { "path": ".childPattern", }},       
+
+  // child pattern created on its own, no connection to parent bullet
+  { "action": "CallMethod", "target":"stage", "method": "SpawnPattern", "params": { "path": ".childPattern", "pos":"bulletPos" }}, 
+},
+```
+
+In the following clip, the bullet on the left **anchors** its child pattern by calling the `AddPattern` method of Bullet, while the bullet on the right **does not anchor** its child pattern when it calls the `SpawnPattern` method of Stage.
+
+<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b2311b1/2019-08-23_16-17-20.mp4" type="video/mp4" > </video>
+
+A pattern can set the `despawnWhenAnchorInactive` property to `true` if you want it to stop when the bullet that is dragging it along is removed.
+
+Setting a pattern's `rotateWithAnchor` property to `true` will cause it to rotate as the bullet its anchored to rotates.
 
 ## Visual Effect Bullets
 
-- isStrictlyVisual
+Bullets are used for most of the particle effects in Chippy (the main exception being the pixel debris, which is a Unity particle system).
+
+When you want to use a bullet for purely visual reasons with no effect on gameplay, set the `isStrictlyVisual` property to true.
+
+```json
+"bullet": {
+  // ...
+  "isStrictlyVisual":true,
+},
+```
+
+Now that bullet won't be considered for collision with pixels or the player and won't be affected or destroyed by any Actions.
 
 ## Callbacks
 
 You may want to call Actions at certain points during a bullet's lifetime.
 
 ```json
-"pattern":{
+"bullet": {
   "keyframes": [ 
     // ... 
   ],
@@ -849,6 +944,137 @@ Property | Summary
 ## Params
 
 ## Floating Text
+
+Floating text (used in Chippy for damage amount floaters and powerup alerts) can only be created when added to a bullet. 
+
+To control the text's movement, you simply use the existing bullet properties.
+
+When the bullet despawns, the text is removed.
+
+```json
+"onKeyframe":[ 
+  { "action": "CallMethod", "method": "AddText", "params": { 
+      "message": "${playerPos}", 
+      "opacity":0.75, 
+    }
+  },
+],
+```
+
+Remember, the bullet itself does not have to be visible!
+
+<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b2311b1/2019-08-23_17-35-24.mp4" type="video/mp4" > </video>
+
+??? info "Example bullet json"
+    ```json
+    "bullet": {
+      "keyframes": [
+      {
+        "duration":0.75,
+        "acceleration":0,
+        "frictionPercent":0.05,
+        "colorA1":{"r":1,"g":0.33,"b":0.33,"a":1},
+        "colorA2":{"r":1,"g":0.15,"b":0.15,"a":0.75},
+        "colorB1":{"r":1,"g":0,"b":0.1,"a":0.25},
+        "colorB2":{"r":1,"g":0,"b":0.1,"a":0.33},
+        "colorC1":{"r":1,"g":0.3,"b":0.3,"a":0.9},
+        "colorC2":{"r":1,"g":0.2,"b":0.1,"a":1},
+        "colorBlinkTime":0.075,
+        "easingType":"QuadOut",
+        "loopEnd": 1,
+        "glowA": 8,
+        "glowB": 8,
+        "glowC": 8,
+        "opacity":0,
+        "radius":3.5,
+        "sprite":"sprites/circle/simple",
+      },
+      {
+        "duration":1,
+        "acceleration":8,
+        "frictionPercent":0.033,
+        "glowA": 1.75,
+        "glowB": 1,
+        "glowC": 1,
+        "opacity":0.33,
+        "onKeyframe":[ 
+          { "action": "CallMethod",  "target":"this", "method": "AddText", "params": { 
+            "message": "TEST", 
+            "font": "MonoMMM", 
+            "material": "Outline", 
+            "scale":"vec2(0.8f, 2.5f)", 
+            "colorA":"color(1f, 0.9f, 0.5f)", 
+            "colorB":"color(1f, 0.5f, 0.5f)", 
+            "fontSize":3.5, 
+            "opacity":0.5, 
+            "lerpSpeed":0.075, }
+          },
+        ],
+      },
+      {
+        "duration":1,
+        "opacity":0,
+        "onKeyframe":[ 
+          { "action": "CallMethod", "method": "SetTextSize", "params": { "size": 5,}},
+        ],
+      },
+      ],
+      "startSpeed":20,
+      "lifetime":3,
+      "shouldLoop":false,
+      "despawnAfterKeyframes":false,
+      "depthLevel": "BulletTop",
+      "shapeType": "Circle",
+      "impulseFrictionPercent":0.05,
+      "despawnTime":0.33,
+      "useAbsoluteAngles":true,
+      "circleSkew":0.125,
+      "circleSkewDist":0.5,
+    },
+    ```
+??? info "All AddText parameters"
+    Property &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Type | Summary
+    :----------- |:------------- |:-------------
+    `message` | string | the text to show (use ${NAME} for properties)
+    `opacity` | string | how opaque text is
+    `scale` | Vector2 | width and height scaling for text (default = `vec2(1f, 1f)`)
+    `colorA` | Color | first color of text
+    `colorB` | Color | second color of text
+    `colorBlinkTime` | float | time to blink between first and second color
+    `font` | FloatingTextFont | font to use, from the available fonts
+    `fontSize` | float | default = `2.5f`
+    `material` | string | use "Outline" to show outlines, omit otherwise
+    `outlineWidth` | float | width of outline
+    `outlineColor` | Color | outline color
+    `offset` | Vector2 | position offset from bullet
+    `alignment` | BulletTextAlignment | which side of text is anchored
+    `useAngle` | bool | if true, rotate text as bullet rotates
+    `lerpSpeed` | float | how quickly the bullet changes to new values (`0-1`)
+    
+    There are also a number of methods that bullets can call to change their anchored text:
+
+    ```csharp
+    SetTextLerpSpeed(float lerpSpeed)
+    SetTextSize(float size)
+    SetTextScale(Vector2 scale)
+    SetTextOpacity(float opacity)
+    SetTextMessage(string message)
+    SetTextColorA(Color color)
+    SetTextColorB(Color color)
+    SetTextColor(Color color)
+    SetTextColorBlinkTime(float time)
+    SetTextOutlineColor(Color color)
+    SetTextOutlineWidth(float width)
+    SetTextNumChars(int numChars)
+    SetTextStartChars(int startChar)
+    SetTextCharacterSpacing(float spacing)
+    SetTextLineSpacing(float spacing)
+    SetTextWordSpacing(float spacing)
+    SetTextOffset(Vector2 offset)
+    DespawnText(Vector2 scale, float time = 1f, EasingType easingType = EasingType.QuadOut)
+    Vector2 GetTextSize()
+    ```
+    
 
 ## Other Volley Bullets
 

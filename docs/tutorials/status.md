@@ -14,6 +14,8 @@ Set the max level of a status with `numLevels`:
 
 Levels can be used however you want. In the official Chippy levels, they represent the quantity of an item you have, but it could instead represent the strength of the item.
 
+## Modifiers
+
 ## Items
 
 ### Selectable

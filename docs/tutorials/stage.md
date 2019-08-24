@@ -4,6 +4,23 @@
 
 The Stage config file handles spawning units and the player, setting the bounds of the arena, and various other things.
 
+### Basic Settings
+
+```json
+{
+    "menuCore": "misc/core/octopus/core0", // the layered sprite eye to show on menu
+    "title": "#octopus.title",
+    "description": "#octopus.description",
+    "behaviour": ".fsm", // the behaviour state machine
+    "song": "019", // the song config file to use
+
+	"arena": {
+		// arena position and size
+        "bounds": "rectCenter(vec2(0f, 0f), vec2(200f, 200f))",
+    },
+}
+```
+
 ### Game Mode
 
 #### Time Attack
@@ -12,6 +29,7 @@ This is the default mode. The goal is to win as fast as possible.
 
 ```json
 {
+	// ...
 	"gameMode": "TimeAttack",
 }
 ```
@@ -22,20 +40,127 @@ The goal is to survive as long as possible. When time is slowed down or sped up 
 
 ```json
 {
+	// ...
 	"gameMode": "Endless",
 }
 ```
 
 ### Medal Times
 
+Choose the **time in seconds** that needs to be beat to earn each medal.
+
+```json
+{
+	// ...
+	"medals": {
+        "bronze": 420,
+        "silver": 300,
+        "gold": 180,
+    },
+}
+```
+
+An `Endless` stage needs to specify the `victory` time as well - that is, the time you need to last to beat the stage without even earning a bronze medal.
+
+```json
+{
+	// ...
+	"medals": {
+		"victory": 250,
+        "bronze": 350,
+        "silver": 500,
+        "gold": 650,
+    },
+}
+```
+
 ### Player
+
+```json
+{
+	"player": {
+		// the path to the player config file
+        "path":"player/defaultPlayer",
+
+		// spawn the player here at the start of level
+        "spawnPos": "vec2(0f, -20f)",
+    },
+}
+```
+
+The `player.path` property is used when overriding the default player ship - you can safely omit it otherwise.
 
 ### Units
 
-- count
-- requiredForVictory
+Units are preloaded to avoid stuttering during gameplay, and therefore the type and max count of each unit needs to be decided on in advance.
+
+```json
+{
+	// ...
+	"units": {
+        "boss": { "config": "mech/unit/boss", "requiredForVictory": true },
+        "turret": { "config": "mech/unit/turret", "count":5, },
+        "egg": { "config": "misc/unit/eggShield", "count":1, },
+        "trap": { "config": "mech/unit/trapLaser", "count":1, },
+    },
+}
+```
+
+To beat the level on `Time Attack` stages, the player needs to destroy all `requiredForVictory` units.
 
 #### Cross-Unit Requirements
+
+Unit parts can be protected from parts of other units.
+
+```json
+{
+	// ...
+	"units": {
+        "boss": { "config": "octopus/unit/boss", "requiredForVictory": true, "requirements": { "form2:core": [{ "unit": "turret", "form": 0, "parts": [ "core" ] }] }},
+        "turret": { "config": "octopus/unit/turret", "count": "turretCount", "progressWeight": 0.25 },
+        "egg": { "config": "misc/unit/eggShield", "count":1, },
+    },
+}
+```
+
+Spread out for clarity:
+
+```json
+"boss": {
+	// ...
+	"requirements": { 
+		// the 3rd form core of the boss requires the turret unit's 1st form core
+		"form2:core": [
+			{ 
+				"unit": "turret", 
+				"form": 0, 
+				"parts": [ "core" ],
+			},
+		], 
+	},
+},
+```
+
+#### Spawning
+
+```json
+{ "action": "CallMethod", "method": "SpawnUnit", "params": { "name": "boss", "pos": "vec2(0f, 10f)", }},
+```
+
+There are a couple optional parameters:
+
+```json
+{ "action": "CallMethod", "method": "SpawnUnit", 
+	"params": { 
+		"name": "boss", // the name refers to what you chose in the "units" json property
+		"pos": "vec2(0f, 10f)", 
+		"force": "vec2(0f, -50f)", // force applied to unit upon spawn
+		"facingDir": "UpLeft", // initial direction of unit
+	}
+},
+```
+
+If you try to spawn a unit with too many active already, it will be ignored. The `count` of a unit determines the max amount that can be active.
 
 ## Behaviour
 
@@ -80,19 +205,120 @@ You'll probably want to choose your level size by setting `bounds`, but the othe
 
 <img src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1611b1/Chippy_2019-08-16_17-38-15.png" width="100%"/>
 
-
-## Adjusting Stage Size
-
 ## Behaviour
 
+The stage has its own state machine like units do, where actions can be called in sequence.
+
+```json
+{
+	"behaviour": ".fsm",
+
+	// ...
+
+	"fsm":{
+		"inactive": [
+			
+		],
+		"start":[
+			// spawn clouds, boss, etc
+
+			// without an indefinite Wait, the state machine will keep looping
+			{ "action": "Wait", },
+		],
+	},
+
+}
+```
+
+!!! warning
+	While most names can be safely changed in Chippy scripts, the `start` state in a stage fsm will specifically be set at the beginning of a run, so make sure it exists.
+
 ## Callbacks
+
+You can call Actions are certain points during a stage, besides the state machine.
+
+```json
+{
+    "onUpdate":[
+        // called each frame
+        { "action": "CallMethod", "target":"player", "method": "AddForce", "params": { "force": "vec2(0f, 1f)", }},
+    ],    
+
+    "onPlayerHit":[ /* called when player is hit but does not die */ ],
+	"onPlayerDie":[ /* called when player takes lethal damage */ ],
+},
+```
 
 ## Params
 
 ## Custom Variables
+
+Custom variables can be defined in the `properties` structure of the stage config.
+
+```json
+{
+	"properties": {
+	    "numBubblesPopped": { "type": "Int" },
+		"egg": { "type": "Unit" },
+
+		// player specific
+		"attempts": { "type": "Int", "userData": true, "value": "progression.GetAttempts(stageId)" },
+		"victories": { "type": "Int", "userData": true, "value": "progression.GetVictories(stageId)" },
+	},
+}
+```
+
+These values can be used in any script func by the stage **or any object** (unit, player, bullets, etc) that exists on the stage.
+
+To modify them, use the SetValue method:
+
+```json
+{ "action": "SetValue", "target":"stage", "name": "numBubblesPopped", "type": "Int", "value": "numBubblesPopped + 1" },
+```
+
+When using the `target` param so you can set the property of a different object (for example, a bullet setting the value of a stage property) you must also declare the **type** of the value.
+
+### Player Specific Properties
+
+The **player specific** properties check the player's individual progression file for their `attempts` (number of times playing the level) and `victories` (number of times beating the level).
+
+Typically these are only used to adjust which speech lines the bosses say, but there's no rule that they can't have gameplay implications.
+
+### Return Values
+
+Some methods have a **return** value that you may want to save to a custom variable to access later.
+
+```json hl_lines="17"
+{
+	"properties": {
+		/* when the level starts, the value of
+		the bossUnit property is null */
+		"bossUnit": { "type": "Unit" },
+	},
+
+	"fsm": {
+		"inactive": [
+            { "action": "Wait" },
+        ],
+        "start": [
+			/* spawn the boss unit and save the return value
+			(of type Unit) to the custom property */
+			{ "action": "CallMethod", "method": "SpawnUnit", 
+			 	"params": { "name": "boss", "pos": "vec2(0f, 20f)" }, 
+				"return":"bossUnit", 
+			},
+
+			// now we can call actions directly on the bossUnit
+			{ "action": "CallMethod", "target":"bossUnit", "method": "Shake", "params": { "strength":5, "time":2, "easingType":"QuadIn", }},
+		],
+	},
+}
+```
 
 ## Camera Effects
 
 ## Background
 
 ## Debugging
+
+- debug line/text

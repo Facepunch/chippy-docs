@@ -1,5 +1,9 @@
 # Overview
 
+There are a lot of possibilities for customization with Chippy workshop levels, from the bosses and bullet patterns to the player handling and dynamic songs. 
+
+Instead of trying do it all from scratch, it's probably best to start with an existing boss and the default player, while editing some patterns and experimenting.
+
 >
 [Quick Start](tutorials/quickstart.md)<br>
 [Bullet Patterns](tutorials/pattern.md)<br>

@@ -140,6 +140,27 @@ Each form should also set some properties for its pixels.
 }
 ```
 
+To find the `range` of a certain type of pixel:
+> 1) Load your animation file in the [PxcEditor](pxc_editor.md).
+
+> 2) Decide which pixel type you want to get the range of - in this case, the purple colored pixels are going to be invulnerable.
+
+<img src="https://files.facepunch.com/ryleigh/1b2211b1/PxcEditor_2019-08-22_20-39-47.png" />
+
+> 3) Hold the ++c++ key and right click one of the pixels to select all other pixels of the same color.
+
+<img src="https://files.facepunch.com/ryleigh/1b2211b1/PxcEditor_2019-08-22_20-38-32.png" />
+
+> 4) Hold the ++shift+c++ keys and right click one of the **other** purple pixels to add all pixels of that shade to the selection.
+
+<img src="https://files.facepunch.com/ryleigh/1b2211b1/PxcEditor_2019-08-22_20-39-01.png" />
+
+> 5) Press ++"Middle Mouse Button"++ or the `=` button on the far right of the toolbar to toggle showing pixel assignments.
+
+<img src="https://files.facepunch.com/ryleigh/1b2211b1/PxcEditor_2019-08-22_20-46-28.png" />
+
+> 6) The range (in this case `244, 1923`) should now be copied to your clipboard. Paste it into the pixel config. If your range isn't a neat sequence, you probably didn't assign your pixels on a color-by-color basis.
+
 ### Pixel Types
 
 When specifying properties for pixels, you can choose between a few fundamental types.
@@ -149,8 +170,6 @@ Pixel Type | Summary
 `Normal` | pixel has a certain amount of hp until it is destroyed
 `Explosive` | a small amount of damage will trigger this pixel to explode and destroy adjacent pixels
 `Invulnerable` | normal damage won't affect this pixel (though Explosive pixels will)
-
-- legacy pixelPrefix
 
 ## Parts
 
@@ -271,6 +290,9 @@ When the unit's second form finishes spawning, it will switch to the first state
 }
 ```
 
+!!! tip
+	Holding the ++h++ key will show the current state of a unit.
+
 ### Charging Patterns
 
 When you want a unit to shoot a pattern, usually you'll **charge** it from their core or another part. This will cause the part to glow and look in the pattern direction as it leads up to firing.
@@ -373,7 +395,7 @@ The movement mode and the functions can be set with Actions such as `SetMovement
 
 ### Avoiding Other Units
 
-Generally you want to prevent units from overlapping. This works by defining circular hitboxes that repel other units.
+Generally you want to prevent units from overlapping eachother. You can define circular hitboxes that repel other units.
 
 <img src="https://files.facepunch.com/ryleigh/1b2111b1/Unity_2019-08-21_21-16-28.png" />
 
@@ -539,6 +561,26 @@ To modify them, use the SetValue method:
 ## Params
 
 ## Speech Bubbles
+
+Unit's `SpawnBubble` creates a speech bubble coming out of a part.
+
+```json
+{ "action": "CallMethod", "method": "SpawnBubble", 
+	"params": { 
+		"text": "Hihihi", 
+		"partType":"core", 
+		"lifetime": 1,
+		"fillColor": "color(0.2f, 0.1f, fastSin(stageTime * PI * 2f) * 0.2f + 0.5f, 0.8f)", 
+		"borderColor": "color(0.75f, 0.75f, fastSin((stageTime + 0.5f) * PI * 2f) * 0.05f + 0.95f, 0.66f)", 
+		"borderWidth": "fastSin(stageTime * PI * 3f) * 2f + 4f",
+		"textColor":"lerp(color(1f, 1f, 1f), color(0.75f, 0.75f, 1f), 0.5f + fastSin(stageTime * PI * 12f) * 0.5f)",
+		"font":"Quantico",
+		"fontSize":33,
+	}
+},
+```
+
+<img src="https://files.facepunch.com/ryleigh/1b2311b1/Chippy_2019-08-23_20-50-13.png" />
 
 ## Debugging
 

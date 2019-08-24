@@ -2,8 +2,6 @@
 
 A bullet pattern is made up of **volleys**, each shooting a number of **bullets** from a certain position and angle.
 
-## Data
-
 ## A Simple Pattern
 
 ```json

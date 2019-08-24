@@ -49,7 +49,7 @@ Use `Condition` actions like if-else statements, to run certain actions based on
 ],
 ```
 
-You can omit the `false` branch if it's not needed.
+You can omit the `false` branch if it's not needed (or the `true` branch).
 
 ```json
 "5b":[
@@ -62,30 +62,19 @@ You can omit the `false` branch if it's not needed.
 ],
 ```
 
-### Repeat
-
-Use the `Repeat` action to loop actions multiple times.
-
-The `count` parameter controls the number of times to loop the actions.<br>
-The `delay` parameter is the time to wait after each loop.<br>
-The `inner` parameter is the list of actions to loop.<br>
+Conditions can be nested as much as you want.
 
 ```json
-"state_6":[
-	{ "action": "Repeat", "count": "6 + min(loopNum, 4)", "delay": "map(loopNum, 0, 6, 1.5f, 1.25f, 'QuadIn')", "inner": [
-	    { "action": "CallMethod", "method": "ChargePattern", "params": { "path": "claw/pattern/orbiter.1", "partType": "core", "chargeTime":1, "dir":"(playerPos + playerVel * 2f) - partPos", }},
-	]},
-
-	// or, spread out for clarity:
-	{ "action": "Repeat", 
-		"count": "6 + min(loopNum, 4)", 
-		"delay": "map(loopNum, 0, 6, 1.5f, 1.25f, 'QuadIn')", 
-		"inner": [
-	    	{ "action": "CallMethod", "method": "ChargePattern", "params": { 
-	    		"path": "claw/pattern/orbiter.1", 
-	    		"partType": "core", "chargeTime":1, 
-	    		"dir":"(playerPos + playerVel * 2f) - partPos", 
-	    	}},
+"state 0": [
+	{ "action": "Condition", "condition": "rand.Float(0f, 1f) < 0.25f",
+		"true": [
+			{ "action": "Condition", "condition": "playerPos.y < 0f",
+				"true": [{ "action": "Goto", "state": "state 1" },],
+				"false":[{ "action": "Goto", "state": "state 2" },]},
+		],
+		"false":[
+			{ "action": "Condition", "condition": "playerPos.x < 0f",
+				"false": [{ "action": "Goto", "state": "state 3" },],},
 		]},
 ],
 ```
@@ -120,16 +109,92 @@ The `value` parameter should be an Int variable.
 	},
 }
 ```
+
+### Repeat
+
+Use the `Repeat` action to loop actions multiple times.
+
+The `count` parameter controls the number of times to loop the actions.<br>
+The `delay` parameter is the time to wait after each loop.<br>
+The `inner` parameter is the list of actions to loop.<br>
+
+```json
+"state_6":[
+	{ "action": "Repeat", "count": "6 + min(loopNum, 4)", "delay": "map(loopNum, 0, 6, 1.5f, 1.25f, 'QuadIn')", "inner": [
+	    { "action": "CallMethod", "method": "ChargePattern", "params": { "path": "claw/pattern/orbiter.1", "partType": "core", "chargeTime":1, "dir":"(playerPos + playerVel * 2f) - partPos", }},
+	]},
+
+	// or, spread out for clarity:
+	{ "action": "Repeat", 
+		"count": "6 + min(loopNum, 4)", 
+		"delay": "map(loopNum, 0, 6, 1.5f, 1.25f, 'QuadIn')", 
+		"inner": [
+	    	{ "action": "CallMethod", "method": "ChargePattern", "params": { 
+	    		"path": "claw/pattern/orbiter.1", 
+	    		"partType": "core", "chargeTime":1, 
+	    		"dir":"(playerPos + playerVel * 2f) - partPos", 
+	    	}},
+		]},
+],
+```
+
 ### Goto
+
+The `Goto` action lets you change states.
+
+In the following example, normally the state would loop from `1` back to the beginning state `initial delay`. Instead it's told to go back to state `0`.
+
+```json hl_lines="10"
+"fsm": {
+	"form0": {
+		"initial delay":[
+			// do this only one time
+		],
+		"0":[
+			// do this every time
+		],
+		"1":[
+			{ "action": "Goto", "state":"0" },
+		],
+	}
+},
+```
+
+The current full state when Goto is called is `form0.1` - when trying to switch to state `0`, it first checks it's current level of `form0` for that state, and ends up with a target of `form0.0`.
+
+It would also be possible to go to state `form1.0` if you wanted to leave your current state collection of `form0`.
 
 ### Yield
 
+`Yield` is a very specific action that waits a single frame before continuing on with an action list
+
+```json
+"keyframes": [
+	{
+		"duration":0,
+		"onKeyframe":[
+			{ "action": "Yield" },
+			{ "action": "CallMethod", "method": "AddPattern", "params": { "path": ".childPattern"} }
+		],
+	},
+],
+```
+
+In that case, adding a pattern on the first frame of the first keyframe was causing issues, so `Yield` waits until the next frame.
+
 ## SetValue
+
+## Subroutines
 
 ## Stage Methods
 
 - TimeScale
 - Shake Camera
+- AffectBulletsInRadius
+- AffectTouchingBullets
+- AffectUnitsInRadius
+- AffectTouchingUnits
+- LerpBounds
 
 ## Player Methods
 
@@ -139,6 +204,6 @@ The `value` parameter should be an Int variable.
 
 - Respawn Pixels
 
-## Subroutines
+## Pattern Methods
 
-- Log
+- AffectBullets

@@ -4,15 +4,102 @@ A section of pixels can be grouped together as a **part**. Parts have a single h
 
 ## Config
 
-- corePath
-    - difference from core
-- spritePath
-- hp
+```json
+{
+    "forms":[
+        {
+            "parts":{
+                "core": {
+                    "corePath": "misc/core/octopus/core0",
+                    "size": 12,
+                    "placements": [ 0 ],
+                    "hp": 900,
+                    "requires": [ "gun", ],
+                },
+                "gun": {
+                    "corePath": "misc/core/octopus/smallGun",
+                    "size": 7,
+                    "placements": [ 73, 89 ],
+                    "hp": 500,
+                },
+                "stud": {
+                    "spritePath": "stud/stud_2x14",
+                    "width": 2,
+                    "height": 14,
+                    "placements": [ 1628, 1332, 1360, 1064 ],
+                    "hp": 400,
+                },
+            }
+        },
+    ],
+}
+```
+
+`corePath` is used when drawing a layered sprite that can move and aim.<br>
+`spritePath` is used when representing a part as a single-layered image.
+
+In official stages, `sprites` are generally used for non-square parts, and layered `cores` are used for square parts.
+
+!!! warning
+    It's a bit confusing that each boss has a "core" in the center, while "core" is also used to refer to the layered moving sprites that represent most parts. Just be aware that the term is overused.
 
 ### Placing
-- size
-- placements
-- different sizes for same core
+
+The part config needs to know which pixels are in it, from your editor `source` file.
+
+> 1) Load your animation file in the [PxcEditor](pxc_editor.md).
+
+> 2) Decide which part you want the details of - in this case, the core:
+
+<img src="https://files.facepunch.com/ryleigh/1b2211b1/PxcEditor_2019-08-22_21-16-56.png" />
+
+> 3) Hold ++v++ and right click inside the part, to select all adjacent pixels of the same color.
+
+<img src="https://files.facepunch.com/ryleigh/1b2211b1/PxcEditor_2019-08-22_21-18-04.png" />
+
+> 4) Press ++"Middle Mouse Button"++ or the `=` button on the far right of the toolbar to toggle showing pixel assignments.
+
+<img src="https://files.facepunch.com/ryleigh/1b2211b1/PxcEditor_2019-08-22_21-18-55.png" />
+
+> 5) The first number in the range (`0`) is your `placement`, or the starting pixel of your part. The `size` is used for square parts.
+
+```json
+"parts": {
+    "core": {
+        "corePath": "misc/core/octopus/core0",
+        "size": 8,
+        "placements": [ 0 ],
+        "hp": 900,
+    },
+},
+```
+
+To use the same config for multiple parts in your unit, simply list more placements:
+```json
+"placements": [ 73, 89 ],
+```
+
+For square parts of different sizes that are otherwise identical, use this form:
+```json
+"placements": [ 
+    { "size": 8, "start": 25 },
+    { "size": 6, "start": 89 }, 
+    { "size": 6, "start": 125 }, 
+    { "size": 5, "start": 161 }, 
+],
+```
+
+For non-square parts, use `width` and `height` instead of `size`.
+
+```json hl_lines="3 4"
+"stud": {
+    "spritePath": "stud/stud_2x19",
+    "width": 2,
+    "height": 10,
+    "placements": [ 4 ],
+    "hp": 300,
+},
+```
 
 ## Protecting Parts
 
@@ -135,25 +222,95 @@ The visuals can be adjusted with optional parameters:
     `ropeCurrLength` | float | the amount of length we've traversed, at the current spring
     `ropeTotalLength` | float | the total length of the rope
 
-
-
 ## Lasers
+
+Lasers are lines that stop when they hit a pixel, and damage the player if they pass through. 
+
+<img src="https://files.facepunch.com/ryleigh/1b2211b1/Unity_2019-08-22_22-27-48.jpg" />
+
+You can usually achieve a similar obstacle with a bullet, but if you want pixel collision or you plan to rotate the obstacle extremely fast, a laser can be more appropriate.
+
+```json hl_lines="7"
+"parts":{
+    "core": {
+        "corePath": "misc/core/laser/core1",
+        "size": 8,
+        "placements": [ 0 ],
+        "hp": 780,
+        "laser":{ "dps":10, "autoRotate":true, "rotationSpeed":-4.5, "startAngle":0, "ignoreCollisionWith":["egg", "trap"], "colorOnA":"color(1f, 0.15f, 0f) * 1.33f", "colorOnB":"color(1f, 0.1f, 0f) * 0.35f", "colorBlinkTimeOn":0.25, "colorBlinkEasingType":"Linear", "widthAMin": 1.5, "widthAMax":1.75, },
+    },
+},
+```
+
+Spread out for clarity:
+```json
+"laser":{ 
+    "dps":10, // damage per second dealt to pixels
+    "autoRotate":true, // 
+    "rotationSpeed":-4.5, 
+    "startAngle":0, 
+    "ignoreCollisionWith":["egg", "trap"], 
+    "colorOnA":"color(1f, 0.15f, 0f) * 1.33f",
+    "colorOnB":"color(1f, 0.1f, 0f) * 0.35f", 
+    "colorBlinkTimeOn":0.25, 
+    "colorBlinkEasingType":"Linear", 
+    "widthAMin": 1.5, 
+    "widthAMax":1.75, 
+},
+```
+
+??? info "All laser properties"
+    Property &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Type | Summary
+    :----------- |:------------- |:-------------
+    `dps` | float | damage per second to pixels
+    `startAngle` | float | start angle
+    `autoRotate` | bool | if true, use `rotationSpeed` and turn, if false, use `aimSpeed` towards target
+    `rotationSpeed` | float | opacity when rope is stretched
+    `aimSpeed` | float | width factor when slack
+    `colorOffA` | Color | first color when off
+    `colorOffB` | Color | second color when off
+    `colorOnA` | Color | first color when on (on = dangerous)
+    `colorOnB` | Color | second color when on
+    `colorBlinkTimeOn` | float | blink time between colors when on
+    `colorBlinkTimeOff` | float | blink time between colors when off
+    `colorBlinkEasingType` | EasingType | easing type for blinking
+    `animSpeedOff` | float | speed of wobble when off
+    `animSpeedOn` | float | speed of wobble when on
+    `widthAMin` | float | min width of start
+    `widthAMax` | float | max width of start
+    `widthBMin` | float | min width of end
+    `widthBMax` | float | max width of end
+    `hitSelfPixels` | bool | whether the laser can impact pixels of its own unit
+    `impactPattern` | Pattern path | spark pattern at impact
+    `impactPatternDelay` | float | how often to spawn impact pattern
+    `missOffPattern` | Pattern path | pattern when off and not hitting pixel
+    `missOnPattern` | Pattern path | pattern when on and not hitting pixel
+    `length` | float | how far laser reaches
+    `lengthLerpSpeed` | float | how fast the laser reaches full length (`0-1`)
+    `sfxHit` | string | impact sound
+    `ignoreCollisionWith` | string | name of units that should not collide with laser
+    `damagePlayer` | bool | if false, don't collide with player
+    `onHitPlayer` | List of Actions | callback for hitting player
+    `partDamageFactor` | float | multiplier for how much damage is dealt to parts
 
 ## Callbacks
 
 You may want to call Actions from a unit part.
 
 ```json
-{
-    "onSpawn":[
-        // called when status effect is started (gains its first level)
-        { "action": "CallMethod", "target":"stage", "method": "ShakeCamera", "params": { "strength": 3, "time": 0.5, "easingType": "QuadOut" }},
-    ],    
+"parts":{
+    "core": {
+        // ...
+        "onSpawn":[
+            // called when status effect is started (gains its first level)
+            { "action": "CallMethod", "target":"stage", "method": "ShakeCamera", "params": { "strength": 3, "time": 0.5, "easingType": "QuadOut" }},
+        ],    
 
-    "onUpdate":[ /* called each frame while part is active */ ],
-	"onDestroy":[ /* called when part is destroyed */ ],
-	"onHit":[ /* called when part hit by bullet or laser */ ],
-	"onHitProtected":[ /* called when part hit by bullet or laser and has other part shielding it */ ],
+        "onUpdate":[ /* called each frame while part is active */ ],
+        "onDestroy":[ /* called when part is destroyed */ ],
+        "onHit":[ /* called when part hit by bullet or laser */ ],
+        "onHitProtected":[ /* called when part hit by bullet or laser and has other part shielding it */ ],
+    },
 },
 ```
 
@@ -166,5 +323,3 @@ You may want to call Actions from a unit part.
 ## Sprites
 
 ### Config
-
-## Non-Rectangle Parts
