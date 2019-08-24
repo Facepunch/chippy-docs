@@ -3,6 +3,9 @@
 A **unit** is anything that has pixels. <br>
 Bosses are units, minions are units, shield containers are units, etc.
 
+!!! info
+	[Properties & Methods](../../SpaceUsurper/Unit)
+
 ## Config
 
 The config type for units is of the type `UnitData`.
@@ -57,6 +60,9 @@ Each unit config should contain a list of forms:
 	],
 }
 ```
+
+!!! Unit form info
+    [Full json config](../../SpaceUsurper/UnitFormData)
 
 ### Base Form
 

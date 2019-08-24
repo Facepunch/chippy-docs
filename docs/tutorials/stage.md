@@ -1,5 +1,10 @@
 # Stages
 
+!!! info
+	[Properties & Methods](../../SpaceUsurper/GameStage)
+
+	[Full json config](../../SpaceUsurper/StageData)
+
 ## Config
 
 The Stage config file handles spawning units and the player, setting the bounds of the arena, and various other things.

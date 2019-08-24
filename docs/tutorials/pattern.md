@@ -2,6 +2,11 @@
 
 A bullet pattern is made up of **volleys**, each shooting a number of **bullets** from a certain position and angle.
 
+!!! info
+	[Properties & Methods](../../SpaceUsurper/BulletPattern)
+
+	[Full json config](../../SpaceUsurper/PatternData)
+
 ## A Simple Pattern
 
 ```json

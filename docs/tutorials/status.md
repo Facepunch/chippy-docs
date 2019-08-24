@@ -2,6 +2,11 @@
 
 Status Effects are used for both **active items** and **passive buffs/debuffs** applied to the player.
 
+!!! info
+	[Properties & Methods](../../SpaceUsurper/StatusEffect)
+
+    [Full json config](../../SpaceUsurper/StatusEffectData)
+
 ## Levels
 
 Set the max level of a status with `numLevels`:

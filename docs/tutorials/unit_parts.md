@@ -2,6 +2,11 @@
 
 A section of pixels can be grouped together as a **part**. Parts have a single health pool and can only be destroyed as a whole.
 
+!!! info
+	[Properties & Methods](../../SpaceUsurper/PixelGroup)
+    
+    [Full json config](../../SpaceUsurper/UnitPartData)
+
 ## Config
 
 ```json
@@ -292,6 +297,11 @@ Spread out for clarity:
     `damagePlayer` | bool | if false, don't collide with player
     `onHitPlayer` | List of Actions | callback for hitting player
     `partDamageFactor` | float | multiplier for how much damage is dealt to parts
+
+!!! info "Laser info"
+	[Properties & Methods](../../SpaceUsurper/Laser)
+    
+    [Full json config](../../SpaceUsurper/UnitLaserData)
 
 ## Callbacks
 

@@ -1,5 +1,10 @@
 # Player
 
+!!! info
+	[Properties & Methods](../../SpaceUsurper/Player)
+    
+    [Full json config](../../SpaceUsurper/PlayerData)
+
 ## Config
 
 ## Overriding Default Player
@@ -35,6 +40,11 @@ Then, in your stage config, reference your new player config:
 ## Params
 
 ## Guns
+
+!!! info "Player gun info"
+	[Properties & Methods](../../SpaceUsurper/PlayerGun)
+    
+    [Full json config](../../SpaceUsurper/PlayerGunData)
 
 ### Gun Params
 

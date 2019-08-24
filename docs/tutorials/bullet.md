@@ -1,5 +1,14 @@
 # Bullets
 
+Bullets are used for many things in Chippy, besides simple obstacles. They can be visual effects, anchors for floating text, or enablers for invisible AOE effects.
+
+!!! info
+    [Properties & Methods](../../SpaceUsurper/Bullet)
+
+    [Bullet json config](../../SpaceUsurper/BulletData)
+
+    [Bullet keyframe json config](../../SpaceUsurper/BulletKeyframeData)
+
 ## Data
 
 Bullet definitions can be stored in their own json file, but it's usually easier to include them in the same file as the pattern that uses them.
