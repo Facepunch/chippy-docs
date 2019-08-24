@@ -302,13 +302,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data" title="Data" class="md-nav__link">
-    Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#a-simple-pattern" title="A Simple Pattern" class="md-nav__link">
     A Simple Pattern
   </a>
@@ -380,6 +373,19 @@
   <a href="#affecting-child-bullets" title="Affecting Child Bullets" class="md-nav__link">
     Affecting Child Bullets
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linking-volley-bullets" title="Linking Volley Bullets" class="md-nav__link">
+    Linking Volley Bullets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -461,18 +467,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../actions/" title="Actions" class="md-nav__link">
-      Actions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../unit/" title="Units" class="md-nav__link">
       Units
     </a>
@@ -487,6 +481,18 @@
   <li class="md-nav__item">
     <a href="../unit_parts/" title="Unit Parts" class="md-nav__link">
       Unit Parts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../actions/" title="Actions" class="md-nav__link">
+      Actions
     </a>
   </li>
 
@@ -533,8 +539,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../pxc_editor/" title="Editor" class="md-nav__link">
-      Editor
+    <a href="../pxc_editor/" title="Pixel Editor" class="md-nav__link">
+      Pixel Editor
     </a>
   </li>
 
@@ -24007,30 +24013,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../SpaceUsurper/UnitLaserData/OnHitPart/" title="OnHitPart" class="md-nav__link">
-      OnHitPart
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../SpaceUsurper/UnitLaserData/OnHitPixel/" title="OnHitPixel" class="md-nav__link">
-      OnHitPixel
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../SpaceUsurper/UnitLaserData/OnHitPlayer/" title="OnHitPlayer" class="md-nav__link">
       OnHitPlayer
     </a>
@@ -26773,13 +26755,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data" title="Data" class="md-nav__link">
-    Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#a-simple-pattern" title="A Simple Pattern" class="md-nav__link">
     A Simple Pattern
   </a>
@@ -26851,6 +26826,19 @@
   <a href="#affecting-child-bullets" title="Affecting Child Bullets" class="md-nav__link">
     Affecting Child Bullets
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linking-volley-bullets" title="Linking Volley Bullets" class="md-nav__link">
+    Linking Volley Bullets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -26935,7 +26923,6 @@
     <!-- Content -->
     <h1 id="bullet-patterns">Bullet Patterns</h1>
 <p>A bullet pattern is made up of <strong>volleys</strong>, each shooting a number of <strong>bullets</strong> from a certain position and angle.</p>
-<h2 id="data">Data</h2>
 <h2 id="a-simple-pattern">A Simple Pattern</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -27539,8 +27526,424 @@ Setting <code class="codehilite"><span class="ss">&quot;aimMode&quot;</span><spa
 
 </details>
 <h2 id="affecting-child-bullets">Affecting Child Bullets</h2>
+<p>Patterns have their own position and angle, and their movement can be applied to bullets they've fired.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;childPattern&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="err">//</span> <span class="err">...</span>
+    <span class="nt">&quot;dragBullets&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">affect</span> <span class="err">bullet</span> <span class="err">position</span> <span class="err">as</span> <span class="err">pattern</span> <span class="err">position</span> <span class="err">changes</span>
+    <span class="nt">&quot;rotateBullets&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">affect</span> <span class="err">bullet</span> <span class="err">position</span> <span class="err">as</span> <span class="err">pattern</span> <span class="err">rotation</span> <span class="err">changes</span>
+    <span class="nt">&quot;rotateBulletAngles&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">affect</span> <span class="err">bullet</span> <span class="err">rotation</span> <span class="err">as</span> <span class="err">pattern</span> <span class="err">rotation</span> <span class="err">changes</span>
+    <span class="nt">&quot;waitForBulletsToDespawn&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">dont</span> <span class="err">despawn</span> <span class="err">until</span> <span class="err">all</span> <span class="err">bullets</span> <span class="err">have</span> <span class="err">despawned</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<video controls> <source src="https://files.facepunch.com/ryleigh/1b2011b1/2019-08-20_16-12-32.mp4" type="video/mp4"> </video>
+
+<p>On the left, <code class="codehilite"><span class="n">dragBullets</span></code> is true.<br>
+In the center, <code class="codehilite"><span class="n">dragBullets</span></code> and <code class="codehilite"><span class="n">rotateBullets</span></code> are true.<br>
+On the right,  <code class="codehilite"><span class="n">dragBullets</span></code> and <code class="codehilite"><span class="n">rotateBullets</span></code> and <code class="codehilite"><span class="n">rotateBulletAngles</span></code> are true.<br></p>
+<p><img src="https://files.facepunch.com/ryleigh/1b2011b1/Chippy_2019-08-20_18-49-15.png"/><br>
+To produce the attack in the image above:</p>
+<blockquote>
+<p>1) A very simple pattern shoots the faded blue bullet, then the pattern despawns</p>
+<p>2) On its first keyframe, the blue bullet shoots a second pattern and anchors it to itself</p>
+<p>3) The second pattern fires the red diamond bullets, and drags them along as the blue bullet drags <em>it</em></p>
+</blockquote>
+<details class="info"><summary>Full json file</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;1&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;patternShape&quot;</span><span class="p">:</span> <span class="s2">&quot;Spokes&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;numVolleys&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;numBulletsInVolley&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;shootDelay&quot;</span><span class="p">:</span> <span class="s2">&quot;0f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;rotationSpeed&quot;</span><span class="p">:</span> <span class="s2">&quot;-80f - ((patternNum % 3) * 20f)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;arcAngle&quot;</span><span class="p">:</span> <span class="s2">&quot;360f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;bullets&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.parentBullet1&quot;</span><span class="p">],</span>
+        <span class="nt">&quot;dragBullets&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;chargeColor&quot;</span><span class="p">:</span><span class="s2">&quot;color(1f, 0f, 0f) * 8f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;shootColor&quot;</span><span class="p">:</span><span class="s2">&quot;color(1f, 0f, 0f) * 10f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;shootColorTime&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span>
+        <span class="nt">&quot;shootColorEasingType&quot;</span><span class="p">:</span> <span class="s2">&quot;QuadIn&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;vibrationStrength&quot;</span><span class="p">:</span><span class="s2">&quot;0.33f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;maxVibrationDist&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+        <span class="nt">&quot;vibrationHorizThreshold&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+        <span class="nt">&quot;sfxCharge&quot;</span><span class="p">:</span><span class="s2">&quot;OctopusF1OrbCharge&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;sfxVolley&quot;</span><span class="p">:</span> <span class="s2">&quot;OctopusF1OrbShoot&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;numVolleysPerShootSfx&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">},</span>
+
+    <span class="nt">&quot;2&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;#include&quot;</span><span class="p">:</span><span class="s2">&quot;.1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;bullets&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.parentBullet2&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+
+    <span class="nt">&quot;3&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;#include&quot;</span><span class="p">:</span><span class="s2">&quot;.1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;bullets&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.parentBullet3&quot;</span><span class="p">],</span>
+    <span class="p">},</span>
+
+    <span class="nt">&quot;parentBullet1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;keyframes&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;acceleration&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span>
+        <span class="nt">&quot;frictionPercent&quot;</span><span class="p">:</span><span class="mf">0.025</span><span class="p">,</span>
+        <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mf">0.2</span><span class="p">,</span>
+        <span class="nt">&quot;radius&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+        <span class="nt">&quot;sprite&quot;</span><span class="p">:</span><span class="s2">&quot;sprites/circle/simple&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;colorA1&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.9</span><span class="p">},</span>
+        <span class="nt">&quot;colorA2&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.8</span><span class="p">},</span>
+        <span class="nt">&quot;colorB1&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">},</span>
+        <span class="nt">&quot;colorB2&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">},</span>
+        <span class="nt">&quot;colorC1&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">},</span>
+        <span class="nt">&quot;colorC2&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.22</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.66</span><span class="p">},</span>
+        <span class="nt">&quot;onKeyframe&quot;</span><span class="p">:[{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;AddPattern&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;.childPattern1&quot;</span><span class="p">,</span> <span class="p">}},],</span>
+        <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;startSpeed&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span>
+        <span class="nt">&quot;shouldLoop&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;despawnAfterKeyframes&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;depthLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;Bullet&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;shapeType&quot;</span><span class="p">:</span> <span class="s2">&quot;Circle&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;despawnTime&quot;</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span>
+        <span class="nt">&quot;outOfBoundsRadiusFactor&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+        <span class="nt">&quot;mass&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;ignorePlayerCollision&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+    <span class="p">},</span>
+
+    <span class="nt">&quot;parentBullet2&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;#include&quot;</span><span class="p">:</span><span class="s2">&quot;.parentBullet1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;keyframes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+            <span class="nt">&quot;#include&quot;</span><span class="p">:</span> <span class="s2">&quot;.parentBullet1.keyframes[0]&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;onKeyframe&quot;</span><span class="p">:[{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;AddPattern&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;.childPattern2&quot;</span><span class="p">,</span> <span class="p">}},],</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+
+    <span class="nt">&quot;parentBullet3&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;#include&quot;</span><span class="p">:</span><span class="s2">&quot;.parentBullet1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;keyframes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+            <span class="nt">&quot;#include&quot;</span><span class="p">:</span> <span class="s2">&quot;.parentBullet1.keyframes[0]&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;onKeyframe&quot;</span><span class="p">:[{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;AddPattern&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;.childPattern3&quot;</span><span class="p">,</span> <span class="p">}},],</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+
+    <span class="nt">&quot;childPattern1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;patternShape&quot;</span><span class="p">:</span> <span class="s2">&quot;Custom&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;numVolleys&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;numBulletsInVolley&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;customBulletPos&quot;</span><span class="p">:</span> <span class="s2">&quot;patternPos + vec2(0f, 1f) * bulletNum * 5f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;customBulletAngle&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;shootDelay&quot;</span><span class="p">:</span> <span class="s2">&quot;0f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;bulletIndex&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;rotationSpeed&quot;</span><span class="p">:</span> <span class="s2">&quot;-50f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;arcAngle&quot;</span><span class="p">:</span> <span class="s2">&quot;360f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;bullets&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.childBullet&quot;</span><span class="p">],</span>
+        <span class="nt">&quot;dragBullets&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>  
+        <span class="nt">&quot;rotateBullets&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;rotateBulletAngles&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;waitForBulletsToDespawn&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;constantRotation&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;chargeColor&quot;</span><span class="p">:</span><span class="s2">&quot;color(1f, 0f, 0f) * 8f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;shootColor&quot;</span><span class="p">:</span><span class="s2">&quot;color(1f, 0f, 0f) * 10f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;shootColorTime&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span>
+        <span class="nt">&quot;shootColorEasingType&quot;</span><span class="p">:</span> <span class="s2">&quot;QuadIn&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;vibrationStrength&quot;</span><span class="p">:</span><span class="s2">&quot;0.33f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;maxVibrationDist&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+        <span class="nt">&quot;vibrationHorizThreshold&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+        <span class="nt">&quot;sfxVolley&quot;</span><span class="p">:</span> <span class="s2">&quot;ShipShoot&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;numVolleysPerShootSfx&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;debugVector&quot;</span><span class="p">:</span><span class="s2">&quot;patternDir * 5f&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+
+    <span class="nt">&quot;childPattern2&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;#include&quot;</span><span class="p">:</span><span class="s2">&quot;.childPattern1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;dragBullets&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>  
+        <span class="nt">&quot;rotateBullets&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;rotateBulletAngles&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+    <span class="p">},</span>
+
+    <span class="nt">&quot;childPattern3&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;#include&quot;</span><span class="p">:</span><span class="s2">&quot;.childPattern1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;dragBullets&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>  
+        <span class="nt">&quot;rotateBullets&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;rotateBulletAngles&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+    <span class="p">},</span>
+
+    <span class="nt">&quot;childBullet&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;keyframes&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="nt">&quot;frictionPercent&quot;</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span>
+        <span class="nt">&quot;colorA1&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.9</span><span class="p">},</span>
+        <span class="nt">&quot;colorA2&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.8</span><span class="p">},</span>
+        <span class="nt">&quot;colorB1&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.075</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">},</span>
+        <span class="nt">&quot;colorB2&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">},</span>
+        <span class="nt">&quot;colorC1&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">},</span>
+        <span class="nt">&quot;colorC2&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.22</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.66</span><span class="p">},</span>
+        <span class="nt">&quot;colorBlinkTime&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="nt">&quot;easingType&quot;</span><span class="p">:</span><span class="s2">&quot;ExpoOut&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;loopEnd&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;glowA&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="nt">&quot;glowB&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="nt">&quot;glowC&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;sprite&quot;</span><span class="p">:</span><span class="s2">&quot;sprites/diamond/simple&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+        <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;length&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+        <span class="nt">&quot;crossWidth&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+        <span class="nt">&quot;crossDistance&quot;</span><span class="p">:</span><span class="mf">0.66</span><span class="p">,</span>
+        <span class="nt">&quot;easingType&quot;</span><span class="p">:</span><span class="s2">&quot;ExpoInOut&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;glowA&quot;</span><span class="p">:</span> <span class="mf">3.75</span><span class="p">,</span>
+        <span class="nt">&quot;glowB&quot;</span><span class="p">:</span> <span class="mf">0.33</span><span class="p">,</span>
+        <span class="nt">&quot;glowC&quot;</span><span class="p">:</span> <span class="mf">0.33</span><span class="p">,</span>
+        <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;startSpeed&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span>
+        <span class="nt">&quot;shouldLoop&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;despawnAfterKeyframes&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;depthLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;Bullet&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;shapeType&quot;</span><span class="p">:</span> <span class="s2">&quot;Diamond&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;despawnTime&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;mass&quot;</span><span class="p">:</span><span class="mi">99</span><span class="p">,</span>
+        <span class="nt">&quot;anchored&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+</details>
+<h3 id="linking-volley-bullets">Linking Volley Bullets</h3>
+<p>A pattern can choose to <strong>link</strong> all bullets in a volley.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;linkedPattern&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;linkVolleyBullets&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>If one linked bullet despawns, all other bullets in the linked volley will despawn - this is useful for powerup patterns, among other things.</p>
 <h2 id="visual-effects">Visual Effects</h2>
+<p>Patterns can declare another pattern to be spawned as their "shoot effect":</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;attack&quot;</span><span class="err">:</span><span class="p">{</span>
+    <span class="err">//</span> <span class="err">...</span>
+    <span class="nt">&quot;shootEffectPattern&quot;</span><span class="p">:</span> <span class="s2">&quot;misc/pattern/shoot/fanRedRound&quot;</span><span class="p">,</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>This will spawn the effect at the position of the shooting pattern, and pointed in the same direction.</p>
 <h2 id="callbacks">Callbacks</h2>
+<p>You may want to call Actions at certain points during a pattern.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;pattern&quot;</span><span class="err">:</span><span class="p">{</span>
+    <span class="err">//</span> <span class="err">...</span>
+    <span class="nt">&quot;onStart&quot;</span><span class="p">:[</span>
+        <span class="err">//</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">pattern</span> <span class="err">begins</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;ShakeCamera&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;strength&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span> <span class="nt">&quot;easingType&quot;</span><span class="p">:</span> <span class="s2">&quot;QuadOut&quot;</span> <span class="p">}},</span>
+    <span class="p">],</span>    
+
+    <span class="nt">&quot;onVolley&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">pattern</span> <span class="err">starts</span> <span class="err">a</span> <span class="err">volley</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onBullet&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">pattern</span> <span class="err">fires</span> <span class="err">a</span> <span class="err">bullet</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onUpdate&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">each</span> <span class="err">frame</span> <span class="err">the</span> <span class="err">pattern</span> <span class="err">is</span> <span class="err">active</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onFinish&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">pattern</span> <span class="err">despawns</span> <span class="err">*/</span> <span class="p">],</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
 <h2 id="behaviour">Behaviour</h2>
 <h2 id="params">Params</h2>
 <h2 id="custom-variables">Custom Variables</h2>

@@ -412,6 +412,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#velocity-mode" title="Velocity Mode" class="md-nav__link">
+    Velocity Mode
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -506,6 +513,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#other-volley-bullets" title="Other Volley Bullets" class="md-nav__link">
+    Other Volley Bullets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#debugging" title="Debugging" class="md-nav__link">
     Debugging
   </a>
@@ -529,18 +543,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../actions/" title="Actions" class="md-nav__link">
-      Actions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../unit/" title="Units" class="md-nav__link">
       Units
     </a>
@@ -555,6 +557,18 @@
   <li class="md-nav__item">
     <a href="../unit_parts/" title="Unit Parts" class="md-nav__link">
       Unit Parts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../actions/" title="Actions" class="md-nav__link">
+      Actions
     </a>
   </li>
 
@@ -601,8 +615,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../pxc_editor/" title="Editor" class="md-nav__link">
-      Editor
+    <a href="../pxc_editor/" title="Pixel Editor" class="md-nav__link">
+      Pixel Editor
     </a>
   </li>
 
@@ -24075,30 +24089,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../SpaceUsurper/UnitLaserData/OnHitPart/" title="OnHitPart" class="md-nav__link">
-      OnHitPart
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../SpaceUsurper/UnitLaserData/OnHitPixel/" title="OnHitPixel" class="md-nav__link">
-      OnHitPixel
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../SpaceUsurper/UnitLaserData/OnHitPlayer/" title="OnHitPlayer" class="md-nav__link">
       OnHitPlayer
     </a>
@@ -26939,6 +26929,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#velocity-mode" title="Velocity Mode" class="md-nav__link">
+    Velocity Mode
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -27028,6 +27025,13 @@
         <li class="md-nav__item">
   <a href="#floating-text" title="Floating Text" class="md-nav__link">
     Floating Text
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-volley-bullets" title="Other Volley Bullets" class="md-nav__link">
+    Other Volley Bullets
   </a>
   
 </li>
@@ -27744,6 +27748,7 @@ The keyframe property <code class="codehilite"><span class="n">frictionPercent</
 </td></tr></table>
 
 <p>When the bullet enters this keyframe, it will set its target position to the player's current location. From then on, its <code class="codehilite"><span class="n">posLerpSpeed</span></code> of <code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">01</span></code> will move the bullet 1% of the remaining distance to the target per frame.</p>
+<h4 id="velocity-mode">Velocity Mode</h4>
 <h3 id="facing">Facing</h3>
 <p>By default, bullets don't rotate at all. By specifying a value from <code class="codehilite"><span class="mi">0</span><span class="o">-</span><span class="mi">1</span></code> for the keyframe property <code class="codehilite"><span class="n">facingSpeedPercent</span></code>, the bullet will ease toward a certain direction - normally the same direction as their velocity.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -28223,28 +28228,32 @@ Each frame, the bullet will evaluate this function and set the result to its <co
 19
 20
 21
-22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;pattern&quot;</span><span class="err">:</span> <span class="p">{</span>
-  <span class="err">//</span> <span class="err">...</span>
-  <span class="nt">&quot;bullets&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.bullet&quot;</span><span class="p">],</span>
-  <span class="nt">&quot;hitSelfPixels&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">by</span> <span class="err">default,</span> <span class="err">bullets</span> <span class="err">fired</span> <span class="err">by</span> <span class="err">enemies</span> <span class="err">dont</span> <span class="err">collide</span> <span class="err">with</span> <span class="err">their</span> <span class="err">own</span> <span class="err">pixels</span>
-<span class="p">}</span><span class="err">,</span>
-
-<span class="s2">&quot;bullet&quot;</span><span class="err">:</span> <span class="p">{</span>
-  <span class="nt">&quot;keyframes&quot;</span><span class="p">:[</span> 
-    <span class="p">{</span>
-      <span class="nt">&quot;ignorePixelCollision&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">don&#39;t</span> <span class="err">collide</span> <span class="err">with</span> <span class="err">pixels</span> <span class="err">for</span> <span class="err">now</span>
-    <span class="p">},</span>
+22
+23
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;pattern&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="err">//</span> <span class="err">...</span>
-    <span class="p">{</span>
-      <span class="nt">&quot;moveAngle&quot;</span><span class="p">:</span><span class="mi">180</span><span class="p">,</span> <span class="err">//</span> <span class="err">move</span> <span class="err">backwards</span>
-      <span class="nt">&quot;ignorePixelCollision&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span> <span class="err">//</span> <span class="err">re-enable</span> <span class="err">pixel</span> <span class="err">collision</span>
-    <span class="p">},</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;collideWithPixels&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">bullet</span> <span class="err">is</span> <span class="err">eligible</span> <span class="err">for</span> <span class="err">pixel</span> <span class="err">collision</span>
-  <span class="nt">&quot;totalPixelDamage&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span>
-  <span class="nt">&quot;impactPattern&quot;</span><span class="p">:</span><span class="s2">&quot;misc/pattern/effect/defaultBulletImpact&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;despawnStyle&quot;</span><span class="p">:</span><span class="s2">&quot;ShrinkToFront&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">shrink</span> <span class="err">forward</span> <span class="err">when</span> <span class="err">despawning</span>
-<span class="p">}</span><span class="err">,</span>
+    <span class="nt">&quot;bullets&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;.bullet&quot;</span><span class="p">],</span>
+    <span class="nt">&quot;hitSelfPixels&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">by</span> <span class="err">default,</span> <span class="err">bullets</span> <span class="err">fired</span> <span class="err">by</span> <span class="err">enemies</span> <span class="err">dont</span> <span class="err">collide</span> <span class="err">with</span> <span class="err">their</span> <span class="err">own</span> <span class="err">pixels</span>
+  <span class="p">},</span>
+
+  <span class="nt">&quot;bullet&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;keyframes&quot;</span><span class="p">:[</span> 
+      <span class="p">{</span>
+        <span class="nt">&quot;ignorePixelCollision&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">don&#39;t</span> <span class="err">collide</span> <span class="err">with</span> <span class="err">pixels</span> <span class="err">for</span> <span class="err">now</span>
+      <span class="p">},</span>
+      <span class="err">//</span> <span class="err">...</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;moveAngle&quot;</span><span class="p">:</span><span class="mi">180</span><span class="p">,</span> <span class="err">//</span> <span class="err">move</span> <span class="err">backwards</span>
+        <span class="nt">&quot;ignorePixelCollision&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span> <span class="err">//</span> <span class="err">re-enable</span> <span class="err">pixel</span> <span class="err">collision</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;collideWithPixels&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">bullet</span> <span class="err">is</span> <span class="err">eligible</span> <span class="err">for</span> <span class="err">pixel</span> <span class="err">collision</span>
+    <span class="nt">&quot;totalPixelDamage&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span>
+    <span class="nt">&quot;impactPattern&quot;</span><span class="p">:</span><span class="s2">&quot;misc/pattern/effect/defaultBulletImpact&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;despawnStyle&quot;</span><span class="p">:</span><span class="s2">&quot;ShrinkToFront&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">shrink</span> <span class="err">forward</span> <span class="err">when</span> <span class="err">despawning</span>
+  <span class="p">},</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
@@ -28404,15 +28413,526 @@ Each frame, the bullet will evaluate this function and set the result to its <co
 
 </details>
 <h2 id="player-collision">Player Collision</h2>
+<p>By default, players deal deal damage to the player on collision, either removing a shield or killing them. The bullet is destroyed by the impact unless specified otherwise.</p>
+<p>To change what happens on player collision, define the <code class="codehilite"><span class="n">onHitPlayer</span></code> callback:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;bullet&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="err">//</span> <span class="err">...</span>
+  <span class="nt">&quot;onHitPlayer&quot;</span><span class="p">:[</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;ShakeCamera&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;strength&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="nt">&quot;easingType&quot;</span><span class="p">:</span> <span class="s2">&quot;QuadOut&quot;</span> <span class="p">}},</span>
+
+    <span class="err">//</span> <span class="err">without</span> <span class="err">calling</span> <span class="err">this</span><span class="p">,</span> <span class="err">bullet</span> <span class="err">will</span> <span class="err">despawn</span> <span class="err">without</span> <span class="err">hurting</span> <span class="err">player</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;DamagePlayer&quot;</span><span class="p">,</span> <span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table></p>
+<p>Once <code class="codehilite"><span class="n">onHitPlayer</span></code> is defined, the bullet no longer automatically damages the player.</p>
+<p>If you don't want the bullet to despawn when it collides with the player, set <code class="codehilite"><span class="n">despawnOnPlayerHit</span></code> to <code class="codehilite"><span class="k">false</span></code>.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;bullet&quot;</span><span class="err">:</span><span class="p">{</span>
+  <span class="err">//</span> <span class="err">...</span>
+  <span class="nt">&quot;despawnOnPlayerHit&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table></p>
+<p>To ignore collision with the player altogether, there are a couple options: <code class="codehilite"><span class="n">ignorePlayerCollision</span></code> is <strong>both</strong> a keyframe property and a non-keyframe property.</p>
+<p>Set the non-keyframe property to <code class="codehilite"><span class="k">true</span></code> if you never want the bullet to collide with the player.<br>
+Set the keyframe property to <code class="codehilite"><span class="k">true</span></code> if you temporarily want to disable player collision.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;bullet0&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;keyframes&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">...</span> <span class="err">*/</span> <span class="p">],</span>
+
+    <span class="err">//</span> <span class="err">this</span> <span class="err">bullet</span> <span class="err">will</span> <span class="err">NEVER</span> <span class="err">be</span> <span class="err">considered</span> <span class="err">for</span> <span class="err">player</span> <span class="err">collision</span>
+    <span class="nt">&quot;ignorePlayerCollision&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="nt">&quot;bullet1&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;keyframes&quot;</span><span class="p">:[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+
+        <span class="err">//</span> <span class="err">ignore</span> <span class="err">player</span> <span class="err">collision</span> <span class="err">until</span> <span class="err">told</span> <span class="err">otherwise</span>
+        <span class="nt">&quot;ignorePlayerCollision&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>  
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+
+        <span class="err">//</span> <span class="err">player</span> <span class="err">collision</span> <span class="err">is</span> <span class="err">now</span> <span class="err">re-enabled</span>
+        <span class="nt">&quot;ignorePlayerCollision&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>  
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <h2 id="child-patterns">Child Patterns</h2>
+<p>Bullets that spawn other bullets can create very interesting attacks. Bullets can either call the stage's <code class="codehilite"><span class="n">SpawnPattern</span></code> method to simply create a pattern, or they can call their own <code class="codehilite"><span class="n">AddPattern</span></code> method to drag a pattern along with it.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="err">//</span> <span class="err">child</span> <span class="err">pattern</span> <span class="err">automatically</span> <span class="err">created</span> <span class="err">at</span> <span class="err">bullet&#39;s</span> <span class="err">location,</span> <span class="err">and</span> <span class="err">anchored</span> <span class="err">to</span> <span class="err">it</span>
+  <span class="err">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;AddPattern&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;.childPattern&quot;</span><span class="p">,</span> <span class="p">}}</span><span class="err">,</span>       
+
+  <span class="err">//</span> <span class="err">child</span> <span class="err">pattern</span> <span class="err">created</span> <span class="err">on</span> <span class="err">its</span> <span class="err">own,</span> <span class="err">no</span> <span class="err">connection</span> <span class="err">to</span> <span class="err">parent</span> <span class="err">bullet</span>
+  <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SpawnPattern&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;.childPattern&quot;</span><span class="p">,</span> <span class="nt">&quot;pos&quot;</span><span class="p">:</span><span class="s2">&quot;bulletPos&quot;</span> <span class="p">}}</span><span class="err">,</span> 
+<span class="err">},</span>
+</pre></div>
+</td></tr></table>
+
+<p>In the following clip, the bullet on the left <strong>anchors</strong> its child pattern by calling the <code class="codehilite"><span class="n">AddPattern</span></code> method of Bullet, while the bullet on the right <strong>does not anchor</strong> its child pattern when it calls the <code class="codehilite"><span class="n">SpawnPattern</span></code> method of Stage.</p>
+<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b2311b1/2019-08-23_16-17-20.mp4" type="video/mp4" > </video>
+
+<p>A pattern can set the <code class="codehilite"><span class="n">despawnWhenAnchorInactive</span></code> property to <code class="codehilite"><span class="k">true</span></code> if you want it to stop when the bullet that is dragging it along is removed.</p>
+<p>Setting a pattern's <code class="codehilite"><span class="n">rotateWithAnchor</span></code> property to <code class="codehilite"><span class="k">true</span></code> will cause it to rotate as the bullet its anchored to rotates.</p>
 <h2 id="visual-effect-bullets">Visual Effect Bullets</h2>
-<ul>
-<li>isStrictlyVisual</li>
-</ul>
+<p>Bullets are used for most of the particle effects in Chippy (the main exception being the pixel debris, which is a Unity particle system).</p>
+<p>When you want to use a bullet for purely visual reasons with no effect on gameplay, set the <code class="codehilite"><span class="n">isStrictlyVisual</span></code> property to true.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;bullet&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="err">//</span> <span class="err">...</span>
+  <span class="nt">&quot;isStrictlyVisual&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>Now that bullet won't be considered for collision with pixels or the player and won't be affected or destroyed by any Actions.</p>
 <h2 id="callbacks">Callbacks</h2>
+<p>You may want to call Actions at certain points during a bullet's lifetime.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;bullet&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="nt">&quot;keyframes&quot;</span><span class="p">:</span> <span class="p">[</span> 
+    <span class="err">//</span> <span class="err">...</span> 
+  <span class="p">],</span>
+  <span class="err">//</span> <span class="err">...</span>
+  <span class="nt">&quot;onStart&quot;</span><span class="p">:[</span>
+    <span class="err">//</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">bullet</span> <span class="err">spawns</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;ShakeCamera&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;strength&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="nt">&quot;easingType&quot;</span><span class="p">:</span> <span class="s2">&quot;QuadOut&quot;</span> <span class="p">}},</span>
+  <span class="p">],</span>    
+
+  <span class="nt">&quot;onHitPlayer&quot;</span><span class="p">:[</span>
+    <span class="err">//</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">bullet</span> <span class="err">hits</span> <span class="err">a</span> <span class="err">player</span>
+    <span class="err">//</span> <span class="err">(if</span> <span class="err">onHitPlayer</span> <span class="err">is</span> <span class="err">declared</span><span class="p">,</span> <span class="err">the</span> <span class="err">bullet</span> <span class="err">won&#39;t</span> <span class="err">automatically</span> <span class="err">damage</span> <span class="err">the</span> <span class="err">player</span> <span class="err">like</span> <span class="err">it</span> <span class="err">normally</span> <span class="err">does)</span>
+  <span class="p">],</span>
+
+  <span class="nt">&quot;onUpdate&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">each</span> <span class="err">frame</span> <span class="err">the</span> <span class="err">bullet</span> <span class="err">is</span> <span class="err">active</span> <span class="err">*/</span> <span class="p">],</span>
+  <span class="nt">&quot;onHitPixel&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">bullet</span> <span class="err">hits</span> <span class="err">a</span> <span class="err">pixel</span> <span class="err">and</span> <span class="err">fails</span> <span class="err">to</span> <span class="err">destroy</span> <span class="err">it</span> <span class="err">*/</span> <span class="p">],</span>
+  <span class="nt">&quot;onDestroyPixel&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">bullet</span> <span class="err">destroys</span> <span class="err">a</span> <span class="err">pixel</span> <span class="err">and</span> <span class="err">still</span> <span class="err">has</span> <span class="err">damage</span> <span class="err">remaining</span> <span class="err">*/</span> <span class="p">],</span>
+  <span class="nt">&quot;onHitPart&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">bullet</span> <span class="err">hits</span> <span class="err">a</span> <span class="err">part</span> <span class="err">*/</span> <span class="p">],</span>
+  <span class="nt">&quot;onHitPartProtected&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">bullet</span> <span class="err">hits</span> <span class="err">a</span> <span class="err">part</span> <span class="err">that</span> <span class="err">is</span> <span class="err">shielded</span> <span class="err">by</span> <span class="err">another</span> <span class="err">part</span> <span class="err">*/</span> <span class="p">],</span>
+  <span class="nt">&quot;onLifetimeFinished&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">bullet&#39;s</span> <span class="err">lifetime</span> <span class="err">elapses</span> <span class="err">*/</span> <span class="p">],</span>
+  <span class="nt">&quot;onRemove&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">bullet</span> <span class="err">finishes</span> <span class="err">despawning</span> <span class="err">*/</span> <span class="p">],</span>
+  <span class="nt">&quot;onOutOfBounds&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">the</span> <span class="err">bullet</span> <span class="err">leaves</span> <span class="err">the</span> <span class="err">arena</span> <span class="err">bounds</span> <span class="err">*/</span> <span class="p">],</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>Some of the callbacks set the values of useful properties when they call their actions.<br></p>
+<p><code class="codehilite"><span class="n">onHitPixel</span></code>, <code class="codehilite"><span class="n">onDestroyPixel</span></code>, <code class="codehilite"><span class="n">onHitPart</span></code>, and <code class="codehilite"><span class="n">onHitPartProtected</span></code> set the following properties:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="left">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">hitPos</span></code></td>
+<td align="left">the position of the collision</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">hitNormal</span></code></td>
+<td align="left">the normal of the collision (the direction the hit pixel's edge was facing)</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">hitPixel</span></code></td>
+<td align="left">the PixelData of the hit pixel</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">hitPart</span></code></td>
+<td align="left">the PixelGroup of the hit pixel (only set for <code class="codehilite"><span class="n">onHitPart</span></code> and <code class="codehilite"><span class="n">onHitPartProtected</span></code>)</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">hitUnit</span></code></td>
+<td align="left">the Unit that owns the hit pixel</td>
+</tr>
+</tbody>
+</table>
+<p><code class="codehilite"><span class="n">onOutOfBounds</span></code> sets the following properties:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="left">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">outOfBoundsPos</span></code></td>
+<td align="left">the position where the bullet left bounds</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">outOfBoundsNormal</span></code></td>
+<td align="left">the normal of the arena edge the bullet passed (eg, <code class="codehilite"><span class="n">vec2</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="mi">0</span><span class="n">f</span><span class="p">)</span></code> for the right edge)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="params">Params</h2>
 <h2 id="floating-text">Floating Text</h2>
+<p>Floating text (used in Chippy for damage amount floaters and powerup alerts) can only be created when added to a bullet. </p>
+<p>To control the text's movement, you simply use the existing bullet properties.</p>
+<p>When the bullet despawns, the text is removed.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;onKeyframe&quot;</span><span class="err">:</span><span class="p">[</span> 
+  <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;AddText&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> 
+      <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;${playerPos}&quot;</span><span class="p">,</span> 
+      <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mf">0.75</span><span class="p">,</span> 
+    <span class="p">}</span>
+  <span class="p">},</span>
+<span class="p">]</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>Remember, the bullet itself does not have to be visible!</p>
+<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b2311b1/2019-08-23_17-35-24.mp4" type="video/mp4" > </video>
+
+<details class="info"><summary>Example bullet json</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;bullet&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="nt">&quot;keyframes&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mf">0.75</span><span class="p">,</span>
+    <span class="nt">&quot;acceleration&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;frictionPercent&quot;</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span>
+    <span class="nt">&quot;colorA1&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span>
+    <span class="nt">&quot;colorA2&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.15</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.15</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.75</span><span class="p">},</span>
+    <span class="nt">&quot;colorB1&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">},</span>
+    <span class="nt">&quot;colorB2&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">},</span>
+    <span class="nt">&quot;colorC1&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.3</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.3</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.9</span><span class="p">},</span>
+    <span class="nt">&quot;colorC2&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mf">0.2</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span>
+    <span class="nt">&quot;colorBlinkTime&quot;</span><span class="p">:</span><span class="mf">0.075</span><span class="p">,</span>
+    <span class="nt">&quot;easingType&quot;</span><span class="p">:</span><span class="s2">&quot;QuadOut&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;loopEnd&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;glowA&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;glowB&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;glowC&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;radius&quot;</span><span class="p">:</span><span class="mf">3.5</span><span class="p">,</span>
+    <span class="nt">&quot;sprite&quot;</span><span class="p">:</span><span class="s2">&quot;sprites/circle/simple&quot;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;acceleration&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
+    <span class="nt">&quot;frictionPercent&quot;</span><span class="p">:</span><span class="mf">0.033</span><span class="p">,</span>
+    <span class="nt">&quot;glowA&quot;</span><span class="p">:</span> <span class="mf">1.75</span><span class="p">,</span>
+    <span class="nt">&quot;glowB&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;glowC&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">,</span>
+    <span class="nt">&quot;onKeyframe&quot;</span><span class="p">:[</span> 
+      <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span>  <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;AddText&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> 
+        <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;TEST&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;font&quot;</span><span class="p">:</span> <span class="s2">&quot;MonoMMM&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;material&quot;</span><span class="p">:</span> <span class="s2">&quot;Outline&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;scale&quot;</span><span class="p">:</span><span class="s2">&quot;vec2(0.8f, 2.5f)&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;colorA&quot;</span><span class="p">:</span><span class="s2">&quot;color(1f, 0.9f, 0.5f)&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;colorB&quot;</span><span class="p">:</span><span class="s2">&quot;color(1f, 0.5f, 0.5f)&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;fontSize&quot;</span><span class="p">:</span><span class="mf">3.5</span><span class="p">,</span> 
+        <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span> 
+        <span class="nt">&quot;lerpSpeed&quot;</span><span class="p">:</span><span class="mf">0.075</span><span class="p">,</span> <span class="p">}</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;onKeyframe&quot;</span><span class="p">:[</span> 
+      <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetTextSize&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,}},</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;startSpeed&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>
+  <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+  <span class="nt">&quot;shouldLoop&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;despawnAfterKeyframes&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;depthLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;BulletTop&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;shapeType&quot;</span><span class="p">:</span> <span class="s2">&quot;Circle&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;impulseFrictionPercent&quot;</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span>
+  <span class="nt">&quot;despawnTime&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">,</span>
+  <span class="nt">&quot;useAbsoluteAngles&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;circleSkew&quot;</span><span class="p">:</span><span class="mf">0.125</span><span class="p">,</span>
+  <span class="nt">&quot;circleSkewDist&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+</details>
+<details class="info"><summary>All AddText parameters</summary><table>
+<thead>
+<tr>
+<th align="left">Property &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+<th align="left">Type</th>
+<th align="left">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">message</span></code></td>
+<td align="left">string</td>
+<td NAME="NAME" align="left">the text to show (use $</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">opacity</span></code></td>
+<td align="left">string</td>
+<td align="left">how opaque text is</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="k">scale</span></code></td>
+<td align="left">Vector2</td>
+<td align="left">width and height scaling for text (default = <code class="codehilite"><span class="n">vec2</span><span class="p">(</span><span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">)</span></code>)</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">colorA</span></code></td>
+<td align="left">Color</td>
+<td align="left">first color of text</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">colorB</span></code></td>
+<td align="left">Color</td>
+<td align="left">second color of text</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">colorBlinkTime</span></code></td>
+<td align="left">float</td>
+<td align="left">time to blink between first and second color</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">font</span></code></td>
+<td align="left">FloatingTextFont</td>
+<td align="left">font to use, from the available fonts</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">fontSize</span></code></td>
+<td align="left">float</td>
+<td align="left">default = <code class="codehilite"><span class="mi">2</span><span class="p">.</span><span class="mi">5</span><span class="n">f</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">material</span></code></td>
+<td align="left">string</td>
+<td align="left">use "Outline" to show outlines, omit otherwise</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">outlineWidth</span></code></td>
+<td align="left">float</td>
+<td align="left">width of outline</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">outlineColor</span></code></td>
+<td align="left">Color</td>
+<td align="left">outline color</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="k">offset</span></code></td>
+<td align="left">Vector2</td>
+<td align="left">position offset from bullet</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">alignment</span></code></td>
+<td align="left">BulletTextAlignment</td>
+<td align="left">which side of text is anchored</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">useAngle</span></code></td>
+<td align="left">bool</td>
+<td align="left">if true, rotate text as bullet rotates</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">lerpSpeed</span></code></td>
+<td align="left">float</td>
+<td align="left">how quickly the bullet changes to new values (<code class="codehilite"><span class="mi">0</span><span class="o">-</span><span class="mi">1</span></code>)</td>
+</tr>
+</tbody>
+</table>
+<p>There are also a number of methods that bullets can call to change their anchored text:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">SetTextLerpSpeed</span><span class="p">(</span><span class="kt">float</span> <span class="n">lerpSpeed</span><span class="p">)</span>
+<span class="n">SetTextSize</span><span class="p">(</span><span class="kt">float</span> <span class="n">size</span><span class="p">)</span>
+<span class="n">SetTextScale</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">scale</span><span class="p">)</span>
+<span class="n">SetTextOpacity</span><span class="p">(</span><span class="kt">float</span> <span class="n">opacity</span><span class="p">)</span>
+<span class="n">SetTextMessage</span><span class="p">(</span><span class="kt">string</span> <span class="n">message</span><span class="p">)</span>
+<span class="n">SetTextColorA</span><span class="p">(</span><span class="n">Color</span> <span class="n">color</span><span class="p">)</span>
+<span class="n">SetTextColorB</span><span class="p">(</span><span class="n">Color</span> <span class="n">color</span><span class="p">)</span>
+<span class="n">SetTextColor</span><span class="p">(</span><span class="n">Color</span> <span class="n">color</span><span class="p">)</span>
+<span class="n">SetTextColorBlinkTime</span><span class="p">(</span><span class="kt">float</span> <span class="n">time</span><span class="p">)</span>
+<span class="n">SetTextOutlineColor</span><span class="p">(</span><span class="n">Color</span> <span class="n">color</span><span class="p">)</span>
+<span class="n">SetTextOutlineWidth</span><span class="p">(</span><span class="kt">float</span> <span class="n">width</span><span class="p">)</span>
+<span class="n">SetTextNumChars</span><span class="p">(</span><span class="kt">int</span> <span class="n">numChars</span><span class="p">)</span>
+<span class="n">SetTextStartChars</span><span class="p">(</span><span class="kt">int</span> <span class="n">startChar</span><span class="p">)</span>
+<span class="n">SetTextCharacterSpacing</span><span class="p">(</span><span class="kt">float</span> <span class="n">spacing</span><span class="p">)</span>
+<span class="n">SetTextLineSpacing</span><span class="p">(</span><span class="kt">float</span> <span class="n">spacing</span><span class="p">)</span>
+<span class="n">SetTextWordSpacing</span><span class="p">(</span><span class="kt">float</span> <span class="n">spacing</span><span class="p">)</span>
+<span class="n">SetTextOffset</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">offset</span><span class="p">)</span>
+<span class="n">DespawnText</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">scale</span><span class="p">,</span> <span class="kt">float</span> <span class="n">time</span> <span class="p">=</span> <span class="m">1f</span><span class="p">,</span> <span class="n">EasingType</span> <span class="n">easingType</span> <span class="p">=</span> <span class="n">EasingType</span><span class="p">.</span><span class="n">QuadOut</span><span class="p">)</span>
+<span class="n">Vector2</span> <span class="nf">GetTextSize</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+
+</details>
+<h2 id="other-volley-bullets">Other Volley Bullets</h2>
+<p>Bullets can ask for information on other bullets fired in the same volley.</p>
+<p>The following statement will get the position of the next bullet in the volley:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;bullet.GetVolleyBullet(bulletNum + 1).Position&quot;</span>
+</pre></div>
+</td></tr></table></p>
+<p>Bullets can get a reference to <strong>themselves</strong> with the <code class="codehilite"><span class="n">bullet</span></code> property.<br></p>
 <h2 id="debugging">Debugging</h2>
+<p><code class="codehilite"><span class="n">debugVector</span></code>: draws a 2d vector from the bullet's position <br>
+<code class="codehilite"><span class="n">debugText</span></code>: displays a string at the bullet's position (use <code class="codehilite"><span class="cp">${</span><span class="n">NAME</span><span class="cp">}</span></code> for properties)</p>
 <ul>
 <li>bubble example</li>
 </ul>
@@ -28453,13 +28973,13 @@ Each frame, the bullet will evaluate this function and set the result to its <co
           </a>
         
         
-          <a href="../actions/" title="Actions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../unit/" title="Units" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Actions
+                Units
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

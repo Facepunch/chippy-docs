@@ -299,18 +299,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../actions/" title="Actions" class="md-nav__link">
-      Actions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../unit/" title="Units" class="md-nav__link">
       Units
     </a>
@@ -354,18 +342,24 @@
     Config
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#placing" title="Placing" class="md-nav__link">
     Placing
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#requirements" title="Requirements" class="md-nav__link">
-    Requirements
+  <a href="#protecting-parts" title="Protecting Parts" class="md-nav__link">
+    Protecting Parts
   </a>
   
     <nav class="md-nav">
@@ -384,6 +378,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#lasers" title="Lasers" class="md-nav__link">
+    Lasers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#callbacks" title="Callbacks" class="md-nav__link">
     Callbacks
   </a>
@@ -398,8 +399,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cores" title="Cores" class="md-nav__link">
-    Cores
+  <a href="#core-controllers" title="Core Controllers" class="md-nav__link">
+    Core Controllers
   </a>
   
     <nav class="md-nav">
@@ -437,13 +438,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#non-rectangle-parts" title="Non-Rectangle Parts" class="md-nav__link">
-    Non-Rectangle Parts
-  </a>
-  
-</li>
-      
       
       
       
@@ -452,6 +446,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../actions/" title="Actions" class="md-nav__link">
+      Actions
+    </a>
   </li>
 
         
@@ -497,8 +503,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../pxc_editor/" title="Editor" class="md-nav__link">
-      Editor
+    <a href="../pxc_editor/" title="Pixel Editor" class="md-nav__link">
+      Pixel Editor
     </a>
   </li>
 
@@ -23971,30 +23977,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../SpaceUsurper/UnitLaserData/OnHitPart/" title="OnHitPart" class="md-nav__link">
-      OnHitPart
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../SpaceUsurper/UnitLaserData/OnHitPixel/" title="OnHitPixel" class="md-nav__link">
-      OnHitPixel
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../SpaceUsurper/UnitLaserData/OnHitPlayer/" title="OnHitPlayer" class="md-nav__link">
       OnHitPlayer
     </a>
@@ -26741,18 +26723,24 @@
     Config
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#placing" title="Placing" class="md-nav__link">
     Placing
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#requirements" title="Requirements" class="md-nav__link">
-    Requirements
+  <a href="#protecting-parts" title="Protecting Parts" class="md-nav__link">
+    Protecting Parts
   </a>
   
     <nav class="md-nav">
@@ -26771,6 +26759,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#lasers" title="Lasers" class="md-nav__link">
+    Lasers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#callbacks" title="Callbacks" class="md-nav__link">
     Callbacks
   </a>
@@ -26785,8 +26780,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cores" title="Cores" class="md-nav__link">
-    Cores
+  <a href="#core-controllers" title="Core Controllers" class="md-nav__link">
+    Core Controllers
   </a>
   
     <nav class="md-nav">
@@ -26824,13 +26819,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#non-rectangle-parts" title="Non-Rectangle Parts" class="md-nav__link">
-    Non-Rectangle Parts
-  </a>
-  
-</li>
-      
       
       
       
@@ -26862,33 +26850,746 @@
 
     <!-- Content -->
     <h1 id="unit-parts">Unit Parts</h1>
-<p>A section of pixels can be grouped together as a "part" or "pixelgroup". Parts have a single health pool and can only be destroyed as a whole.</p>
+<p>A section of pixels can be grouped together as a <strong>part</strong>. Parts have a single health pool and can only be destroyed as a whole.</p>
 <h2 id="config">Config</h2>
-<ul>
-<li>corePath</li>
-<li>spritePath</li>
-<li>hp</li>
-</ul>
-<h2 id="placing">Placing</h2>
-<ul>
-<li>size</li>
-<li>placements</li>
-<li>different sizes for same core</li>
-</ul>
-<h2 id="requirements">Requirements</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;forms&quot;</span><span class="p">:[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;parts&quot;</span><span class="p">:{</span>
+                <span class="nt">&quot;core&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;corePath&quot;</span><span class="p">:</span> <span class="s2">&quot;misc/core/octopus/core0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+                    <span class="nt">&quot;placements&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">0</span> <span class="p">],</span>
+                    <span class="nt">&quot;hp&quot;</span><span class="p">:</span> <span class="mi">900</span><span class="p">,</span>
+                    <span class="nt">&quot;requires&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;gun&quot;</span><span class="p">,</span> <span class="p">],</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;gun&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;corePath&quot;</span><span class="p">:</span> <span class="s2">&quot;misc/core/octopus/smallGun&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                    <span class="nt">&quot;placements&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">89</span> <span class="p">],</span>
+                    <span class="nt">&quot;hp&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;stud&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;spritePath&quot;</span><span class="p">:</span> <span class="s2">&quot;stud/stud_2x14&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;width&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                    <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+                    <span class="nt">&quot;placements&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">1628</span><span class="p">,</span> <span class="mi">1332</span><span class="p">,</span> <span class="mi">1360</span><span class="p">,</span> <span class="mi">1064</span> <span class="p">],</span>
+                    <span class="nt">&quot;hp&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p><code class="codehilite"><span class="n">corePath</span></code> is used when drawing a layered sprite that can move and aim.<br>
+<code class="codehilite"><span class="n">spritePath</span></code> is used when representing a part as a single-layered image.</p>
+<p>In official stages, <code class="codehilite"><span class="n">sprites</span></code> are generally used for non-square parts, and layered <code class="codehilite"><span class="n">cores</span></code> are used for square parts.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It's a bit confusing that each boss has a "core" in the center, while "core" is also used to refer to the layered moving sprites that represent most parts. Just be aware that the term is overused.</p>
+</div>
+<h3 id="placing">Placing</h3>
+<p>The part config needs to know which pixels are in it, from your editor <code class="codehilite"><span class="k">source</span></code> file.</p>
+<blockquote>
+<p>1) Load your animation file in the <a href="../pxc_editor/">PxcEditor</a>.</p>
+<p>2) Decide which part you want the details of - in this case, the core:</p>
+</blockquote>
+<p><img src="https://files.facepunch.com/ryleigh/1b2211b1/PxcEditor_2019-08-22_21-16-56.png" /></p>
+<blockquote>
+<p>3) Hold <span class="keys"><kbd class="key-v">V</kbd></span> and right click inside the part, to select all adjacent pixels of the same color.</p>
+</blockquote>
+<p><img src="https://files.facepunch.com/ryleigh/1b2211b1/PxcEditor_2019-08-22_21-18-04.png" /></p>
+<blockquote>
+<p>4) Press <span class="keys"><kbd>Middle Mouse Button</kbd></span> or the <code class="codehilite"><span class="o">=</span></code> button on the far right of the toolbar to toggle showing pixel assignments.</p>
+</blockquote>
+<p><img src="https://files.facepunch.com/ryleigh/1b2211b1/PxcEditor_2019-08-22_21-18-55.png" /></p>
+<blockquote>
+<p>5) The first number in the range (<code class="codehilite"><span class="mi">0</span></code>) is your <code class="codehilite"><span class="n">placement</span></code>, or the starting pixel of your part. The <code class="codehilite"><span class="k">size</span></code> is used for square parts.</p>
+</blockquote>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;parts&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;core&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;corePath&quot;</span><span class="p">:</span> <span class="s2">&quot;misc/core/octopus/core0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="nt">&quot;placements&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">0</span> <span class="p">],</span>
+        <span class="nt">&quot;hp&quot;</span><span class="p">:</span> <span class="mi">900</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>To use the same config for multiple parts in your unit, simply list more placements:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;placements&quot;</span><span class="err">:</span> <span class="p">[</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">89</span> <span class="p">]</span><span class="err">,</span>
+</pre></div>
+</td></tr></table></p>
+<p>For square parts of different sizes that are otherwise identical, use this form:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;placements&quot;</span><span class="err">:</span> <span class="p">[</span> 
+    <span class="p">{</span> <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="mi">25</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="mi">89</span> <span class="p">},</span> 
+    <span class="p">{</span> <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="mi">125</span> <span class="p">},</span> 
+    <span class="p">{</span> <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="mi">161</span> <span class="p">},</span> 
+<span class="p">]</span><span class="err">,</span>
+</pre></div>
+</td></tr></table></p>
+<p>For non-square parts, use <code class="codehilite"><span class="n">width</span></code> and <code class="codehilite"><span class="n">height</span></code> instead of <code class="codehilite"><span class="k">size</span></code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;stud&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;spritePath&quot;</span><span class="p">:</span> <span class="s2">&quot;stud/stud_2x19&quot;</span><span class="p">,</span>
+<span class="hll">    <span class="nt">&quot;width&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span><span class="hll">    <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+</span>    <span class="nt">&quot;placements&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">4</span> <span class="p">],</span>
+    <span class="nt">&quot;hp&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="protecting-parts">Protecting Parts</h2>
+<p>Parts can remain invulnerable until certain other parts are destroyed. Usually the <strong>core</strong> can't be destroyed until the other parts are gone.</p>
+<p>In the following example, the <code class="codehilite"><span class="n">core</span></code> part will be protected &amp; invulnerable until the two <code class="codehilite"><span class="n">smallGun</span></code> parts and the two <code class="codehilite"><span class="n">largeGun</span></code> parts are destroyed.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;forms&quot;</span><span class="p">:[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;parts&quot;</span><span class="p">:{</span>
+                <span class="nt">&quot;core&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;corePath&quot;</span><span class="p">:</span> <span class="s2">&quot;misc/core/invasion/core0&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+                    <span class="nt">&quot;placements&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">900</span> <span class="p">],</span>
+                    <span class="nt">&quot;hp&quot;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
+<span class="hll">                    <span class="nt">&quot;requires&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;smallGun&quot;</span><span class="p">,</span> <span class="s2">&quot;largeGun&quot;</span><span class="p">,</span> <span class="p">],</span>
+</span>                <span class="p">},</span>
+                <span class="nt">&quot;smallGun&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;corePath&quot;</span><span class="p">:</span> <span class="s2">&quot;misc/core/invasion/smallGun&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+                    <span class="nt">&quot;placements&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">1616</span><span class="p">,</span> <span class="mi">1737</span> <span class="p">],</span>
+                    <span class="nt">&quot;hp&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;largeGun&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;corePath&quot;</span><span class="p">:</span> <span class="s2">&quot;misc/core/invasion/largeGun&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+                    <span class="nt">&quot;placements&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">1224</span><span class="p">,</span> <span class="mi">1420</span> <span class="p">],</span>
+                    <span class="nt">&quot;hp&quot;</span><span class="p">:</span> <span class="mi">1200</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <h3 id="ropes">Ropes</h3>
+<p>Parts have a visual "rope" connecting them to any parts they're protecting.</p>
+<p><img src="https://files.facepunch.com/ryleigh/1b2211b1/Chippy_2019-08-22_16-37-08.png" /></p>
+<p>The visuals can be adjusted with optional parameters:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;parts&quot;</span><span class="p">:[</span>
+        <span class="s2">&quot;core&quot;</span><span class="err">:</span> <span class="p">{</span>
+            <span class="nt">&quot;corePath&quot;</span><span class="p">:</span> <span class="s2">&quot;misc/core/octopus/core0&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+            <span class="nt">&quot;placements&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">0</span> <span class="p">],</span>
+            <span class="nt">&quot;hp&quot;</span><span class="p">:</span> <span class="mi">900</span><span class="p">,</span>
+            <span class="nt">&quot;requires&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;mid&quot;</span><span class="p">,</span> <span class="s2">&quot;side&quot;</span> <span class="p">],</span>
+            <span class="nt">&quot;ropeColorStart&quot;</span><span class="p">:</span><span class="s2">&quot;color(1f,0f,0f)&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;ropeColorEnd&quot;</span><span class="p">:</span><span class="s2">&quot;color(1f,0f,0.66f) * 1.25&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;ropeWobbleOpacityMin&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;ropeWobbleOpacityMax&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;ropeWobbleGlow&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+            <span class="nt">&quot;ropeWobbleWidthMin&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;ropeWobbleWidthMax&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;ropeTightness&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+            <span class="nt">&quot;ropeWidthLerpFunc&quot;</span><span class="p">:</span><span class="s2">&quot;mapReturn(ropeSpringNum, 0f, ropeNumSprings, 20f, 1f, &#39;QuadOut&#39;)&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;ropeOpacityLerpFunc&quot;</span><span class="p">:</span><span class="s2">&quot;mapReturn(ropeCurrLength, 0f, ropeTotalLength, 0f, 1f, &#39;QuadIn&#39;)&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<details class="info"><summary>All rope parameters</summary><table>
+<thead>
+<tr>
+<th align="left">Property &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+<th align="left">Type</th>
+<th align="left">Summary</th>
+<th align="left">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeColorStart</span></code></td>
+<td align="left">Color</td>
+<td align="left">color at protecting part</td>
+<td align="left"><code class="codehilite"><span class="n">color</span><span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">66</span><span class="n">f</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">66</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">)</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeColorEnd</span></code></td>
+<td align="left">Color</td>
+<td align="left">color at protected part</td>
+<td align="left"><code class="codehilite"><span class="n">color</span><span class="p">(</span><span class="mi">0</span><span class="n">f</span><span class="p">,</span> <span class="mi">0</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">)</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeOpacityNormal</span></code></td>
+<td align="left">float</td>
+<td align="left">opacity when rope is slack</td>
+<td align="left"><code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">5</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeOpacityStretched</span></code></td>
+<td align="left">float</td>
+<td align="left">opacity when rope is stretched</td>
+<td align="left"><code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">25</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeWidthFactorNormal</span></code></td>
+<td align="left">float</td>
+<td align="left">width factor when slack</td>
+<td align="left"><code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">66</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeWidthFactorStretched</span></code></td>
+<td align="left">float</td>
+<td align="left">width factor when stretched</td>
+<td align="left"><code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">4</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeWobbleWidthMin</span></code></td>
+<td align="left">float</td>
+<td align="left">width factor when spring is not wobbling</td>
+<td align="left"><code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">25</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeWobbleWidthMax</span></code></td>
+<td align="left">float</td>
+<td align="left">width factor when spring is wobbling</td>
+<td align="left"><code class="codehilite"><span class="mi">2</span><span class="p">.</span><span class="mi">5</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeWobbleGlow</span></code></td>
+<td align="left">float</td>
+<td align="left">glow factor when spring is wobbling</td>
+<td align="left"><code class="codehilite"><span class="mi">1</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeWobbleEasingType</span></code></td>
+<td align="left">EasingType</td>
+<td align="left">how the wobble effect eases through rope</td>
+<td align="left"><code class="codehilite"><span class="n">QuadIn</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeWobbleDelayPerNode</span></code></td>
+<td align="left">float</td>
+<td align="left">makes the wobble effect look interesting</td>
+<td align="left"><code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">075</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeWobbleOpacityMin</span></code></td>
+<td align="left">float</td>
+<td align="left">opacity factor when spring is not wobbling</td>
+<td align="left"><code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">1</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeWobbleOpacityMax</span></code></td>
+<td align="left">float</td>
+<td align="left">opacity factor when spring is wobbling</td>
+<td align="left"><code class="codehilite"><span class="mi">1</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeLength</span></code></td>
+<td align="left">float</td>
+<td align="left">slack length of rope</td>
+<td align="left"><code class="codehilite"><span class="mi">8</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeLengthEasingType</span></code></td>
+<td align="left">EasingType</td>
+<td align="left">how length distributed through springs</td>
+<td align="left"><code class="codehilite"><span class="n">SineInOut</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeNumNodes</span></code></td>
+<td align="left">int</td>
+<td align="left">how many nodes (and therefore springs) in rope</td>
+<td align="left"><code class="codehilite"><span class="mi">5</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeTightness</span></code></td>
+<td align="left">float</td>
+<td align="left">how much force springs apply to stay slack</td>
+<td align="left"><code class="codehilite"><span class="mi">15</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeNodeTopSpeed</span></code></td>
+<td align="left">float</td>
+<td align="left">controls how much friction the node has</td>
+<td align="left"><code class="codehilite"><span class="mi">30</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeNodeFrictionMin</span></code></td>
+<td align="left">float</td>
+<td align="left">friction at no speed</td>
+<td align="left"><code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">01</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeNodeFrictionMax</span></code></td>
+<td align="left">float</td>
+<td align="left">friction at top speed</td>
+<td align="left"><code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">05</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeNodeMass</span></code></td>
+<td align="left">float</td>
+<td align="left">how heavy the nodes are</td>
+<td align="left"><code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">25</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeBlockWidthFactor</span></code></td>
+<td align="left">float</td>
+<td align="left">width factor when protected part is being attacked</td>
+<td align="left"><code class="codehilite"><span class="mi">1</span><span class="p">.</span><span class="mi">33</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeBlockOpacityFactor</span></code></td>
+<td align="left">float</td>
+<td align="left">opacity factor when protected part is being attacked</td>
+<td align="left"><code class="codehilite"><span class="mi">2</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeBlockGlowFactor</span></code></td>
+<td align="left">float</td>
+<td align="left">glow factor when protected part is being attacked</td>
+<td align="left"><code class="codehilite"><span class="mi">4</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeBlockColor</span></code></td>
+<td align="left">Color</td>
+<td align="left">rope color when protected part is being attacked</td>
+<td align="left"><code class="codehilite"><span class="n">color</span><span class="p">(</span><span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">)</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeAnimSpeedNormal</span></code></td>
+<td align="left">float</td>
+<td align="left">normal wobble speed</td>
+<td align="left"><code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">25</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeAnimSpeedBlock</span></code></td>
+<td align="left">float</td>
+<td align="left">wobble speed when protected part is being attacked</td>
+<td align="left"><code class="codehilite"><span class="mi">3</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The <code class="codehilite"><span class="n">wobble</span></code> properties refer to the pulsing effect that moves along the rope toward the protected part. For example, <code class="codehilite"><span class="n">ropeWobbleWidthMax</span></code> is the multiplier applied to the spring width when the full wobble effect has reached that spring.</p>
+</div>
+<p><br>
+The following func properties can be used to adjust things along the length of a rope:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+<th align="left">Type</th>
+<th align="left">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeWidthLerpFunc</span></code></td>
+<td align="left">float</td>
+<td align="left">width of the rope at a given point</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeOpacityLerpFunc</span></code></td>
+<td align="left">float</td>
+<td align="left">opacity of the rope at a given point</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeTightnessLerpFunc</span></code></td>
+<td align="left">float</td>
+<td align="left">tightness of the rope at a given point</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeGlowAddLerpFunc</span></code></td>
+<td align="left">float</td>
+<td align="left">amount to add to rope's glow at a given point</td>
+</tr>
+</tbody>
+</table>
+<p>These variables are made available for using in the funcs:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+<th align="left">Type</th>
+<th align="left">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeSpringNum</span></code></td>
+<td align="left">int</td>
+<td align="left">the current spring we're considering</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeNumSprings</span></code></td>
+<td align="left">int</td>
+<td align="left">total number of springs in the rope</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeCurrLength</span></code></td>
+<td align="left">float</td>
+<td align="left">the amount of length we've traversed, at the current spring</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeTotalLength</span></code></td>
+<td align="left">float</td>
+<td align="left">the total length of the rope</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h2 id="lasers">Lasers</h2>
+<p>Lasers are lines that stop when they hit a pixel, and damage the player if they pass through. </p>
+<p><img src="https://files.facepunch.com/ryleigh/1b2211b1/Unity_2019-08-22_22-27-48.jpg" /></p>
+<p>You can usually achieve a similar obstacle with a bullet, but if you want pixel collision or you plan to rotate the obstacle extremely fast, a laser can be more appropriate.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;parts&quot;</span><span class="err">:</span><span class="p">{</span>
+    <span class="nt">&quot;core&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;corePath&quot;</span><span class="p">:</span> <span class="s2">&quot;misc/core/laser/core1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="nt">&quot;placements&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">0</span> <span class="p">],</span>
+        <span class="nt">&quot;hp&quot;</span><span class="p">:</span> <span class="mi">780</span><span class="p">,</span>
+<span class="hll">        <span class="nt">&quot;laser&quot;</span><span class="p">:{</span> <span class="nt">&quot;dps&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;autoRotate&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="nt">&quot;rotationSpeed&quot;</span><span class="p">:</span><span class="mf">-4.5</span><span class="p">,</span> <span class="nt">&quot;startAngle&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="nt">&quot;ignoreCollisionWith&quot;</span><span class="p">:[</span><span class="s2">&quot;egg&quot;</span><span class="p">,</span> <span class="s2">&quot;trap&quot;</span><span class="p">],</span> <span class="nt">&quot;colorOnA&quot;</span><span class="p">:</span><span class="s2">&quot;color(1f, 0.15f, 0f) * 1.33f&quot;</span><span class="p">,</span> <span class="nt">&quot;colorOnB&quot;</span><span class="p">:</span><span class="s2">&quot;color(1f, 0.1f, 0f) * 0.35f&quot;</span><span class="p">,</span> <span class="nt">&quot;colorBlinkTimeOn&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span> <span class="nt">&quot;colorBlinkEasingType&quot;</span><span class="p">:</span><span class="s2">&quot;Linear&quot;</span><span class="p">,</span> <span class="nt">&quot;widthAMin&quot;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="nt">&quot;widthAMax&quot;</span><span class="p">:</span><span class="mf">1.75</span><span class="p">,</span> <span class="p">},</span>
+</span>    <span class="p">},</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>Spread out for clarity:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;laser&quot;</span><span class="err">:</span><span class="p">{</span> 
+    <span class="nt">&quot;dps&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="err">//</span> <span class="err">damage</span> <span class="err">per</span> <span class="err">second</span> <span class="err">dealt</span> <span class="err">to</span> <span class="err">pixels</span>
+    <span class="nt">&quot;autoRotate&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> 
+    <span class="nt">&quot;rotationSpeed&quot;</span><span class="p">:</span><span class="mf">-4.5</span><span class="p">,</span> 
+    <span class="nt">&quot;startAngle&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> 
+    <span class="nt">&quot;ignoreCollisionWith&quot;</span><span class="p">:[</span><span class="s2">&quot;egg&quot;</span><span class="p">,</span> <span class="s2">&quot;trap&quot;</span><span class="p">],</span> 
+    <span class="nt">&quot;colorOnA&quot;</span><span class="p">:</span><span class="s2">&quot;color(1f, 0.15f, 0f) * 1.33f&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;colorOnB&quot;</span><span class="p">:</span><span class="s2">&quot;color(1f, 0.1f, 0f) * 0.35f&quot;</span><span class="p">,</span> 
+    <span class="nt">&quot;colorBlinkTimeOn&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span> 
+    <span class="nt">&quot;colorBlinkEasingType&quot;</span><span class="p">:</span><span class="s2">&quot;Linear&quot;</span><span class="p">,</span> 
+    <span class="nt">&quot;widthAMin&quot;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> 
+    <span class="nt">&quot;widthAMax&quot;</span><span class="p">:</span><span class="mf">1.75</span><span class="p">,</span> 
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table></p>
+<details class="info"><summary>All laser properties</summary><table>
+<thead>
+<tr>
+<th align="left">Property &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+<th align="left">Type</th>
+<th align="left">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">dps</span></code></td>
+<td align="left">float</td>
+<td align="left">damage per second to pixels</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">startAngle</span></code></td>
+<td align="left">float</td>
+<td align="left">start angle</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">autoRotate</span></code></td>
+<td align="left">bool</td>
+<td align="left">if true, use <code class="codehilite"><span class="n">rotationSpeed</span></code> and turn, if false, use <code class="codehilite"><span class="n">aimSpeed</span></code> towards target</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">rotationSpeed</span></code></td>
+<td align="left">float</td>
+<td align="left">opacity when rope is stretched</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">aimSpeed</span></code></td>
+<td align="left">float</td>
+<td align="left">width factor when slack</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">colorOffA</span></code></td>
+<td align="left">Color</td>
+<td align="left">first color when off</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">colorOffB</span></code></td>
+<td align="left">Color</td>
+<td align="left">second color when off</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">colorOnA</span></code></td>
+<td align="left">Color</td>
+<td align="left">first color when on (on = dangerous)</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">colorOnB</span></code></td>
+<td align="left">Color</td>
+<td align="left">second color when on</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">colorBlinkTimeOn</span></code></td>
+<td align="left">float</td>
+<td align="left">blink time between colors when on</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">colorBlinkTimeOff</span></code></td>
+<td align="left">float</td>
+<td align="left">blink time between colors when off</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">colorBlinkEasingType</span></code></td>
+<td align="left">EasingType</td>
+<td align="left">easing type for blinking</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">animSpeedOff</span></code></td>
+<td align="left">float</td>
+<td align="left">speed of wobble when off</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">animSpeedOn</span></code></td>
+<td align="left">float</td>
+<td align="left">speed of wobble when on</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">widthAMin</span></code></td>
+<td align="left">float</td>
+<td align="left">min width of start</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">widthAMax</span></code></td>
+<td align="left">float</td>
+<td align="left">max width of start</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">widthBMin</span></code></td>
+<td align="left">float</td>
+<td align="left">min width of end</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">widthBMax</span></code></td>
+<td align="left">float</td>
+<td align="left">max width of end</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">hitSelfPixels</span></code></td>
+<td align="left">bool</td>
+<td align="left">whether the laser can impact pixels of its own unit</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">impactPattern</span></code></td>
+<td align="left">Pattern path</td>
+<td align="left">spark pattern at impact</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">impactPatternDelay</span></code></td>
+<td align="left">float</td>
+<td align="left">how often to spawn impact pattern</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">missOffPattern</span></code></td>
+<td align="left">Pattern path</td>
+<td align="left">pattern when off and not hitting pixel</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">missOnPattern</span></code></td>
+<td align="left">Pattern path</td>
+<td align="left">pattern when on and not hitting pixel</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="k">length</span></code></td>
+<td align="left">float</td>
+<td align="left">how far laser reaches</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">lengthLerpSpeed</span></code></td>
+<td align="left">float</td>
+<td align="left">how fast the laser reaches full length (<code class="codehilite"><span class="mi">0</span><span class="o">-</span><span class="mi">1</span></code>)</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">sfxHit</span></code></td>
+<td align="left">string</td>
+<td align="left">impact sound</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ignoreCollisionWith</span></code></td>
+<td align="left">string</td>
+<td align="left">name of units that should not collide with laser</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">damagePlayer</span></code></td>
+<td align="left">bool</td>
+<td align="left">if false, don't collide with player</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">onHitPlayer</span></code></td>
+<td align="left">List of Actions</td>
+<td align="left">callback for hitting player</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">partDamageFactor</span></code></td>
+<td align="left">float</td>
+<td align="left">multiplier for how much damage is dealt to parts</td>
+</tr>
+</tbody>
+</table>
+</details>
 <h2 id="callbacks">Callbacks</h2>
-<ul>
-<li>onHit</li>
-<li>onHitProtected</li>
-<li>onDestroy</li>
-</ul>
+<p>You may want to call Actions from a unit part.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;parts&quot;</span><span class="err">:</span><span class="p">{</span>
+    <span class="nt">&quot;core&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="err">//</span> <span class="err">...</span>
+        <span class="nt">&quot;onSpawn&quot;</span><span class="p">:[</span>
+            <span class="err">//</span> <span class="err">called</span> <span class="err">when</span> <span class="err">status</span> <span class="err">effect</span> <span class="err">is</span> <span class="err">started</span> <span class="err">(gains</span> <span class="err">its</span> <span class="err">first</span> <span class="err">level)</span>
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;ShakeCamera&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;strength&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="nt">&quot;easingType&quot;</span><span class="p">:</span> <span class="s2">&quot;QuadOut&quot;</span> <span class="p">}},</span>
+        <span class="p">],</span>    
+
+        <span class="nt">&quot;onUpdate&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">each</span> <span class="err">frame</span> <span class="err">while</span> <span class="err">part</span> <span class="err">is</span> <span class="err">active</span> <span class="err">*/</span> <span class="p">],</span>
+        <span class="nt">&quot;onDestroy&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">part</span> <span class="err">is</span> <span class="err">destroyed</span> <span class="err">*/</span> <span class="p">],</span>
+        <span class="nt">&quot;onHit&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">part</span> <span class="err">hit</span> <span class="err">by</span> <span class="err">bullet</span> <span class="err">or</span> <span class="err">laser</span> <span class="err">*/</span> <span class="p">],</span>
+        <span class="nt">&quot;onHitProtected&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">part</span> <span class="err">hit</span> <span class="err">by</span> <span class="err">bullet</span> <span class="err">or</span> <span class="err">laser</span> <span class="err">and</span> <span class="err">has</span> <span class="err">other</span> <span class="err">part</span> <span class="err">shielding</span> <span class="err">it</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="p">},</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
 <h2 id="params">Params</h2>
-<h2 id="cores">Cores</h2>
+<h2 id="core-controllers">Core Controllers</h2>
 <h3 id="config_1">Config</h3>
 <h2 id="sprites">Sprites</h2>
 <h3 id="config_2">Config</h3>
-<h2 id="non-rectangle-parts">Non-Rectangle Parts</h2>
 
     <!-- Source files -->
     
@@ -26926,13 +27627,13 @@
           </a>
         
         
-          <a href="../stage/" title="Stages" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../actions/" title="Actions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Stages
+                Actions
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

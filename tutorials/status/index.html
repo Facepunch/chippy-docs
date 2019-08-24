@@ -299,18 +299,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../actions/" title="Actions" class="md-nav__link">
-      Actions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../unit/" title="Units" class="md-nav__link">
       Units
     </a>
@@ -325,6 +313,18 @@
   <li class="md-nav__item">
     <a href="../unit_parts/" title="Unit Parts" class="md-nav__link">
       Unit Parts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../actions/" title="Actions" class="md-nav__link">
+      Actions
     </a>
   </li>
 
@@ -393,9 +393,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#modifiers" title="Modifiers" class="md-nav__link">
+    Modifiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#items" title="Items" class="md-nav__link">
     Items
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selectable" title="Selectable" class="md-nav__link">
+    Selectable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activation" title="Activation" class="md-nav__link">
+    Activation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -448,6 +475,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#indicator-bullet" title="Indicator Bullet" class="md-nav__link">
+    Indicator Bullet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#custom-variables" title="Custom Variables" class="md-nav__link">
     Custom Variables
   </a>
@@ -457,6 +491,13 @@
         <li class="md-nav__item">
   <a href="#params" title="Params" class="md-nav__link">
     Params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" title="Debugging" class="md-nav__link">
+    Debugging
   </a>
   
 </li>
@@ -478,8 +519,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../pxc_editor/" title="Editor" class="md-nav__link">
-      Editor
+    <a href="../pxc_editor/" title="Pixel Editor" class="md-nav__link">
+      Pixel Editor
     </a>
   </li>
 
@@ -23952,30 +23993,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../SpaceUsurper/UnitLaserData/OnHitPart/" title="OnHitPart" class="md-nav__link">
-      OnHitPart
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../SpaceUsurper/UnitLaserData/OnHitPixel/" title="OnHitPixel" class="md-nav__link">
-      OnHitPixel
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../SpaceUsurper/UnitLaserData/OnHitPlayer/" title="OnHitPlayer" class="md-nav__link">
       OnHitPlayer
     </a>
@@ -26725,9 +26742,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#modifiers" title="Modifiers" class="md-nav__link">
+    Modifiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#items" title="Items" class="md-nav__link">
     Items
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selectable" title="Selectable" class="md-nav__link">
+    Selectable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activation" title="Activation" class="md-nav__link">
+    Activation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -26780,6 +26824,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#indicator-bullet" title="Indicator Bullet" class="md-nav__link">
+    Indicator Bullet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#custom-variables" title="Custom Variables" class="md-nav__link">
     Custom Variables
   </a>
@@ -26789,6 +26840,13 @@
         <li class="md-nav__item">
   <a href="#params" title="Params" class="md-nav__link">
     Params
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" title="Debugging" class="md-nav__link">
+    Debugging
   </a>
   
 </li>
@@ -26826,18 +26884,137 @@
     <h1 id="status-effects">Status Effects</h1>
 <p>Status Effects are used for both <strong>active items</strong> and <strong>passive buffs/debuffs</strong> applied to the player.</p>
 <h2 id="levels">Levels</h2>
+<p>Set the max level of a status with <code class="codehilite"><span class="n">numLevels</span></code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;numLevels&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Levels can be used however you want. In the official Chippy levels, they represent the quantity of an item you have, but it could instead represent the strength of the item.</p>
+<h2 id="modifiers">Modifiers</h2>
 <h2 id="items">Items</h2>
-<ul>
-<li>isSelectable</li>
-</ul>
+<h3 id="selectable">Selectable</h3>
+<p>The <code class="codehilite"><span class="n">isSelectable</span></code> property differentiates items from passive effects.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;isSelectable&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>If <code class="codehilite"><span class="n">isSelectable</span></code> is true, an item will show up in the player's item bar and can be selected.</p>
+<h3 id="activation">Activation</h3>
+<p>For a status effect intended to be used as an active item, you should define the <code class="codehilite"><span class="n">onActivate</span></code> callback. This callback is triggered when the player presses the "use item" button while this status effect is selected.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;onActivate&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="err">//</span> <span class="err">your</span> <span class="err">item&#39;s</span> <span class="err">effect:</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;ShakeCamera&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;strength&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="mf">0.75</span><span class="p">,</span> <span class="p">}},</span>
+
+        <span class="err">//</span> <span class="err">typically</span><span class="p">,</span> <span class="err">you</span> <span class="err">want</span> <span class="err">to</span> <span class="err">remove</span> <span class="err">one</span> <span class="err">of</span> <span class="err">the</span> <span class="err">item</span> <span class="err">stack</span> <span class="err">when</span> <span class="err">you</span> <span class="err">use</span> <span class="err">it</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;LevelDown&quot;</span> <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></p>
 <h2 id="charge">Charge</h2>
+<p>The <code class="codehilite"><span class="n">charge</span></code> properties are a convenient way to do time-based effects, though more complicated functionality can be done with custom variables and the <code class="codehilite"><span class="n">onUpdate</span></code> callback.</p>
+<p>The following is from an unused powerup that repelled nearby bullets after you closely graze a bullet long enough:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="err">//</span> <span class="err">this</span> <span class="err">func</span> <span class="err">is</span> <span class="err">added</span> <span class="err">to</span> <span class="nt">&quot;charge&quot;</span> <span class="err">each</span> <span class="err">frame</span> <span class="err">(in</span> <span class="err">this</span> <span class="err">case</span><span class="p">,</span> <span class="err">it&#39;s</span> <span class="err">how</span> <span class="err">closely</span> <span class="err">a</span> <span class="err">player</span> <span class="err">is</span> <span class="err">grazing</span> <span class="err">bullets,</span> <span class="err">from</span> <span class="err">0-1)</span>
+    <span class="nt">&quot;chargeIncrease&quot;</span><span class="p">:</span><span class="s2">&quot;playerGrazePercent&quot;</span><span class="p">,</span>
+
+    <span class="err">//</span> <span class="err">when</span> <span class="err">charge</span> <span class="err">reaches</span> <span class="err">this</span> <span class="err">amount,</span> <span class="nt">&quot;onExecute&quot;</span> <span class="err">is</span> <span class="err">triggered</span><span class="p">,</span>
+    <span class="nt">&quot;chargeRequired&quot;</span><span class="p">:</span><span class="mf">2.8</span><span class="p">,</span>
+
+    <span class="err">//</span> <span class="err">apply</span> <span class="err">this</span> <span class="err">friction</span> <span class="err">amount</span> <span class="err">(0-1</span> <span class="err">value)</span> <span class="err">to</span> <span class="nt">&quot;charge&quot;</span> <span class="err">each</span> <span class="err">frame</span> <span class="err">(</span><span class="mf">0.2</span> <span class="err">reduces</span> <span class="err">charge</span> <span class="err">by</span> <span class="mi">20</span><span class="err">%</span> <span class="err">each</span> <span class="err">frame)</span><span class="p">,</span>
+    <span class="nt">&quot;chargeDecay&quot;</span><span class="p">:</span><span class="mf">0.2</span><span class="p">,</span>
+
+    <span class="nt">&quot;onExecute&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;RepelBullets&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;pos&quot;</span><span class="p">:</span><span class="s2">&quot;playerPos&quot;</span><span class="p">,</span> <span class="nt">&quot;radius&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span> <span class="nt">&quot;freezeTime&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span> <span class="nt">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;color(0.66f, 0.66f, 1f) * 1.15f&quot;</span><span class="p">,</span> <span class="nt">&quot;strength&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span> <span class="nt">&quot;effectBullet&quot;</span><span class="p">:</span><span class="s2">&quot;misc/bullet/effect/repel&quot;</span><span class="p">,</span> <span class="nt">&quot;easingType&quot;</span><span class="p">:</span><span class="s2">&quot;QuadIn&quot;</span><span class="p">,</span> <span class="p">}},</span>
+
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;Disable&quot;</span> <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <h2 id="callbacks">Callbacks</h2>
+<p>You may want to call Actions at certain points during a status effect.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;onEnable&quot;</span><span class="p">:[</span>
+        <span class="err">//</span> <span class="err">called</span> <span class="err">when</span> <span class="err">status</span> <span class="err">effect</span> <span class="err">is</span> <span class="err">started</span> <span class="err">(gains</span> <span class="err">its</span> <span class="err">first</span> <span class="err">level)</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;ShakeCamera&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;strength&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="nt">&quot;easingType&quot;</span><span class="p">:</span> <span class="s2">&quot;QuadOut&quot;</span> <span class="p">}},</span>
+    <span class="p">],</span>    
+
+    <span class="nt">&quot;onLevelUp&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">status</span> <span class="err">effect</span> <span class="err">gains</span> <span class="err">a</span> <span class="err">level</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onMaxedOut&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">status</span> <span class="err">effect</span> <span class="err">gains</span> <span class="err">a</span> <span class="err">level</span> <span class="err">but</span> <span class="err">is</span> <span class="err">already</span> <span class="err">at</span> <span class="err">max</span> <span class="err">level</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onLevelDown&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">status</span> <span class="err">effect</span> <span class="err">loses</span> <span class="err">a</span> <span class="err">level</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onPreventDeath&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">status</span> <span class="err">effect</span> <span class="err">level</span> <span class="err">is</span> <span class="err">lost</span> <span class="err">to</span> <span class="err">prevent</span> <span class="err">player</span> <span class="err">death</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onDisable&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">status</span> <span class="err">effect</span> <span class="err">is</span> <span class="err">finished</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onUpdate&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">each</span> <span class="err">frame</span> <span class="err">the</span> <span class="err">status</span> <span class="err">effect</span> <span class="err">is</span> <span class="err">active</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onActivate&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">player</span> <span class="err">uses</span> <span class="err">item</span> <span class="err">when</span> <span class="err">status</span> <span class="err">effect</span> <span class="err">is</span> <span class="err">selected</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onSelect&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">player</span> <span class="err">selects</span> <span class="err">status</span> <span class="err">effect</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onDeselect&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">player</span> <span class="err">selects</span> <span class="err">a</span> <span class="err">different</span> <span class="err">status</span> <span class="err">effect</span><span class="p">,</span> <span class="err">deselecting</span> <span class="err">this</span> <span class="err">one</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onExecute&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">charge</span> <span class="err">hits</span> <span class="err">required</span> <span class="err">amount</span> <span class="err">*/</span> <span class="p">],</span>
+    <span class="nt">&quot;onPlayerHit&quot;</span><span class="p">:[</span> <span class="err">/*</span> <span class="err">called</span> <span class="err">when</span> <span class="err">player</span> <span class="err">is</span> <span class="err">hit</span> <span class="err">but</span> <span class="err">does</span> <span class="err">not</span> <span class="err">die</span> <span class="err">*/</span> <span class="p">],</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
 <h2 id="icon">Icon</h2>
 <h3 id="aux-text">Aux Text</h3>
 <h3 id="category">Category</h3>
 <h2 id="name-description">Name &amp; Description</h2>
+<h2 id="indicator-bullet">Indicator Bullet</h2>
 <h2 id="custom-variables">Custom Variables</h2>
 <h2 id="params">Params</h2>
+<h2 id="debugging">Debugging</h2>
+<p><code class="codehilite"><span class="n">debugVector</span></code>: draws a 2d vector from the player's position <br>
+<code class="codehilite"><span class="n">debugText</span></code>: displays a string above the player's position (use <code class="codehilite"><span class="cp">${</span><span class="n">NAME</span><span class="cp">}</span></code> for properties)</p>
 
     <!-- Source files -->
     
@@ -26875,13 +27052,13 @@
           </a>
         
         
-          <a href="../pxc_editor/" title="Editor" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../pxc_editor/" title="Pixel Editor" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Editor
+                Pixel Editor
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
