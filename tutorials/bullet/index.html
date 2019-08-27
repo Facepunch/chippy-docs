@@ -412,13 +412,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#velocity-mode" title="Velocity Mode" class="md-nav__link">
-    Velocity Mode
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -492,15 +485,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#callbacks" title="Callbacks" class="md-nav__link">
-    Callbacks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#params" title="Params" class="md-nav__link">
-    Params
+  <a href="#handlers" title="Handlers" class="md-nav__link">
+    Handlers
   </a>
   
 </li>
@@ -14993,8 +14979,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
-      DrawText
+    <a href="../../SpaceUsurper/Stage/DrawDebugText/" title="DrawDebugText" class="md-nav__link">
+      DrawDebugText
     </a>
   </li>
 
@@ -15005,8 +14991,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
-      DrawText
+    <a href="../../SpaceUsurper/Stage/DrawDebugText/" title="DrawDebugText" class="md-nav__link">
+      DrawDebugText
     </a>
   </li>
 
@@ -15017,8 +15003,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
-      DrawText
+    <a href="../../SpaceUsurper/Stage/DrawDebugText/" title="DrawDebugText" class="md-nav__link">
+      DrawDebugText
     </a>
   </li>
 
@@ -15029,8 +15015,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../SpaceUsurper/Stage/DrawText/" title="DrawText" class="md-nav__link">
-      DrawText
+    <a href="../../SpaceUsurper/Stage/DrawDebugText/" title="DrawDebugText" class="md-nav__link">
+      DrawDebugText
     </a>
   </li>
 
@@ -26929,13 +26915,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#velocity-mode" title="Velocity Mode" class="md-nav__link">
-    Velocity Mode
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -27009,15 +26988,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#callbacks" title="Callbacks" class="md-nav__link">
-    Callbacks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#params" title="Params" class="md-nav__link">
-    Params
+  <a href="#handlers" title="Handlers" class="md-nav__link">
+    Handlers
   </a>
   
 </li>
@@ -27158,11 +27130,12 @@ When referencing this bullet in a pattern, the <code class="codehilite"><span cl
 </pre></div>
 </td></tr></table>
 When referencing this bullet from a different file, the <code class="codehilite"><span class="n">path</span></code> would be <code class="codehilite"><span class="n">MyCampaign</span><span class="o">/</span><span class="n">pattern</span><span class="o">/</span><span class="n">myPattern</span><span class="p">.</span><span class="n">bullet</span></code>. As you can see above, when referencing it from within the same json object, you can just use <code class="codehilite"><span class="na">.bullet</span></code>.</p>
-<p>The <code class="codehilite"><span class="n">path</span></code> of the patterns would be <code class="codehilite"><span class="n">myCampaign</span><span class="o">/</span><span class="n">pattern</span><span class="o">/</span><span class="n">myPattern</span><span class="p">.</span><span class="mi">1</span></code> and <code class="codehilite"><span class="n">myCampaign</span><span class="o">/</span><span class="n">pattern</span><span class="o">/</span><span class="n">myPattern</span><span class="p">.</span><span class="mi">2</span></code>, when spawning them with Actions.</p>
+<p>The <code class="codehilite"><span class="n">path</span></code> of the <em>patterns</em> would be <code class="codehilite"><span class="n">myCampaign</span><span class="o">/</span><span class="n">pattern</span><span class="o">/</span><span class="n">myPattern</span><span class="p">.</span><span class="mi">1</span></code> and <code class="codehilite"><span class="n">myCampaign</span><span class="o">/</span><span class="n">pattern</span><span class="o">/</span><span class="n">myPattern</span><span class="p">.</span><span class="mi">2</span></code>, when spawning them with Actions.</p>
 </details>
 <h2 id="bullet-properties">Bullet Properties</h2>
-<p>Most properties of a bullet are part of its <code class="codehilite"><span class="n">keyframes</span></code> system, to simplify changing the state of a bullet between specific configurations. However some important properties can only be specified once for the bullet as a whole, instead of changing between its keyframes.</p>
-<p>These are some of the most important non-keyframe properties for a bullet.</p>
+<p>Most properties of a bullet are set as part of a <code class="codehilite"><span class="n">keyframe</span></code>, to simplify changing the state of a bullet between specific configurations. </p>
+<p>However some important properties are set for the bullet as a whole, instead of being set on a keyframe level.</p>
+<p>These are <strong>some</strong> of the most important non-keyframe properties for a bullet.</p>
 <table>
 <thead>
 <tr>
@@ -27396,7 +27369,7 @@ When referencing this bullet from a different file, the <code class="codehilite"
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">crossDistance</span></code></td>
-<td align="left">how far forward the center of the bullet is</td>
+<td align="left">how far forward the center of the diamond is (<code class="codehilite"><span class="mi">0</span><span class="o">-</span><span class="mi">1</span></code>)</td>
 </tr>
 </tbody>
 </table>
@@ -27755,7 +27728,6 @@ The keyframe property <code class="codehilite"><span class="n">frictionPercent</
 </td></tr></table>
 
 <p>When the bullet enters this keyframe, it will set its target position to the player's current location. From then on, its <code class="codehilite"><span class="n">posLerpSpeed</span></code> of <code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">01</span></code> will move the bullet 1% of the remaining distance to the target per frame.</p>
-<h4 id="velocity-mode">Velocity Mode</h4>
 <h3 id="facing">Facing</h3>
 <p>By default, bullets don't rotate at all. By specifying a value from <code class="codehilite"><span class="mi">0</span><span class="o">-</span><span class="mi">1</span></code> for the keyframe property <code class="codehilite"><span class="n">facingSpeedPercent</span></code>, the bullet will ease toward a certain direction - normally the same direction as their velocity.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -27896,9 +27868,9 @@ The keyframe property <code class="codehilite"><span class="n">frictionPercent</
         <span class="nt">&quot;colorBlinkTime&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">,</span>
         <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
         <span class="nt">&quot;easingType&quot;</span><span class="p">:</span><span class="s2">&quot;QuadOut&quot;</span><span class="p">,</span>
-<span class="hll">        <span class="nt">&quot;facingSpeedPercent&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span>
-</span>        <span class="nt">&quot;loopEnd&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="err">//</span> <span class="err">keyframe</span> <span class="err">ignored</span> <span class="err">on</span> <span class="err">loops</span> <span class="err">greater</span> <span class="err">or</span> <span class="err">equal</span> <span class="err">than</span> <span class="err">1</span>
-      <span class="p">},</span>
+        <span class="nt">&quot;facingSpeedPercent&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span>
+<span class="hll">        <span class="nt">&quot;loopEnd&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="err">//</span> <span class="err">this</span> <span class="err">keyframe</span> <span class="err">ignored</span> <span class="err">on</span> <span class="err">loop</span> <span class="err">number</span> <span class="err">1</span> <span class="err">or</span> <span class="err">higher</span> <span class="err">(the</span> <span class="err">first</span> <span class="err">loop</span> <span class="err">is</span> <span class="err">#0)</span>
+</span>      <span class="p">},</span>
       <span class="p">{</span>
         <span class="err">//</span> <span class="err">KEYFRAME</span> <span class="err">1</span>
         <span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
@@ -27931,11 +27903,11 @@ The keyframe property <code class="codehilite"><span class="n">frictionPercent</
         <span class="nt">&quot;length&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
         <span class="nt">&quot;crossWidth&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
       <span class="p">},</span>
-<span class="hll">  <span class="p">],</span>
-</span>  <span class="nt">&quot;startSpeed&quot;</span><span class="p">:</span><span class="mi">120</span><span class="p">,</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;startSpeed&quot;</span><span class="p">:</span><span class="mi">120</span><span class="p">,</span>
   <span class="nt">&quot;lifetime&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span>
-  <span class="nt">&quot;shouldLoop&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">loop</span> <span class="err">keyframes</span>
-  <span class="nt">&quot;depthLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;Bullet&quot;</span><span class="p">,</span>
+<span class="hll">  <span class="nt">&quot;shouldLoop&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="err">//</span> <span class="err">enable</span> <span class="err">keyframe</span> <span class="err">looping</span>
+</span>  <span class="nt">&quot;depthLevel&quot;</span><span class="p">:</span> <span class="s2">&quot;Bullet&quot;</span><span class="p">,</span>
   <span class="nt">&quot;shapeType&quot;</span><span class="p">:</span> <span class="s2">&quot;Diamond&quot;</span><span class="p">,</span>
   <span class="nt">&quot;despawnTime&quot;</span><span class="p">:</span><span class="mf">0.15</span><span class="p">,</span>
 <span class="p">}</span><span class="err">,</span>
@@ -28421,7 +28393,7 @@ Each frame, the bullet will evaluate this function and set the result to its <co
 </details>
 <h2 id="player-collision">Player Collision</h2>
 <p>By default, players deal deal damage to the player on collision, either removing a shield or killing them. The bullet is destroyed by the impact unless specified otherwise.</p>
-<p>To change what happens on player collision, define the <code class="codehilite"><span class="n">onHitPlayer</span></code> callback:
+<p>To change what happens on player collision, define the <code class="codehilite"><span class="n">onHitPlayer</span></code> handler:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -28544,7 +28516,7 @@ Set the keyframe property to <code class="codehilite"><span class="k">true</span
 </td></tr></table>
 
 <p>Now that bullet won't be considered for collision with pixels or the player and won't be affected or destroyed by any Actions.</p>
-<h2 id="callbacks">Callbacks</h2>
+<h2 id="handlers">Handlers</h2>
 <p>You may want to call Actions at certain points during a bullet's lifetime.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -28596,8 +28568,8 @@ Set the keyframe property to <code class="codehilite"><span class="k">true</span
 </pre></div>
 </td></tr></table>
 
-<p>Some of the callbacks set the values of useful properties when they call their actions.<br></p>
-<p><code class="codehilite"><span class="n">onHitPixel</span></code>, <code class="codehilite"><span class="n">onDestroyPixel</span></code>, <code class="codehilite"><span class="n">onHitPart</span></code>, and <code class="codehilite"><span class="n">onHitPartProtected</span></code> set the following properties:</p>
+<p>Some of the handlers have useful properties available to them when they call their actions.<br></p>
+<p><code class="codehilite"><span class="n">onHitPixel</span></code>, <code class="codehilite"><span class="n">onDestroyPixel</span></code>, <code class="codehilite"><span class="n">onHitPart</span></code>, and <code class="codehilite"><span class="n">onHitPartProtected</span></code> have the following properties:</p>
 <table>
 <thead>
 <tr>
@@ -28620,7 +28592,7 @@ Set the keyframe property to <code class="codehilite"><span class="k">true</span
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">hitPart</span></code></td>
-<td align="left">the PixelGroup of the hit pixel (only set for <code class="codehilite"><span class="n">onHitPart</span></code> and <code class="codehilite"><span class="n">onHitPartProtected</span></code>)</td>
+<td align="left">the PixelGroup of the hit pixel (only for <code class="codehilite"><span class="n">onHitPart</span></code> and <code class="codehilite"><span class="n">onHitPartProtected</span></code>)</td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">hitUnit</span></code></td>
@@ -28628,7 +28600,7 @@ Set the keyframe property to <code class="codehilite"><span class="k">true</span
 </tr>
 </tbody>
 </table>
-<p><code class="codehilite"><span class="n">onOutOfBounds</span></code> sets the following properties:</p>
+<p><code class="codehilite"><span class="n">onOutOfBounds</span></code> has the following properties:</p>
 <table>
 <thead>
 <tr>
@@ -28647,7 +28619,6 @@ Set the keyframe property to <code class="codehilite"><span class="k">true</span
 </tr>
 </tbody>
 </table>
-<h2 id="params">Params</h2>
 <h2 id="floating-text">Floating Text</h2>
 <p>Floating text (used in Chippy for damage amount floaters and powerup alerts) can only be created when added to a bullet. </p>
 <p>To control the text's movement, you simply use the existing bullet properties.</p>
@@ -28940,9 +28911,6 @@ Set the keyframe property to <code class="codehilite"><span class="k">true</span
 <h2 id="debugging">Debugging</h2>
 <p><code class="codehilite"><span class="n">debugVector</span></code>: draws a 2d vector from the bullet's position <br>
 <code class="codehilite"><span class="n">debugText</span></code>: displays a string at the bullet's position (use <code class="codehilite"><span class="cp">${</span><span class="n">NAME</span><span class="cp">}</span></code> for properties)</p>
-<ul>
-<li>bubble example</li>
-</ul>
 
     <!-- Source files -->
     
