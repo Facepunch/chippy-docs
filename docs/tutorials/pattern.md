@@ -48,8 +48,8 @@ Instead of an unchanging rotation speed, we could make it oscillate between -150
 ```
 `patternTime` simply tracks how long this pattern has been running for. 
 
-!!! tip
-	The 'f's after the numbers denote them as floating-point numbers instead of integers, since `rotationSpeed` is itself a float, but don't worry about it too much.
+!!! info
+	The 'f's after the numbers denote them as floating-point numbers instead of integers.
 
 ### Aiming
 
@@ -228,7 +228,7 @@ Setting the `patternType` to `Manual` means the pattern will wait for you to man
 
 <video controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1611b1/2019-08-16_00-11-35.mp4" type="video/mp4"> </video>
 
-That type of pattern would have been challenging to express as a single `customBulletPos` function, so the actions were called manually.
+That above pattern would have been challenging to express as a single `customBulletPos` function, so the actions were called manually.
 
 ??? info "Full json file"
 	  ```json hl_lines="3 11 104"
@@ -584,7 +584,7 @@ To produce the attack in the image above:
 
 ### Linking Volley Bullets
 
-A pattern can choose to **link** all bullets in a volley.
+A pattern can choose to **link** all bullets in each volley.
 
 ```json
 "linkedPattern": {
@@ -607,7 +607,7 @@ Patterns can declare another pattern to be spawned as their "shoot effect":
 
 This will spawn the effect at the position of the shooting pattern, and pointed in the same direction.
 
-## Callbacks
+## Handlers
 
 You may want to call Actions at certain points during a pattern.
 
@@ -626,11 +626,26 @@ You may want to call Actions at certain points during a pattern.
 },
 ```
 
-## Behaviour
-
-## Params
-
 ## Custom Variables
+
+Custom variables can be defined in the `properties` section of the pattern config. They can be used in other script funcs throughout the pattern, and can be modified with `SetValue`.
+
+```json
+{
+	"properties": {
+	    "nextBulletPos": { "type": "Vector2" },
+	},
+
+	"patternShape":"Custom",
+  	"customBulletPos": "nextBulletPos",
+
+	// ...
+
+	"onVolley":[
+		{ "action": "SetValue", "name": "nextBulletPos", "value": "lerp(nextBulletPos, playerPos, 0.5f)" },
+	],
+}
+```
 
 ## Workflow
 

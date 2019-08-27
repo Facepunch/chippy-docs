@@ -30,7 +30,7 @@ The Stage config file handles spawning units and the player, setting the bounds 
 
 #### Time Attack
 
-This is the default mode. The goal is to win as fast as possible.
+This is the default mode. The goal is to destroy the boss(es) as quickly as possible.
 
 ```json
 {
@@ -41,7 +41,7 @@ This is the default mode. The goal is to win as fast as possible.
 
 #### Endless
 
-The goal is to survive as long as possible. When time is slowed down or sped up in this mode, the game timer is affected too.
+In `Endless` mode, the goal is to survive as long as possible.
 
 ```json
 {
@@ -49,6 +49,9 @@ The goal is to survive as long as possible. When time is slowed down or sped up 
 	"gameMode": "Endless",
 }
 ```
+
+!!! note
+	When time is slowed down or sped up in `Endless` mode, the game timer is affected too!
 
 ### Medal Times
 
@@ -65,7 +68,7 @@ Choose the **time in seconds** that needs to be beat to earn each medal.
 }
 ```
 
-An `Endless` stage needs to specify the `victory` time as well - that is, the time you need to last to beat the stage without even earning a bronze medal.
+An `Endless` stage needs to specify the `victory` time as well - that is, the time you need to last to **beat the stage** without even earning a bronze medal.
 
 ```json
 {
@@ -128,8 +131,7 @@ Unit parts can be protected from parts of other units.
 }
 ```
 
-Spread out for clarity:
-
+Expanded for clarity:
 ```json
 "boss": {
 	// ...
@@ -166,10 +168,6 @@ There are a couple optional parameters:
 ```
 
 If you try to spawn a unit with too many active already, it will be ignored. The `count` of a unit determines the max amount that can be active.
-
-## Behaviour
-
-## Stage Patterns
 
 ### Arena
 
@@ -238,7 +236,7 @@ The stage has its own state machine like units do, where actions can be called i
 !!! warning
 	While most names can be safely changed in Chippy scripts, the `start` state in a stage fsm will specifically be set at the beginning of a run, so make sure it exists.
 
-## Callbacks
+## Handlers
 
 You can call Actions are certain points during a stage, besides the state machine.
 
@@ -253,8 +251,6 @@ You can call Actions are certain points during a stage, besides the state machin
 	"onPlayerDie":[ /* called when player takes lethal damage */ ],
 },
 ```
-
-## Params
 
 ## Custom Variables
 
@@ -293,11 +289,10 @@ Typically these are only used to adjust which speech lines the bosses say, but t
 
 Some methods have a **return** value that you may want to save to a custom variable to access later.
 
-```json hl_lines="17"
+```json hl_lines="15"
 {
 	"properties": {
-		/* when the level starts, the value of
-		the bossUnit property is null */
+		// when the level starts, the value of the bossUnit property is null
 		"bossUnit": { "type": "Unit" },
 	},
 
@@ -306,8 +301,7 @@ Some methods have a **return** value that you may want to save to a custom varia
             { "action": "Wait" },
         ],
         "start": [
-			/* spawn the boss unit and save the return value
-			(of type Unit) to the custom property */
+			// spawn the boss unit and save the return value (of type Unit) to the custom bossUnit property
 			{ "action": "CallMethod", "method": "SpawnUnit", 
 			 	"params": { "name": "boss", "pos": "vec2(0f, 20f)" }, 
 				"return":"bossUnit", 
@@ -320,10 +314,55 @@ Some methods have a **return** value that you may want to save to a custom varia
 }
 ```
 
-## Camera Effects
+## Screen Effects
 
-## Background
+Some visual effects can be applied to the screen.
+
+```json
+"onUpdate":[
+	{ "action": "CallMethod", "method": "SetHueShift", "params": { "amount": "mapReturn(stageTime, 0f, 9f, 0f, 100f, 'QuadInOut')", }},
+	{ "action": "CallMethod", "method": "SetContrast", "params": { "amount": "mapReturn(stageTime, 0f, 2f, 0f, -60f, 'QuadInOut')", }},
+	{ "action": "CallMethod", "method": "SetSaturation", "params": { "amount": "mapReturn(stageTime, 0f, 8f, 0f, 200f, 'QuadInOut')", }},
+	{ "action": "CallMethod", "method": "SetColorFilter", "params": { "color": "lerp(color(1f, 1f, 1f), color(1f, 1f, 0f) * 2f, mapReturn(stageTime, 0f, 4f, 0f, 1f, 'QuadInOut'))", }},
+	{ "action": "CallMethod", "method": "SetTemperature", "params": { "amount": "mapReturn(stageTime, 0f, 5f, 0f, -100f, 'Linear')", }},
+	{ "action": "CallMethod", "method": "SetChromaticAberration", "params": { "amount": "mapReturn(stageTime, 0f, 10f, 0f, 4f, 'ExpoInOut')", }},
+],
+```
+
+<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b2611b1/2019-08-26_00-18-50.mp4" type="video/mp4" > </video>
 
 ## Debugging
 
-- debug line/text
+Any entity can call the Stage debug methods to draw lines or text.
+
+```json
+"onUpdate": [
+	{ "action": "CallMethod", "target":"stage", "method": "DrawDebugLine", 
+		"params": { 
+			"a":"playerPos", 
+			"b":"playerPos + playerVel", 
+			"time":0.02, 
+			"color":"color(0f, 0f, 1f) * 2f", 
+			"width":0.2, 
+			"opacity":0.6, 
+		}
+	},
+
+	{ "action": "CallMethod", "target":"stage", "method": "DrawDebugText", 
+		"params": {
+			"pos": "playerPos + vec2(0f, 3f)",
+			"text": "${playerVel}",
+			"fontSize":"2.5f + fastSin(stageTime * 4f) * 0.5f",
+			"time": 0.02,
+			"color":{"r":1,"g":1,"b":0,"a":0.25},
+		}
+	},
+],
+
+```
+
+<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b2411b1/2019-08-24_22-55-58.mp4" type="video/mp4" > </video>
+
+### Camera Zoom
+
+Hold ++v++ to temporarily zoom out, or use ++plus++ and ++minus++ for finer control.

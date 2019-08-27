@@ -66,7 +66,7 @@ Each unit config should contain a list of forms:
 
 ### Base Form
 
-Any properties defined for the `base form` of a unit apply to all of its forms, unless overridden (they're essentially the same thing as the `#include` functionality, which can be used instead).
+Any properties defined for the `baseForm` of a unit apply to all of its forms, unless overridden (they're essentially the same thing as the `#include` functionality, which can be used instead).
 
 ```json
 {
@@ -93,6 +93,11 @@ Any properties defined for the `base form` of a unit apply to all of its forms, 
 ```
 
 `form 0` overrides the base pixel health of the base form while keeping its `onUpdate` actions, while the next form keeps the base form's `baseHp` but overrides its `onUpdate` actions.
+
+!!! warning
+	Some properties won't show your changes until you completely reload the level - restarting isn't enough.
+
+	Press the ++g++ key to reload the level.
 
 ## Pixels
 
@@ -380,24 +385,8 @@ Similar to how bullets work, units can choose to be moved by velocity or moved t
 }
 ```
 
-### All 
-
-Setting `moveMode` to `All` will apply both acceleration and easing toward the target position. Not sure if this mode is useful for anything.
-
-```json
-{
-	"forms":[
-		{
-			"moveMode":"All",
-			"accelVector":"vec2(0f, 2f)", // move upwards
-			"targetPos":"playerPos", // move toward player
-			"posLerpSpeed":0.05, // unit moves 5% of the current distance to player each frame
-		}
-	],
-}
-```
-
-The movement mode and the functions can be set with Actions such as `SetMovementModeFunc`, `SetAccelVectorFunc`, `ClearAccelVectorFunc`, etc.
+!!! info
+	The movement mode and the functions can be set with Actions such as `SetMovementModeFunc`, `SetAccelVectorFunc`, `ClearAccelVectorFunc`, etc.
 
 ### Avoiding Other Units
 
@@ -409,17 +398,17 @@ Generally you want to prevent units from overlapping eachother. You can define c
 {
 	"forms": [
 		{
-			// how strongly the unit's circles are repelled by other units
-			"avoidUnitStrength":1,
-
-			// how strongly the unit's circles repel other units' circles
-        	"repelUnitStrength":10,
-
 			"repulsionCircles": [
                 {  "offset":"vec2(0, 7f)", "radius":18, // strength is 1 by default},
                 {  "offset":"vec2(-14.5f, -7f)", "radius":12, "strength":1.5, },
                 {  "offset":"vec2(14.5f, -7f)", "radius":12, "strength":1.5, },
             ],
+
+			// how strongly the unit's circles are repelled by other units
+			"avoidUnitStrength":1,
+
+			// how strongly the unit's circles repel other units' circles
+        	"repelUnitStrength":10,
 		},
 	],
 }
@@ -489,25 +478,14 @@ By default, a unit does not try to stay in the level bounds, and is removed when
 }
 ```
 
-## Texture
-
-## Pixel Effects
-
-- Splash Damage
-- Transform Line
-- Transform Ring
-- Spark
-
-## Pixel Chunks
-
-## Callbacks
+## Handlers
 
 You may want to call Actions at certain points while a unit form is active.
 
 ```json
 {
     "onSpawn":[
-        // called when status effect is started (gains its first level)
+        // called immediately when unit is spawned
         { "action": "CallMethod", "target":"stage", "method": "ShakeCamera", "params": { "strength": 3, "time": 0.5, "easingType": "QuadOut" }},
     ],    
 
@@ -564,7 +542,40 @@ To modify them, use the SetValue method:
 { "action": "SetValue", "name": "revengeCounter", "value": "revengeCounter + 1" },
 ```
 
-## Params
+## Texture
+
+Unit forms have a `texture` property, which itself has a single `shader` property.
+
+It draws a scrolling wavy texture on the pixels.
+
+```json
+{
+	"baseForm":{
+		"texture": {
+            "shader": {
+				// the texture to draw (path relative to your campaign folder)
+				"texturePath":"pxc_textures/blurredClouds",
+
+				// how strong the effect is
+				"intensity": "rand.Float(0.9, 1.1)",
+
+				// i can't remember what all this stuff does, you just gotta play with it
+                "speedX": "rand.Float(0.8, 1.2)",
+                "speedY": "rand.Float(0.15, 0.25)",
+                "timeFactor": "rand.Float(0.08, 0.12)",
+                "timeFactor2": "rand.Float(0.45, 0.55)",    
+                "timeFactor3": "rand.Float(0.65, 0.75)",
+                "freqX": "rand.Float(9, 11)",
+                "freqY": "rand.Float(7, 9)",
+                "depthX": "rand.Float(0.075, 0.125)",
+                "depthY": "rand.Float(0.125, 0.175)",
+            }
+        },
+	},
+}
+```
+
+<img src="https://files.facepunch.com/ryleigh/1b2411b1/Chippy_2019-08-24_21-09-09.png" />
 
 ## Speech Bubbles
 

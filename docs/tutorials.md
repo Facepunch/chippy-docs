@@ -1,9 +1,5 @@
 # Overview
 
-There are a lot of possibilities for customization with Chippy workshop levels. Creating new bosses... bullet patterns... player handling... dynamic songs. 
-
-Instead of trying do it all from scratch, it's probably best to start with an existing boss and the default player, while editing some patterns and experimenting.
-
 >
 [Quick Start](tutorials/quickstart.md)<br>
 [Bullet Patterns](tutorials/pattern.md)<br>
@@ -13,9 +9,7 @@ Instead of trying do it all from scratch, it's probably best to start with an ex
 [Unit Parts](tutorials/unit_parts.md)<br>
 [Stages](tutorials/stage.md)<br>
 [Player](tutorials/player.md)<br>
-[Powerups & Status Effects](tutorials/status.md)<br>
-Music & Sfx<br>
-Sprites<br>
+[Status Effects](tutorials/status.md)<br>
 ---
 >
 [Pixel Editor](tutorials/pxc_editor.md)<br>
@@ -23,4 +17,7 @@ Sprites<br>
 ---
 
 !!! tip
-    Try using the **Search** bar at the top for full information, as this tutorial leaves out some options.
+    Try using the **Search** bar at the top for full information, since this tutorial leaves out some options.
+
+!!! abstract "Download level scripts"
+    Learn from examples in offical level scripts: [**chippy_resources.rar**](https://files.facepunch.com/ryleigh/1b2711b1/chippy_resources.rar)

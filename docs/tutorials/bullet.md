@@ -59,13 +59,15 @@ Bullet definitions can be stored in their own json file, but it's usually easier
     ```
     When referencing this bullet from a different file, the `path` would be `MyCampaign/pattern/myPattern.bullet`. As you can see above, when referencing it from within the same json object, you can just use `.bullet`.
 
-    The `path` of the patterns would be `myCampaign/pattern/myPattern.1` and `myCampaign/pattern/myPattern.2`, when spawning them with Actions.
+    The `path` of the *patterns* would be `myCampaign/pattern/myPattern.1` and `myCampaign/pattern/myPattern.2`, when spawning them with Actions.
 
 ## Bullet Properties
 
-Most properties of a bullet are part of its `keyframes` system, to simplify changing the state of a bullet between specific configurations. However some important properties can only be specified once for the bullet as a whole, instead of changing between its keyframes.
+Most properties of a bullet are set as part of a `keyframe`, to simplify changing the state of a bullet between specific configurations. 
 
-These are some of the most important non-keyframe properties for a bullet.
+However some important properties are set for the bullet as a whole, instead of being set on a keyframe level.
+
+These are **some** of the most important non-keyframe properties for a bullet.
 
 Property | Summary
 :----------- |:-------------
@@ -183,7 +185,7 @@ Keyframe Property | Summary
 :----------- |:-------------
 `length` | length of diamond bullet
 `crossWidth` | width of bullet at the widest point
-`crossDistance` | how far forward the center of the bullet is
+`crossDistance` | how far forward the center of the diamond is (`0-1`)
 
 ```json
 "diamondBullet": {
@@ -418,10 +420,6 @@ It's possible to control a bullet's position directly, instead of relying on the
 
 When the bullet enters this keyframe, it will set its target position to the player's current location. From then on, its `posLerpSpeed` of `0.01` will move the bullet 1% of the remaining distance to the target per frame.
 
-#### Velocity Mode
-
-
-
 ### Facing
 
 By default, bullets don't rotate at all. By specifying a value from `0-1` for the keyframe property `facingSpeedPercent`, the bullet will ease toward a certain direction - normally the same direction as their velocity.
@@ -464,7 +462,7 @@ facingMode | Summary
 Sometimes it's useful for a bullet to repeat keyframes multiple times. By setting the non-keyframe property `shouldLoop` to true, a bullet will continue looping through each keyframe unless told otherwise.
 
 ???+ info "Looping bullet definition"
-	```json hl_lines="16 51"
+	```json hl_lines="17 54"
 	"bullet": {
 	  "keyframes": [
 		  {
@@ -481,7 +479,7 @@ Sometimes it's useful for a bullet to repeat keyframes multiple times. By settin
 		    "opacity":0,
 		    "easingType":"QuadOut",
 		    "facingSpeedPercent":0.1,
-		    "loopEnd":1, // keyframe ignored on loops greater or equal than 1
+		    "loopEnd":1, // this keyframe ignored on loop number 1 or higher (the first loop is #0)
 		  },
 		  {
 		  	// KEYFRAME 1
@@ -518,7 +516,7 @@ Sometimes it's useful for a bullet to repeat keyframes multiple times. By settin
 	  ],
 	  "startSpeed":120,
 	  "lifetime":30,
-	  "shouldLoop":true, // loop keyframes
+	  "shouldLoop":true, // enable keyframe looping
 	  "depthLevel": "Bullet",
 	  "shapeType": "Diamond",
 	  "despawnTime":0.15,
@@ -807,7 +805,7 @@ Generally you'll also want to set a value for the non-keyframe properties `total
 
 By default, players deal deal damage to the player on collision, either removing a shield or killing them. The bullet is destroyed by the impact unless specified otherwise.
 
-To change what happens on player collision, define the `onHitPlayer` callback:
+To change what happens on player collision, define the `onHitPlayer` handler:
 ```json
 "bullet": {
   // ...
@@ -900,7 +898,7 @@ When you want to use a bullet for purely visual reasons with no effect on gamepl
 
 Now that bullet won't be considered for collision with pixels or the player and won't be affected or destroyed by any Actions.
 
-## Callbacks
+## Handlers
 
 You may want to call Actions at certain points during a bullet's lifetime.
 
@@ -931,26 +929,24 @@ You may want to call Actions at certain points during a bullet's lifetime.
 },
 ```
 
-Some of the callbacks set the values of useful properties when they call their actions.<br>
+Some of the handlers have useful properties available to them when they call their actions.<br>
 
-`onHitPixel`, `onDestroyPixel`, `onHitPart`, and `onHitPartProtected` set the following properties:
+`onHitPixel`, `onDestroyPixel`, `onHitPart`, and `onHitPartProtected` have the following properties:
 
 Property | Summary
 :----------- |:-------------
 `hitPos` | the position of the collision
 `hitNormal` | the normal of the collision (the direction the hit pixel's edge was facing)
 `hitPixel` | the PixelData of the hit pixel
-`hitPart` | the PixelGroup of the hit pixel (only set for `onHitPart` and `onHitPartProtected`)
+`hitPart` | the PixelGroup of the hit pixel (only for `onHitPart` and `onHitPartProtected`)
 `hitUnit` | the Unit that owns the hit pixel
 
-`onOutOfBounds` sets the following properties:
+`onOutOfBounds` has the following properties:
 
 Property | Summary
 :----------- |:-------------
 `outOfBoundsPos` | the position where the bullet left bounds
 `outOfBoundsNormal` | the normal of the arena edge the bullet passed (eg, `vec2(-1f, 0f)` for the right edge)
-
-## Params
 
 ## Floating Text
 
@@ -1100,5 +1096,3 @@ Bullets can get a reference to **themselves** with the `bullet` property.<br>
 
 `debugVector`: draws a 2d vector from the bullet's position <br>
 `debugText`: displays a string at the bullet's position (use `${NAME}` for properties)
-
-- bubble example

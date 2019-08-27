@@ -40,7 +40,7 @@ A section of pixels can be grouped together as a **part**. Parts have a single h
 }
 ```
 
-`corePath` is used when drawing a layered sprite that can move and aim.<br>
+`corePath` is used when drawing a layered sprite that can move.<br>
 `spritePath` is used when representing a part as a single-layered image.
 
 In official stages, `sprites` are generally used for non-square parts, and layered `cores` are used for square parts.
@@ -247,7 +247,7 @@ You can usually achieve a similar obstacle with a bullet, but if you want pixel 
 },
 ```
 
-Spread out for clarity:
+Expanded for clarity:
 ```json
 "laser":{ 
     "dps":10, // damage per second dealt to pixels
@@ -295,7 +295,7 @@ Spread out for clarity:
     `sfxHit` | string | impact sound
     `ignoreCollisionWith` | string | name of units that should not collide with laser
     `damagePlayer` | bool | if false, don't collide with player
-    `onHitPlayer` | List of Actions | callback for hitting player
+    `onHitPlayer` | List of Actions | handler for hitting player
     `partDamageFactor` | float | multiplier for how much damage is dealt to parts
 
 !!! info "Laser info"
@@ -303,7 +303,7 @@ Spread out for clarity:
     
     [Full json config](../../SpaceUsurper/UnitLaserData)
 
-## Callbacks
+## Handlers
 
 You may want to call Actions from a unit part.
 
@@ -312,7 +312,7 @@ You may want to call Actions from a unit part.
     "core": {
         // ...
         "onSpawn":[
-            // called when status effect is started (gains its first level)
+            // called when part spawns or respawns
             { "action": "CallMethod", "target":"stage", "method": "ShakeCamera", "params": { "strength": 3, "time": 0.5, "easingType": "QuadOut" }},
         ],    
 
@@ -324,12 +324,130 @@ You may want to call Actions from a unit part.
 },
 ```
 
-## Params
-
 ## Core Controllers
 
-### Config
+Core Controllers are used to draw multi-layered sprites on unit parts.
+
+<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b2611b1/2019-08-26_15-40-48.mp4" type="video/mp4" > </video>
+
+??? example "Full config: `misc/core/octopus/core0.json`"
+    ```json
+    {
+        "background1": {
+            "color": "#1b1335",
+            "chargePercent":0.2,
+            "shootPercent":0.2,
+        },
+        "background2": {
+            "image": "cores/shapes/circle",
+            "color": "#2a2863",
+            "scale": 0.8,        
+            "chargePercent":0.3,
+            "shootPercent":0.3,
+            "chargeScale":1.1,
+            "shootScale":1.2,
+            "reactScale":0.9,
+        },
+        "background4": {
+            "image": "cores/shapes/circle",
+            "color": "#36317f",
+            "scale": 0.65,     
+            "chargePercent":0.4,
+            "shootPercent":0.4,   
+            "chargeScale":1.1,
+            "shootScale":1.2,
+            "reactScale":0.9,
+        },    
+        "eye2": {
+            "image": "cores/shapes/circle",
+            "color": "#de75ac",
+            "scale": 0.5,  
+            "chargePercent":0.5,
+            "shootPercent":0.5,     
+            "chargeScale":1.1,
+            "shootScale":1.2,
+            "reactScale":0.9,
+            "shootWobbleScale":1.15,
+            "shootWobbleSpeed":15,
+        },
+        "pupil": {
+            "image": "cores/octopus/eye1",
+            "scale": 0.25,
+            "lookRadius": 0.125,
+            "chargeScale":1.25,
+            "shootScale":1.66,
+            "reactScale":0.9,
+            "shootWobbleScale":1.15,
+            "shootWobbleSpeed":15,
+        },
+        "highlight": {
+            "image": "cores/shapes/highlight01",
+            "scale": 0.37,        
+            "lookRadius": 0.05,
+            "chargePercent":0.6,
+            "shootPercent":0.6,
+            "chargeScale":1.1,
+            "shootScale":1.2,
+            "reactScale":0.9,
+            "shootWobbleScale":1.15,
+            "shootWobbleSpeed":15,
+        },
+        "background3": {
+            "image": "cores/shapes/circleline01",
+            "color": "#970816",
+            "scale": 0.55,
+            "chargePercent":0.4,
+            "shootPercent":0.4,
+            "chargeScale":1.1,
+            "shootScale":1.2,
+            "reactScale":0.9,
+            "shootWobbleScale":1.15,
+            "shootWobbleSpeed":15,
+        },
+         "frame": {
+            "image": "cores/octopus/frame1",
+            "tintPercent": 0.25,
+            "chargePercent":0.1,
+            "shootPercent":0.1,
+        },
+    }
+    ```
 
 ## Sprites
 
-### Config
+You can also represent a unit part with a single-layered sprite instead of a core controller. The sprite can be static or animated.
+
+Here's an example from the **Execution** stage:
+
+<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b2611b1/2019-08-26_19-41-30.mp4" type="video/mp4" > </video>
+
+```json
+{
+    "parts": {
+        "trigger": {
+            "spritePath": "execution_trigger",
+            // ... 
+        },
+    },
+}
+```
+
+`execution_trigger.json`:<br>
+```json
+{
+	"anims": {
+		"idle":{
+			"frameNums": [ 0, 1, 2, 3, ],
+			"totalTime": 0.5,
+			"loopMode": "PingPong",
+			"easingType": "Linear",
+		},
+	},
+	"gridHeight":2,
+	"gridWidth":2,
+	"spritesheetPath":"fuse/trigger_anim2",
+}
+```
+
+`fuse/trigger_anim2`:<br>
+<img src="https://files.facepunch.com/ryleigh/1b2611b1/trigger_anim2.png" />

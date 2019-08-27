@@ -5,8 +5,6 @@
     
     [Full json config](../../SpaceUsurper/PlayerData)
 
-## Config
-
 ## Overriding Default Player
 
 To create a custom player that only changes certain things, you can `#include` the default player and override specific properties.
@@ -31,13 +29,23 @@ Then, in your stage config, reference your new player config:
 
 ### Physics Elements
 
-### Body
+You may want different types of forces that can be applied to players.
 
-## Behaviour
+For each type of you create, you can define `frictionPercentMin` (the minimum friction) and `frictionPercentMax` (the max friction). You also choose the `topSpeed` - as the player's velocity increases to `topSpeed`, the friction applied to them increases from the min friction to the max.
 
-## Custom Variables
+```json
+{
+    "physicsElements": {
+        "impulse": { "frictionPercentMin": 0.05, "frictionPercentMax": 0.3, "topSpeed": 100, },
+        "shoot_force": { "frictionPercentMin": 0.2, "frictionPercentMax": 0.5, "topSpeed": 50, },
+        "boost": { "frictionPercentMin": 0.04, "frictionPercentMax": 0.15, "topSpeed": 100, },
+    },
 
-## Params
+    "onHit": [
+        { "action": "CallMethod", "target": "player.Movement", "method": "AddPhysicsForce", "params": { "name": "impulse", "force":"damageDir * 50f" }},
+    ],
+}
+```
 
 ## Guns
 
@@ -46,6 +54,7 @@ Then, in your stage config, reference your new player config:
     
     [Full json config](../../SpaceUsurper/PlayerGunData)
 
-### Gun Params
-
 ## Debugging
+
+`debugVector`: draws a 2d vector from the player's position <br>
+`debugText`: displays a string below the player's position (use `${NAME}` for properties)

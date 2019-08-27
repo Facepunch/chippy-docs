@@ -12,16 +12,23 @@ Browse to the `custom` folder in Chippy's directory.
 
 <img src="https://files.facepunch.com/ryleigh/1b2411b1/explorer_2019-08-24_02-50-29.png" />
 
-The "Template" folder contains an example stage (Kraken from the main game), so to get started messing around with your own stuff you should create a copy of that folder (with a name you choose) in the "custom" directory. You can load a custom stage from that directory (but only on the "debug" branch) by setting Chippy's launch options to this:
+The `Template` campaign folder contains an example stage (Kraken from the main game).
+
+To begin messing around with your own creations you should make a copy of the `Template` folder (with a name of your choice) in the `custom` directory. 
+
+<img src="https://files.facepunch.com/ryleigh/1b2611b1/explorer_2019-08-26_13-00-50.png" />
+
+To load a stage from a custom campaign (while on the `debug` branch), set Chippy's launch options to this:
 
 ```
---initial-stage <your stage folder>:<stage index>
+--initial-stage <your campaign folder>:<stage index>
 ```
 
-Each folder contains a list of stages, so the "stage index" at the end tells the game which to load. So for example, to load the Template folder, you will set it to this:
+Each campaign folder contains a list of stages, so the "stage index" tells the game which stage to load. So for example, to load the `Template` campaign's first (and only) level:
 
 <img src="https://files.facepunch.com/ryleigh/1b2911b1/launch3.png" />
 
-For more information you can ask us in the #workshop channel on our Discord:
+!!! tip
+    For more information you can ask us in the ==#workshop== channel on our Discord:
 
-https://discord.gg/xNguzDH
+    https://discord.gg/xNguzDH

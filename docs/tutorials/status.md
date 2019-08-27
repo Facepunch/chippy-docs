@@ -19,13 +19,44 @@ Set the max level of a status with `numLevels`:
 
 Levels can be used however you want. In the official Chippy levels, they represent the quantity of an item you have, but it could instead represent the strength of the item.
 
-## Modifiers
+## Player Modifiers
+
+[Player modifiers](../../SpaceUsurper/StatusEffectPlayerModifierData) are easy ways to change certain properties of the player while a status is active.
+
+The modifiers can be expressed as a simple value or as a script func that is constantly updated.
+
+```json
+{
+    "modifiers": {
+        // multiplier to player's movement speed
+        "moveSpeedMultiplier": 1.5,
+
+        // multiplier to player's movement friction
+        "frictionMultiplier":0.5,
+
+        // amount added to `playerDamageBonus` property, which bullets can add to their damage
+        "damageAmount": "level * 0.38f",
+
+        // multiplier to player's opacity
+        "opacityMultiplier":"map(playerGrazePercent, 0f, 1f, 0.5f, 1f, 'SineOut')",
+
+        // while true, player can safely move through bullets, pixels, and lasers
+        "intangible": "dist(playerVel) < 0.1f",
+
+        // amount to add to player's bullet avoidance strength
+        "avoidBulletsAmount":0.6,
+
+        // how much to reverse player's move/aim input (0-1)
+        "reverseInputPercent":"0.5f + sin(stageTime * 2f) * 0.5f",
+    },
+}
+```
 
 ## Items
 
 ### Selectable
 
-The `isSelectable` property differentiates items from passive effects.
+The `isSelectable` property differentiates **items** from passive effects.
 
 ```json
 {
@@ -37,7 +68,7 @@ If `isSelectable` is true, an item will show up in the player's item bar and can
 
 ### Activation
 
-For a status effect intended to be used as an active item, you should define the `onActivate` callback. This callback is triggered when the player presses the "use item" button while this status effect is selected.
+For a status effect intended to be used as an active item, you should define the `onActivate` handler. This handler is triggered when the player presses the "use item" button while this status effect is selected.
 ```json
 {
     "onActivate": [
@@ -52,7 +83,7 @@ For a status effect intended to be used as an active item, you should define the
 
 ## Charge
 
-The `charge` properties are a convenient way to do time-based effects, though more complicated functionality can be done with custom variables and the `onUpdate` callback.
+The `charge` properties are a convenient way to do time-based effects, though more complicated functionality can be done with custom variables and the `onUpdate` handler.
 
 The following is from an unused powerup that repelled nearby bullets after you closely graze a bullet long enough:
 
@@ -75,7 +106,7 @@ The following is from an unused powerup that repelled nearby bullets after you c
 }
 ```
 
-## Callbacks
+## Handlers
 
 You may want to call Actions at certain points during a status effect.
 
@@ -104,15 +135,112 @@ You may want to call Actions at certain points during a status effect.
 
 ### Aux Text
 
+The `auxText` is the little number on the upper right corner of a status icon. 
+
+<img src="https://files.facepunch.com/ryleigh/1b2611b1/Chippy_2019-08-26_21-17-19.png" />
+
+Generally it indicates the level (quantity) of an item, but it could potentially be used as a countdown timer, show the number of enemies around you, things like that.
+
+```json
+{
+    "auxText": "${level > 1 ? level.ToString() : ''}",
+    "auxTextColor": "#707c7f",
+}
+```
+
 ### Category
+
+The `category` of a status effect just affects the colors of its icon background.
+
+```json
+{
+    "category": "categories.offensive",
+}
+```
+
+You can define a new category wherever you want.
+
+```json
+"category": ".red",
+
+"red": {
+    "color1":"color(1f, 0f, 0f) * 1.5f",
+    "color2":"color(1f, 0f, 0f) * 0.1f",
+},
+```
+
+<img src="https://files.facepunch.com/ryleigh/1b2611b1/Chippy_2019-08-26_21-33-52.png" />
+
+!!! tip
+    If you want to replace a powerup with your own tweaked version, you can simply copy it to the same relative path and edit it, and your edited version will be loaded instead of the original.
+
+    For example, `status/repel` is the path of the original. Placing your edited version at `your_campaign_folder/status/repel` will cause your version of the powerup to override the original.
 
 ## Name & Description
 
+```json
+{
+    "displayName":"Shield",
+    "description":"Prevent death ${level} ${level > 1 ? 'times' : 'time'}",
+}
+```
+
+<img src="https://files.facepunch.com/ryleigh/1b2611b1/Chippy_2019-08-26_21-56-39.png" />
+
 ## Indicator Bullet
+
+The items in chippy each show a different visual indicator on your ship while you have them selected.
+
+<video controls> <source src="https://files.facepunch.com/ryleigh/1b2611b1/2019-08-26_22-01-33.mp4" type="video/mp4" > </video>
+
+The `onSelect` and `onDeselect` handlers are used to accomplish this.
+
+```json
+{
+    "onSelect": [
+        { "action": "CallMethod", "method": "DespawnAddedBullets", },
+        { "action": "CallMethod", "method": "AddBullet", "params": { "path": ".effectBullet", "pos":"playerPos", "level":"level", }},
+
+        { "action": "CallMethod", "target": "stage", "method": "PlaySfx", "params": { "sfxType":"PowerupSlowmoSelect", "pos":"playerPos", }},
+    ],
+
+    "onDeselect": [
+        { "action": "CallMethod", "method": "DespawnAddedBullets", },
+    ],
+}
+```
 
 ## Custom Variables
 
-## Params
+Much like other json object types, status effects can declare custom properties.
+
+```json
+{
+    "properties": {
+        "aimer": { "type": "Bullet" },
+        "aimer2": { "type": "Bullet" },
+    },
+
+    "onSelect": [
+        { "action": "CallMethod", "method": "DespawnAddedBullets", },
+        { "action": "CallMethod", "method": "AddBullet", "params": { "path": ".aimer", "pos": "stage.IsRaycastHit(playerGunPos, playerGunPos + playerGunDir * 60f) ? stage.Raycast(playerGunPos, playerGunPos + playerGunDir * 60f) : playerGunPos + playerGunDir * 8f", "level":"level", }, "return": "aimer" },
+        { "action": "CallMethod", "method": "AddBullet", "params": { "path": ".aimer2", "pos": "playerPos", "level":"level", }, "return": "aimer2" },
+
+        { "action": "CallMethod", "target": "stage", "method": "PlaySfx", "params": { "sfxType":"PowerupCannonSelect", "pos":"playerPos", }},
+    ],
+
+    "onDeselect": [
+        { "action": "CallMethod", "method": "DespawnAddedBullets", },
+    ],
+
+    "onUpdate": [
+        { "action": "Condition", "condition": "isSelected && aimer2 != null && aimer != null",
+          "true": [ 
+            { "action": "CallMethod", "target": "aimer2", "method": "SetVectorVar", "params": { "var":"aimer.Position - playerPos", }},
+          ],},
+    ],
+}
+```
 
 ## Debugging
 
