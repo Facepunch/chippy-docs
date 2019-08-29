@@ -20,4 +20,4 @@
     Try using the **Search** bar at the top for full information, since this tutorial leaves out some options.
 
 !!! abstract "Download level scripts"
-    Learn from examples in offical level scripts: [**chippy_resources.rar**](https://files.facepunch.com/ryleigh/1b2711b1/chippy_resources.rar)
+    Learn from or remix the official campaigns: [**chippy_resources.rar**](https://files.facepunch.com/ryleigh/1b2711b1/chippy_resources.rar)

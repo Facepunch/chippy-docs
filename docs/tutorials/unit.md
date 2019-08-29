@@ -40,6 +40,299 @@ The basic structure looks like this:
 }
 ```
 
+??? abstract "Example json file for a very simple 2-form boss"
+	```json
+	{
+		// custom variables for this boss
+		"properties": {
+			"loopNum": { "type": "Int", "value": 0 }, // the starting value is already 0 by default, but it's specified here for clarity
+		},
+
+		"behaviour": ".fsm", // specify where to find the behaviour state machine definition (the leading "." indicates its inside the same json object)
+
+		"torqueFriction":0.01, // how fast rotation force slows down
+
+		// properties defined in baseForm will be used for all forms unless overridden
+		"baseForm": {
+			"baseHp":18, // default hp for each pixel
+
+			// when player is hit by a bullet, this handler is called
+			"onPlayerHit":[
+				{ "action": "CallSubroutine", "target":"unit", "path": ".speech.sub", "params": { "message": "#octopus.boss.player_hit_bullet", "chance":0.1, }},
+			],
+		},
+
+		"forms": [
+			{   
+				// FORM 0 CONFIG
+
+				"pxcSource": "octopus/pxc/boss/form0/source", // the location of the pixel source file for this form
+				"pxcAnimDir": "octopus/pxc/boss/form0", // the directory where the anim files associated with the source file are located
+				"implodeTime":1, // if implodeTime is >0, when the core takes lethal damage, it will play a death effect for the boss
+				
+				// list anim files to use (from the directory specified for pxcAnimDir)
+				"anims": {
+					"spawn": { "time": 1, "easingType": "QuadIn", "next":"idle",},
+					"idle": { "time": 1.25, "easingType": "Linear" },
+				},
+
+				// pixel properties
+				"pixels": [
+					{   
+						"range": "all", // apply these properties to all pixels
+						"sfxHit": "FleshHit",
+						"sfxDestroy": "FleshDestroy",
+						"sfxDisconnect": "FleshDisconnect",
+						"hitGlow":1.4,
+						"hitFlashTime":1,
+					},
+				],
+
+				// define parts
+				"parts": {
+					"core": {
+						"corePath": "misc/core/octopus/core0",
+						"size": 8, // a size of 8 means this part is an 8x8 square
+						"placements": [ 0 ],
+						"hp": 900,
+						"requires": [ "mid", "side" ], // this part cant be damaged until the required parts are destroyed
+						"onHit": [
+							{ "action": "CallMethod", "target": "stage", "method": "ShakeCamera", "params": { "strength": 0.25, "time": 0.33, "easingType": "QuadOut" }},
+						],
+					},
+					"mid": {
+						"corePath": "misc/core/octopus/smallGun",
+						"size": 4,
+						"placements": [ 73, 89 ],
+						"hp": 500,
+						"onDestroy": [
+							// spawn a powerup
+							{ "action": "CallMethod", "target":"stage", "method": "SpawnPattern", "params": { "path": "octopus/pattern/powerup0Mid", "pos": "partPos", "angle":"vecToAngle((playerPos + playerVel * 0.5f) - partPos)",  }},
+						],
+					},
+					"side": {
+						"corePath": "misc/core/octopus/smallGun",
+						"size": 3,
+						"placements": [ 64, 105 ], 
+						"hp": 500,
+						"onDestroy": [
+							{ "action": "CallMethod", "target":"stage", "method": "SpawnPattern", "params": { "path": "octopus/pattern/powerup0Side", "pos": "partPos", "angle":"vecToAngle((playerPos + playerVel * 0.5f) - partPos)",  }},
+						],
+					}
+				},
+
+				// this handler is called each frame
+				"onUpdate": [
+					// continually re-align the rotation of the boss
+					{ "action": "CallMethod", "method": "AimTowards", "params": { "facingAngle":0, "rotPercent":0.125, }},
+				],
+
+				// this handler is called when the form is destroyed
+				"onDestroy": [
+					{ "action": "CallMethod", "target":"stage", "method": "SpawnPattern", "params": { "path": "octopus/pattern/powerup0Core", "pos": "corePos", "angle":"vecToAngle((playerPos + playerVel * 0.5f) - corePos)",  }},
+
+					// controller rumble
+					{ "action": "CallMethod", "target": "player", "method": "Vibrate", "params": { "pos":"unitPos", "strength": 1, "time": 0.25, "maxDist": 150, "horizThreshold": 40 }},
+
+					// camera shake
+					{ "action": "CallMethod", "target": "stage", "method": "ShakeCamera", "params": { "strength": 5, "time": 0.5, "easingType": "QuadOut" }},
+
+					// slow time for a moment
+					{ "action": "CallMethod", "target": "stage", "method": "AddTimeScale", "params": { "scale": 0.5, "time": 0.5, "easingType": "CubicIn" }},
+				],
+
+				// this handler is called when a pixel of this form is hit by a bullet
+				"onPixelHit": [
+					// add some rotational force to the boss
+					{ "action": "CallMethod", "method": "AddRotationForce", "params": { "hitPos": "hitPos", "forceDir": "bullet.FacingDirection", "strength":20 }},
+				],
+
+				// this handler is called when the player dies while this form is active
+				"onPlayerDie":[
+					// a chance to show a speech bubble
+					{ "action": "CallSubroutine", "target":"unit", "path": ".speech.sub", "params": { "message": "#octopus.boss.player_die_0", "chance":0.2, }},
+				],
+			},
+			{ 
+				// FORM 1 CONFIG
+
+				"pxcSource": "octopus/pxc/boss/form1/source",
+				"pxcAnimDir": "octopus/pxc/boss/form1",
+				"spawnDelay":2.2, // time to wait before spawning this form
+				"coreSpawnTime":1.75, // time to spawn the core
+				"moveMode":"Target", // unit moves toward target position, instead of using velocity
+				"targetPos":"unitSpawnPos + vec2(sin(stageTime * 0.5f), cos(stageTime * 0.5f)) * 2f", // unit will bob around a central point
+				"posLerpSpeed":0.01, // how fast the unit lerps toward the target position
+				"implodeTime":1.5,
+
+				"anims": {
+					"spawn": { "time": 1, "easingType": "QuadIn", "next": "idle" },
+					"idle": { "time": 1.25, "easingType": "Linear" },
+				},
+				"pixels": [
+					{   
+						"range": "all", 
+						"sfxHit": "FleshHit",
+						"sfxDestroy": "FleshDestroy",
+						"sfxDisconnect": "FleshDisconnect",
+						"hitGlow":1.4,
+						"hitFlashTime":1,
+					},
+					{ 
+						"range": "part('core')", 
+						"color": "color(1f, 0f, 0f)", // this property applies to pixels defined in the "core" part below
+					},
+					{  
+						"range": "part('mid')",  
+						"color": "color(1f, 0f, 0f)", // this property applies to pixels defined in "mid" parts below
+					},
+					{  "range": "part('side')", "color": "color(1f, 0f, 0f)", },
+					{  "range": "part('bot')", "color": "color(1f, 0f, 0f)", },
+					{
+						"range": "range(146,389)",
+						"sfxHit": "Thump",
+						"sfxDestroy": "MetalDestroy",
+						"sfxDisconnect": "MetalDisconnect",
+						"damagedColor": "color(0.175f, 1f, 0.35f) * 1.15f", // as the pixel loses hp, it changes toward this color
+						"hp": 40, // override the baseHp for these pixels
+						"hitGlow":1.2,
+						"hitFlashTime":0.5,
+					}
+				],
+				"parts": {
+					"core": {
+						"corePath": "misc/core/octopus/core1",
+						"size": 8,
+						"placements": [ 0 ],
+						"hp": 1000,
+						"requires": [ "mid", "side", "bot" ],
+						"onHit": [
+							{ "action": "CallMethod", "target": "stage", "method": "ShakeCamera", "params": { "strength": 0.25, "time": 0.33, "easingType": "QuadOut" }},
+						],
+					},
+					"side": {
+						"corePath": "misc/core/octopus/smallGun",
+						"placements": [ 
+							{ "size": 3, "start": 128 }, 
+							{ "area": 9, "start": 137 }, // you can specify "area" instead of "size", for irregularly shaped parts
+						],
+						"hp": 600,
+						"onDestroy": [ 
+							{ "action": "CallMethod", "target":"stage", "method": "SpawnPattern", "params": { "path": "octopus/pattern/powerup1Side", "pos": "partPos", "angle":"vecToAngle((playerPos + playerVel * 0.5f) - partPos)",  }},
+						],
+					},
+					"bot": {
+						"corePath": "misc/core/octopus/largeGun",
+						"size": 4,
+						"placements": [ 80, 112 ],
+						"hp": 600,
+						"onDestroy": [{ "action": "CallMethod", "target":"stage", "method": "SpawnPattern", "params": { "path": "octopus/pattern/powerup1Bot", "pos": "partPos", "angle":"vecToAngle((playerPos + playerVel * 0.5f) - partPos)",  }},],
+					},
+					"mid": {
+						"corePath": "misc/core/octopus/largeGun",
+						"size": 4,
+						"placements": [ 64, 96 ],
+						"hp": 600,
+						"onDestroy": [{ "action": "CallMethod", "target":"stage", "method": "SpawnPattern", "params": { "path": "octopus/pattern/powerup1Mid", "pos": "partPos", "angle":"vecToAngle((playerPos + playerVel * 0.5f) - partPos)",  }},],
+					}
+				},
+
+				// this handler is called immediately when the unit is spawned
+				"onSpawn": [
+					{ "action": "CallMethod", "target": "stage", "method": "SpawnPattern", "params": { "path": "octopus/pattern/effect/bgClouds.fgStart", }},
+					{ "action": "CallMethod", "target": "stage", "method": "SpawnPattern", "params": { "path": "octopus/pattern/effect/bgClouds.fgOngoing", }},
+					{ "action": "CallMethod", "target":"stage", "method": "SetGridColor", "params": { "color": "color(0f, 1f, 1f, 0.033f)", "time":1, "easingType":"QuadOut" }},
+				],
+
+				// this handler is called when the pixels finish respawning
+				"onFormRespawn": [
+					{ "action": "CallSubroutine", "target":"unit", "path": ".speech.sub", "params": { "message": "#octopus.boss.form_1", "chance":0.25, }},
+				],
+
+				"onUpdate": [
+					{ "action": "CallMethod", "method": "Shake", "params": { "strength":"map(core.HpPercent, 1f, 0f, 0f, 0.175f, 'QuadIn')", "time":0, }},
+					{ "action": "CallMethod", "method": "SetScale", "params": { "scale": "vec2(1f + sin(stageTime * 1.8f) * 0.03f, 1f + sin(stageTime * 1.8f) * 0.03f)" }},
+					{ "action": "CallMethod", "method": "AimTowards", "params": { "facingAngle":0, "rotPercent":0.125, }},
+				],
+				"onPixelHit": [
+					{ "action": "CallMethod", "method": "SetAnimSpeed", "params": { "speed": "map(unitPixelPercent, 1f, 0f, 1f, 4f)" }},
+					{ "action": "CallMethod", "target": "unit", "method": "Nudge", "params": { "vector":"bullet.FacingDirection * 0.15f", "time":0.25, "easingType":"QuadOut", }},
+					{ "action": "CallMethod", "method": "AddRotationForce", "params": { "hitPos": "hitPos", "forceDir": "bullet.FacingDirection", "strength":17 }},
+				],
+				"onPlayerDie":[
+					{ "action": "CallSubroutine", "target":"unit", "path": ".speech.sub", "params": { "message": "#octopus.boss.player_die_1", "chance":0.33, }},
+				],
+			},
+		],
+
+		// the state machine that handles the boss behaviour
+		"fsm": {
+			"inactive": [
+				{ "action": "Wait", } // wait indefinitely
+			],
+			"form0": { // the name "form0" is important, when the first form of the unit finishes respawning, its behaviour state will be set to this
+				// FORM 0
+				"initial delay": [
+					{ "action": "Wait", "time":2, },
+				],
+				"0": [
+					{ "action": "CallMethod", "method": "ChargePattern", "params": { "paths": [ "octopus/pattern/lazyBullets.1", "octopus/pattern/lazyBullets.2", "octopus/pattern/lazyBullets.3", "octopus/pattern/lazyBullets.4" ], "pathIndex":"loopNum % 4", "partType": "mid", "chargeTime": 0.75, "dir":"playerPos - partPos", }},
+					{ "action": "Wait", "time": 4, },
+				],
+				"1": [
+					{ "action": "SetValue", "name": "loopNum", "value": "loopNum + 1" },
+					{ "action": "Goto", "state": "0" },
+				],
+			},
+			"form1": { // when the 2nd unit form finishes respawning, its behaviour state will be set to "form1"
+				// FORM 1
+				"initial delay 2": [
+					{ "action": "SetValue", "name": "loopNum", "value": 0 },
+	
+					{ "action": "Wait", "time": 1 },
+					{ "action": "CallMethod", "method": "ChargePattern", "params": { "path": "octopus/pattern/curseMineOrb", "partType": "core", "chargeTime": 1, "loopNum":"loopNum", "dir": "(playerPos + playerVel * 0.75f) - partPos", }},
+					{ "action": "Wait", "time": 1 },
+				],
+				"0": [
+					{ "action": "Condition", "condition": "loopNum > 0 && numShotPatterns % 2 == 0",
+						"true": [ 
+							{ "action": "CallMethod", "method": "ChargePattern", "params": { "paths": [ "octopus/pattern/spread.spokes1", "octopus/pattern/spread.spokes2", "octopus/pattern/spread.spokes3" ], "pathIndex":"numShotPatterns % 3", "partType": "side", "chargeTime": 1, "dir":"(playerPos + playerVel * 0.25f) - partPos", }},
+							{ "action": "Wait", "time": 3, },
+						],
+						"false": [ 
+							{ "action": "Repeat", "count": 2, "delay": 1.5, "inner": [
+								{ "action": "CallMethod", "method": "ChargePattern", "params": { "path": "octopus/pattern/spread.1", "partType": "side", "chargeTime": 1, "dir":"(playerPos + playerVel * 0.25f) - partPos", }},
+							]},
+							{ "action": "Wait", "time": 2, },
+						],},
+				],
+				"1": [
+					{ "action": "SetValue", "name": "loopNum", "value": "loopNum + 1" },
+					{ "action": "Goto", "state": "0" },
+				],
+			},
+		},
+
+		// subroutine to show a speech bubble and play a sound
+		"speech.sub": {
+			// the parameters we can pass in to the subroutine
+			"parameters": {
+				"this": { "type": "Unit" }, // this subroutine is intended to be run by Unit objects
+				"message": { "type": "String" },
+				"chance": { "type": "Float" },
+			},
+
+			"actions": [
+				{ "action": "Condition", "condition": "rand.Float(0f, 1f) < 0.5f",
+					"true": [ 
+						{ "action": "CallMethod", "target":"unit.GetPart('core')", "method": "SpawnBubble", "ignoreNullRef": true, "params": { "text": "${message}", "partType":"core", "lifetime": 4, }},
+						{ "action": "CallMethod", "target":"stage", "method": "PlaySfx", "params": { "sfxType": "OctopusBossSpeech", "pos":"unitPos", }},
+					],},
+			]
+		},
+	}
+	```
+
 ## Forms
 
 Most of the properties for a unit can be defined for each form.<br>
@@ -61,8 +354,8 @@ Each unit config should contain a list of forms:
 }
 ```
 
-!!! Unit form info
-    [Full json config](../../SpaceUsurper/UnitFormData)
+!!! info "Unit form info"
+    [Unit form json config](../../SpaceUsurper/UnitFormData)
 
 ### Base Form
 

@@ -2,7 +2,7 @@
 
 The **PxcEditor** is used to draw units, assign pixels, create animations, and export them to json files.
 
-Download v34 for Windows: [files.facepunch.com/ryleigh/1b2211b1/PXC34.rar](https://files.facepunch.com/ryleigh/1b2211b1/PXC34.rar)
+Download v34 for Windows: [PXC34.rar](https://files.facepunch.com/ryleigh/1b2811b1/PXC34.rar)
 
 <img src="https://files.facepunch.com/ryleigh/1b1511b1/PxcEditor_2019-08-15_20-49-04.png" width="100%"/>
 
@@ -158,7 +158,7 @@ While in this mode, the editor background color is red.<br>
 
 Use ++ctrl+"RMB"++ with Brush tool to flood-assign hovered area.<br>
 Use ++ctrl+"RMB"++ with Eraser tool to flood-unassign hovered area.<br>
-Use ++ctrl+f++ to assign all un-assigned pixels on current frame.<br>
+Use ++ctrl+f++ to assign all selected un-assigned pixels on current frame (if none are selected, it assigns **all** unassigned pixels).<br>
 Use ++del++ to delete all (or selected) assignments on current frame.<br>
 
 You can use ++"LMB"++ on a pixel to assign it (or un-assign it with the Eraser), but generally this is the best workflow:

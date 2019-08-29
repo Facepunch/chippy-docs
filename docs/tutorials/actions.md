@@ -384,4 +384,4 @@ The subroutine definition should include a `this` parameter, set to the type of 
 ```
 
 !!! tip
-	The name of subroutines doesn't **have** to include `.sub`, we just do it for clarity.
+	The name of subroutines don't **need** to include `.sub`, we just do it for clarity.
