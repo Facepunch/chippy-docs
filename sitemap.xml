@@ -166,6 +166,251 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/BulletNum/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/CantBeAffected/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/CantBeDestroyed/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/ChildBullet/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/CollideWithPixels/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/CollideWithPlayer/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/CurrDamageAvailable/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/CurrForceStrength/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/DataPath/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/ElapsedFrameTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/ElapsedLifetime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/FacingAngle/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/FacingDirection/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/FloatVar/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/HasParentPattern/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/ImpulseVelocity/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IntVar/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsActive/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsAnchored/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsFinishedAdvancingKeyframes/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsPlayerBullet/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsPositive/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsRedirected/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsStatusVisualBullet/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/LastPos/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/Level/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/LoopNum/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/Mass/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/MoveMode/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/NumBullets/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/NumShotPatternsConstant/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/ParentBullet/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/PatternNum/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/PlayerCollideable/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/PosA/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/PosB/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/Position/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/PxcCollideable/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/PxcDamageDealt/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/Radius/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/ShouldOverrideStatus/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/SpawnPos/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/StartTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/StatusLevel/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/TimeScale/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/TotalLifetime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/TotalPxcDamage/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/VectorVar/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/Velocity/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/AddBullet/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -451,307 +696,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/BulletNum/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/CantBeAffected/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/CantBeDestroyed/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/ChildBullet/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/CollideWithPixels/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/CollideWithPlayer/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/CurrDamageAvailable/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/CurrForceStrength/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/DataPath/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/ElapsedFrameTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/ElapsedLifetime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/FacingAngle/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/FacingDirection/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/FloatVar/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/HasParentPattern/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/ImpulseVelocity/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IntVar/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsActive/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsAnchored/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsFinishedAdvancingKeyframes/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsPlayerBullet/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsPositive/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsRedirected/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/IsStatusVisualBullet/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/LastPos/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/Level/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/LoopNum/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/Mass/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/MoveMode/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/NumBullets/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/NumShotPatternsConstant/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/ParentBullet/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/PatternNum/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/PlayerCollideable/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/PosA/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/PosB/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/Position/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/PxcCollideable/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/PxcDamageDealt/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/Radius/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/ShouldOverrideStatus/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/SpawnPos/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/StartTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/StatusLevel/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/TimeScale/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/TotalLifetime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/TotalPxcDamage/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/VectorVar/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Bullet/Velocity/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnDestroyPixel/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnFixedUpdate/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnHitPart/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnHitPartProtected/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnHitPixel/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnHitPlayer/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnLifetimeFinished/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnOutOfBounds/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnProximity/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnRemove/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnStart/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1096,17 +1041,67 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnDestroyPixel/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnFixedUpdate/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnHitPart/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnHitPartProtected/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnHitPixel/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnHitPlayer/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnLifetimeFinished/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnOutOfBounds/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnProximity/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnRemove/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletData/OnStart/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletFacingMode/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletKeyframeData/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletKeyframeData/OnKeyframe/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1331,32 +1326,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletKeyframeData/OnKeyframe/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletMoveMode/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletPattern/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletPattern/AddBullet/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletPattern/AffectBullets/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletPattern/DespawnBulletAnchor/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletPattern/Finish/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1422,6 +1402,26 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletPattern/Shape/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletPattern/AddBullet/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletPattern/AffectBullets/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletPattern/DespawnBulletAnchor/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/BulletPattern/Finish/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -2051,6 +2051,31 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/GameStage/BaseBgColor/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/GameStage/BgColor/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/GameStage/BossFormCount/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/GameStage/BossFormNumber/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/GameStage/Bounds/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/GameStage/ClearAccelVectorFunc/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -2162,31 +2187,6 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/GameStage/SpawnUnit/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/GameStage/BaseBgColor/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/GameStage/BgColor/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/GameStage/BossFormCount/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/GameStage/BossFormNumber/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/GameStage/Bounds/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -2306,6 +2306,21 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/MovementController/Position/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/MovementController/Velocity/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/MovementController/VelocityPercent/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/MovementController/AddForce/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -2351,21 +2366,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/MovementController/Position/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/MovementController/Velocity/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/MovementController/VelocityPercent/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PartSelectMode/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -2377,31 +2377,6 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PatternData/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PatternData/OnBullet/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PatternData/OnFinish/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PatternData/OnStart/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PatternData/OnUpdate/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PatternData/OnVolley/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -2801,12 +2776,62 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PatternData/OnBullet/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PatternData/OnFinish/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PatternData/OnStart/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PatternData/OnUpdate/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PatternData/OnVolley/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PatternShape/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelData/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelData/Category/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelData/Exists/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelData/ParentPixelGroup/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelData/PixelNum/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelData/Position/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -2851,32 +2876,92 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelData/Category/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelData/Exists/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelData/ParentPixelGroup/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelData/PixelNum/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelData/Position/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/BaseHp/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/CurrentHp/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/HpPercent/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/IntRect/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/IsActive/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/Laser/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/LastPatternTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumActivePatterns/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumActivePrereqs/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumChargingPatterns/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumPixels/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumSpeechBubbles/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumTimesDestroyed/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumTimesHit/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumTimesHitProtected/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/PartNum/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/Position/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -2981,91 +3066,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/BaseHp/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/CurrentHp/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/HpPercent/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/IntRect/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/IsActive/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/Laser/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/LastPatternTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumActivePatterns/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumActivePrereqs/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumChargingPatterns/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumPixels/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumSpeechBubbles/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumTimesDestroyed/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumTimesHit/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/NumTimesHitProtected/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/PartNum/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelGroup/Position/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PixelJsonTransformation/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -3077,76 +3077,6 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/AddForce/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/AddGun/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/AddPattern/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/AddPhysicsForce/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/AddStatus/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/Damage/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/GetStatus/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/GetStatusLevel/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/IsStatusSelected/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/KillPlayer/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/ReplaceMainGun/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/RestoreDefaultMainGun/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/SetPosition/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/Vibrate/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -3221,6 +3151,81 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/AddForce/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/AddGun/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/AddPattern/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/AddPhysicsForce/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/AddStatus/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/Damage/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/GetStatus/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/GetStatusLevel/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/IsStatusSelected/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/KillPlayer/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/ReplaceMainGun/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/RestoreDefaultMainGun/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/SetPosition/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player/Vibrate/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player_Behaviour/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player_Body/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -3247,6 +3252,21 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player_Body/WidthMods/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player_Camera/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player_Collision/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player_Crosshair/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -3336,6 +3356,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player_Hitbox/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player_Input/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -3411,6 +3436,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player_Trail/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Player_Vibration/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -3427,51 +3457,6 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnActivateStatus/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnChunkExplode/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnDeathFinish/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnDeathStart/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnDisconnectChunk/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnFixedUpdate/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnHit/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnHitPixel/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnSpawn/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -3671,6 +3656,51 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnActivateStatus/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnChunkExplode/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnDeathFinish/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnDeathStart/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnDisconnectChunk/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnFixedUpdate/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnHit/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnHitPixel/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerData/OnSpawn/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerGun/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -3687,16 +3717,6 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerGunData/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerGunData/OnFixedUpdate/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerGunData/OnSpawn/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -3836,6 +3856,16 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerGunData/OnFixedUpdate/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PlayerGunData/OnSpawn/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PluginData/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -3906,6 +3936,61 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Pxc/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Pxc_Animation/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Pxc_Collision/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Pxc_Connection/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Pxc_Debug/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Pxc_Effects/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Pxc_Grid/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Pxc_PixelChunks/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Pxc_PixelGroups/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Pxc_Source/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Pxc_Texture/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PxcAnimData/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -3937,6 +4022,11 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PxcAnimDataCompressed/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/PxcComponent/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -4221,11 +4311,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/SongSegmentData/Actions/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/SongSegmentData/HighPass/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -4257,6 +4342,11 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/SongSegmentData/Volume/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/SongSegmentData/Actions/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -4296,6 +4386,396 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BehaviourHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BehaviourHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BehaviourHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BehaviourHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BossFormCount/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BossFormCount/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BossFormCount/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BossFormNumber/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BossFormNumber/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BossFormNumber/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/CameraHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/CameraHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/CameraHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/CameraHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedDeltaTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedDeltaTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedDeltaTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedDeltaTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedElapsedTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedElapsedTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedElapsedTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedElapsedTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsMenuStage/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsMenuStage/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsMenuStage/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsMenuStage/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsPaused/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsPaused/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsPaused/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsPaused/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/MiscDebugToggle/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/MiscDebugToggle/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/MiscDebugToggle/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/MiscDebugToggle/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumBullets/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumBullets/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumBullets/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumBullets/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumShotPatterns/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumShotPatterns/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumShotPatterns/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumShotPatterns/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumSpawnedPatterns/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumSpawnedPatterns/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumSpawnedPatterns/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumSpawnedPatterns/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedDeltaTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedDeltaTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedDeltaTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedDeltaTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedElapsedTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedElapsedTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedElapsedTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedElapsedTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SongHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SongHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SongHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SongHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SpeechHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SpeechHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SpeechHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SpeechHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/StageProgress/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/StageProgress/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/StageProgress/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/StageProgress/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TextHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TextHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TextHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TextHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TimeScaleHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TimeScaleHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TimeScaleHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TimeScaleHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/UnitHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/UnitHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/UnitHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/UnitHandler/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/AddFlatTimeScale/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -5267,396 +5747,6 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/ZoomCamera/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BehaviourHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BehaviourHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BehaviourHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BehaviourHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BossFormCount/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BossFormCount/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BossFormCount/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BossFormNumber/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BossFormNumber/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/BossFormNumber/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/CameraHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/CameraHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/CameraHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/CameraHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedDeltaTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedDeltaTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedDeltaTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedDeltaTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedElapsedTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedElapsedTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedElapsedTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/FixedElapsedTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsMenuStage/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsMenuStage/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsMenuStage/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsMenuStage/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsPaused/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsPaused/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsPaused/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/IsPaused/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/MiscDebugToggle/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/MiscDebugToggle/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/MiscDebugToggle/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/MiscDebugToggle/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumBullets/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumBullets/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumBullets/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumBullets/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumShotPatterns/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumShotPatterns/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumShotPatterns/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumShotPatterns/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumSpawnedPatterns/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumSpawnedPatterns/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumSpawnedPatterns/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/NumSpawnedPatterns/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedDeltaTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedDeltaTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedDeltaTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedDeltaTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedElapsedTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedElapsedTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedElapsedTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/RawFixedElapsedTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SongHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SongHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SongHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SongHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SpeechHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SpeechHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SpeechHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/SpeechHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/StageProgress/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/StageProgress/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/StageProgress/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/StageProgress/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TextHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TextHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TextHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TextHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TimeScaleHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TimeScaleHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TimeScaleHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/TimeScaleHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/UnitHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/UnitHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/UnitHandler/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage/UnitHandler/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -5716,6 +5806,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage_TimeScale/CurrentTimeScale/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage_TimeScale/AddFlatTimeScale/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -5731,11 +5826,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage_TimeScale/CurrentTimeScale/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Stage_Units/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -5747,21 +5837,6 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StageData/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StageData/OnFixedUpdate/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StageData/OnPlayerDie/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StageData/OnPlayerHit/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -5802,6 +5877,21 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StageData/Units/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StageData/OnFixedUpdate/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StageData/OnPlayerDie/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StageData/OnPlayerHit/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -5891,6 +5981,46 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/Charge/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/ChargePercent/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/ChargeRequired/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/ElapsedTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/IsSelected/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/Level/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/NumLevels/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/NumStatusBullets/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/Activate/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -5971,46 +6101,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/Charge/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/ChargePercent/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/ChargeRequired/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/ElapsedTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/IsSelected/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/Level/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/NumLevels/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffect/NumStatusBullets/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectCategoryData/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -6027,66 +6117,6 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnActivate/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnDeselect/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnDisable/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnEnable/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnExecute/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnFixedUpdate/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnLevelDown/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnLevelUp/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnMaxedOut/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnPlayerHit/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnPreventDeath/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnSelect/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -6211,6 +6241,66 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnActivate/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnDeselect/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnDisable/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnEnable/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnExecute/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnFixedUpdate/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnLevelDown/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnLevelUp/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnMaxedOut/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnPlayerHit/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnPreventDeath/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectData/OnSelect/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/StatusEffectPlayerModifierData/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -6256,12 +6346,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/SubroutineData/Actions/</loc>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/SubroutineData/Parameters/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/SubroutineData/Parameters/</loc>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/SubroutineData/Actions/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -6282,6 +6372,261 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CoreHpPercent/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CorePos/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CurrAnimName/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CurrentCore/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CurrentState/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CurrFormData/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CurrFormNum/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CurrPxcFrameNum/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/DataPath/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/ElapsedFormTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/ElapsedTime/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/ExistingPixelCount/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/ExistingPixelPercent/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/FacingAngle/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/FacingVector/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/HasFullyEnteredBounds/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/HasFullyEnteredLevel/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/HidePercent/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/ImplodeProgress/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsActive/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsAnimPlaying/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsDestroyed/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsFullyInBounds/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsFullyInLevel/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsHidden/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsHiding/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsImploding/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsPartiallyInBounds/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsPartiallyInLevel/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsRevealing/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsRotatingToFace/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsSpawning/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/Movement/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/NumActiveParts/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/NumDestroyedParts/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/NumDestroyedPixels/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/NumShotPatterns/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/NumShotPatternsThisForm/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/NumSpeechBubbles/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/Opacity/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/OriginalSpawnPos/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/OutOfBoundsPercent/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/Position/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/Radius/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/SpawnPercent/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/SpawnPos/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/TimeScale/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/TimeSinceCoreHit/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/TotalPixelCount/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/TotalVelocity/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/Velocity/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -6921,257 +7266,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CoreHpPercent/</loc>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit_Behaviour/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CorePos/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CurrAnimName/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CurrentCore/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CurrentState/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CurrFormData/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CurrFormNum/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/CurrPxcFrameNum/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/DataPath/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/ElapsedFormTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/ElapsedTime/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/ExistingPixelCount/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/ExistingPixelPercent/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/FacingAngle/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/FacingVector/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/HasFullyEnteredBounds/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/HasFullyEnteredLevel/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/HidePercent/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/ImplodeProgress/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsActive/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsAnimPlaying/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsDestroyed/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsFullyInBounds/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsFullyInLevel/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsHidden/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsHiding/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsImploding/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsPartiallyInBounds/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsPartiallyInLevel/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsRevealing/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsRotatingToFace/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/IsSpawning/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/Movement/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/NumActiveParts/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/NumDestroyedParts/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/NumDestroyedPixels/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/NumShotPatterns/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/NumShotPatternsThisForm/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/NumSpeechBubbles/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/Opacity/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/OriginalSpawnPos/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/OutOfBoundsPercent/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/Position/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/Radius/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/SpawnPercent/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/SpawnPos/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/TimeScale/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/TimeSinceCoreHit/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/TotalPixelCount/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/TotalVelocity/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit/Velocity/</loc>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/Unit_Forms/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -7241,12 +7341,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitData/</loc>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitComponent/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitData/OnDisable/</loc>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitData/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -7401,147 +7501,22 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitData/OnDisable/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFacingMode/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitForm/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnDestroy/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnDisconnectChunk/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnDormantEnd/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnDormantStart/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnDormantUpdate/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnFixedUpdate/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnFormRespawn/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnHidden/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnHitPlayer/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnImplodeFinish/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnImplodeStart/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnImplodeUpdate/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnOutOfBoundsDown/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnOutOfBoundsLeft/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnOutOfBoundsRight/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnOutOfBoundsUp/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPartDestroyed/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPartHit/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPartHitByLaser/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPixelDestroyed/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPixelHit/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPixelHitByLaser/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPlayerActivateStatus/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPlayerDie/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPlayerHit/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPlayerStatusLevelChanged/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnSpawn/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -7831,12 +7806,142 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitLaserData/</loc>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnDestroy/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitLaserData/OnHitPlayer/</loc>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnDisconnectChunk/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnDormantEnd/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnDormantStart/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnDormantUpdate/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnFixedUpdate/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnFormRespawn/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnHidden/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnHitPlayer/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnImplodeFinish/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnImplodeStart/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnImplodeUpdate/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnOutOfBoundsDown/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnOutOfBoundsLeft/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnOutOfBoundsRight/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnOutOfBoundsUp/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPartDestroyed/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPartHit/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPartHitByLaser/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPixelDestroyed/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPixelHit/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPixelHitByLaser/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPlayerActivateStatus/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPlayerDie/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPlayerHit/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnPlayerStatusLevelChanged/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitFormData/OnSpawn/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitLaserData/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -7986,6 +8091,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitLaserData/OnHitPlayer/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitMovementData/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
@@ -8022,31 +8132,6 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitPartData/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitPartData/OnDestroy/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitPartData/OnFixedUpdate/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitPartData/OnHit/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitPartData/OnHitProtected/</loc>
-     <lastmod>2019-08-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitPartData/OnSpawn/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -8392,6 +8477,31 @@
     </url>
     <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitPartData/Width/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitPartData/OnDestroy/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitPartData/OnFixedUpdate/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitPartData/OnHit/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitPartData/OnHitProtected/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/UnitPartData/OnSpawn/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
