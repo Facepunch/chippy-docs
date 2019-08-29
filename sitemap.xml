@@ -1661,6 +1661,41 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/CoreController/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/CoreController/ChargePercent/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/CoreController/IsWandering/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/CoreController/LookDirection/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/CoreController/LookPercent/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/CoreController/ReactPercent/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/CoreController/ShootPercent/</loc>
+     <lastmod>2019-08-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://facepunch.github.io/chippy-docs/SpaceUsurper/CoreData/</loc>
      <lastmod>2019-08-29</lastmod>
      <changefreq>daily</changefreq>
