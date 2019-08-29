@@ -374,13 +374,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#config" title="Config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#overriding-default-player" title="Overriding Default Player" class="md-nav__link">
     Overriding Default Player
   </a>
@@ -395,36 +388,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#body" title="Body" class="md-nav__link">
-    Body
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behaviour" title="Behaviour" class="md-nav__link">
-    Behaviour
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-variables" title="Custom Variables" class="md-nav__link">
-    Custom Variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#params" title="Params" class="md-nav__link">
-    Params
-  </a>
   
 </li>
       
@@ -432,19 +397,6 @@
   <a href="#guns" title="Guns" class="md-nav__link">
     Guns
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gun-params" title="Gun Params" class="md-nav__link">
-    Gun Params
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -28356,13 +28308,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#config" title="Config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#overriding-default-player" title="Overriding Default Player" class="md-nav__link">
     Overriding Default Player
   </a>
@@ -28377,36 +28322,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#body" title="Body" class="md-nav__link">
-    Body
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behaviour" title="Behaviour" class="md-nav__link">
-    Behaviour
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-variables" title="Custom Variables" class="md-nav__link">
-    Custom Variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#params" title="Params" class="md-nav__link">
-    Params
-  </a>
   
 </li>
       
@@ -28414,19 +28331,6 @@
   <a href="#guns" title="Guns" class="md-nav__link">
     Guns
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gun-params" title="Gun Params" class="md-nav__link">
-    Gun Params
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -28473,7 +28377,6 @@
 <p><a href="../../SpaceUsurper/Player">Properties &amp; Methods</a></p>
 <p><a href="../../SpaceUsurper/PlayerData">Full json config</a></p>
 </div>
-<h2 id="config">Config</h2>
 <h2 id="overriding-default-player">Overriding Default Player</h2>
 <p>To create a custom player that only changes certain things, you can <code class="codehilite">#<span class="k">include</span></code> the default player and override specific properties.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -28502,18 +28405,41 @@
 </td></tr></table>
 
 <h3 id="physics-elements">Physics Elements</h3>
-<h3 id="body">Body</h3>
-<h2 id="behaviour">Behaviour</h2>
-<h2 id="custom-variables">Custom Variables</h2>
-<h2 id="params">Params</h2>
+<p>You may want different types of forces that can be applied to players.</p>
+<p>For each type of you create, you can define <code class="codehilite"><span class="n">frictionPercentMin</span></code> (the minimum friction) and <code class="codehilite"><span class="n">frictionPercentMax</span></code> (the max friction). You also choose the <code class="codehilite"><span class="n">topSpeed</span></code> - as the player's velocity increases to <code class="codehilite"><span class="n">topSpeed</span></code>, the friction applied to them increases from the min friction to the max.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;physicsElements&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;impulse&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;frictionPercentMin&quot;</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span> <span class="nt">&quot;frictionPercentMax&quot;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="nt">&quot;topSpeed&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="p">},</span>
+        <span class="nt">&quot;shoot_force&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;frictionPercentMin&quot;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="nt">&quot;frictionPercentMax&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="nt">&quot;topSpeed&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="p">},</span>
+        <span class="nt">&quot;boost&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;frictionPercentMin&quot;</span><span class="p">:</span> <span class="mf">0.04</span><span class="p">,</span> <span class="nt">&quot;frictionPercentMax&quot;</span><span class="p">:</span> <span class="mf">0.15</span><span class="p">,</span> <span class="nt">&quot;topSpeed&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="p">},</span>
+    <span class="p">},</span>
+
+    <span class="nt">&quot;onHit&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;player.Movement&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;AddPhysicsForce&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;impulse&quot;</span><span class="p">,</span> <span class="nt">&quot;force&quot;</span><span class="p">:</span><span class="s2">&quot;damageDir * 50f&quot;</span> <span class="p">}},</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <h2 id="guns">Guns</h2>
 <div class="admonition info">
 <p class="admonition-title">Player gun info</p>
 <p><a href="../../SpaceUsurper/PlayerGun">Properties &amp; Methods</a></p>
 <p><a href="../../SpaceUsurper/PlayerGunData">Full json config</a></p>
 </div>
-<h3 id="gun-params">Gun Params</h3>
 <h2 id="debugging">Debugging</h2>
+<p><code class="codehilite"><span class="n">debugVector</span></code>: draws a 2d vector from the player's position <br>
+<code class="codehilite"><span class="n">debugText</span></code>: displays a string below the player's position (use <code class="codehilite"><span class="cp">${</span><span class="n">NAME</span><span class="cp">}</span></code> for properties)</p>
 
     <!-- Source files -->
     

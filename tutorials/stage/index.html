@@ -444,26 +444,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behaviour" title="Behaviour" class="md-nav__link">
-    Behaviour
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stage-patterns" title="Stage Patterns" class="md-nav__link">
-    Stage Patterns
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#arena" title="Arena" class="md-nav__link">
     Arena
@@ -477,22 +457,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#behaviour_1" title="Behaviour" class="md-nav__link">
+  <a href="#behaviour" title="Behaviour" class="md-nav__link">
     Behaviour
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#callbacks" title="Callbacks" class="md-nav__link">
-    Callbacks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#params" title="Params" class="md-nav__link">
-    Params
+  <a href="#handlers" title="Handlers" class="md-nav__link">
+    Handlers
   </a>
   
 </li>
@@ -525,15 +498,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#camera-effects" title="Camera Effects" class="md-nav__link">
-    Camera Effects
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#background" title="Background" class="md-nav__link">
-    Background
+  <a href="#screen-effects" title="Screen Effects" class="md-nav__link">
+    Screen Effects
   </a>
   
 </li>
@@ -542,6 +508,19 @@
   <a href="#debugging" title="Debugging" class="md-nav__link">
     Debugging
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camera-zoom" title="Camera Zoom" class="md-nav__link">
+    Camera Zoom
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -28540,26 +28519,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behaviour" title="Behaviour" class="md-nav__link">
-    Behaviour
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stage-patterns" title="Stage Patterns" class="md-nav__link">
-    Stage Patterns
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#arena" title="Arena" class="md-nav__link">
     Arena
@@ -28573,22 +28532,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#behaviour_1" title="Behaviour" class="md-nav__link">
+  <a href="#behaviour" title="Behaviour" class="md-nav__link">
     Behaviour
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#callbacks" title="Callbacks" class="md-nav__link">
-    Callbacks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#params" title="Params" class="md-nav__link">
-    Params
+  <a href="#handlers" title="Handlers" class="md-nav__link">
+    Handlers
   </a>
   
 </li>
@@ -28621,15 +28573,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#camera-effects" title="Camera Effects" class="md-nav__link">
-    Camera Effects
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#background" title="Background" class="md-nav__link">
-    Background
+  <a href="#screen-effects" title="Screen Effects" class="md-nav__link">
+    Screen Effects
   </a>
   
 </li>
@@ -28638,6 +28583,19 @@
   <a href="#debugging" title="Debugging" class="md-nav__link">
     Debugging
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camera-zoom" title="Camera Zoom" class="md-nav__link">
+    Camera Zoom
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -28708,7 +28666,7 @@
 
 <h3 id="game-mode">Game Mode</h3>
 <h4 id="time-attack">Time Attack</h4>
-<p>This is the default mode. The goal is to win as fast as possible.</p>
+<p>This is the default mode. The goal is to destroy the boss(es) as quickly as possible.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -28720,7 +28678,7 @@
 </td></tr></table>
 
 <h4 id="endless">Endless</h4>
-<p>The goal is to survive as long as possible. When time is slowed down or sped up in this mode, the game timer is affected too.</p>
+<p>In <code class="codehilite"><span class="n">Endless</span></code> mode, the goal is to survive as long as possible.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -28731,6 +28689,10 @@
 </pre></div>
 </td></tr></table>
 
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When time is slowed down or sped up in <code class="codehilite"><span class="n">Endless</span></code> mode, the game timer is affected too!</p>
+</div>
 <h3 id="medal-times">Medal Times</h3>
 <p>Choose the <strong>time in seconds</strong> that needs to be beat to earn each medal.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -28751,7 +28713,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>An <code class="codehilite"><span class="n">Endless</span></code> stage needs to specify the <code class="codehilite"><span class="n">victory</span></code> time as well - that is, the time you need to last to beat the stage without even earning a bronze medal.</p>
+<p>An <code class="codehilite"><span class="n">Endless</span></code> stage needs to specify the <code class="codehilite"><span class="n">victory</span></code> time as well - that is, the time you need to last to <strong>beat the stage</strong> without even earning a bronze medal.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -28837,7 +28799,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>Spread out for clarity:</p>
+<p>Expanded for clarity:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -28864,8 +28826,7 @@
     <span class="p">},</span>
 <span class="p">}</span><span class="err">,</span>
 </pre></div>
-</td></tr></table>
-
+</td></tr></table></p>
 <h4 id="spawning">Spawning</h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SpawnUnit&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;boss&quot;</span><span class="p">,</span> <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="s2">&quot;vec2(0f, 10f)&quot;</span><span class="p">,</span> <span class="p">}}</span><span class="err">,</span>
 </pre></div>
@@ -28891,8 +28852,6 @@
 </td></tr></table>
 
 <p>If you try to spawn a unit with too many active already, it will be ignored. The <code class="codehilite"><span class="k">count</span></code> of a unit determines the max amount that can be active.</p>
-<h2 id="behaviour">Behaviour</h2>
-<h2 id="stage-patterns">Stage Patterns</h2>
 <h3 id="arena">Arena</h3>
 <p>You'll probably want to choose your level size by setting <code class="codehilite"><span class="n">bounds</span></code>, but the other <code class="codehilite"><span class="n">arena</span></code> properties can be ignored if you're fine with the defaults for now.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -28958,7 +28917,7 @@
 </td></tr></table>
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1611b1/Chippy_2019-08-16_17-38-15.png" width="100%"/></p>
-<h2 id="behaviour_1">Behaviour</h2>
+<h2 id="behaviour">Behaviour</h2>
 <p>The stage has its own state machine like units do, where actions can be called in sequence.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -29002,7 +28961,7 @@
 <p class="admonition-title">Warning</p>
 <p>While most names can be safely changed in Chippy scripts, the <code class="codehilite"><span class="k">start</span></code> state in a stage fsm will specifically be set at the beginning of a run, so make sure it exists.</p>
 </div>
-<h2 id="callbacks">Callbacks</h2>
+<h2 id="handlers">Handlers</h2>
 <p>You can call Actions are certain points during a stage, besides the state machine.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -29024,7 +28983,6 @@
 </pre></div>
 </td></tr></table>
 
-<h2 id="params">Params</h2>
 <h2 id="custom-variables">Custom Variables</h2>
 <p>Custom variables can be defined in the <code class="codehilite"><span class="n">properties</span></code> structure of the stage config.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -29082,12 +29040,9 @@
 19
 20
 21
-22
-23
-24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="err">/*</span> <span class="err">when</span> <span class="err">the</span> <span class="err">level</span> <span class="err">starts,</span> <span class="err">the</span> <span class="err">value</span> <span class="err">of</span>
-        <span class="err">the</span> <span class="err">bossUnit</span> <span class="err">property</span> <span class="err">is</span> <span class="err">null</span> <span class="err">*/</span>
+        <span class="err">//</span> <span class="err">when</span> <span class="err">the</span> <span class="err">level</span> <span class="err">starts,</span> <span class="err">the</span> <span class="err">value</span> <span class="err">of</span> <span class="err">the</span> <span class="err">bossUnit</span> <span class="err">property</span> <span class="err">is</span> <span class="err">null</span>
         <span class="nt">&quot;bossUnit&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Unit&quot;</span> <span class="p">},</span>
     <span class="p">},</span>
 
@@ -29096,8 +29051,7 @@
             <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Wait&quot;</span> <span class="p">},</span>
         <span class="p">],</span>
         <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="err">/*</span> <span class="err">spawn</span> <span class="err">the</span> <span class="err">boss</span> <span class="err">unit</span> <span class="err">and</span> <span class="err">save</span> <span class="err">the</span> <span class="err">return</span> <span class="err">value</span>
-            <span class="err">(of</span> <span class="err">type</span> <span class="err">Unit)</span> <span class="err">to</span> <span class="err">the</span> <span class="err">custom</span> <span class="err">property</span> <span class="err">*/</span>
+            <span class="err">//</span> <span class="err">spawn</span> <span class="err">the</span> <span class="err">boss</span> <span class="err">unit</span> <span class="err">and</span> <span class="err">save</span> <span class="err">the</span> <span class="err">return</span> <span class="err">value</span> <span class="err">(of</span> <span class="err">type</span> <span class="err">Unit)</span> <span class="err">to</span> <span class="err">the</span> <span class="err">custom</span> <span class="err">bossUnit</span> <span class="err">property</span>
             <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SpawnUnit&quot;</span><span class="p">,</span> 
                 <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;boss&quot;</span><span class="p">,</span> <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="s2">&quot;vec2(0f, 20f)&quot;</span> <span class="p">},</span> 
 <span class="hll">                <span class="nt">&quot;return&quot;</span><span class="p">:</span><span class="s2">&quot;bossUnit&quot;</span><span class="p">,</span> 
@@ -29111,12 +29065,80 @@
 </pre></div>
 </td></tr></table>
 
-<h2 id="camera-effects">Camera Effects</h2>
-<h2 id="background">Background</h2>
+<h2 id="screen-effects">Screen Effects</h2>
+<p>Some visual effects can be applied to the screen.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;onUpdate&quot;</span><span class="err">:</span><span class="p">[</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetHueShift&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;mapReturn(stageTime, 0f, 9f, 0f, 100f, &#39;QuadInOut&#39;)&quot;</span><span class="p">,</span> <span class="p">}},</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetContrast&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;mapReturn(stageTime, 0f, 2f, 0f, -60f, &#39;QuadInOut&#39;)&quot;</span><span class="p">,</span> <span class="p">}},</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetSaturation&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;mapReturn(stageTime, 0f, 8f, 0f, 200f, &#39;QuadInOut&#39;)&quot;</span><span class="p">,</span> <span class="p">}},</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetColorFilter&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;lerp(color(1f, 1f, 1f), color(1f, 1f, 0f) * 2f, mapReturn(stageTime, 0f, 4f, 0f, 1f, &#39;QuadInOut&#39;))&quot;</span><span class="p">,</span> <span class="p">}},</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetTemperature&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;mapReturn(stageTime, 0f, 5f, 0f, -100f, &#39;Linear&#39;)&quot;</span><span class="p">,</span> <span class="p">}},</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetChromaticAberration&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;mapReturn(stageTime, 0f, 10f, 0f, 4f, &#39;ExpoInOut&#39;)&quot;</span><span class="p">,</span> <span class="p">}},</span>
+<span class="p">]</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b2611b1/2019-08-26_00-18-50.mp4" type="video/mp4" > </video>
+
 <h2 id="debugging">Debugging</h2>
-<ul>
-<li>debug line/text</li>
-</ul>
+<p>Any entity can call the Stage debug methods to draw lines or text.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;onUpdate&quot;</span><span class="err">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;DrawDebugLine&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> 
+            <span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="s2">&quot;playerPos&quot;</span><span class="p">,</span> 
+            <span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="s2">&quot;playerPos + playerVel&quot;</span><span class="p">,</span> 
+            <span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="mf">0.02</span><span class="p">,</span> 
+            <span class="nt">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;color(0f, 0f, 1f) * 2f&quot;</span><span class="p">,</span> 
+            <span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="mf">0.2</span><span class="p">,</span> 
+            <span class="nt">&quot;opacity&quot;</span><span class="p">:</span><span class="mf">0.6</span><span class="p">,</span> 
+        <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;DrawDebugText&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="s2">&quot;playerPos + vec2(0f, 3f)&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;${playerVel}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;fontSize&quot;</span><span class="p">:</span><span class="s2">&quot;2.5f + fastSin(stageTime * 4f) * 0.5f&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mf">0.02</span><span class="p">,</span>
+            <span class="nt">&quot;color&quot;</span><span class="p">:{</span><span class="nt">&quot;r&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;g&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;b&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="mf">0.25</span><span class="p">},</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+<span class="p">]</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b2411b1/2019-08-24_22-55-58.mp4" type="video/mp4" > </video>
+
+<h3 id="camera-zoom">Camera Zoom</h3>
+<p>Hold <span class="keys"><kbd class="key-v">V</kbd></span> to temporarily zoom out, or use <span class="keys"><kbd class="key-plus">+</kbd></span> and <span class="keys"><kbd class="key-minus">-</kbd></span> for finer control.</p>
 
     <!-- Source files -->
     
