@@ -28,7 +28,9 @@ Each campaign folder contains a list of stages, so the "stage index" tells the g
 
 <img src="https://files.facepunch.com/ryleigh/1b2911b1/launch3.png" />
 
-!!! tip
-    For more information you can ask us in the ==#workshop== channel on our Discord:
+<br>
+Hit `PLAY` to start testing your level.
 
-    https://discord.gg/xNguzDH
+Some script changes will take effect right away, some will require a **reset**, and some will require a **full reload** to see the results.
+
+Press `R` to quickly reset the stage, and `G` to fully reload it.<br>

@@ -2,18 +2,9 @@
 
 The **PxcEditor** is used to draw units, assign pixels, create animations, and export them to json files.
 
-Download v34 for Windows: [PXC34.rar](https://files.facepunch.com/ryleigh/1b2811b1/PXC34.rar)
+Download for Windows: [PxcEditor_v35.rar](https://files.facepunch.com/ryleigh/1b0311b1/PxcEditor_v35.rar)
 
 <img src="https://files.facepunch.com/ryleigh/1b1511b1/PxcEditor_2019-08-15_20-49-04.png" width="100%"/>
-
-## Canvas Panel
-
-Pictured below is the **canvas panel** in the center, flanked by the **swatch panel** on the left and the **palette panel** on the right.
-
-<img src="https://files.facepunch.com/ryleigh/1b1611b1/PxcEditor_2019-08-16_20-29-25.png" width="100%"/>
-
-++"RMB"++ and drag on the border of any panel to move it.<br>
-Hover over a panel and use ++alt+"Scroll Wheel"++ to resize it.<br>
 
 ### Brush
 
@@ -81,6 +72,8 @@ Use ++ctrl+v++ to paste. Pasted pixels can be dragged around before they become 
 Hold ++"RMB"++ on the edge and drag to **move** it around.<br>
 Hold ++"RMB"++ on one of the corners and drag to change the canvas **dimensions**.<br>
 Hover over the panel and use ++alt+"Scroll Wheel"++ to **resize** it.<br>
+
+Click the ++"◩"++ button on the right side of the toolbar to switch between **dark** and **light** canvas backgrounds.<br>
 
 ## Layer Panel
 

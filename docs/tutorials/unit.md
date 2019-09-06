@@ -50,8 +50,6 @@ The basic structure looks like this:
 
 		"behaviour": ".fsm", // specify where to find the behaviour state machine definition (the leading "." indicates its inside the same json object)
 
-		"torqueFriction":0.01, // how fast rotation force slows down
-
 		// properties defined in baseForm will be used for all forms unless overridden
 		"baseForm": {
 			"baseHp":18, // default hp for each pixel
@@ -68,12 +66,13 @@ The basic structure looks like this:
 
 				"pxcSource": "octopus/pxc/boss/form0/source", // the location of the pixel source file for this form
 				"pxcAnimDir": "octopus/pxc/boss/form0", // the directory where the anim files associated with the source file are located
-				"implodeTime":1, // if implodeTime is >0, when the core takes lethal damage, it will play a death effect for the boss
 				
 				// list anim files to use (from the directory specified for pxcAnimDir)
 				"anims": {
-					"spawn": { "time": 1, "easingType": "QuadIn", "next":"idle",},
-					"idle": { "time": 1.25, "easingType": "Linear" },
+					"idle": { 
+						"time": 1.25, // how long each playthrough of the anim is
+						"easingType": "Linear", // how to ease through the anim frames
+					},
 				},
 
 				// pixel properties
@@ -141,12 +140,6 @@ The basic structure looks like this:
 					{ "action": "CallMethod", "target": "stage", "method": "AddTimeScale", "params": { "scale": 0.5, "time": 0.5, "easingType": "CubicIn" }},
 				],
 
-				// this handler is called when a pixel of this form is hit by a bullet
-				"onPixelHit": [
-					// add some rotational force to the boss
-					{ "action": "CallMethod", "method": "AddRotationForce", "params": { "hitPos": "hitPos", "forceDir": "bullet.FacingDirection", "strength":20 }},
-				],
-
 				// this handler is called when the player dies while this form is active
 				"onPlayerDie":[
 					// a chance to show a speech bubble
@@ -163,7 +156,6 @@ The basic structure looks like this:
 				"moveMode":"Target", // unit moves toward target position, instead of using velocity
 				"targetPos":"unitSpawnPos + vec2(sin(stageTime * 0.5f), cos(stageTime * 0.5f)) * 2f", // unit will bob around a central point
 				"posLerpSpeed":0.01, // how fast the unit lerps toward the target position
-				"implodeTime":1.5,
 
 				"anims": {
 					"spawn": { "time": 1, "easingType": "QuadIn", "next": "idle" },
@@ -254,11 +246,12 @@ The basic structure looks like this:
 					{ "action": "CallMethod", "method": "SetScale", "params": { "scale": "vec2(1f + sin(stageTime * 1.8f) * 0.03f, 1f + sin(stageTime * 1.8f) * 0.03f)" }},
 					{ "action": "CallMethod", "method": "AimTowards", "params": { "facingAngle":0, "rotPercent":0.125, }},
 				],
+
+				// this handler is called when the unit's pixel is hit by a bullet
 				"onPixelHit": [
-					{ "action": "CallMethod", "method": "SetAnimSpeed", "params": { "speed": "map(unitPixelPercent, 1f, 0f, 1f, 4f)" }},
 					{ "action": "CallMethod", "target": "unit", "method": "Nudge", "params": { "vector":"bullet.FacingDirection * 0.15f", "time":0.25, "easingType":"QuadOut", }},
-					{ "action": "CallMethod", "method": "AddRotationForce", "params": { "hitPos": "hitPos", "forceDir": "bullet.FacingDirection", "strength":17 }},
 				],
+				
 				"onPlayerDie":[
 					{ "action": "CallSubroutine", "target":"unit", "path": ".speech.sub", "params": { "message": "#octopus.boss.player_die_1", "chance":0.33, }},
 				],
