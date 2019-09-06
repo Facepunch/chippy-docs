@@ -28778,19 +28778,19 @@ inside of a resource of this type.</p>
 <tbody>
 <tr>
 <td align="left"><code class="codehilite"><span class="k">all</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.5">IEnumerable</a>&lt;<a href="../PixelData/">PixelData</a>&gt;</small></td>
+<td>Applies to all pixels, for use in the unit form's <code class="codehilite"><span class="n">pixels</span></code> property.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.5">IEnumerable</a>&lt;<a href="../PixelData/">PixelData</a>&gt;</small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">bullet</span></code></td>
-<td><small>Type: <a href="../Bullet/">Bullet</a></small></td>
+<td>The bullet that last hit this pixelgroup.<br><small>Type: <a href="../Bullet/">Bullet</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">campaignIndex</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
+<td>The stage's index in the campaign.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">disconnectPixel</span></code></td>
-<td><small>Type: <a href="../PixelData/">PixelData</a></small></td>
+<td>The pixel that was destroyed to disconnect the latest chunk.<br><small>Type: <a href="../PixelData/">PixelData</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">dt</span></code></td>
@@ -28802,87 +28802,71 @@ inside of a resource of this type.</p>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="k">force</span></code></td>
-<td><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
+<td>The latest force applied in a pixel collision, for use in <code class="codehilite"><span class="n">onPixelDestroyed</span></code> handler.<br><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">formNum</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
+<td>The current form num of this unit (first form is number 0).<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">hitDamage</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+<td>The amount of damage dealt the last time thix pixelgroup was hit.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">hitDamageInt</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
+<td>The above, but rounded to the nearest integer.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">hitNormal</span></code></td>
-<td><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
+<td>The surface normal of the last collision on this pixelgroup.<br><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">hitPixel</span></code></td>
-<td><small>Type: <a href="../PixelData/">PixelData</a></small></td>
+<td>The pixel that was hit during the last collision on this pixelgroup.<br><small>Type: <a href="../PixelData/">PixelData</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">hitPos</span></code></td>
-<td><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
+<td>The position of the last collision on this pixelgroup (for use in <code class="codehilite"><span class="n">onHit</span></code> and <code class="codehilite"><span class="n">onHitProtected</span></code> handlers, and Unit's <code class="codehilite"><span class="n">onPartHit</span></code> and <code class="codehilite"><span class="n">onPartHitByLaser</span></code> handlers.<br><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">laser</span></code></td>
-<td><small>Type: <a href="../Laser/">Laser</a></small></td>
+<td>The laser that last hit this pixelgroup.<br><small>Type: <a href="../Laser/">Laser</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">normal</span></code></td>
-<td><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
+<td>The surface normal of the latest pixel collision, for use in <code class="codehilite"><span class="n">onPixelHit</span></code> and <code class="codehilite"><span class="n">onPixelHitByLaser</span></code> handlers.<br><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">numPixelsDisconnected</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
+<td>The number of pixels in the latest chunk to be disconnected.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">part</span></code></td>
-<td><small>Type: <a href="../PixelGroup/">PixelGroup</a></small></td>
+<td>This pixelgroup (unit part).<br><small>Type: <a href="../PixelGroup/">PixelGroup</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">partPos</span></code></td>
-<td><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
+<td>The position of the center of this pixelgroup.<br><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">pixel</span></code></td>
-<td><small>Type: <a href="../PixelData/">PixelData</a></small></td>
+<td>The pixel that was hit, for use in <code class="codehilite"><span class="n">onPixelHit</span></code> and <code class="codehilite"><span class="n">onPixelHitByLaser</span></code> handlers.<br><small>Type: <a href="../PixelData/">PixelData</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">pixelNum</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
+<td>The current pixel num, for use in the unit form's <code class="codehilite"><span class="n">pixels</span></code> property.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">player</span></code></td>
-<td><small>Type: <a href="../Player/">Player</a></small></td>
+<td>The player.<br><small>Type: <a href="../Player/">Player</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">rand</span></code></td>
-<td><small>Type: <a href="../Rand/">Rand</a></small></td>
+<td>oooooooooooo<br><small>Type: <a href="../Rand/">Rand</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">recentlyDestroyedPixels</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.5">IEnumerable</a>&lt;<a href="../PixelData/">PixelData</a>&gt;</small></td>
-</tr>
-<tr>
-<td align="left"><code class="codehilite"><span class="n">ropeCurrLength</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
-</tr>
-<tr>
-<td align="left"><code class="codehilite"><span class="n">ropeNumSprings</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
-</tr>
-<tr>
-<td align="left"><code class="codehilite"><span class="n">ropeSpringNum</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
-</tr>
-<tr>
-<td align="left"><code class="codehilite"><span class="n">ropeTotalLength</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+<td>The pixels that were most recently destroyed or disconnected.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.5">IEnumerable</a>&lt;<a href="../PixelData/">PixelData</a>&gt;</small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">stage</span></code></td>
@@ -28890,47 +28874,47 @@ inside of a resource of this type.</p>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">stageHeight</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+<td>The height of the arena.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">stagePath</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a></small></td>
+<td>oooooooooooo<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.5">String</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">stageSize</span></code></td>
-<td><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
+<td>The size of the arena.<br><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">stageTime</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+<td>The elapsed time for the current run.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">stageWidth</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+<td>The width of the arena.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">this</span></code></td>
-<td><small>Type: <a href="../PixelGroup/">PixelGroup</a></small></td>
+<td>This pixelgroup (unit part).<br><small>Type: <a href="../PixelGroup/">PixelGroup</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">unit</span></code></td>
-<td><small>Type: <a href="../Unit/">Unit</a></small></td>
+<td>This unit.<br><small>Type: <a href="../Unit/">Unit</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">xMax</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+<td>The right boundary of the arena.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">xMin</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+<td>The left boundary of the arena.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">yMax</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+<td>The upper boundary of the arena.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">yMin</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+<td>The lower boundary of the arena.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">baseHp</span></code></td>
