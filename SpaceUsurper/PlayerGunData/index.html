@@ -381,6 +381,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../tutorials/utilities/" title="Utilities" class="md-nav__link">
+      Utilities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../tutorials/workshop/" title="Workshop" class="md-nav__link">
       Workshop
     </a>
@@ -17119,6 +17131,54 @@
 
 
   <li class="md-nav__item">
+    <a href="../Stage/ClearTimeScales/" title="ClearTimeScales" class="md-nav__link">
+      ClearTimeScales
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Stage/ClearTimeScales/" title="ClearTimeScales" class="md-nav__link">
+      ClearTimeScales
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Stage/ClearTimeScales/" title="ClearTimeScales" class="md-nav__link">
+      ClearTimeScales
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Stage/ClearTimeScales/" title="ClearTimeScales" class="md-nav__link">
+      ClearTimeScales
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Stage/DespawnAddedPatterns/" title="DespawnAddedPatterns" class="md-nav__link">
       DespawnAddedPatterns
     </a>
@@ -28606,11 +28666,11 @@ inside of a resource of this type.</p>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">charge</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+<td>The current charge amount of this gun.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">chargePercent</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+<td>The percent of charge toward the required charge (<code class="codehilite"><span class="mi">0</span><span class="o">-</span><span class="mi">1</span></code>).<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">dt</span></code></td>
@@ -28622,27 +28682,27 @@ inside of a resource of this type.</p>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">facingDir</span></code></td>
-<td><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
+<td>The facing direction of the gun.<br><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">gunNum</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
+<td>When multiple guns of the same type exist, this is the index (first gun of each type is num <code class="codehilite"><span class="mi">0</span></code>).<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">gunTime</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+<td>The amount of time this gun has existed.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="k">level</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
+<td>Optional property to facilitate creating guns of increasing power, or whatever else.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">numShots</span></code></td>
-<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
+<td>How many times this gun has shot.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">offsetDir</span></code></td>
-<td><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
+<td>The direction of the gun's offset from the player.<br><small>Type: <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">Vector2</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">player</span></code></td>
@@ -28654,6 +28714,22 @@ inside of a resource of this type.</p>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">recoilPercent</span></code></td>
+<td>Returns <code class="codehilite"><span class="mi">1</span></code> immediately after firing, easing to <code class="codehilite"><span class="mi">0</span></code> over the gun's <code class="codehilite"><span class="n">recoilTime</span></code>.<br><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeCurrLength</span></code></td>
+<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeNumSprings</span></code></td>
+<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeSpringNum</span></code></td>
+<td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=netframework-4.5">Int32</a></small></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ropeTotalLength</span></code></td>
 <td><small>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.single?view=netframework-4.5">Single</a></small></td>
 </tr>
 <tr>
@@ -28686,7 +28762,7 @@ inside of a resource of this type.</p>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">this</span></code></td>
-<td><small>Type: <a href="../PlayerGun/">PlayerGun</a></small></td>
+<td>This PlayerGun.<br><small>Type: <a href="../PlayerGun/">PlayerGun</a></small></td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite"><span class="n">xMax</span></code></td>
