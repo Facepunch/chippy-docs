@@ -885,6 +885,13 @@ Unit's `SpawnBubble` creates a speech bubble coming out of a part.
 
 <img src="https://files.facepunch.com/ryleigh/1b2311b1/Chippy_2019-08-23_20-50-13.png" />
 
+## Script Parameters
+
+These parameters can be used inside any scriptfunc by a Unit.
+
+!!! info
+    [Script Params](../../SpaceUsurper/UnitData/#script-parameters)
+
 ## Debugging
 
 `debugVector`: draws a 2d vector from the unit's position <br>

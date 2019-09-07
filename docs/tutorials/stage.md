@@ -331,6 +331,13 @@ Some visual effects can be applied to the screen.
 
 <video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b2611b1/2019-08-26_00-18-50.mp4" type="video/mp4" > </video>
 
+## Script Parameters
+
+These parameters can be used inside any scriptfunc by the stage or any object in it (player, units, patterns, bullets, etc).
+
+!!! info
+    [Script Params](../../SpaceUsurper/StageData/#script-parameters)
+
 ## Debugging
 
 Any entity can call the Stage debug methods to draw lines or text.

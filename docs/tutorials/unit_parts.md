@@ -451,3 +451,10 @@ Here's an example from the **Execution** stage:
 
 `fuse/trigger_anim2`:<br>
 <img src="https://files.facepunch.com/ryleigh/1b2611b1/trigger_anim2.png" />
+
+## Script Parameters
+
+These parameters can be used inside any scriptfunc by a PixelGroup.
+
+!!! info
+    [Script Params](../../SpaceUsurper/UnitPartData/#script-parameters)

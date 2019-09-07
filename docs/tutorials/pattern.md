@@ -51,6 +51,13 @@ Instead of an unchanging rotation speed, we could make it oscillate between -150
 !!! info
 	The 'f's after the numbers denote them as floating-point numbers instead of integers.
 
+#### Script Parameters
+
+These parameters can be used inside any scriptfunc in a Pattern.
+
+!!! info
+    [Script Params](../../SpaceUsurper/PatternData/#script-parameters)
+
 ### Aiming
 
 By default, patterns simply rotate according to their `rotationSpeed` property, but we can instead set a target angle:

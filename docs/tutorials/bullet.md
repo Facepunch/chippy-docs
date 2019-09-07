@@ -1080,7 +1080,6 @@ Remember, the bullet itself does not have to be visible!
     Vector2 GetTextSize()
     ```
     
-
 ## Other Volley Bullets
 
 Bullets can ask for information on other bullets fired in the same volley.
@@ -1091,6 +1090,13 @@ The following statement will get the position of the next bullet in the volley:
 ```
 
 Bullets can get a reference to **themselves** with the `bullet` property.<br>
+
+## Script Parameters
+
+These parameters can be used inside any scriptfunc in a Bullet.
+
+!!! info
+    [Script Params](../../SpaceUsurper/BulletData/#script-parameters)
 
 ## Debugging
 

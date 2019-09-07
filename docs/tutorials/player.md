@@ -54,6 +54,16 @@ For each type of you create, you can define `frictionPercentMin` (the minimum fr
     
     [Full json config](../../SpaceUsurper/PlayerGunData)
 
+    [Script Params](../../SpaceUsurper/PlayerGunData/#script-parameters)
+
+
+## Script Parameters
+
+These parameters can be used inside any scriptfunc in the Player (including any of the [Stage script params](../../SpaceUsurper/StageData/#script-parameters))
+
+!!! info
+    [Script Params](../../SpaceUsurper/PlayerData/#script-parameters)
+
 ## Debugging
 
 `debugVector`: draws a 2d vector from the player's position <br>

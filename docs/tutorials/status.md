@@ -242,6 +242,13 @@ Much like other json object types, status effects can declare custom properties.
 }
 ```
 
+## Script Parameters
+
+These parameters can be used inside any scriptfunc by a Status Effect.
+
+!!! info
+    [Script Params](../../SpaceUsurper/StatusEffectData/#script-parameters)
+
 ## Debugging
 
 `debugVector`: draws a 2d vector from the player's position <br>
