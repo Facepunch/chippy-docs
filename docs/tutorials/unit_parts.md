@@ -458,3 +458,29 @@ These parameters can be used inside any scriptfunc by a PixelGroup.
 
 !!! info
     [Script Params](../../SpaceUsurper/UnitPartData/#script-parameters)
+
+## FAQ
+
+??? question "How do I check if a part has been destroyed?"
+    You may want to change behaviour depending on if a certain part has been destroyed or not.
+
+    [Unit.DoesPartExist](../../SpaceUsurper/Unit/DoesPartExist/) will return true if one or more parts of the specified type still exist.
+    ```json
+    { "action": "Condition", "condition": "unit.DoesPartExist('topGun')",
+        "true": [
+            // ...
+        ],
+        "false": [
+            // ...
+        ],
+    },
+    ```
+
+    Use [Unit.GetPart](../../docs/SpaceUsurper/Unit/GetPart/) to access a specific part, then use the [PixelGroup.IsActive](../../docs/SpaceUsurper/PixelGroup/IsActive/) property to see if it still exists:
+    ```json
+    // Find the third `topGun` part (based on order they were defined) and see if it still exists
+    { "action": "Condition", "condition": "unit.GetPart('topGun', 2).IsActive",
+        "true": [ // ... ],
+        "false": [ // ... ],
+    },
+    ```

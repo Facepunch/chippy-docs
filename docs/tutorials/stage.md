@@ -20,7 +20,7 @@ The Stage config file handles spawning units and the player, setting the bounds 
     "song": "019", // the song config file to use
 
 	"arena": {
-		// arena position and size
+		// arena position and size (this stage is 200 units wide, 200 units tall, and centered around x:0, y:0)
         "bounds": "rectCenter(vec2(0f, 0f), vec2(200f, 200f))",
     },
 }
@@ -97,6 +97,11 @@ An `Endless` stage needs to specify the `victory` time as well - that is, the ti
 ```
 
 The `player.path` property is used when overriding the default player ship - you can safely omit it otherwise.
+
+!!! note
+    `vec2(0f, -20f)` is a position with an x-coordinate of `0` and y-coordinate of `-20`. 
+
+	Most stages have `(x: 0, y: 0)` as the center of the arena.
 
 ### Units
 

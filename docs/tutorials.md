@@ -1,7 +1,10 @@
 # Overview
 
 >
-[Quick Start](tutorials/quickstart.md)<br>
+<!-- [Quick Start](tutorials/quickstart.md)<br> -->
+[Setup](tutorials/setup.md)<br>
+---
+>
 [Bullet Patterns](tutorials/pattern.md)<br>
 [Bullets](tutorials/bullet.md)<br>
 [Actions](tutorials/actions.md)<br>
@@ -13,6 +16,7 @@
 ---
 >
 [Pixel Editor](tutorials/pxc_editor.md)<br>
+[Utilities](tutorials/utilities.md)<br>
 [Workshop](tutorials/workshop.md)<br>
 ---
 

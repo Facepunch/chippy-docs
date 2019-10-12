@@ -40,7 +40,7 @@ The basic structure looks like this:
 }
 ```
 
-??? abstract "Example json file for a very simple 2-form boss"
+??? abstract "Example json file of a simple 2-form boss"
 	```json
 	{
 		// custom variables for this boss
@@ -571,15 +571,15 @@ When the unit's second form finishes spawning, it will switch to the first state
 				{ "action": "Wait", "time": 1 },
 			],
 			"state 1": [
-				{ "action": "Goto", "state": "state 0" },
+				// attack
 			],
 		},
 		"form1": {
 			"state 0": [
-				{ "action": "Wait", "time": 1 },
+				{ "action": "Wait", "time": 1.5 },
 			],
 			"state 1": [
-				{ "action": "Goto", "state": "state 0" },
+				// attack
 			],
 		},
 		
@@ -589,6 +589,12 @@ When the unit's second form finishes spawning, it will switch to the first state
 
 !!! tip
 	Holding the ++h++ key will show the current state of a unit.
+
+When finishing the last action in a state, the state machine will automatically move to the next state in the group.
+
+When finishing the last state in a group of states, it will loop around to the first state in the group. 
+
+For example, when ==form1.state&nbsp;1== finishes all its actions, playback will move back to ==form1.state&nbsp;0==.
 
 ### Charging Patterns
 
@@ -798,6 +804,58 @@ You may want to call Actions at certain points while a unit form is active.
 },
 ```
 
+## Unit Destruction
+
+### Anchors
+
+Individual pixels can set the `isAnchor` property to `true`. When non-anchor pixels or parts are disconnected from all anchor pixels, they will be destroyed.
+
+### Cores
+
+Generally, units should declare a part with the name =="core"==, though this isn't absolutely required.
+
+The **core** part of a unit will automatically set all its pixels as anchors.
+
+!!! note
+	If a unit has no core (and no anchor pixels), it will handle destruction differently: whenever pixels become separated, the smaller of the separate pieces will be destroyed.
+
+### Imploding
+
+"Imploding" refers to the animation when a unit has received lethal damage to its core, but before it is destroyed.
+
+<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b1111b1/2019-10-11_13-10-33.mp4" type="video/mp4" > </video>
+
+In order for your unit to display this behaviour, it must define a few handlers in its form config:
+
+```json
+"baseForm": {
+	// the time the imploding effect lasts
+	"implodeTime":1.5,
+
+	// called once, when the unit core takes lethal damage
+	"onImplodeStart": [
+		// play sounds, show speech bubbles, initialize variables
+	],
+
+	// called each frame between onImplodeStart and onImplodeFinish
+	"onImplodeUpdate": [
+		// make the unit wiggle around, destroy random pixels, etc
+	],
+
+	// called once, after implodeTime has elapsed, and right before the unit is destroyed
+	"onImplodeFinish": [
+		// play sounds, spawn explosion effects, destroy nearby bullets, etc
+	],
+}
+```
+
+!!! tip
+	You can manually call the **Implode** action on a unit to destroy it at any time, without it needing to take lethal damage to the core.
+
+	```json
+	{ "action": "CallMethod", "target":"unit", "method": "Implode", },
+	```
+
 ## Custom Variables
 
 Custom variables can be defined in the `properties` structure.
@@ -827,6 +885,19 @@ To modify them, use the SetValue method:
 ```json
 { "action": "SetValue", "name": "revengeCounter", "value": "revengeCounter + 1" },
 ```
+
+!!! warning
+	When specifying the starting value of custom properties, you **can't** use a scriptfunc.
+	
+	For instance:
+	```json
+	"revengeCounter": { "type": "Int", "value":"rand.Int(0, 99)"},
+	```
+	Is **not** allowed, but using a simple value of `6` is:
+	```json
+	"revengeCounter": { "type": "Int", "value":6},
+	```
+	
 
 ## Texture
 
@@ -861,7 +932,8 @@ It draws a scrolling wavy texture on the pixels.
 }
 ```
 
-<img src="https://files.facepunch.com/ryleigh/1b2411b1/Chippy_2019-08-24_21-09-09.png" />
+<i>The unit on the left has no shader, while the unit on the right has a subtle cloudy coloring.</i>
+<img src="https://files.facepunch.com/ryleigh/1b1111b1/shader.png" />
 
 ## Speech Bubbles
 
@@ -884,6 +956,15 @@ Unit's `SpawnBubble` creates a speech bubble coming out of a part.
 ```
 
 <img src="https://files.facepunch.com/ryleigh/1b2311b1/Chippy_2019-08-23_20-50-13.png" />
+
+!!! tip
+	In order to print the value of a property or function in text (instead of just displaying the name), format the string like this:
+	```json
+	"text": "I'm thinking of a number!! It's ${rand.Int(1, 100)}!!!", 
+	```
+
+	<img src="https://files.facepunch.com/ryleigh/1b1011b1/Unity_2019-09-10_02-16-20.png" />
+
 
 ## Script Parameters
 

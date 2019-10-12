@@ -28,9 +28,9 @@ Each campaign folder contains a list of stages, so the "stage index" tells the g
 
 <img src="https://files.facepunch.com/ryleigh/1b2911b1/launch3.png" />
 
-<br>
 Hit `PLAY` to start testing your level.
 
-Some script changes will take effect right away, some will require a **reset**, and some will require a **full reload** to see the results.
+!!! warning
+    Some script changes will take effect right away, some will require a **reset**, and some will require a **full reload** to see the results.
 
-Press `R` to quickly reset the stage, and `G` to fully reload it.<br>
+    Press `R` to quickly reset the stage, and `G` to fully reload it.<br>

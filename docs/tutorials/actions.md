@@ -31,7 +31,7 @@ Wait for an amount of time before continuing.
 	```
 
 !!! warning
-	Only use `Wait` actions in behaviour state machines, not in handlers like `onHitPixel`, `onPlayerHit`, etc.
+	For best practices, only use `Wait` actions in behaviour state machines, not in handlers like `onHitPixel`, `onPlayerHit`, etc.
 
 ### Condition
 
