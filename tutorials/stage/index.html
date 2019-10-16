@@ -263,8 +263,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../quickstart/" title="Quick Start" class="md-nav__link">
-      Quick Start
+    <a href="../setup/" title="Setup" class="md-nav__link">
+      Setup
     </a>
   </li>
 
@@ -562,6 +562,18 @@
   <li class="md-nav__item">
     <a href="../status/" title="Status Effects" class="md-nav__link">
       Status Effects
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../audio/" title="Audio" class="md-nav__link">
+      Audio
     </a>
   </li>
 
@@ -29103,7 +29115,7 @@
     <span class="nt">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;019&quot;</span><span class="p">,</span> <span class="err">//</span> <span class="err">the</span> <span class="err">song</span> <span class="err">config</span> <span class="err">file</span> <span class="err">to</span> <span class="err">use</span>
 
     <span class="nt">&quot;arena&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="err">//</span> <span class="err">arena</span> <span class="err">position</span> <span class="err">and</span> <span class="err">size</span>
+        <span class="err">//</span> <span class="err">arena</span> <span class="err">position</span> <span class="err">and</span> <span class="err">size</span> <span class="err">(this</span> <span class="err">stage</span> <span class="err">is</span> <span class="err">200</span> <span class="err">units</span> <span class="err">wide,</span> <span class="err">200</span> <span class="err">units</span> <span class="err">tall,</span> <span class="err">and</span> <span class="err">centered</span> <span class="err">around</span> <span class="err">x:0,</span> <span class="err">y:0)</span>
         <span class="nt">&quot;bounds&quot;</span><span class="p">:</span> <span class="s2">&quot;rectCenter(vec2(0f, 0f), vec2(200f, 200f))&quot;</span><span class="p">,</span>
     <span class="p">},</span>
 <span class="p">}</span>
@@ -29202,6 +29214,11 @@
 </td></tr></table>
 
 <p>The <code class="codehilite"><span class="n">player</span><span class="p">.</span><span class="n">path</span></code> property is used when overriding the default player ship - you can safely omit it otherwise.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="codehilite"><span class="n">vec2</span><span class="p">(</span><span class="mi">0</span><span class="n">f</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="n">f</span><span class="p">)</span></code> is a position with an x-coordinate of <code class="codehilite"><span class="mi">0</span></code> and y-coordinate of <code class="codehilite"><span class="o">-</span><span class="mi">20</span></code>. </p>
+<p>Most stages have <code class="codehilite"><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span></code> as the center of the arena.</p>
+</div>
 <h3 id="units">Units</h3>
 <p>Units are preloaded to avoid stuttering during gameplay, and therefore the type and max count of each unit needs to be decided on in advance.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1

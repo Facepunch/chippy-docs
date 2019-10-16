@@ -263,8 +263,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../quickstart/" title="Quick Start" class="md-nav__link">
-      Quick Start
+    <a href="../setup/" title="Setup" class="md-nav__link">
+      Setup
     </a>
   </li>
 
@@ -502,6 +502,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#unit-destruction" title="Unit Destruction" class="md-nav__link">
+    Unit Destruction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anchors" title="Anchors" class="md-nav__link">
+    Anchors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cores" title="Cores" class="md-nav__link">
+    Cores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imploding" title="Imploding" class="md-nav__link">
+    Imploding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#custom-variables" title="Custom Variables" class="md-nav__link">
     Custom Variables
   </a>
@@ -519,6 +553,19 @@
   <a href="#speech-bubbles" title="Speech Bubbles" class="md-nav__link">
     Speech Bubbles
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-files" title="String Files" class="md-nav__link">
+    String Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -603,6 +650,18 @@
   <li class="md-nav__item">
     <a href="../status/" title="Status Effects" class="md-nav__link">
       Status Effects
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../audio/" title="Audio" class="md-nav__link">
+      Audio
     </a>
   </li>
 
@@ -29093,6 +29152,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#unit-destruction" title="Unit Destruction" class="md-nav__link">
+    Unit Destruction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anchors" title="Anchors" class="md-nav__link">
+    Anchors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cores" title="Cores" class="md-nav__link">
+    Cores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imploding" title="Imploding" class="md-nav__link">
+    Imploding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#custom-variables" title="Custom Variables" class="md-nav__link">
     Custom Variables
   </a>
@@ -29110,6 +29203,19 @@
   <a href="#speech-bubbles" title="Speech Bubbles" class="md-nav__link">
     Speech Bubbles
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-files" title="String Files" class="md-nav__link">
+    String Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -29219,7 +29325,7 @@ Bosses are units, minions are units, shield containers are units, etc.</p>
 </pre></div>
 </td></tr></table>
 
-<details class="abstract"><summary>Example json file for a very simple 2-form boss</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>  1
+<details class="abstract"><summary>Example json file of a simple 2-form boss</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>  1
   2
   3
   4
@@ -30159,15 +30265,15 @@ Each unit config should contain a list of forms:</p>
                 <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Wait&quot;</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">},</span>
             <span class="p">],</span>
             <span class="nt">&quot;state 1&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Goto&quot;</span><span class="p">,</span> <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;state 0&quot;</span> <span class="p">},</span>
+                <span class="err">//</span> <span class="err">attack</span>
             <span class="p">],</span>
         <span class="p">},</span>
         <span class="nt">&quot;form1&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;state 0&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Wait&quot;</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">},</span>
+                <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Wait&quot;</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mf">1.5</span> <span class="p">},</span>
             <span class="p">],</span>
             <span class="nt">&quot;state 1&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Goto&quot;</span><span class="p">,</span> <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;state 0&quot;</span> <span class="p">},</span>
+                <span class="err">//</span> <span class="err">attack</span>
             <span class="p">],</span>
         <span class="p">},</span>
 
@@ -30180,6 +30286,9 @@ Each unit config should contain a list of forms:</p>
 <p class="admonition-title">Tip</p>
 <p>Holding the <span class="keys"><kbd class="key-h">H</kbd></span> key will show the current state of a unit.</p>
 </div>
+<p>When finishing the last action in a state, the state machine will automatically move to the next state in the group.</p>
+<p>When finishing the last state in a group of states, it will loop around to the first state in the group. </p>
+<p>For example, when <mark>form1.state&nbsp;1</mark> finishes all its actions, playback will move back to <mark>form1.state&nbsp;0</mark>.</p>
 <h3 id="charging-patterns">Charging Patterns</h3>
 <p>When you want a unit to shoot a pattern, usually you'll <strong>charge</strong> it from their core or another part. This will cause the part to glow and look in the pattern direction as it leads up to firing.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;ChargePattern&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;octopus/pattern/lazyBullets.1&quot;</span><span class="p">,</span> <span class="nt">&quot;partType&quot;</span><span class="p">:</span> <span class="s2">&quot;side&quot;</span><span class="p">,</span> <span class="nt">&quot;chargeTime&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;dir&quot;</span><span class="p">:</span><span class="s2">&quot;playerPos - partPos&quot;</span><span class="p">,</span> <span class="p">}}</span><span class="err">,</span>
@@ -30539,6 +30648,69 @@ Instead of using the <code class="codehilite"><span class="n">path</span></code>
 </pre></div>
 </td></tr></table>
 
+<h2 id="unit-destruction">Unit Destruction</h2>
+<h3 id="anchors">Anchors</h3>
+<p>Individual pixels can set the <code class="codehilite"><span class="n">isAnchor</span></code> property to <code class="codehilite"><span class="k">true</span></code>. When non-anchor pixels or parts are disconnected from all anchor pixels, they will be destroyed.</p>
+<h3 id="cores">Cores</h3>
+<p>Generally, units should declare a part with the name <mark>"core"</mark>, though this isn't absolutely required.</p>
+<p>The <strong>core</strong> part of a unit will automatically set all its pixels as anchors.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a unit has no core (and no anchor pixels), it will handle destruction differently: whenever pixels become separated, the smaller of the separate pieces will be destroyed.</p>
+</div>
+<h3 id="imploding">Imploding</h3>
+<p>"Imploding" refers to the animation when a unit has received lethal damage to its core, but before it is destroyed.</p>
+<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/1b1111b1/2019-10-11_13-10-33.mp4" type="video/mp4" > </video>
+
+<p>In order for your unit to display this behaviour, it must define a few handlers in its form config:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;baseForm&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="err">//</span> <span class="err">the</span> <span class="err">time</span> <span class="err">the</span> <span class="err">imploding</span> <span class="err">effect</span> <span class="err">lasts</span>
+    <span class="nt">&quot;implodeTime&quot;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">,</span>
+
+    <span class="err">//</span> <span class="err">called</span> <span class="err">once,</span> <span class="err">when</span> <span class="err">the</span> <span class="err">unit</span> <span class="err">core</span> <span class="err">takes</span> <span class="err">lethal</span> <span class="err">damage</span>
+    <span class="nt">&quot;onImplodeStart&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="err">//</span> <span class="err">play</span> <span class="err">sounds</span><span class="p">,</span> <span class="err">show</span> <span class="err">speech</span> <span class="err">bubbles</span><span class="p">,</span> <span class="err">initialize</span> <span class="err">variables</span>
+    <span class="p">],</span>
+
+    <span class="err">//</span> <span class="err">called</span> <span class="err">each</span> <span class="err">frame</span> <span class="err">between</span> <span class="err">onImplodeStart</span> <span class="err">and</span> <span class="err">onImplodeFinish</span>
+    <span class="nt">&quot;onImplodeUpdate&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="err">//</span> <span class="err">make</span> <span class="err">the</span> <span class="err">unit</span> <span class="err">wiggle</span> <span class="err">around</span><span class="p">,</span> <span class="err">destroy</span> <span class="err">random</span> <span class="err">pixels</span><span class="p">,</span> <span class="err">etc</span>
+    <span class="p">],</span>
+
+    <span class="err">//</span> <span class="err">called</span> <span class="err">once,</span> <span class="err">after</span> <span class="err">implodeTime</span> <span class="err">has</span> <span class="err">elapsed,</span> <span class="err">and</span> <span class="err">right</span> <span class="err">before</span> <span class="err">the</span> <span class="err">unit</span> <span class="err">is</span> <span class="err">destroyed</span>
+    <span class="nt">&quot;onImplodeFinish&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="err">//</span> <span class="err">play</span> <span class="err">sounds</span><span class="p">,</span> <span class="err">spawn</span> <span class="err">explosion</span> <span class="err">effects</span><span class="p">,</span> <span class="err">destroy</span> <span class="err">nearby</span> <span class="err">bullets</span><span class="p">,</span> <span class="err">etc</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can manually call the <strong>Implode</strong> action on a unit to destroy it at any time, without it needing to take lethal damage to the core.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;Implode&quot;</span><span class="p">,</span> <span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+</div>
 <h2 id="custom-variables">Custom Variables</h2>
 <p>Custom variables can be defined in the <code class="codehilite"><span class="n">properties</span></code> structure.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -30640,7 +30812,8 @@ Is <strong>not</strong> allowed, but using a simple value of <code class="codehi
 </pre></div>
 </td></tr></table>
 
-<p><img src="https://files.facepunch.com/ryleigh/1b2411b1/Chippy_2019-08-24_21-09-09.png" /></p>
+<p><i>The unit on the left has no shader, while the unit on the right has a subtle cloudy coloring.</i>
+<img src="https://files.facepunch.com/ryleigh/1b1111b1/shader.png" /></p>
 <h2 id="speech-bubbles">Speech Bubbles</h2>
 <p>Unit's <code class="codehilite"><span class="n">SpawnBubble</span></code> creates a speech bubble coming out of a part.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -30674,12 +30847,81 @@ Is <strong>not</strong> allowed, but using a simple value of <code class="codehi
 <p><img src="https://files.facepunch.com/ryleigh/1b2311b1/Chippy_2019-08-23_20-50-13.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>In order to print the value of a property or function in text (instead of just displaying the name), format the string like this:
+<p>In order to print the value of a property or function in text (instead of just displaying the name), format the string with <code class="codehilite"><span class="cp">${</span>    <span class="cp">}</span></code> surrounding whatever should be evaluated.
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;text&quot;</span><span class="err">:</span> <span class="s2">&quot;I&#39;m thinking of a number!! It&#39;s ${rand.Int(1, 100)}!!!&quot;</span><span class="err">,</span> 
 </pre></div>
 </td></tr></table></p>
 <p><img src="https://files.facepunch.com/ryleigh/1b1011b1/Unity_2019-09-10_02-16-20.png" /></p>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Fonts</p>
+<p><a href="https://files.facepunch.com/ryleigh/1b1511b1/fonts-for-floating-text.png">Here is an image</a> showing the different fonts available.</p>
+</div>
+<h3 id="string-files">String Files</h3>
+<p>Instead of including speech lines directly in the unit configs, you can list them in a separate string file. This allows for more variety and opens up the possibility of localizing into other languages.</p>
+<p>Here is <code class="codehilite"><span class="nb">text</span><span class="p">.</span><span class="n">json</span></code>, the strings file for the <strong>example</strong> custom campaign:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;en&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="err">//</span> <span class="err">english</span>
+        <span class="nt">&quot;example&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Stage&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is an example stage&quot;</span><span class="p">,</span>
+
+            <span class="nt">&quot;boss&quot;</span><span class="p">:{</span>
+                <span class="nt">&quot;welcome&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;Let&#39;s fight&quot;</span><span class="p">,</span> 
+                    <span class="p">{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;I&#39;m just an example boss!&quot;</span><span class="p">,</span> <span class="nt">&quot;weight&quot;</span><span class="p">:</span> <span class="mf">0.8</span> <span class="p">},</span> 
+                    <span class="p">{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;I will kill you&quot;</span><span class="p">,</span> <span class="nt">&quot;weight&quot;</span><span class="p">:</span> <span class="mf">0.3</span> <span class="p">},</span>
+                <span class="p">],</span>
+
+                <span class="nt">&quot;death&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;You killed me!&quot;</span><span class="p">,</span> <span class="nt">&quot;weight&quot;</span><span class="p">:</span> <span class="mf">1.5</span> <span class="p">},</span> 
+                    <span class="p">{</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Aghhhh....&quot;</span><span class="p">,</span> <span class="nt">&quot;weight&quot;</span><span class="p">:</span> <span class="mf">0.66</span> <span class="p">},</span>
+                <span class="p">],</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></p>
+<p>Your <code class="codehilite"><span class="n">plugin</span><span class="p">.</span><span class="n">json</span></code> file needs to list this file under the <code class="codehilite"><span class="n">strings</span></code> property, and it's possible to include more than one.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Plugin&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Custom campaign example&quot;</span><span class="p">,</span>
+
+    <span class="err">//</span> <span class="err">...</span>
+<span class="hll">    <span class="nt">&quot;strings&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;text&quot;</span> <span class="p">],</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Now we can use those strings in any of our scripts. </p>
+<p>The text <code class="codehilite"><span class="o">#</span><span class="n">example</span><span class="p">.</span><span class="n">boss</span><span class="p">.</span><span class="n">welcome</span></code> will be replaced with a random selection defined for that string, with <font color=#888888><em>Let's fight</em></font> having the greatest chance with a default weight of <code class="codehilite"><span class="mi">1</span><span class="p">.</span><span class="mi">0</span></code>, <font color=#aaaaaa><em>I'm just an example boss!</em></font> happening slightly less often, and <font color=#dddddd><em>I will kill you</em></font> being even more rare.</p>
 <h2 id="script-parameters">Script Parameters</h2>
 <p>These parameters can be used inside any scriptfunc by a Unit.</p>
 <div class="admonition info">

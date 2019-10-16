@@ -263,8 +263,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../quickstart/" title="Quick Start" class="md-nav__link">
-      Quick Start
+    <a href="../setup/" title="Setup" class="md-nav__link">
+      Setup
     </a>
   </li>
 
@@ -371,6 +371,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../audio/" title="Audio" class="md-nav__link">
+      Audio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../pxc_editor/" title="Pixel Editor" class="md-nav__link">
       Pixel Editor
     </a>
@@ -437,8 +449,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#updating-your-content" title="Updating Your Content" class="md-nav__link">
-    Updating Your Content
+  <a href="#preview-image" title="Preview Image" class="md-nav__link">
+    Preview Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-content" title="Updating Content" class="md-nav__link">
+    Updating Content
   </a>
   
 </li>
@@ -28748,8 +28767,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#updating-your-content" title="Updating Your Content" class="md-nav__link">
-    Updating Your Content
+  <a href="#preview-image" title="Preview Image" class="md-nav__link">
+    Preview Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-content" title="Updating Content" class="md-nav__link">
+    Updating Content
   </a>
   
 </li>
@@ -28813,12 +28839,24 @@ Your campaign scripts will be validated, and you can view the log file if there 
 <p>Your campaign won't be visible to anyone else until you change the visibility setting on your workshop item page.</p>
 <p><img src="https://files.facepunch.com/ryleigh/1b1011b1/chrome_2019-10-10_22-34-45.png" width="100%"/>
 <img src="https://files.facepunch.com/ryleigh/1b1011b1/chrome_2019-10-10_22-43-36.png" /></p>
-<h3 id="updating-your-content">Updating Your Content</h3>
+<h3 id="preview-image">Preview Image</h3>
+<p>Save a <code class="codehilite"><span class="na">.jpg</span></code> or <code class="codehilite"><span class="na">.png</span></code> image in your plugin's folder. </p>
+<p><img src="https://files.facepunch.com/ryleigh/1b1211b1/explorer_2019-10-12_15-20-33.png" /></p>
+<p>Using an aspect ratio of <code class="codehilite"><span class="mi">4</span><span class="o">:</span><span class="mi">3</span></code> (such as <code class="codehilite"><span class="mi">1440</span><span class="n">x1080px</span></code>) will look best in the grid of workshop icons.</p>
+<p><img src="https://files.facepunch.com/ryleigh/1b1211b1/chrome_2019-10-12_15-29-06.png" /></p>
+<p>In your <code class="codehilite"><span class="n">plugin</span><span class="p">.</span><span class="n">json</span></code> file, enter the relative path of your image.</p>
+<p><img src="https://files.facepunch.com/ryleigh/1b1211b1/Code_2019-10-12_15-22-11.png" /></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;previewImage&quot;</span><span class="err">:</span> <span class="s2">&quot;preview.jpg&quot;</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>In this case, it will look for an image named <code class="codehilite"><span class="n">preview</span><span class="p">.</span><span class="n">jpg</span></code> in the root of your plugin folder.</p>
+<h3 id="updating-content">Updating Content</h3>
 <p>After making changes to the local version of your campaign, select <strong>Manage</strong> and then <strong>Upload&nbsp;Changes</strong>.</p>
 <p><img src="https://files.facepunch.com/ryleigh/1b1011b1/Unity_2019-10-10_22-39-37.png" width="50%"/></p>
 <div class="admonition danger">
 <p class="admonition-title">Wiping leaderboards</p>
-<p><strong>Any</strong> gameplay-affecting changes you make to your level will likely break replays from the previous version.</p>
+<p><strong>Any</strong> gameplay-affecting changes you make to your level will likely break exist replays.</p>
 <p>You can wipe the slate clean by incrementing the <code class="codehilite"><span class="n">leaderboardIndex</span></code> property in your <code class="codehilite"><span class="n">plugin</span><span class="p">.</span><span class="n">json</span></code> file.<br />
 The default value is <code class="codehilite"><span class="mi">0</span></code>, so change it to <code class="codehilite"><span class="mi">1</span></code> to create the leaderboard for your newly updated version.</p>
 <p><img src="https://files.facepunch.com/ryleigh/1b1011b1/Code_2019-10-10_22-49-58.png" /></p>
