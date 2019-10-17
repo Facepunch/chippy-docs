@@ -383,6 +383,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#subdividing" title="Subdividing" class="md-nav__link">
+    Subdividing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fan" title="Fan" class="md-nav__link">
+    Fan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel" title="Parallel" class="md-nav__link">
+    Parallel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#affecting-child-bullets" title="Affecting Child Bullets" class="md-nav__link">
     Affecting Child Bullets
   </a>
@@ -28935,6 +28962,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#subdividing" title="Subdividing" class="md-nav__link">
+    Subdividing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fan" title="Fan" class="md-nav__link">
+    Fan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel" title="Parallel" class="md-nav__link">
+    Parallel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#affecting-child-bullets" title="Affecting Child Bullets" class="md-nav__link">
     Affecting Child Bullets
   </a>
@@ -29634,6 +29688,52 @@ Setting <code class="codehilite"><span class="ss">&quot;aimMode&quot;</span><spa
 </td></tr></table>
 
 </details>
+<h2 id="subdividing">Subdividing</h2>
+<p>Bullets spawned by a pattern can be subdivided into several copies of themself. This can allow you to easily create more complex patterns.</p>
+<h3 id="fan">Fan</h3>
+<p>A <code class="codehilite"><span class="n">fanSubdivide</span></code> will replace each bullet with a fan of bullets.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;patternShape&quot;</span><span class="p">:</span> <span class="s2">&quot;Spokes&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;numVolleys&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;numBulletsInVolley&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+    <span class="err">//</span> <span class="err">...</span>
+<span class="hll">    <span class="nt">&quot;fanSubdivide&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="err">//</span> <span class="err">replace</span> <span class="err">each</span> <span class="err">bullet</span> <span class="err">with</span> <span class="err">4</span>
+</span><span class="hll">    <span class="nt">&quot;fanAngle&quot;</span><span class="p">:</span><span class="mi">45</span><span class="p">,</span> <span class="err">//</span> <span class="err">aim</span> <span class="err">the</span> <span class="err">bullets</span> <span class="err">in</span> <span class="err">a</span> <span class="err">45</span> <span class="err">degree</span> <span class="err">angle</span> <span class="err">fan</span>
+</span>  <span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<video controls width="80%"> <source src="https://files.facepunch.com/ryleigh/1b1711b1/2019-10-17_01-18-00.mp4" type="video/mp4"> </video>
+
+<h3 id="parallel">Parallel</h3>
+<p>A <code class="codehilite"><span class="n">parallelSubdivide</span></code> will instead replace with bullets facing the same direction.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;patternShape&quot;</span><span class="p">:</span> <span class="s2">&quot;Spokes&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;numVolleys&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+  <span class="nt">&quot;numBulletsInVolley&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+  <span class="err">//</span> <span class="err">...</span>
+<span class="hll">  <span class="nt">&quot;parallelSubdivide&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+</span><span class="hll">  <span class="nt">&quot;parallelForce&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="err">//</span> <span class="err">the</span> <span class="err">amount</span> <span class="err">of</span> <span class="err">force</span> <span class="err">applied</span> <span class="err">to</span> <span class="err">bullets</span> <span class="err">to</span> <span class="err">spread</span> <span class="err">them</span> <span class="err">out</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<video controls width="80%"> <source src="https://files.facepunch.com/ryleigh/1b1711b1/2019-10-17_01-20-52.mp4" type="video/mp4"> </video>
+
 <h2 id="affecting-child-bullets">Affecting Child Bullets</h2>
 <p>Patterns have their own position and angle, and their movement can be applied to bullets they've fired.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1

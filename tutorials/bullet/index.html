@@ -499,6 +499,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bullet-variables" title="Bullet Variables" class="md-nav__link">
+    Bullet Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#other-volley-bullets" title="Other Volley Bullets" class="md-nav__link">
     Other Volley Bullets
   </a>
@@ -29109,6 +29116,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bullet-variables" title="Bullet Variables" class="md-nav__link">
+    Bullet Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#other-volley-bullets" title="Other Volley Bullets" class="md-nav__link">
     Other Volley Bullets
   </a>
@@ -31019,6 +31033,30 @@ Set the keyframe property to <code class="codehilite"><span class="k">true</span
 <p class="admonition-title">Fonts</p>
 <p><a href="https://files.facepunch.com/ryleigh/1b1511b1/fonts-for-floating-text.png">Here is an image</a> showing the different fonts available.</p>
 </div>
+<h2 id="bullet-variables">Bullet Variables</h2>
+<p>Bullets can't declare custom variables with <code class="codehilite"><span class="n">properties</span></code> the way that patterns, units, etc can.<br /></p>
+<p>However, each bullet has a few built-in variables that can be utilized.</p>
+<p><code class="codehilite"><span class="n">intVar</span></code> stores an integer value.<br/>
+<code class="codehilite"><span class="n">floatVar</span></code> does a float value.<br/>
+<code class="codehilite"><span class="n">vectorVar</span></code> stores a Vector2 value.<br/></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;onUpdate&quot;</span><span class="err">:</span><span class="p">[</span>
+  <span class="err">//</span> <span class="err">examples</span> <span class="err">of</span> <span class="err">setting</span> <span class="err">vars</span>
+  <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetFloatVar&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;var&quot;</span><span class="p">:</span><span class="s2">&quot;easeOverTime(floatVar, 0f, 0.025f, dt)&quot;</span><span class="p">,</span> <span class="p">}},</span> 
+  <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetIntVar&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;var&quot;</span><span class="p">:</span><span class="s2">&quot;stage.StartLoopingSfx(&#39;SafeSpaceLoop&#39;, bulletPos, 1f)&quot;</span><span class="p">,</span> <span class="p">}},</span> 
+  <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetVectorVar&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;var&quot;</span><span class="p">:</span><span class="s2">&quot;vec2(bulletPos.y, playerPos.y)&quot;</span><span class="p">,</span> <span class="p">}},</span>
+<span class="p">]</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>The variables can be used in any of the bullets scriptfuncs, such as:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetPosition&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;pos&quot;</span><span class="p">:</span><span class="s2">&quot;vectorVar&quot;</span><span class="p">,</span> <span class="p">}}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table></p>
 <h2 id="other-volley-bullets">Other Volley Bullets</h2>
 <p>Bullets can ask for information on other bullets fired in the same volley.</p>
 <p>The following statement will get the position of the next bullet in the volley:
