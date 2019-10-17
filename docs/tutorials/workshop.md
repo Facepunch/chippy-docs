@@ -46,7 +46,7 @@ Your campaign won't be visible to anyone else until you change the visibility se
 
 ### Preview Image
 
-Save a `.jpg` image in your plugin's folder (`.png` probably works too). 
+Save a `.jpg` or `.png` image in your plugin's folder. 
 
 <img src="https://files.facepunch.com/ryleigh/1b1211b1/explorer_2019-10-12_15-20-33.png" />
 

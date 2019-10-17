@@ -958,12 +958,62 @@ Unit's `SpawnBubble` creates a speech bubble coming out of a part.
 <img src="https://files.facepunch.com/ryleigh/1b2311b1/Chippy_2019-08-23_20-50-13.png" />
 
 !!! tip
-	In order to print the value of a property or function in text (instead of just displaying the name), format the string like this:
+	In order to print the value of a property or function in text (instead of just displaying the name), format the string with `${    }` surrounding whatever should be evaluated.
 	```json
 	"text": "I'm thinking of a number!! It's ${rand.Int(1, 100)}!!!", 
 	```
 
 	<img src="https://files.facepunch.com/ryleigh/1b1011b1/Unity_2019-09-10_02-16-20.png" />
+
+!!! example "Fonts"
+	[Here is an image](https://files.facepunch.com/ryleigh/1b1511b1/fonts-for-floating-text.png) showing the different fonts available.
+
+### String Files
+
+Instead of including speech lines directly in the unit configs, you can list them in a separate string file. This allows for more variety and opens up the possibility of localizing into other languages.
+
+Here is `text.json`, the strings file for the **example** custom campaign:
+```json
+{
+    "en": { // english
+        "example": {
+            "title": "Example Stage",
+            "description": "This is an example stage",
+
+            "boss":{
+                "welcome": [
+					"Let's fight", 
+					{ "value": "I'm just an example boss!", "weight": 0.8 }, 
+					{ "value": "I will kill you", "weight": 0.3 },
+                ],
+
+                "death": [
+					{ "value": "You killed me!", "weight": 1.5 }, 
+					{ "value": "Aghhhh....", "weight": 0.66 },
+                ],
+            },
+        },
+    }
+}
+```
+
+Your `plugin.json` file needs to list this file under the `strings` property, and it's possible to include more than one.
+
+```json hl_lines="6"
+{
+	"title": "Example Plugin",
+    "description": "Custom campaign example",
+
+	// ...
+	"strings": [ "text" ],
+}
+``` 
+
+Now we can use those strings in any of our scripts. 
+
+The text `#example.boss.welcome` will be replaced with a random selection defined for that string, with <font color=#888888>*Let's fight*</font> having the greatest chance with a default weight of `1.0`, <font color=#aaaaaa>*I'm just an example boss!*</font> happening slightly less often, and <font color=#dddddd>*I will kill you*</font> being even more rare.
+
+
 
 
 ## Script Parameters

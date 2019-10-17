@@ -390,6 +390,44 @@ That above pattern would have been challenging to express as a single `customBul
 	  }
 	  ```
 
+## Subdividing
+
+Bullets spawned by a pattern can be subdivided into several copies of themself. This can allow you to easily create more complex patterns.
+
+### Fan
+
+A `fanSubdivide` will replace each bullet with a fan of bullets.
+
+```json hl_lines="6 7"
+{
+    "patternShape": "Spokes",
+    "numVolleys": 3,
+	"numBulletsInVolley":3,
+	// ...
+    "fanSubdivide":4, // replace each bullet with 4
+    "fanAngle":45, // aim the bullets in a 45 degree angle fan
+  },
+```
+
+<video controls width="80%"> <source src="https://files.facepunch.com/ryleigh/1b1711b1/2019-10-17_01-18-00.mp4" type="video/mp4"> </video>
+
+### Parallel
+
+A `parallelSubdivide	` will instead replace with bullets facing the same direction.
+
+```json hl_lines="6 7"
+{
+  "patternShape": "Spokes",
+  "numVolleys": 5,
+  "numBulletsInVolley":4,
+  // ...
+  "parallelSubdivide":5,
+  "parallelForce":12, // the amount of force applied to bullets to spread them out
+}
+```
+
+<video controls width="80%"> <source src="https://files.facepunch.com/ryleigh/1b1711b1/2019-10-17_01-20-52.mp4" type="video/mp4"> </video>
+
 ## Affecting Child Bullets
 
 Patterns have their own position and angle, and their movement can be applied to bullets they've fired.

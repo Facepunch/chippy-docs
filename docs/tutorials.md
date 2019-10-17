@@ -13,6 +13,7 @@
 [Stages](tutorials/stage.md)<br>
 [Player](tutorials/player.md)<br>
 [Status Effects](tutorials/status.md)<br>
+[Audio](tutorials/audio.md)<br>
 ---
 >
 [Pixel Editor](tutorials/pxc_editor.md)<br>

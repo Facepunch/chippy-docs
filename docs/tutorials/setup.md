@@ -10,11 +10,11 @@ Now enter the `custom` folder.
 
 <img src="https://files.facepunch.com/ryleigh/1b1111b1/explorer_2019-10-11_21-11-01.png" />
 
-There should be some template levels already included, but if not, you can download and unzip them to this folder.
-<img src="https://files.facepunch.com/ryleigh/1b1111b1/explorer_2019-10-11_21-12-48.png" />
+There should already be an [example plugin](https://files.facepunch.com/ryleigh/1b1511b1/example.rar) included.
 
-!!! example "Templates"
-    ...
+<img src="https://files.facepunch.com/ryleigh/1b1511b1/explorer_2019-10-15_22-30-50.png" />
+
+Download the [official levels](https://files.facepunch.com/ryleigh/1b2711b1/chippy_resources.rar) to see more examples (though these levels aren't set up as workshop plugins).
 
 !!! tip
-    Download a good text editor such as [VS Code](https://code.visualstudio.com/).
+    Download a good free text editor such as [VS Code](https://code.visualstudio.com/).

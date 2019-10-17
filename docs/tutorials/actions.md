@@ -18,7 +18,6 @@ Wait for an amount of time before continuing.
 "state 0": [
 	{ "action": "Wait", "time":0.5, },	
 ],
-
 ```
 
 !!! tip
@@ -304,6 +303,10 @@ Here are **some** of the most useful methods:
 	[LevelUp](../../SpaceUsurper/StatusEffect/LevelUp)<br>
 	[LevelDown](../../SpaceUsurper/StatusEffect/LevelDown)<br>
 	[Disable](../../SpaceUsurper/StatusEffect/Disable)<br>
+
+## Return Values
+
+.....
 	
 ## Subroutines
 

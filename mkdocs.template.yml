@@ -34,7 +34,7 @@ nav:
   - 'index.md'
   - Tutorials:
     - 'tutorials.md'
-    - 'tutorials/quickstart.md'
+    - 'tutorials/setup.md'
     - 'tutorials/pattern.md'
     - 'tutorials/bullet.md'
     - 'tutorials/unit.md'
@@ -43,6 +43,7 @@ nav:
     - 'tutorials/stage.md'
     - 'tutorials/player.md'
     - 'tutorials/status.md'
+    - 'tutorials/audio.md'
     - 'tutorials/pxc_editor.md'
     - 'tutorials/utilities.md'
     - 'tutorials/workshop.md'

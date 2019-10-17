@@ -1079,7 +1079,34 @@ Remember, the bullet itself does not have to be visible!
     DespawnText(Vector2 scale, float time = 1f, EasingType easingType = EasingType.QuadOut)
     Vector2 GetTextSize()
     ```
+
+!!! example "Fonts"
+	[Here is an image](https://files.facepunch.com/ryleigh/1b1511b1/fonts-for-floating-text.png) showing the different fonts available.
     
+## Bullet Variables
+
+Bullets can't declare custom variables with `properties` the way that patterns, units, etc can.<br />
+
+However, each bullet has a few built-in variables that can be utilized.
+
+`intVar` stores an integer value.<br/>
+`floatVar` does a float value.<br/>
+`vectorVar` stores a Vector2 value.<br/>
+
+```json
+"onUpdate":[
+  // examples of setting vars
+  { "action": "CallMethod", "method": "SetFloatVar", "params": { "var":"easeOverTime(floatVar, 0f, 0.025f, dt)", }}, 
+  { "action": "CallMethod", "method": "SetIntVar", "params": { "var":"stage.StartLoopingSfx('SafeSpaceLoop', bulletPos, 1f)", }}, 
+  { "action": "CallMethod", "method": "SetVectorVar", "params": { "var":"vec2(bulletPos.y, playerPos.y)", }},
+],
+```
+
+The variables can be used in any of the bullets scriptfuncs, such as:
+```json
+{ "action": "CallMethod", "method": "SetPosition", "params": { "pos":"vectorVar", }},
+```
+  
 ## Other Volley Bullets
 
 Bullets can ask for information on other bullets fired in the same volley.
