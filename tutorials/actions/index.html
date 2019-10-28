@@ -409,12 +409,18 @@
     CallMethod
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#return-values" title="Return Values" class="md-nav__link">
     Return Values
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -28853,12 +28859,18 @@
     CallMethod
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#return-values" title="Return Values" class="md-nav__link">
     Return Values
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -29216,7 +29228,8 @@ The <code class="codehilite"><span class="k">inner</span></code> parameter is th
 
 <p><br>
 Here are <strong>some</strong> of the most useful methods:</p>
-<details class="example"><summary><a href="../../SpaceUsurper/Stage">Stage</a> Methods</summary><p><a href="../../SpaceUsurper/Stage/AddTimeScale">AddTimeScale</a><br>
+<details class="example"><summary><a href="../../SpaceUsurper/Stage">Stage</a> Methods</summary><p><a href="../../SpaceUsurper/GameStage/SpawnUnit">SpawnUnit</a><br>
+<a href="../../SpaceUsurper/Stage/AddTimeScale">AddTimeScale</a><br>
 <a href="../../SpaceUsurper/GameStage/LerpBounds">LerpBounds</a><br>
 <a href="../../SpaceUsurper/Stage/ShakeCamera">ShakeCamera</a><br>
 <a href="../../SpaceUsurper/Stage/SpawnPattern">SpawnPattern</a><br>
@@ -29282,8 +29295,91 @@ Here are <strong>some</strong> of the most useful methods:</p>
 <a href="../../SpaceUsurper/StatusEffect/LevelDown">LevelDown</a><br>
 <a href="../../SpaceUsurper/StatusEffect/Disable">Disable</a><br></p>
 </details>
-<h2 id="return-values">Return Values</h2>
-<p>.....</p>
+<h3 id="return-values">Return Values</h3>
+<p>When using <strong>CallMethod</strong>, or when calling a whitelisted method directly from a scriptfunc, it's possible to store the <strong>return value</strong> (output) of the method.</p>
+<p>For example, <a href="../../SpaceUsurper/GameStage/SpawnUnit">SpawnUnit</a> has a return value of type Unit (which will be equal to the unit spawned if successful, or <code class="codehilite"><span class="k">null</span></code> if unsuccessful).</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SpawnUnit&quot;</span><span class="p">,</span> 
+    <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> 
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;egg&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="s2">&quot;vec2(0f, 0f)&quot;</span> 
+    <span class="p">},</span> 
+<span class="hll">    <span class="nt">&quot;return&quot;</span><span class="p">:</span><span class="s2">&quot;eggUnit&quot;</span><span class="p">,</span>
+</span><span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>In that example, <code class="codehilite"><span class="n">egg</span></code> refers to the name of the unit in the stage's <code class="codehilite"><span class="n">units</span></code> property...</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;units&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="err">//</span> <span class="err">...</span>
+    <span class="nt">&quot;egg&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;config&quot;</span><span class="p">:</span> <span class="s2">&quot;misc/unit/eggShield&quot;</span><span class="p">,</span> <span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="p">},</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>...and <code class="codehilite"><span class="n">eggUnit</span></code> refers to the custom variable of type <code class="codehilite"><span class="n">Unit</span></code> defined in the stage's <code class="codehilite"><span class="n">properties</span></code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;properties&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="err">//</span> <span class="err">...</span>
+    <span class="nt">&quot;eggUnit&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Unit&quot;</span> <span class="p">},</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>By setting the return value to <code class="codehilite"><span class="n">eggUnit</span></code>, the variable can now be used to call actions on the unit we just spawned.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;stage&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SpawnUnit&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;egg&quot;</span><span class="p">,</span> <span class="nt">&quot;pos&quot;</span><span class="p">:</span> <span class="s2">&quot;vec2(0f, 0f)&quot;</span> <span class="p">},</span> <span class="nt">&quot;return&quot;</span><span class="p">:</span><span class="s2">&quot;eggUnit&quot;</span> <span class="p">}</span><span class="err">,</span>
+<span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;eggUnit != null&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;eggUnit&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;Shake&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;strength&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span> <span class="p">}},</span>
+    <span class="p">],}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also use the return value of methods called within scriptfuncs.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;properties&quot;</span><span class="err">:</span><span class="p">{</span>
+    <span class="err">//</span> <span class="err">...</span>
+    <span class="nt">&quot;pixel&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PixelData&quot;</span><span class="p">,</span> <span class="p">},</span>
+<span class="p">}</span><span class="err">,</span>
+
+<span class="err">//</span> <span class="err">...</span>
+
+<span class="s2">&quot;baseForm&quot;</span><span class="err">:</span><span class="p">{</span>
+    <span class="err">//</span> <span class="err">...</span>
+    <span class="nt">&quot;onSpawn&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;pixel&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;unit.GetRandomPixel()&quot;</span> <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table></p>
+</div>
 <h2 id="subroutines">Subroutines</h2>
 <p>Subroutines allow you to create your own functions (essentially, a sequence of actions).</p>
 <p>The following example calls the <code class="codehilite"><span class="n">speech</span><span class="p">.</span><span class="n">sub</span></code> subroutine when the player gets hit.</p>

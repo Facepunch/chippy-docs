@@ -29722,18 +29722,47 @@ Setting <code class="codehilite"><span class="ss">&quot;aimMode&quot;</span><spa
 6
 7
 8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;patternShape&quot;</span><span class="p">:</span> <span class="s2">&quot;Spokes&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;numVolleys&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-  <span class="nt">&quot;numBulletsInVolley&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
-  <span class="err">//</span> <span class="err">...</span>
-<span class="hll">  <span class="nt">&quot;parallelSubdivide&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
-</span><span class="hll">  <span class="nt">&quot;parallelForce&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="err">//</span> <span class="err">the</span> <span class="err">amount</span> <span class="err">of</span> <span class="err">force</span> <span class="err">applied</span> <span class="err">to</span> <span class="err">bullets</span> <span class="err">to</span> <span class="err">spread</span> <span class="err">them</span> <span class="err">out</span>
+    <span class="nt">&quot;patternShape&quot;</span><span class="p">:</span> <span class="s2">&quot;Spokes&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;numVolleys&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;numBulletsInVolley&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+    <span class="err">//</span> <span class="err">...</span>
+<span class="hll">    <span class="nt">&quot;parallelSubdivide&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+</span><span class="hll">    <span class="nt">&quot;parallelForce&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="err">//</span> <span class="err">the</span> <span class="err">amount</span> <span class="err">of</span> <span class="err">force</span> <span class="err">applied</span> <span class="err">to</span> <span class="err">bullets</span> <span class="err">to</span> <span class="err">spread</span> <span class="err">them</span> <span class="err">out</span>
 </span><span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
 <video controls width="80%"> <source src="https://files.facepunch.com/ryleigh/1b1711b1/2019-10-17_01-20-52.mp4" type="video/mp4"> </video>
 
+<p>The two types of subdivides can be combined, and can use scriptfuncs instead of static values:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;patternShape&quot;</span><span class="p">:</span> <span class="s2">&quot;Spokes&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;numVolleys&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;numBulletsInVolley&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+    <span class="err">//</span> <span class="err">...</span>
+    <span class="nt">&quot;fanSubdivide&quot;</span><span class="p">:</span><span class="s2">&quot;1 + volleyNum&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fanAngle&quot;</span><span class="p">:</span><span class="s2">&quot;75f - volleyNum * 10f&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;parallelSubdivide&quot;</span><span class="p">:</span><span class="s2">&quot;5 - volleyNum&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;parallelForce&quot;</span><span class="p">:</span><span class="s2">&quot;5f + volleyNum * 2f&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<video controls width="80%"> <source src="https://files.facepunch.com/ryleigh/1b1711b1/2019-10-17_12-48-24.mp4" type="video/mp4"> </video>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Patterns can use the <code class="codehilite"><span class="n">fanNum</span></code> or <code class="codehilite"><span class="n">parallelNum</span></code> properties to access the index of a bullet in a subdivision.</p>
+</div>
 <h2 id="affecting-child-bullets">Affecting Child Bullets</h2>
 <p>Patterns have their own position and angle, and their movement can be applied to bullets they've fired.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
