@@ -2,7 +2,7 @@
 
 The **PxcEditor** is used to draw units, assign pixels, create animations, and export them to json files.
 
-Download for Windows: [PxcEditor_v35.rar](https://files.facepunch.com/ryleigh/1b0311b1/PxcEditor_v35.rar)
+Download for Windows: [PxcEditor_v35.rar](https://files.facepunch.com/ryleigh/1b2711b1/PxcEditor_v35.zip)
 
 <img src="https://files.facepunch.com/ryleigh/1b1511b1/PxcEditor_2019-08-15_20-49-04.png" width="100%"/>
 
