@@ -71,7 +71,7 @@ After making changes to the local version of your campaign, select **Manage** an
 <img src="https://files.facepunch.com/ryleigh/1b1011b1/Unity_2019-10-10_22-39-37.png" width="50%"/>
 
 !!! danger "Wiping leaderboards"
-	**Any** gameplay-affecting changes you make to your level will likely break exist replays.
+	**Any** gameplay-affecting changes you make to your level will likely break existing replays.
     
     You can wipe the slate clean by incrementing the `leaderboardIndex` property in your `plugin.json` file.<br />
     The default value is `0`, so change it to `1` to create the leaderboard for your newly updated version.

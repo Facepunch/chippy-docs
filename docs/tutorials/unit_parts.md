@@ -46,7 +46,7 @@ A section of pixels can be grouped together as a **part**. Parts have a single h
 In official stages, `sprites` are generally used for non-square parts, and layered `cores` are used for square parts.
 
 !!! warning
-    It's a bit confusing that each boss has a "core" in the center, while "core" is also used to refer to the layered moving sprites that represent most parts. Just be aware that the term is overused.
+    It's a bit confusing that each boss typically has a part named "core" in the center, while the word "core" is also used to refer to the layered moving sprites that represent most parts. Just be aware that the term is overused.
 
 ### Placing
 
@@ -229,11 +229,11 @@ The visuals can be adjusted with optional parameters:
 
 ## Lasers
 
-Lasers are lines that stop when they hit a pixel, and damage the player if they pass through. 
+Lasers are raycasted lines that stop when they hit a pixel, and damage the player if they pass through while the laser is active. 
 
 <img src="https://files.facepunch.com/ryleigh/1b2211b1/Unity_2019-08-22_22-27-48.jpg" />
 
-You can usually achieve a similar obstacle with a bullet, but if you want pixel collision or you plan to rotate the obstacle extremely fast, a laser can be more appropriate.
+You can usually achieve a similar obstacle with a **bullet**, but if you want pixel collision or you plan to rotate the obstacle extremely fast, a laser can be more appropriate (no matter how fast the laser or the player is moving, passing over an active laser *will* damage the player)
 
 ```json hl_lines="7"
 "parts":{
@@ -251,7 +251,7 @@ Expanded for clarity:
 ```json
 "laser":{ 
     "dps":10, // damage per second dealt to pixels
-    "autoRotate":true, // 
+    "autoRotate":true, // simply rotate this laser instead of aiming at a target
     "rotationSpeed":-4.5, 
     "startAngle":0, 
     "ignoreCollisionWith":["egg", "trap"], 
@@ -259,7 +259,7 @@ Expanded for clarity:
     "colorOnB":"color(1f, 0.1f, 0f) * 0.35f", 
     "colorBlinkTimeOn":0.25, 
     "colorBlinkEasingType":"Linear", 
-    "widthAMin": 1.5, 
+    "widthAMin":1.5, 
     "widthAMax":1.75, 
 },
 ```
@@ -302,6 +302,95 @@ Expanded for clarity:
 	[Properties & Methods](../../SpaceUsurper/Laser)
     
     [Full json config](../../SpaceUsurper/UnitLaserData)
+
+### Laser Methods
+
+Laser can be modified at any point by calling methods on the `Unit` that contains them. <br/>
+These are the most useful methods:
+
+??? example "SetLaserActive"
+    Sets **leftGun**'s laser to active, meaning it will now be visible and collide with pixels:
+    ```json
+    { "action": "CallMethod", "method": "SetLaserActive", "params": { 
+            "part": "leftGun", 
+            "active":true, // set `active` to false to turn off the laser
+        }
+    },
+    ```
+
+    You can also use `ToggleLaserActive` to turn it on if it's currently off, and vice-versa:
+    ```json
+    { "action": "CallMethod", "method": "ToggleLaserActive", "params": { "part": "leftGun", }},
+    ```
+
+??? example "SetLaserDangerous"
+    Sets **leftGun**'s laser to dangerous, meaning it will now collide with the player and damage pixels:
+    ```json
+    { "action": "CallMethod", "method": "SetLaserDangerous", "params": { 
+            "part": "leftGun", 
+            "dangerous":true, // set `dangerous` to false to keep the laser visible but unharmful
+        }
+    },
+    ```
+
+    You can also use `ToggleLaserDangerous` to turn it dangerous if it's currently harmless, and vice-versa:
+    ```json
+    { "action": "CallMethod", "method": "ToggleLaserDangerous", "params": { "part": "leftGun", }},
+    ```
+
+??? example "SetLaserDps"
+    Sets the damage that **core**'s laser deals to pixels or parts:
+    ```json
+    { "action": "CallMethod", "method": "SetLaserDps", "params": {
+            "part": "core", 
+            "dps":"map(stageTime, 0f, 60f, 75f, 300f, 'QuadIn')", // sets the lasers damage to increase over time
+        }
+    },
+    ```
+
+??? example "SetLaserAutoRotate"
+    Sets whether **gun**'s laser rotates automatically (when `true`) or rotates toward a target point (when `false`):
+    ```json
+    { "action": "CallMethod", "method": "SetLaserAutoRotate", "params": {
+            "part": "gun", 
+            "autoRotate":false // sets the lasers damage to increase over time
+        }
+    },
+    ```
+
+    !!! note
+        If the unit contains multiple parts named **gun**, this will affect all of their lasers.
+
+??? example "SetLaserAutoRotateSpeed"
+    Sets the speed at which **gun**'s laser rotates automatically:
+    ```json
+    { "action": "CallMethod", "method": "SetLaserAutoRotateSpeed", "params": {
+            "part": "gun", 
+            "autoRotateSpeed":-10,
+        }
+    },
+    ```
+
+??? example "SetLaserTargetAngle"
+    Sets the angle that **leftGun**'s laser aims towards (ignored if the laser has `autoRotate` set to `true`):
+    ```json
+    { "action": "CallMethod", "method": "SetLaserTargetAngle", "params": {
+            "part": "leftGun", 
+            "angle":"vecToAngle(playerPos - unit.GetPartPos('leftGun'))", // aims from the part toward the player
+        }
+    },
+    ```
+
+??? example "SetLaserAimSpeed"
+    Sets the speed at which **leftGun**'s laser eases toward its target angle:
+    ```json
+    { "action": "CallMethod", "method": "SetLaserAimSpeed", "params": {
+            "part": "leftGun", 
+            "aimSpeed":0.01, // use a value between 0-1 (1 will instantly approach the target angle)
+        }
+    },
+    ```
+
 
 ## Handlers
 

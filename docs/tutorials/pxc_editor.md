@@ -2,7 +2,8 @@
 
 The **PxcEditor** is used to draw units, assign pixels, create animations, and export them to json files.
 
-Download for Windows: [PxcEditor_v35.rar](https://files.facepunch.com/ryleigh/1b0311b1/PxcEditor_v35.rar)
+!!! abstract "Download for Windows"
+    [PxcEditor_v35.zip](https://files.facepunch.com/ryleigh/1b2711b1/PxcEditor_v35.zip)
 
 <img src="https://files.facepunch.com/ryleigh/1b1511b1/PxcEditor_2019-08-15_20-49-04.png" width="100%"/>
 
@@ -188,7 +189,7 @@ At this point, **do not create any more pixels**, as it'll be too complex to ass
 The easiest way to animate involves duplicating the current frame and moving around assigned pixels.<br>
 More specifically,<br>
 > **1)** Set appropriate mirroring.<br>
-> **2)** Select the pixels you want to move, set appropriate mirroring, and adjust the pixel positions with mouse or arrow keys.<br>
+> **2)** Select the pixels you want to move, and adjust their positions with mouse or arrow keys.<br>
 > **3)** Press ++shift+d++ to duplicate current frame.<br>
 
 ## Saving & Loading

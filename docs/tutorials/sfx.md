@@ -1,6 +1,4 @@
-# Audio
-
-## SFX
+# SFX
 
 Sound effects are played with the Stage's `PlaySfx` action.
 
@@ -24,9 +22,13 @@ Some modifier parameters can be specified:
 
 If the `pos` parameter is not specified, sounds will play at the player's position.
 
-### Custom SFX
+## Built-in SFX
 
-While your plugin can trigger any of the built-in sfx, you can also create a new json file to define custom sounds.
+
+
+## Custom SFX
+
+You can also create a new json file to define custom sounds.
 
 This is `sfx.json` from the **example** plugin.
 ```json
@@ -53,7 +55,16 @@ Trigger your custom sfx in the same way as the built-in sounds:
 { "action": "CallMethod", "target":"stage", "method": "PlaySfx", "params": { "sfxType": "ExampleStage", }},
 ```
 
-### Looping SFX
+Don't forget to include the path to you sfx file(s) in your `plugin.json` file.
+```json
+{
+  // load files from sfx.json, in the same folder as plugin.json
+  "sounds": [ "sfx" ],
+}
+```
+
+
+## Looping SFX
 
 Looping sounds can be useful for lasers and other things that persist for a certain amount of time.
 
@@ -81,7 +92,3 @@ Looping sounds can be useful for lasers and other things that persist for a cert
 ```
 
 In this example, the ID of the looping sound is stored in a custom integer property of a pattern. You could also store it in the built-in `intVar` of bullets, for example.
-
-## Music
-
-.....

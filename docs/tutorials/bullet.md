@@ -399,6 +399,9 @@ If you want a bullet to interpret `"moveAngle":-90` as an absolute instead of re
 
 Now, the same bullets as before are all moving to the right on their third keyframe, instead of moving 90° to the right of their current angle.
 
+In other words, bullets normally factor in their starting angle, so that bullet patterns will be 'symmetrical'.<br>
+Generally, homing/following bullets will want to set `useAbsoluteAngles` to `true`.
+
 For the record, this is the way angles are set up in Chippy:
 <img src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1411b1/Photo_2019-08-14_3_21_56_PM.jpg" width="450"/>
 

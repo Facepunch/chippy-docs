@@ -231,6 +231,7 @@ Specifying the `target` is only necessary if you are calling a method on a diffe
 Here are **some** of the most useful methods:
 
 ??? example "[Stage](../../SpaceUsurper/Stage) Methods"
+	[SpawnUnit](../../SpaceUsurper/GameStage/SpawnUnit)<br>
 	[AddTimeScale](../../SpaceUsurper/Stage/AddTimeScale)<br>
 	[LerpBounds](../../SpaceUsurper/GameStage/LerpBounds)<br>
 	[ShakeCamera](../../SpaceUsurper/Stage/ShakeCamera)<br>
@@ -304,10 +305,69 @@ Here are **some** of the most useful methods:
 	[LevelDown](../../SpaceUsurper/StatusEffect/LevelDown)<br>
 	[Disable](../../SpaceUsurper/StatusEffect/Disable)<br>
 
-## Return Values
+### Return Values
 
-.....
+When using **CallMethod**, or when calling a whitelisted method directly from a scriptfunc, it's possible to store the **return value** (output) of the method.
 	
+For example, [SpawnUnit](../../SpaceUsurper/GameStage/SpawnUnit) has a return value of type Unit (which will be equal to the unit spawned if successful, or `null` if unsuccessful).
+
+```json hl_lines="6"
+{ "action": "CallMethod", "target":"stage", "method": "SpawnUnit", 
+	"params": { 
+		"name": "egg", 
+		"pos": "vec2(0f, 0f)" 
+	}, 
+	"return":"eggUnit",
+},
+```
+
+In that example, `egg` refers to the name of the unit in the stage's `units` property...
+
+```json
+"units": {
+	// ...
+	"egg": { "config": "misc/unit/eggShield", "count":1, },
+},
+```
+
+...and `eggUnit` refers to the custom variable of type `Unit` defined in the stage's `properties`:
+
+```json
+"properties": {
+	// ...
+	"eggUnit": { "type": "Unit" },
+},
+```
+
+By setting the return value to `eggUnit`, the variable can now be used to call actions on the unit we just spawned.
+
+```json
+{ "action": "CallMethod", "target":"stage", "method": "SpawnUnit", "params": { "name": "egg", "pos": "vec2(0f, 0f)" }, "return":"eggUnit" },
+{ "action": "Condition", "condition": "eggUnit != null",
+	"true": [
+		{ "action": "CallMethod", "target":"eggUnit", "method": "Shake", "params": { "strength":2, "time":0.5, }},
+	],},
+```
+
+!!! tip
+	You can also use the return value of methods called within scriptfuncs.
+	```json
+
+	"properties":{
+		// ...
+		"pixel": { "type": "PixelData", },
+	},
+
+	// ...
+
+	"baseForm":{
+		// ...
+		"onSpawn": [
+			{ "action": "SetValue", "name": "pixel", "value": "unit.GetRandomPixel()" },
+		],
+	},
+	```
+
 ## Subroutines
 
 Subroutines allow you to create your own functions (essentially, a sequence of actions).

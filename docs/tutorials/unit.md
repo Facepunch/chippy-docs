@@ -751,7 +751,7 @@ By default, a unit does not try to stay in the level bounds, and is removed when
 		{
 			"facingMode":"Target",
             "targetFacingAngle":"vecToAngle(playerPos - unitPos)", // look at player
-            "facingLerpSpeed":0.05, // rotate 5% of the way to target angle per frame
+            "facingLerpSpeed":0.05, // rotate 5% of the way to target angle each frame
 		}
 	],
 }

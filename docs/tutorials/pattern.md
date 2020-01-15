@@ -29,7 +29,7 @@ After the initial volley, there's a `0.1` second delay until the next.
 
 The pattern rotates clockwise with a speed of `150` units (basically equivalent to 150° per second). Negative is clockwise, positive is counterclockwise.
 
-`bullets` defines what this pattern shoots - since only one type is referenced, every bullet in the pattern will be the same. The path can be absolute, but usually it's easiest to reference definitions in the same json object - in this case, `.bullet` refers to the bullet defined at the same level as the `simpleAttack` pattern definition.
+`bullets` defines what this pattern shoots - since only one type is referenced, every bullet in the pattern will be the same. The path can be absolute, but usually it's easiest to reference definitions in the same json object - in this case, `.bullet` refers to a bullet defined at the same json level as the `simpleAttack` pattern definition.
 
 ## More About Patterns
 
@@ -413,20 +413,40 @@ A `fanSubdivide` will replace each bullet with a fan of bullets.
 
 ### Parallel
 
-A `parallelSubdivide	` will instead replace with bullets facing the same direction.
+A `parallelSubdivide` will instead replace with bullets facing the same direction.
 
 ```json hl_lines="6 7"
 {
-  "patternShape": "Spokes",
-  "numVolleys": 5,
-  "numBulletsInVolley":4,
-  // ...
-  "parallelSubdivide":5,
-  "parallelForce":12, // the amount of force applied to bullets to spread them out
+	"patternShape": "Spokes",
+  	"numVolleys": 5,
+  	"numBulletsInVolley":4,
+  	// ...
+  	"parallelSubdivide":5,
+  	"parallelForce":12, // the amount of force applied to bullets to spread them out
 }
 ```
 
 <video controls width="80%"> <source src="https://files.facepunch.com/ryleigh/1b1711b1/2019-10-17_01-20-52.mp4" type="video/mp4"> </video>
+
+The two types of subdivides can be combined, and can use scriptfuncs instead of static values:
+
+```json 
+{
+  	"patternShape": "Spokes",
+  	"numVolleys": 5,
+  	"numBulletsInVolley":4,
+  	// ...
+  	"fanSubdivide":"1 + volleyNum",
+	"fanAngle":"75f - volleyNum * 10f",
+	"parallelSubdivide":"5 - volleyNum",
+	"parallelForce":"5f + volleyNum * 2f",
+}
+```
+
+<video controls width="80%"> <source src="https://files.facepunch.com/ryleigh/1b1711b1/2019-10-17_12-48-24.mp4" type="video/mp4"> </video>
+
+!!! tip
+	Patterns can use the `fanNum` or `parallelNum` properties to access the index of a bullet in a subdivision.
 
 ## Affecting Child Bullets
 
