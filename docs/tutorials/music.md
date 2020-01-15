@@ -1,10 +1,10 @@
 # Music
 
-Chippy has a dynamic, layer-based music system. A song can react to the gameplay in any way, and can be randomized so it's different each time.
+Chippy has a dynamic, layer-based music system. A song can be randomized so it's different each time, and can change certain elements based on the gameplay.
 
 ## Built-in Songs
 
-To simply re-use one of the Chippy songs for your stage, fill in one of the stage song names for the `song` property in your level config json.
+To simply re-use one of the Chippy songs for your stage, use one of these song names for the `song` property in your level config json.
 
 ```json hl_lines="4"
 {
@@ -33,15 +33,17 @@ To simply re-use one of the Chippy songs for your stage, fill in one of the stag
     Storm | `storm` | `010`
     Xulgon | `invasion` | `011`
 
+!!! abstract "Download campaign songs"
+    These are the song files used in the campaigns, for you to learn from or remix: [**campaign_songs.zip**](https://files.facepunch.com/ryleigh/200115-tgZam9/campaign_songs.zip)
 
 ## Custom Songs
 
 ### Example
 
-Here's an example song I put together:
+Here's an example song:
 [**music.zip**](https://files.facepunch.com/ryleigh/200115-tn3Hqc/music.zip)
 
-To use it in your stage, unzip the `music` folder and place it somewhere in your plugin folder.<br />
+To test it in your stage, unzip the `music` folder and place it somewhere in your plugin folder.<br />
 In the stage config json file, enter the path to the song config file.
 
 ```json
@@ -50,10 +52,15 @@ In the stage config json file, enter the path to the song config file.
 
 These are three different files included:
 
-??? info "bouncy_samples.mp3"
+???+ info "bouncy_samples.mp3"
     This is an audio file with all our loops crammed into it. We could have used a separate audio file for each loop if we wanted, but then we'd need to create a sample config file for each.
 
     <img src="https://files.facepunch.com/ryleigh/200115-pY2ZNh/audacity_2020-01-15_00-19-22.png" />
+
+    <audio controls>
+      <source src="https://files.facepunch.com/ryleigh/200115-bPN3x2/bouncy_samples_2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
 
 ??? abstract "bouncy_sample_config.json"
     This is the sample config file. It defines which parts of an audio file can be used as sampled loops in the song config.
@@ -169,8 +176,7 @@ These are three different files included:
 
 <br />
 Here's the same song playing twice, and progressing slightly differently each time:
-<br />
-<br />
+<br /> <br />
 <audio controls>
   <source src="https://files.facepunch.com/ryleigh/200114-D7XCN8/song_0.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
@@ -181,10 +187,9 @@ Your browser does not support the audio element.
 Your browser does not support the audio element.
 </audio>
 
+### Workflow
 
-
-
-#### Workflow
+#### Audio
 
 Find some music loops that sound good together. They should probably all be the same bpm.
 
@@ -195,3 +200,140 @@ I used Ableton Live, but any DAW should work.
 Lay out the clips so they play one after another, and export it to mp3.
 
 <img src="https://files.facepunch.com/ryleigh/200115-eGWbAC/Ableton_Live_10_Suite_2020-01-15_01-05-08.png" />
+
+#### Sample Config
+
+Now that we have our audio file, it's time to specify which sections of it to use as samples.
+
+```json
+{
+  // specify the name of the audio file. since it is in the same folder, no need to specify the full path
+  "filename": "bouncy_samples",
+
+  "beatsPerMinute": 128,
+  "beatsPerBar": 4, 
+
+  "samples": {
+    "drum0": { "startBar": 0, "lengthBars": 2 }, // the first bar is 0, not 1
+    "drum1": { "startBar": 2, "lengthBars": 2 },
+    "drum_fill": { "startBar": 4, "lengthBars": 2 },
+    "bass0": { "startBar": 5, "lengthBars": 2 },
+    "bass1": { "startBar": 7, "lengthBars": 2 },
+    "synth0": { "startBar": 9, "lengthBars": 2 },
+    "synth1": { "startBar": 11, "lengthBars": 2 },
+    "piano0": { "startBar": 13, "lengthBars": 8 },
+    "piano1": { "startBar": 21, "lengthBars": 4 },
+    "vox": { "startBar": 25, "lengthBars": 2 },
+  }
+}
+```
+
+To find the `lengthBars` value, count the number of bars each sample is comprised of:
+
+<img src="https://files.facepunch.com/ryleigh/200115-DFcbHr/bars.png" />
+
+Simply increment `startBar` by the `lengthBars` of each sample, but be sure to start with bar `0`, not `1`.
+
+#### Song Config
+
+We have our samples defined now, and can use them to create a song.
+
+```json
+{
+  // pick whatever bpm your samples are in (this value can be dynamically changed in SOME ways, but it's pretty janky, and can't use custom song properties)
+  "beatsPerMinute": 128,
+
+  "beatsPerBar": 4,
+
+  // define custom properties that the layers can refer to 
+  "properties": {
+    "bassVolume": {
+      "type": "Func<Float>",
+      "value": "0.7f + sin(stageTime * 0.33) * 0.3f"
+    },
+    // ...
+  },
+
+  // when the song starts, each layer will begin playing on its first segment
+  "layers": {
+    "bass": {
+      "volume": "bassVolume", // using a custom property to control volume of this layer
+      "segments": [
+        // if there is no sample defined, this section will be silent
+        { "name": "seg0", "lengthBars": "rand.Int(3, 6) * 2", "next":"seg1", },
+
+        // after seg1, the next segment will randomly be selected from seg0, seg1, seg2
+        { "name": "seg1", "lengthBars": "rand.Int(1, 16) * 2", "sample": "bouncy_sample_config.bass0", "next":"seg${rand.Int(0, 3)}", "volume":1, },
+
+        { "name": "seg2", "lengthBars": "rand.Int(1, 8) * 2", "sample": "bouncy_sample_config.bass1", "next":"seg0", "volume":1, },
+      ]
+    },
+    // ...
+  }
+}
+```  
+
+## Custom Property Examples
+
+Here are some examples of ways to influence the song with the current gameplay state.
+
+```json
+{
+  "properties": {
+    // true if the boss form number is 0 (BossFormNumber is shorthand for stage.GetUnit('boss').CurrFormNum)
+    "firstForm": {
+      "type": "Func<Bool>",
+      "value": "stage.BossFormNumber == 0"
+    },
+    "secondForm": {
+      "type": "Func<Bool>",
+      "value": "stage.GetUnit('boss').CurrFormNum == 1"
+    },
+    // the volume of the hats is based on whether the player is shooting or not (we must check if we're on the menu, because no player exists on the menu stage)
+    "hatsVolume": {
+      "type": "Func<Float>",
+      "value": "isMenuStage ? 0f : player.Input.ShootInputPercent * 0.25f"
+    },
+  },
+}
+```
+
+## Segment Actions
+
+Each segment of a layer can define actions to trigger when it starts. In the campaign songs, this is used to control which sections are playing.
+
+```json
+{
+  "properties": {
+    // this property will be changed with an action
+    "shouldPlayMelody": {
+      "type": "Bool",
+      "value": true
+    },
+  },
+  "layers": {
+    "section-control": {
+      "volume": 0,
+      "segments": [
+        { "name": "intro", "next": "melody", "lengthBars": 8, 
+          "actions": [
+            { "action": "SetValue", "name": "shouldPlayMelody", "value": false },
+          ] 
+        },
+        { "name": "melody", "next": "intro", "lengthBars": 8, 
+          "actions": [
+            { "action": "SetValue", "name": "shouldPlayMelody", "value": true },
+          ] 
+        },
+      ],
+    },
+    "melody": {
+      // the volume of this layer depends on the bool value modified by the action
+      "volume": "shouldPlayMelody ? 1 : 0",
+      "segments":[
+        // ...
+      ],
+    },
+  },
+}
+```
