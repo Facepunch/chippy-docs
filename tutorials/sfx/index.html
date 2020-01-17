@@ -263,8 +263,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../setup/" title="Setup" class="md-nav__link">
-      Setup
+    <a href="../setup/" title="Getting Started" class="md-nav__link">
+      Getting Started
     </a>
   </li>
 
@@ -29742,6 +29742,982 @@
 
 <p>If the <code class="codehilite"><span class="n">pos</span></code> parameter is not specified, sounds will play at the player's position.</p>
 <h2 id="built-in-sfx">Built-in SFX</h2>
+<p>This is a list of every built-in sound effect in the game, which you can use for bullet patterns or to trigger with <code class="codehilite"><span class="n">PlaySfx</span></code>.</p>
+<details><summary>SFX</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;PlayerShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PlayerDie1&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PlayerDie2&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShipShoot&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;PlayerHitPixel&quot;</span><span class="err">,</span>
+<span class="s2">&quot;BulletHitPlayerDefault&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;PixelHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PixelDestroy&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PixelDisconnect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PixelExplodeDefault&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MetalHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MetalDestroy&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MetalDisconnect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PlantHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PlantDestroy&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PlantDisconnect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseFleshHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseFleshDestroy&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseFleshDisconnect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FleshHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FleshDestroy&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FleshDisconnect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StoneHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StoneDestroy&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StoneDisconnect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;GlassHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;GlassDestroy&quot;</span><span class="err">,</span>
+<span class="s2">&quot;GlassDisconnect&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;IncreaseProgress&quot;</span><span class="err">,</span>
+<span class="s2">&quot;IncreaseProgressTick&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TutorialStateIncrease&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;BombCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;BombExplode&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;PartHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PartShield&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PartDestroyed&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;PixelIgnite&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PixelExplode&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ExplosiveHitWithoutDamage&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserHit&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;Charge0&quot;</span><span class="err">,</span>
+<span class="s2">&quot;Charge1&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ChargeAscend&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ChargeAscend2&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ChargeWhoosh&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ChargeBomb&quot;</span><span class="err">,</span>
+<span class="s2">&quot;CockGun0&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;ShootBlaster&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootBlaster2&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootBig&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootSniper&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootSniperDeep&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootStaticLaser&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootStaticLaserLongAF&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootCannon&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootEnergy&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootPump&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootForce&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootBomb&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;ShootSmallOrganic&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootPhasor&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootBwomp&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootChunkyError&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootSqueakyToy&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootBlow&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootThicko&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootDart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootAirMute&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootLaserThump&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootResonant&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootWarp&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootLittleRattle&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootLaserBounce&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootPow&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootMetalWarp&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootEvilPhaser&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootGhost&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootSoftWomp&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootMechanical&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootSplash&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootSquelch&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootSoft&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootBigEnergy&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;ExplosionWarps&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ExplosionComputerError&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ExplosionDeepMuted&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ExplosionDeepResonant&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ExplosionDeepKnockKnock&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ExplosionBadGame&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ExplosionSwish&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ExplosionOverclocked&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ExplosionFirework&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ExplosionDrained&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;SawLoop&quot;</span><span class="err">,</span>
+<span class="s2">&quot;EnergyWavesLoop&quot;</span><span class="err">,</span>
+<span class="s2">&quot;EnergyWaveLoop&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MagnetLoop&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LightningStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LightningStrike&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FieldWarning&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TargetLinePip&quot;</span><span class="err">,</span>
+<span class="s2">&quot;GlassShatter&quot;</span><span class="err">,</span>
+<span class="s2">&quot;AlienWail&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LightningOrb&quot;</span><span class="err">,</span>
+<span class="s2">&quot;BulletLand&quot;</span><span class="err">,</span>
+<span class="s2">&quot;Kick&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MechanismClick&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ShootBurst&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;PowerupGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupActiveBoostGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupActiveBoostSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupActiveBoostUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupAirburstGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupAirburstSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupAirburstUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupAirburstExplode&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupBlinkGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupBlinkSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupBlinkUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupBumperGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupBumperSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupBumperUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupCannonGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupCannonSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupCannonUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupCannonHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupCarveGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupCarveSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupCarveUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupCarveHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupConvertGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupConvertSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupConvertUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupDoubleGunGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupDoubleGunSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupDoubleGunUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupDroneGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupDroneSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupDroneUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupEraseGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupEraseSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupEraseUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupFadeGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupFadeSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupFadeUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupFreezeGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupFreezeSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupFreezeUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupRepelGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupRepelSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupRepelUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupShieldGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupShieldBreak&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupShieldZoneGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupShieldZoneSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupShieldZoneUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupSliceGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupSliceSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupSliceUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupSliceHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupSlowmoGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupSlowmoSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupSlowmoUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupSweepGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupSweepSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupSweepUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupTurretGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupTurretSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupTurretUse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupFFDGet&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupFFDSelect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupFFDUse&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;AsteroidImplodeFinish1&quot;</span><span class="err">,</span>
+<span class="s2">&quot;AsteroidImplodeFinish2&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;IntroBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;IntroBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;IntroBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;IntroBossSpokesCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;IntroBossSpokesCharge2&quot;</span><span class="err">,</span>
+<span class="s2">&quot;IntroBossSpokesShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;IntroBossImplodeStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;IntroBossImplodeFinish&quot;</span><span class="err">,</span>
+<span class="s2">&quot;IntroBossRevengeBulletSpawn&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;OctopusBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusStageWave&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusLazyCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusLazyShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusBubbleShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusF0SpiralCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusF0SpiralShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusMineReload&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusMineShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusFloatingMineReload&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusFloatingMineShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusFloatingMineExplode&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusF1SmallSpreadCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusF1SmallSpreadShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusF1OrbCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusF1OrbShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusF1OrbDropMine&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusBubbleOrbCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusBubbleOrbShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusBubbleOrbReleaseBubble&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusSmallSpewCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusSmallSpewShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OctopusTurretSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;BubblePop&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;MechBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MechBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MechBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MechTurretSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MechBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MechBossSpokesCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MechBossSpokesShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MechBossSpokesShootMed&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MechBossSpokesShootFast&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MechBossDirectCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MechTurretSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;MechBallsBeep&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;FuseBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseMinionSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseEnemyEnraged&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseBossShootPew0&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseBossShootPew1&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseBossChargePump&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseBossShootPump&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseBossTossedLand&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseBossChargeDirect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseBossShootDirect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseBossChargeSimple&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseBossShootSimple&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseEnemyImplodeFinish&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseEnemyWarpIn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseEnemyWarpIn2&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseEnemySpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseTriggerHit1&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseTriggerHit2&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FuseTriggerHit3&quot;</span><span class="err">,</span>
+<span class="s2">&quot;Confuse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ConfuseEnd&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;TrenchBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrenchBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrenchBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrenchBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrenchCurveSpokes&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrenchSurroundingCircle&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrenchSurroundingCircle2&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrenchExpandingSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrenchExpandingDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrenchExpandingHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;VineStrangle&quot;</span><span class="err">,</span>
+<span class="s2">&quot;VineRip&quot;</span><span class="err">,</span>
+<span class="s2">&quot;CrawlerPlant&quot;</span><span class="err">,</span>
+<span class="s2">&quot;CrawlerPlant2&quot;</span><span class="err">,</span>
+
+
+<span class="s2">&quot;OnionBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OnionBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OnionBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OnionBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OnionGrid2Spawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OnionGrid2Whoosh&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OnionGrid3Beep&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OnionGrid3Whoosh&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;HunterBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterBombStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterBombExplode&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterShootDiamond&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterSpokesShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterParallelCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterWormCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterWormShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterRandomTriangles&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterLandmineShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterLandmineExplode&quot;</span><span class="err">,</span>
+<span class="s2">&quot;HunterTrailChildShoot&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;TentacleBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleUnitSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleGreenBulletShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleShootPew0&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleCentipedeCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleCentipedeShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleCentipedeDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleStickyCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleStickyHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleWaveShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleWobblingShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleSpiralShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleRoundRainShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleOrbCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleOrbShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TentacleOrbFire&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;ClawBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ClawBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ClawBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ClawBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ClawPopcornShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ClawFireworkShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ClawFireworkExplode&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ClawSpikesStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ClawSpinner&quot;</span><span class="err">,</span>
+<span class="s2">&quot;SpongeHit&quot;</span><span class="err">,</span>
+<span class="s2">&quot;SpongeVanish&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;OrbBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OrbBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OrbBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OrbBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OrbMeteorSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OrbInnerSpiralShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;OrbLaserShoot&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;FrameBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FrameBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FrameBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FrameBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FrameBouncerHitWall&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FrameMeteorLand&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FrameTrailShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FrameTrailChild&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FrameTrailFinish&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FrameFireworkFuse&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FrameFireworkExplode&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FrameToggleSwitchEngage&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FrameToggleDangerSpawned&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;LaserBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserSpewSmallCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserSpewSmallShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserSpewBigCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserSpewBigShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserCrosshairCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserCrosshairShoot1&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserCrosshairShoot2&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserCrosshairCollide&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserWeirdShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserDiamondSkullCircleCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserDiamondSkullCircleShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserDiamondSkullCircle2Charge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserDiamondSkullCircle2Shoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserWeirdShoot2&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserUnitLaserOn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserPetSpewSmallCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserPetSpewSmallShoot&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;StormBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormReturnTransform&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormMeteorWarning&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormMeteorLand&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormMeteorBulletHitPlayer&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormMissileShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormQuickLaserShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormSlalom1Shoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormSlalom2Shoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormSpinnerChildShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;StormSpinnerLifetimeFinished&quot;</span><span class="err">,</span>
+<span class="s2">&quot;ThreeBodyZap&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;InvasionBossSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionBossDie&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionBossSpeech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionBossStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionCircleSpokesShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionTrackSpokesShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionCubeDiamondShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionDiamondShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionXSpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionXAttack&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionShip1Speech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionShip2Speech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionShip2Charge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionShip3Speech&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionBossWarning&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionBossShootPew0&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionBossShootPew1&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionBossShootDirect&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionBossChargeShip3&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionBossSpawnShip3&quot;</span><span class="err">,</span>
+<span class="s2">&quot;InvasionTrailChildBullet&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;Thud&quot;</span><span class="err">,</span>
+<span class="s2">&quot;Thud2&quot;</span><span class="err">,</span>
+<span class="s2">&quot;Thud3&quot;</span><span class="err">,</span>
+<span class="s2">&quot;Thud4&quot;</span><span class="err">,</span>
+<span class="s2">&quot;Thump&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;AllPrereqsDestroyed&quot;</span><span class="err">,</span>
+<span class="s2">&quot;CurseCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;CurseShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;CurseWarning&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;PowerupCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupShoot&quot;</span><span class="err">,</span>
+<span class="s2">&quot;PowerupEmerge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TurretShoot&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;LaserCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;LaserLoop&quot;</span><span class="err">,</span>
+<span class="s2">&quot;FollowingLoop&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;TrapLand&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrapLoop&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrapBeep&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrapExplode&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrapImplodeStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrapImplodeFinish&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;TrapLand2&quot;</span><span class="err">,</span>
+<span class="s2">&quot;TrapImplodeStart2&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;EggLand&quot;</span><span class="err">,</span>
+<span class="s2">&quot;EggImplodeStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;EggImplodeFinish&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;SliderActivated&quot;</span><span class="err">,</span>
+<span class="s2">&quot;SliderEnemySpawn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;SliderEnemyChargeTossed&quot;</span><span class="err">,</span>
+<span class="s2">&quot;SliderEnemyTossedLand&quot;</span><span class="err">,</span>
+<span class="s2">&quot;SafeSpaceWarning&quot;</span><span class="err">,</span>
+<span class="s2">&quot;SafeSpaceCharge&quot;</span><span class="err">,</span>
+<span class="s2">&quot;SafeSpaceLoop&quot;</span><span class="err">,</span>
+<span class="s2">&quot;SafeSpaceLand&quot;</span><span class="err">,</span>
+<span class="s2">&quot;WeirdHomingMove&quot;</span><span class="err">,</span>
+<span class="s2">&quot;SliderEnemyRevengeBulletSpawn&quot;</span><span class="err">,</span>
+
+<span class="s2">&quot;UIButtonHover&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIButtonClick&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIButtonClickForward&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIButtonClickBack&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIStageHover&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIStageSwitch&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIStageStart&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UISoftHover&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIMenuHover&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIMenuClick&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIDragClick&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIDragLoop&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIDragRelease&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIToggleOn&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UIToggleOff&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UISubmenuHover&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UISubmenuClick&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UITinyHover&quot;</span><span class="err">,</span>
+<span class="s2">&quot;UITinyClick&quot;</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+</details>
 <h2 id="custom-sfx">Custom SFX</h2>
 <p>You can also create a new json file to define custom sounds.</p>
 <p>This is <code class="codehilite"><span class="n">sfx</span><span class="p">.</span><span class="n">json</span></code> from the <strong>example</strong> plugin.
