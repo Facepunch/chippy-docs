@@ -1,4 +1,6 @@
 site/
 docs/SpaceUsurper/
 docs/SpaceUsurper.UI/
+docs/SpaceUsurper.Bullets/
+docs/SpaceUsurper.DamageFloaters/
 mkdocs.yml
