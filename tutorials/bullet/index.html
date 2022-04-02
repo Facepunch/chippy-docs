@@ -40405,7 +40405,7 @@
 </td></tr></table>
 When referencing this bullet in a pattern, the <code class="codehilite"><span class="n">path</span></code> would be <code class="codehilite"><span class="n">MyCampaign</span><span class="o">/</span><span class="n">bullet</span><span class="o">/</span><span class="n">myBullet</span></code>.</p>
 </details>
-<details class="example"><summary>Included with pattern</summary><p>This is the entire content of an example bullet file, lets say <code class="codehilite"><span class="n">MyCampaign</span><span class="o">/</span><span class="n">pattern</span><span class="o">/</span><span class="n">myPattern</span><span class="p">.</span><span class="n">json</span></code>.
+<details class="example"><summary>Included with pattern</summary><p>This is the entire content of an example pattern file, lets say <code class="codehilite"><span class="n">MyCampaign</span><span class="o">/</span><span class="n">pattern</span><span class="o">/</span><span class="n">myPattern</span><span class="p">.</span><span class="n">json</span></code>.
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -40458,7 +40458,7 @@ When referencing this bullet from a different file, the <code class="codehilite"
 </details>
 <h2 id="bullet-properties">Bullet Properties</h2>
 <p>Most properties of a bullet are set as part of a <code class="codehilite"><span class="n">keyframe</span></code>, to simplify changing the state of a bullet between specific configurations. </p>
-<p>However some important properties are set for the bullet as a whole, instead of being set on a keyframe level.</p>
+<p>However some important properties are set for the bullet as a whole, instead of being set per-keyframe.</p>
 <p>These are <strong>some</strong> of the most important non-keyframe properties for a bullet.</p>
 <table>
 <thead>
@@ -40597,7 +40597,7 @@ When referencing this bullet from a different file, the <code class="codehilite"
 </td></tr></table>
 <video controls> <source src="https://files.facepunch.com/ryleigh/1b1211b1/2019-08-12_21-46-12.mp4" type="video/mp4"> </video></p>
 <p>This bullet spends <code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">5</span></code> seconds in its first keyframe, eases the values to the 2<sup>nd</sup> keyframe with the easing type <code class="codehilite"><span class="n">QuadOut</span></code> (quickly approach target value, then slow down as you reach it), then spends <code class="codehilite"><span class="mi">1</span></code> second easing in to the 3<sup>rd</sup> keyframe with an easing type of <code class="codehilite"><span class="n">QuadIn</span></code> (slowly begin changing to target value, then quickly reach it).</p>
-<p>You can see that the <code class="codehilite"><span class="n">width</span></code> of the bullet quickly reaches the value in keyframe 1 (the second keyframe), before slowly easing into the large <code class="codehilite"><span class="n">width</span></code> in keyframe 2. Since keyframe 2 does not specify a new <code class="codehilite"><span class="k">length</span></code>, <code class="codehilite"><span class="n">opacity</span></code>, etc, the bullet continues to use the last value that was set.</p>
+<p>You can see that the <code class="codehilite"><span class="n">width</span></code> of the bullet quickly reaches the value in keyframe 1 (the second keyframe), before slowly easing into the large <code class="codehilite"><span class="n">width</span></code> in keyframe 2. Since keyframe 2 does not specify a new <code class="codehilite"><span class="k">length</span></code>, <code class="codehilite"><span class="n">opacity</span></code>, etc, the bullet continues to use the previously set value.</p>
 </details>
 <h3 id="shape">Shape</h3>
 <h4 id="circle">Circle</h4>
@@ -40793,7 +40793,7 @@ When referencing this bullet from a different file, the <code class="codehilite"
 
 <p><img src="https://files.facepunch.com/ryleigh/1b1311b1/Photo_2019-08-13_1_33_28_AM.jpg" width="600"/></p>
 <h3 id="sprite">Sprite</h3>
-<p>Bullets need to specify a sprite in their first keyframe. If a different sprite is specified in the next kefyrame, the bullet will blend into it over the current keyframe's duration. All the sprites used by a bullet need to have the same dimensions.</p>
+<p>Bullets must specify a sprite in their first keyframe. If a different sprite is specified in the next kefyrame, the bullet will blend into it over the current keyframe's duration. All the sprites used by a bullet need to have the same dimensions.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -40871,7 +40871,7 @@ When referencing this bullet from a different file, the <code class="codehilite"
 <p><code class="codehilite"><span class="n">colorBlinkTime</span></code> determines how rapidly the color pairs alternate - how quickly the red portion of the sprite blinks between <code class="codehilite"><span class="n">colorA1</span></code> and <code class="codehilite"><span class="n">colorA2</span></code>, etc.</p>
 <h3 id="movement">Movement</h3>
 <p>A bullet's starting velocity is set with the non-keyframe property <code class="codehilite"><span class="n">startSpeed</span></code>. <br>
-The keyframe property <code class="codehilite"><span class="n">acceleration</span></code> controls how fast they accelerate each frame <br>
+The keyframe property <code class="codehilite"><span class="n">acceleration</span></code> controls how fast they accelerate each frame. <br>
 The keyframe property <code class="codehilite"><span class="n">frictionPercent</span></code> is a value from <code class="codehilite"><span class="mi">0</span><span class="o">-</span><span class="mi">1</span></code> that controls how much of the bullet's speed is lost. A value of <code class="codehilite"><span class="mi">0</span><span class="p">.</span><span class="mi">1</span></code> means that the bullet will lose 10% of its velocity each frame.</p>
 <h4 id="changing-direction">Changing Direction</h4>
 <p>By default, bullets simply move forward in the direction their pattern spawns them in. Changing the keyframe property <code class="codehilite"><span class="n">moveAngle</span></code> will adjust the direction the bullet's <code class="codehilite"><span class="n">acceleration</span></code> moves them in.</p>
@@ -41027,8 +41027,8 @@ The keyframe property <code class="codehilite"><span class="n">frictionPercent</
 <video controls> <source src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1411b1/2019-08-14_15-10-35.mp4" type="video/mp4"> </video>
 
 <p>Now, the same bullets as before are all moving to the right on their third keyframe, instead of moving 90° to the right of their current angle.</p>
-<p>In other words, bullets normally factor in their starting angle, so that bullet patterns will be 'symmetrical'.<br>
-Generally, homing/following bullets will want to set <code class="codehilite"><span class="n">useAbsoluteAngles</span></code> to <code class="codehilite"><span class="k">true</span></code>.</p>
+<p>In other words, bullets normally factor in their starting angle, so that bullet patterns will be 'symmetrical'.<br></p>
+<p>Generally, homing/following bullets will want to set <code class="codehilite"><span class="n">useAbsoluteAngles</span></code> to <code class="codehilite"><span class="k">true</span></code>.</p>
 <p>For the record, this is the way angles are set up in Chippy:
 <img src="https://s3-eu-west-1.amazonaws.com/files.facepunch.com/ryleigh/1b1411b1/Photo_2019-08-14_3_21_56_PM.jpg" width="450"/></p>
 <h4 id="direct-movement">Direct Movement</h4>
