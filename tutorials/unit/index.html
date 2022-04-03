@@ -583,6 +583,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
       
       
       
@@ -40429,6 +40436,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
       
       
       
@@ -41947,11 +41961,11 @@ Instead of using the <code class="codehilite"><span class="n">path</span></code>
 <p class="admonition-title">Warning</p>
 <p>When specifying the starting value of custom properties, you <strong>can't</strong> use a scriptfunc.</p>
 <p>For instance:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;revengeCounter&quot;</span><span class="err">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Int&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="s2">&quot;rand.Int(0, 99)&quot;</span><span class="p">}</span><span class="err">,</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;revengeCounter&quot;</span><span class="err">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Int&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="s2">&quot;rand.Int(0, 99)&quot;</span> <span class="p">}</span><span class="err">,</span>
 </pre></div>
 </td></tr></table>
-Is <strong>not</strong> allowed, but using a simple value of <code class="codehilite"><span class="mi">6</span></code> is:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;revengeCounter&quot;</span><span class="err">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Int&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">}</span><span class="err">,</span>
+Is <strong>not</strong> allowed, but using a simple value like <code class="codehilite"><span class="mi">6</span></code> is:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;revengeCounter&quot;</span><span class="err">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Int&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="mi">6</span> <span class="p">}</span><span class="err">,</span>
 </pre></div>
 </td></tr></table></p>
 </div>
@@ -42008,7 +42022,7 @@ Is <strong>not</strong> allowed, but using a simple value of <code class="codehi
 </pre></div>
 </td></tr></table>
 
-<p><i>The unit on the left has no shader, while the unit on the right has a subtle cloudy coloring.</i>
+<p><i>The unit on the left has no "shader", while the unit on the right has a subtle cloudy coloring.</i>
 <img src="https://files.facepunch.com/ryleigh/1b1111b1/shader.png" /></p>
 <h2 id="speech-bubbles">Speech Bubbles</h2>
 <p>Unit's <code class="codehilite"><span class="n">SpawnBubble</span></code> creates a speech bubble coming out of a part.</p>
@@ -42127,6 +42141,244 @@ Is <strong>not</strong> allowed, but using a simple value of <code class="codehi
 <h2 id="debugging">Debugging</h2>
 <p><code class="codehilite"><span class="n">debugVector</span></code>: draws a 2d vector from the unit's position <br>
 <code class="codehilite"><span class="n">debugText</span></code>: displays a string below the unit's position (use <code class="codehilite"><span class="cp">${</span><span class="n">NAME</span><span class="cp">}</span></code> for properties)</p>
+<h2 id="examples">Examples</h2>
+<details class="example"><summary>Phobia movement</summary><p>The Phobia boss script is at <code class="codehilite"><span class="n">redux</span><span class="o">/</span><span class="n">hunter</span><span class="o">/</span><span class="n">unit</span><span class="o">/</span><span class="n">boss</span><span class="p">.</span><span class="n">json</span></code>.</p>
+<p><strong>Form 0</strong> alternates between moving toward the center of the stage, and running from the player.</p>
+<p><video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/220403-RaPneD/hunter_form0.mp4" type="video/mp4" > </video></p>
+<p>In <code class="codehilite"><span class="n">properties</span></code>, the unit declares the Vector2 property <code class="codehilite"><span class="n">targetPos</span></code> to represent where to move, and the boolean variable <code class="codehilite"><span class="n">isGoingToCenter</span></code> to keep track of the state:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;targetPos&quot;</span><span class="err">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vector2&quot;</span><span class="p">,</span> <span class="p">}</span><span class="err">,</span>
+<span class="s2">&quot;isGoingToCenter&quot;</span><span class="err">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Bool&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+<code class="codehilite"><span class="n">targetPos</span></code> defaults to <code class="codehilite"><span class="n">Vector2</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></code>, the center of the stage, and we'll keep that inital value during Form 0.</p>
+<p>In the definition of the first form, the <code class="codehilite"><span class="n">accelVector</span></code> property controls the unit's acceleration:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>294</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;accelVector&quot;</span><span class="err">:</span><span class="s2">&quot;normalize(isGoingToCenter ? (targetPos - unitPos) : (unitPos - playerPos)) * map(dist(isGoingToCenter ? (targetPos - unitPos) : (unitPos - playerPos)), 0f, 80f, (isGoingToCenter ? 16f : 3f), (isGoingToCenter ? 30f : 15f), &#39;SineOut&#39;) * select(diffInt, 0.8f, 1f, 1.2f)&quot;</span><span class="err">,</span>
+</pre></div>
+</td></tr></table></p>
+<p><strong><code class="codehilite"><span class="n">normalize</span><span class="p">(</span><span class="n">isGoingToCenter</span> <span class="o">?</span> <span class="p">(</span><span class="n">targetPos</span> <span class="o">-</span> <span class="n">unitPos</span><span class="p">)</span> <span class="p">:</span> <span class="p">(</span><span class="n">unitPos</span> <span class="o">-</span> <span class="n">playerPos</span><span class="p">))</span></code></strong></p>
+<p>In the above section, <code class="codehilite"><span class="p">(</span><span class="n">targetPos</span> <span class="o">-</span> <span class="n">unitPos</span><span class="p">)</span></code> represents the vector from the boss to (0, 0), and <code class="codehilite"><span class="p">(</span><span class="n">unitPos</span> <span class="o">-</span> <span class="n">playerPos</span><span class="p">)</span></code> represents the vector from the player to the boss.</p>
+<p>We choose which vector to use depending on whether <code class="codehilite"><span class="n">isGoingToCenter</span></code> is true or false, using a <a href="https://en.wikipedia.org/wiki/%3F:">ternary operator</a>.</p>
+<p>Then we <code class="codehilite"><span class="n">normalize</span></code> the vector, which keeps the same direction but sets the length to 1. The normalized vector is multiplied by this next section, which determines the speed based on distance to the target:</p>
+<p><strong><code class="codehilite"><span class="k">map</span><span class="p">(</span><span class="n">dist</span><span class="p">(</span><span class="n">isGoingToCenter</span> <span class="o">?</span> <span class="p">(</span><span class="n">targetPos</span> <span class="o">-</span> <span class="n">unitPos</span><span class="p">)</span> <span class="p">:</span> <span class="p">(</span><span class="n">unitPos</span> <span class="o">-</span> <span class="n">playerPos</span><span class="p">)),</span> <span class="mi">0</span><span class="n">f</span><span class="p">,</span> <span class="mi">80</span><span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="n">isGoingToCenter</span> <span class="o">?</span> <span class="mi">16</span><span class="n">f</span> <span class="p">:</span> <span class="mi">3</span><span class="n">f</span><span class="p">),</span> <span class="p">(</span><span class="n">isGoingToCenter</span> <span class="o">?</span> <span class="mi">30</span><span class="n">f</span> <span class="p">:</span> <span class="mi">15</span><span class="n">f</span><span class="p">),</span> <span class="s1">&#39;SineOut&#39;</span><span class="p">)</span></code></strong></p>
+<p><code class="codehilite"><span class="n">dist</span><span class="p">(</span><span class="n">isGoingToCenter</span> <span class="o">?</span> <span class="p">(</span><span class="n">targetPos</span> <span class="o">-</span> <span class="n">unitPos</span><span class="p">)</span> <span class="p">:</span> <span class="p">(</span><span class="n">unitPos</span> <span class="o">-</span> <span class="n">playerPos</span><span class="p">))</span></code> finds the distance to the target, depending on our current state.</p>
+<p>The <code class="codehilite"><span class="k">map</span></code> function checks how far the distance is from <code class="codehilite"><span class="mi">0</span><span class="n">f</span></code> to <code class="codehilite"><span class="mi">80</span><span class="n">f</span></code>, and returns the corresponding value in the range from <code class="codehilite"><span class="p">(</span><span class="n">isGoingToCenter</span> <span class="o">?</span> <span class="mi">16</span><span class="n">f</span> <span class="p">:</span> <span class="mi">3</span><span class="n">f</span><span class="p">)</span></code> to <code class="codehilite"><span class="p">(</span><span class="n">isGoingToCenter</span> <span class="o">?</span> <span class="mi">30</span><span class="n">f</span> <span class="p">:</span> <span class="mi">15</span><span class="n">f</span><span class="p">)</span></code>.
+For example, if the distance is <code class="codehilite"><span class="mi">80</span></code> or higher, it will return the max side of the range: <code class="codehilite"><span class="mi">30</span></code> if <code class="codehilite"><span class="n">isGoingToCenter</span></code> is true, and <code class="codehilite"><span class="mi">15</span></code> otherwise.</p>
+<p>For the final part of <code class="codehilite"><span class="n">accelVector</span></code>, the speed is adjusted based on the difficulty:</p>
+<p><strong><code class="codehilite"><span class="k">select</span><span class="p">(</span><span class="n">diffInt</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="n">f</span><span class="p">)</span></code></strong></p>
+<p>The <code class="codehilite"><span class="k">select</span></code> function checks the first parameter (in this case the difficulty represented as either <code class="codehilite"><span class="mi">0</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span></code> for Easy/Normal/Nightmare). It uses the first parameter to decide which of the other parameters to use, for example if <code class="codehilite"><span class="n">diffInt</span></code> is <code class="codehilite"><span class="mi">2</span></code>, the returned value will be <code class="codehilite"><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="n">f</span></code>.</p>
+<p>In essence, the long <code class="codehilite"><span class="n">accelVector</span></code> function can be thought of as: <em>"accelVector":"direction * speed * difficulty modifier"</em></p>
+<p>Also in the the first form, these properties control the unit's rotation:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>295
+296
+297</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;facingMode&quot;</span><span class="err">:</span><span class="s2">&quot;Target&quot;</span><span class="err">,</span>
+<span class="s2">&quot;targetFacingAngle&quot;</span><span class="err">:</span><span class="s2">&quot;vecToAngle(isGoingToCenter ? (targetPos - unitPos) : (unitPos - playerPos))&quot;</span><span class="err">,</span>
+<span class="s2">&quot;facingLerpSpeed&quot;</span><span class="err">:</span><span class="s2">&quot;map(distSqr(targetPos - unitPos), 0f, 100f * 100f, 0.00175f, 0.0066f, &#39;QuadIn&#39;) * select(diffInt, 1f, 1f, 1.5f)&quot;</span><span class="err">,</span>
+</pre></div>
+</td></tr></table></p>
+<p>To determine <code class="codehilite"><span class="n">targetFacingAngle</span></code>, we use <code class="codehilite"><span class="n">vecToAngle</span></code> to convert the intended direction into degrees.</p>
+<p>For <code class="codehilite"><span class="n">facingLerpSpeed</span></code>, we again use a <code class="codehilite"><span class="k">map</span></code> function to lerp a value based on distance (though in this case we use <code class="codehilite"><span class="n">distSqr</span></code> as it's more performant). The boss rotates faster when they are farther away from the center of the stage.</p>
+<p>We also need to change the value of <code class="codehilite"><span class="n">isGoingToCenter</span></code>:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>391
+392
+393</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;onUpdate&quot;</span><span class="err">:</span><span class="p">[</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;isGoingToCenter &amp;&amp; distSqr(targetPos - unitPos) &lt; select(diffInt, 2f, 2f, 25f)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;isGoingToCenter&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},],},</span>
+</pre></div>
+</td></tr></table></p>
+<p>Every frame Form 0 runs the <code class="codehilite"><span class="n">onUpdate</span></code> method. The above Condition checks if <code class="codehilite"><span class="n">isGoingToCenter</span></code> is true, and if the boss is close enough to the center of the stage - if so, <code class="codehilite"><span class="n">isGoingToCenter</span></code> is set to false.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>467
+468
+469
+470</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;onOutOfBoundsLeft&quot;</span><span class="err">:</span><span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;isGoingToCenter&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="p">]</span><span class="err">,</span>
+<span class="s2">&quot;onOutOfBoundsRight&quot;</span><span class="err">:</span><span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;isGoingToCenter&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="p">]</span><span class="err">,</span>
+<span class="s2">&quot;onOutOfBoundsDown&quot;</span><span class="err">:</span><span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;isGoingToCenter&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="p">]</span><span class="err">,</span>
+<span class="s2">&quot;onOutOfBoundsUp&quot;</span><span class="err">:</span><span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;isGoingToCenter&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="p">]</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>These callbacks set the value of <code class="codehilite"><span class="n">isGoingToCenter</span></code> to true whenever the boss hits the outer bounds of the stage.</p>
+<hr />
+<p><strong>Form 1</strong> simply moves and rotates toward the player, but it rotates slower when it's near the player, and moves faster when it's facing the player or far from the player. </p>
+<p><video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/220403-nmf6pT/hunter_form1.mp4" type="video/mp4" > </video></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>504
+505
+506
+507</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;accelVector&quot;</span><span class="err">:</span><span class="s2">&quot;normalize(playerPos - unitPos) * map(distSqr(playerPos - unitPos), 0f, 100f * 100f, map(dot(unitFacingDir, normalize(playerPos - unitPos)), -1f, 1f, 0f, 1f, &#39;QuadInOut&#39;), map(dot(unitFacingDir, normalize(playerPos - unitPos)), -1f, 1f, 15f, 75f, &#39;QuadInOut&#39;), &#39;Linear&#39;) * (0.4f + (fastSin(unitTime * 1f) * 0.33f)) * select(diffInt, 0.8f, 1f, 1.2f)&quot;</span><span class="err">,</span>
+<span class="s2">&quot;facingMode&quot;</span><span class="err">:</span><span class="s2">&quot;Target&quot;</span><span class="err">,</span>
+<span class="s2">&quot;targetFacingAngle&quot;</span><span class="err">:</span><span class="s2">&quot;vecToAngle(playerPos - unitPos)&quot;</span><span class="err">,</span>
+<span class="s2">&quot;facingLerpSpeed&quot;</span><span class="err">:</span><span class="s2">&quot;map(distSqr(playerPos - unitPos), 0f, 75f * 75f, 0f, 0.015f, &#39;QuadIn&#39;)&quot;</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>The long <code class="codehilite"><span class="n">accelVector</span></code> property for Form 1 involves nested <code class="codehilite"><span class="k">map</span></code> functions, so it looks more confusing than it is.</p>
+<p><strong><code class="codehilite"><span class="k">map</span><span class="p">(</span><span class="n">distSqr</span><span class="p">(</span><span class="n">playerPos</span> <span class="o">-</span> <span class="n">unitPos</span><span class="p">),</span> <span class="mi">0</span><span class="n">f</span><span class="p">,</span> <span class="mi">100</span><span class="n">f</span> <span class="o">*</span> <span class="mi">100</span><span class="n">f</span><span class="p">,</span> <span class="k">map</span><span class="p">(</span><span class="n">dot</span><span class="p">(</span><span class="n">unitFacingDir</span><span class="p">,</span> <span class="n">normalize</span><span class="p">(</span><span class="n">playerPos</span> <span class="o">-</span> <span class="n">unitPos</span><span class="p">)),</span> <span class="o">-</span><span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="mi">0</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;QuadInOut&#39;</span><span class="p">),</span> <span class="k">map</span><span class="p">(</span><span class="n">dot</span><span class="p">(</span><span class="n">unitFacingDir</span><span class="p">,</span> <span class="n">normalize</span><span class="p">(</span><span class="n">playerPos</span> <span class="o">-</span> <span class="n">unitPos</span><span class="p">)),</span> <span class="o">-</span><span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="mi">15</span><span class="n">f</span><span class="p">,</span> <span class="mi">75</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;QuadInOut&#39;</span><span class="p">),</span> <span class="s1">&#39;Linear&#39;</span><span class="p">)</span></code></strong></p>
+<p>This can be represented as <em>map(distance squared, 0, 100*100, 0-1 based on facing the player, 15-75 based on facing the player)</em></p>
+<p>The <code class="codehilite"><span class="n">dot</span></code> function takes two vectors, and returns a value from -1 to 1 depending on how much the vectors point in the same direction. If the vectors are facing in opposite directions, it returns -1, and if they are facing in the exact same direction, it returns 1.</p>
+<p><strong><code class="codehilite"><span class="k">map</span><span class="p">(</span><span class="n">dot</span><span class="p">(</span><span class="n">unitFacingDir</span><span class="p">,</span> <span class="n">normalize</span><span class="p">(</span><span class="n">playerPos</span> <span class="o">-</span> <span class="n">unitPos</span><span class="p">)),</span> <span class="o">-</span><span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="mi">0</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;QuadInOut&#39;</span><span class="p">)</span></code></strong> </p>
+<p>The above <code class="codehilite"><span class="k">map</span></code> simply checks how closely the boss is facing the player, and re-maps the lower end of the -1 to 1 range to 0 instead.</p>
+<p><strong><code class="codehilite"><span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span> <span class="o">+</span> <span class="p">(</span><span class="n">fastSin</span><span class="p">(</span><span class="n">unitTime</span> <span class="o">*</span> <span class="mi">1</span><span class="n">f</span><span class="p">)</span> <span class="o">*</span> <span class="mi">0</span><span class="p">.</span><span class="mi">33</span><span class="n">f</span><span class="p">))</span></code></strong></p>
+<p>The above section simply uses <code class="codehilite"><span class="n">fastSin</span></code> (a more performant, less precise version of <code class="codehilite"><span class="n">sin</span></code>) to multiply by (0.4 - 0.33) to (0.4 + 0.33), depending on time.</p>
+<hr />
+<p><strong>Form 2</strong> has the most complex movement behaviour. The boss repeats this same pattern:<br>
+1. aim toward the player without moving for 6 seconds<br>
+2. move forward until hitting the side of the stage or until a certain amount of time elapses<br>
+3. wait for a bit without moving or rotating<br></p>
+<p><video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/220403-jRf7yS/hunter_form2.mp4" type="video/mp4" > </video></p>
+<p>These variables are defined in <code class="codehilite"><span class="n">properties</span></code> to control the movement of Form 2:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;form2IsRecovering&quot;</span><span class="err">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Bool&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">}</span><span class="err">,</span>
+<span class="s2">&quot;form2IsAiming&quot;</span><span class="err">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Bool&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}</span><span class="err">,</span>
+<span class="s2">&quot;form2IsMoving&quot;</span><span class="err">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Bool&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">}</span><span class="err">,</span>
+<span class="s2">&quot;form2Timer&quot;</span><span class="err">:</span> <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Float&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>In the <code class="codehilite"><span class="n">onUpdate</span></code> callback for Form 2, we check multiple Conditions based on the value of the properties.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 972
+ 973
+ 974
+ 975
+ 976
+ 977
+ 978
+ 979
+ 980
+ 981
+ 982
+ 983
+ 984
+ 985
+ 986
+ 987
+ 988
+ 989
+ 990
+ 991
+ 992
+ 993
+ 994
+ 995
+ 996
+ 997
+ 998
+ 999
+1000
+1001
+1002
+1003
+1004
+1005</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;onUpdate&quot;</span><span class="err">:</span><span class="p">[</span>
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;form2IsRecovering&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[</span> 
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2Timer&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;form2Timer + dt&quot;</span><span class="p">,</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;form2Timer &gt; map(unitPixelPercent, 1f, 0.33f, 10f, 8f, &#39;QuadIn&#39;)&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[</span> 
+                    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallSubroutine&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;.form2StartAiming.sub&quot;</span><span class="p">,</span> <span class="p">},</span> 
+                <span class="p">],},</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;false&quot;</span><span class="p">:</span> <span class="p">[</span> 
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;form2IsAiming&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[</span> 
+                    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2Timer&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;form2Timer + dt&quot;</span><span class="p">,</span> <span class="p">},</span>
+                    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;form2Timer &gt; 6f&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[</span> 
+                            <span class="err">//</span> <span class="err">charge</span>
+                            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallSubroutine&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;.speech.sub&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;#hunter.charge_2&quot;</span><span class="p">,</span> <span class="nt">&quot;chance&quot;</span><span class="p">:</span><span class="s2">&quot;attempts == 0 ? 1f : map(attempts % 5, 0, 4, 0.1f, 0.45f)&quot;</span><span class="p">,</span> <span class="p">}},</span>
+                            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2IsAiming&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+                            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2IsMoving&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+                            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2Timer&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">},</span>
+                            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetFacingLerpSpeedFunc&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;func&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">}},</span>
+                            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetAccelVectorFunc&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;func&quot;</span><span class="p">:</span> <span class="s2">&quot;unitFacingDir * 300f * mapReturn(form2Timer, 0f, map(unitDestroyedPartCount, 0, 10, 7.5f, 4.5f) * select(diffInt, 1.25f, 1f, 0.85f), 0f, 1f, &#39;Linear&#39;) * select(diffInt, 0.4f, 1f, 1.2f)&quot;</span><span class="p">}},</span>
+
+                            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2NumTimesMoved&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;form2NumTimesMoved + 1&quot;</span> <span class="p">},</span>
+                        <span class="p">],},</span>
+                <span class="p">],},</span>
+        <span class="p">],</span> <span class="p">},</span>
+
+    <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;form2IsMoving&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[</span> 
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2Timer&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;form2Timer + dt&quot;</span><span class="p">,</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;form2Timer &gt; map(unitDestroyedPartCount, 0, 10, 7.5f, 4.5f) * select(diffInt, 1.25f, 1f, 0.85f)&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallSubroutine&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;.form2HitEdge.sub&quot;</span><span class="p">,</span> <span class="p">},</span> <span class="p">],},</span>
+        <span class="p">],},</span>
+</pre></div>
+</td></tr></table>
+
+<p>If <code class="codehilite"><span class="n">form2IsRecovering</span></code> is true, we wait a certain amount of time before calling the subroutine <code class="codehilite"><span class="na">.form2StartAiming.sub</span></code></p>
+<p>If <code class="codehilite"><span class="n">form2IsAiming</span></code> is true, we wait 6 seconds before setting <code class="codehilite"><span class="n">form2IsMoving</span></code> to true, using <code class="codehilite"><span class="n">SetFacingLerpSpeedFunc</span></code> to set rotation speed to 0, and using <code class="codehilite"><span class="n">SetAccelVectorFunc</span></code> to change the boss' speed.</p>
+<p>If <code class="codehilite"><span class="n">form2IsMoving</span></code> is true, we increment <code class="codehilite"><span class="n">form2Timer</span></code> and call the subroutine <code class="codehilite"><span class="na">.form2HitEdge.sub</span></code> if enough time has elapsed. We also call that subroutine if the boss hits the edge of the stage.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1934
+1935
+1936
+1937
+1938
+1939
+1940
+1941
+1942
+1943
+1944
+1945
+1946
+1947
+1948
+1949
+1950
+1951
+1952
+1953
+1954
+1955
+1956
+1957
+1958
+1959
+1960
+1961
+1962
+1963
+1964
+1965</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;form2StartAiming.sub&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallSubroutine&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;.speech.sub&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;#hunter.aim_2&quot;</span><span class="p">,</span> <span class="nt">&quot;chance&quot;</span><span class="p">:</span><span class="s2">&quot;attempts == 0 ? 0.1f : map((attempts + 2) % 7, 0, 6, 0.05f, 0.4f)&quot;</span><span class="p">,</span> <span class="p">}},</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2IsRecovering&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2IsAiming&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2IsMoving&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2Timer&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetAccelVectorFunc&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;func&quot;</span><span class="p">:</span> <span class="s2">&quot;vec2(0,0)&quot;</span><span class="p">}},</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetFacingLerpSpeedFunc&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;func&quot;</span><span class="p">:</span> <span class="s2">&quot;map(distSqr(playerPos - unitPos), 0f, 100f * 100f, 0.0075f, 0.045f, &#39;QuadIn&#39;) * select(diffInt, 0.7f, 0.95f, 1f) * map(form2Timer, 0f, 2f, 0f, 1f, &#39;QuadIn&#39;)&quot;</span><span class="p">}},</span>
+
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;distSqr(playerPos - unitPos) &lt; 100f * 100f &amp;&amp; !stage.DoesBulletExist(&#39;redux/hunter/pattern/draggingVine.chainBullet&#39;) &amp;&amp; numShotPatterns % 5 != 4&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallSubroutine&quot;</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;.attackSpeech.sub&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;#hunter.attack_1&quot;</span><span class="p">,</span> <span class="nt">&quot;chanceIncrease&quot;</span><span class="p">:</span><span class="mi">0</span> <span class="p">}},</span>
+                <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;ChargePattern&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;redux/hunter/pattern/draggingVine.1&quot;</span><span class="p">,</span> <span class="nt">&quot;partType&quot;</span><span class="p">:</span> <span class="s2">&quot;core&quot;</span><span class="p">,</span> <span class="nt">&quot;chargeTime&quot;</span><span class="p">:</span><span class="s2">&quot;0.5f * select(diffInt, 1.2f, 1f, 0.8f)&quot;</span><span class="p">,</span> <span class="nt">&quot;dir&quot;</span><span class="p">:</span><span class="s2">&quot;playerPos - partPos&quot;</span><span class="p">,</span> <span class="p">}},</span>
+                <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Wait&quot;</span><span class="p">,</span> <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;3f * select(diffInt, 1.2f, 1f, 0.8f)&quot;</span> <span class="p">},</span>
+            <span class="p">],},</span>
+
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Condition&quot;</span><span class="p">,</span> <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;form2NumTimesMoved % 4 == 3 || form2NumTimesMoved == 9 || form2NumTimesMoved == 21&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;true&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetTargetFacingAngleFunc&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;func&quot;</span><span class="p">:</span> <span class="s2">&quot;vecToAngle(vec2(0f, 0f) - unitPos) + (fastSin(stageTime * 2f) * 10f)&quot;</span><span class="p">}},],</span>
+            <span class="nt">&quot;false&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetTargetFacingAngleFunc&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;func&quot;</span><span class="p">:</span> <span class="s2">&quot;vecToAngle(playerPos - unitPos)&quot;</span><span class="p">}},],},</span>
+    <span class="p">]</span>
+<span class="p">}</span><span class="err">,</span>
+
+<span class="s2">&quot;form2HitEdge.sub&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;CallMethod&quot;</span><span class="p">,</span> <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;SetAccelVectorFunc&quot;</span><span class="p">,</span> <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;func&quot;</span><span class="p">:</span> <span class="s2">&quot;vec2(0,0)&quot;</span><span class="p">}},</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2IsRecovering&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2IsAiming&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2IsMoving&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;SetValue&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;form2Timer&quot;</span><span class="p">,</span> <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}</span><span class="err">,</span>
+</pre></div>
+</td></tr></table>
+
+<p>In <code class="codehilite"><span class="n">form2StartAiming</span><span class="p">.</span><span class="n">sub</span></code>, we use <code class="codehilite"><span class="n">SetAccelVectorFunc</span></code> to set the acceleration to <code class="codehilite"><span class="n">vec2</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></code> so the boss doesn't move, and use <code class="codehilite"><span class="n">SetFacingLerpSpeedFunc</span></code> so that the boss will aim at the player.</p>
+<p>Likewise, in <code class="codehilite"><span class="n">form2HitEdge</span><span class="p">.</span><span class="n">sub</span></code> we also set the acceleration to 0 so the boss stops moving, and we set the flag <code class="codehilite"><span class="n">form2IsRecovering</span></code> to true.</p>
+</details>
 
     <!-- Source files -->
     
