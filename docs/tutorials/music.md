@@ -74,7 +74,7 @@ These are three different files included:
       "samples": {
         "drum0": { "startBar": 0, "lengthBars": 2 },
         "drum1": { "startBar": 2, "lengthBars": 2 },
-        "drum_fill": { "startBar": 4, "lengthBars": 2 },
+        "drum_fill": { "startBar": 4, "lengthBars": 1 },
         "bass0": { "startBar": 5, "lengthBars": 2 },
         "bass1": { "startBar": 7, "lengthBars": 2 },
         "synth0": { "startBar": 9, "lengthBars": 2 },

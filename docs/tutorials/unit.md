@@ -784,7 +784,7 @@ You may want to call Actions at certain points while a unit form is active.
     "onFormRespawn":[ /* called when form has finished spawning pixels */ ],
     "onUpdate":[ /* called each frame this unit is active and not dormant or hidden, and on this form*/ ],
 	"onDestroy":[ /* called when form is destroyed */ ],
-	"onHidden":[ /* called when unit has becomes hidden */ ],
+	"onHidden":[ /* called when unit has become hidden */ ],
 	"onPixelHit":[ /* called when a pixel of this form is hit by a bullet */ ],
 	"onPixelHitByLaser":[ /* called pixel of this form is hit by a laser */ ],
 	"onPixelDestroyed":[ /* called pixel of this form is destroyed */ ],
@@ -891,11 +891,11 @@ To modify them, use the SetValue method:
 	
 	For instance:
 	```json
-	"revengeCounter": { "type": "Int", "value":"rand.Int(0, 99)"},
+	"revengeCounter": { "type": "Int", "value":"rand.Int(0, 99)" },
 	```
-	Is **not** allowed, but using a simple value of `6` is:
+	Is **not** allowed, but using a simple value like `6` is:
 	```json
-	"revengeCounter": { "type": "Int", "value":6},
+	"revengeCounter": { "type": "Int", "value":6 },
 	```
 	
 
@@ -932,7 +932,7 @@ It draws a scrolling wavy texture on the pixels.
 }
 ```
 
-<i>The unit on the left has no shader, while the unit on the right has a subtle cloudy coloring.</i>
+<i>The unit on the left has no "shader", while the unit on the right has a subtle cloudy coloring.</i>
 <img src="https://files.facepunch.com/ryleigh/1b1111b1/shader.png" />
 
 ## Speech Bubbles
@@ -1027,3 +1027,212 @@ These parameters can be used inside any scriptfunc by a Unit.
 
 `debugVector`: draws a 2d vector from the unit's position <br>
 `debugText`: displays a string below the unit's position (use `${NAME}` for properties)
+
+## Examples
+
+??? example "Phobia movement"
+	The Phobia boss script is at `redux/hunter/unit/boss.json`.
+
+	**Form 0** alternates between moving toward the center of the stage, and running from the player.
+
+	<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/220403-RaPneD/hunter_form0.mp4" type="video/mp4" > </video>
+
+	In `properties`, the unit declares the Vector2 property `targetPos` to represent where to move, and the boolean variable `isGoingToCenter` to keep track of the state:
+	```json linenums="6"
+	"targetPos": { "type": "Vector2", },
+    "isGoingToCenter": { "type": "Bool", "value": false },
+    ```
+	`targetPos` defaults to `Vector2(0, 0)`, the center of the stage, and we'll keep that inital value during Form 0.
+
+	In the definition of the first form, the `accelVector` property controls the unit's acceleration:
+	```json linenums="294"
+    "accelVector":"normalize(isGoingToCenter ? (targetPos - unitPos) : (unitPos - playerPos)) * map(dist(isGoingToCenter ? (targetPos - unitPos) : (unitPos - playerPos)), 0f, 80f, (isGoingToCenter ? 16f : 3f), (isGoingToCenter ? 30f : 15f), 'SineOut') * select(diffInt, 0.8f, 1f, 1.2f)",
+    ```
+
+	**`normalize(isGoingToCenter ? (targetPos - unitPos) : (unitPos - playerPos))`**
+
+	In the above section, `(targetPos - unitPos)` represents the vector from the boss to (0, 0), and `(unitPos - playerPos)` represents the vector from the player to the boss.
+
+	We choose which vector to use depending on whether `isGoingToCenter` is true or false, using a [ternary operator](https://en.wikipedia.org/wiki/%3F:).
+	
+	Then we `normalize` the vector, which keeps the same direction but sets the length to 1. The normalized vector is multiplied by this next section, which determines the speed based on distance to the target:
+	
+	**`map(dist(isGoingToCenter ? (targetPos - unitPos) : (unitPos - playerPos)), 0f, 80f, (isGoingToCenter ? 16f : 3f), (isGoingToCenter ? 30f : 15f), 'SineOut')`**
+
+	`dist(isGoingToCenter ? (targetPos - unitPos) : (unitPos - playerPos))` finds the distance to the target, depending on our current state.
+
+	The `map` function checks how far the distance is from `0f` to `80f`, and returns the corresponding value in the range from `(isGoingToCenter ? 16f : 3f)` to `(isGoingToCenter ? 30f : 15f)`.
+	For example, if the distance is `80` or higher, it will return the max side of the range: `30` if `isGoingToCenter` is true, and `15` otherwise.
+
+	For the final part of `accelVector`, the speed is adjusted based on the difficulty:
+
+	**`select(diffInt, 0.8f, 1f, 1.2f)`**
+
+	The `select` function checks the first parameter (in this case the difficulty represented as either `0/1/2` for Easy/Normal/Nightmare). It uses the first parameter to decide which of the other parameters to use, for example if `diffInt` is `2`, the returned value will be `1.2f`.
+
+	In essence, the long `accelVector` function can be thought of as: _"accelVector":"direction * speed * difficulty modifier"_
+
+	Also in the the first form, these properties control the unit's rotation:
+	```json linenums="295"
+	"facingMode":"Target",
+	"targetFacingAngle":"vecToAngle(isGoingToCenter ? (targetPos - unitPos) : (unitPos - playerPos))",
+	"facingLerpSpeed":"map(distSqr(targetPos - unitPos), 0f, 100f * 100f, 0.00175f, 0.0066f, 'QuadIn') * select(diffInt, 1f, 1f, 1.5f)",
+    ```
+
+	To determine `targetFacingAngle`, we use `vecToAngle` to convert the intended direction into degrees.
+
+	For `facingLerpSpeed`, we again use a `map` function to lerp a value based on distance (though in this case we use `distSqr` as it's more performant). The boss rotates faster when they are farther away from the center of the stage.
+
+	We also need to change the value of `isGoingToCenter`:
+	```json linenums="391"
+	"onUpdate":[
+		{ "action": "Condition", "condition": "isGoingToCenter && distSqr(targetPos - unitPos) < select(diffInt, 2f, 2f, 25f)",
+			"true": [{ "action": "SetValue", "name": "isGoingToCenter", "value": false },],},
+    ```
+
+	Every frame Form 0 runs the `onUpdate` method. The above Condition checks if `isGoingToCenter` is true, and if the boss is close enough to the center of the stage - if so, `isGoingToCenter` is set to false.
+	
+	```json linenums="467"
+	"onOutOfBoundsLeft":[ { "action": "SetValue", "name": "isGoingToCenter", "value": true }, ],
+	"onOutOfBoundsRight":[ { "action": "SetValue", "name": "isGoingToCenter", "value": true }, ],
+	"onOutOfBoundsDown":[ { "action": "SetValue", "name": "isGoingToCenter", "value": true }, ],
+	"onOutOfBoundsUp":[ { "action": "SetValue", "name": "isGoingToCenter", "value": true }, ],
+    ```
+
+	These callbacks set the value of `isGoingToCenter` to true whenever the boss hits the outer bounds of the stage.
+
+	_____________
+	**Form 1** simply moves and rotates toward the player, but it rotates slower when it's near the player, and moves faster when it's facing the player or far from the player. 
+
+	<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/220403-nmf6pT/hunter_form1.mp4" type="video/mp4" > </video>
+
+	```json linenums="504"
+	"accelVector":"normalize(playerPos - unitPos) * map(distSqr(playerPos - unitPos), 0f, 100f * 100f, map(dot(unitFacingDir, normalize(playerPos - unitPos)), -1f, 1f, 0f, 1f, 'QuadInOut'), map(dot(unitFacingDir, normalize(playerPos - unitPos)), -1f, 1f, 15f, 75f, 'QuadInOut'), 'Linear') * (0.4f + (fastSin(unitTime * 1f) * 0.33f)) * select(diffInt, 0.8f, 1f, 1.2f)",
+	"facingMode":"Target",
+	"targetFacingAngle":"vecToAngle(playerPos - unitPos)",
+	"facingLerpSpeed":"map(distSqr(playerPos - unitPos), 0f, 75f * 75f, 0f, 0.015f, 'QuadIn')",
+    ```
+
+	The long `accelVector` property for Form 1 involves nested `map` functions, so it looks more confusing than it is.
+
+	**`map(distSqr(playerPos - unitPos), 0f, 100f * 100f, map(dot(unitFacingDir, normalize(playerPos - unitPos)), -1f, 1f, 0f, 1f, 'QuadInOut'), map(dot(unitFacingDir, normalize(playerPos - unitPos)), -1f, 1f, 15f, 75f, 'QuadInOut'), 'Linear')`**
+
+	This can be represented as _map(distance squared, 0, 100*100, 0-1 based on facing the player, 15-75 based on facing the player)_
+
+	The `dot` function takes two vectors, and returns a value from -1 to 1 depending on how much the vectors point in the same direction. If the vectors are facing in opposite directions, it returns -1, and if they are facing in the exact same direction, it returns 1.
+
+	**`map(dot(unitFacingDir, normalize(playerPos - unitPos)), -1f, 1f, 0f, 1f, 'QuadInOut')`** 
+
+	The above `map` simply checks how closely the boss is facing the player, and re-maps the lower end of the -1 to 1 range to 0 instead.
+
+	**`(0.4f + (fastSin(unitTime * 1f) * 0.33f))`**
+
+	The above section simply uses `fastSin` (a more performant, less precise version of `sin`) to multiply by (0.4 - 0.33) to (0.4 + 0.33), depending on time.
+
+	_____________
+	**Form 2** has the most complex movement behaviour. The boss repeats this same pattern:<br>
+	1. aim toward the player without moving for 6 seconds<br>
+	2. move forward until hitting the side of the stage or until a certain amount of time elapses<br>
+	3. wait for a bit without moving or rotating<br>
+
+	<video controls width="100%"> <source src="https://files.facepunch.com/ryleigh/220403-jRf7yS/hunter_form2.mp4" type="video/mp4" > </video>
+
+	These variables are defined in `properties` to control the movement of Form 2:
+
+	```json linenums="9"
+	"form2IsRecovering": { "type": "Bool", "value": false },
+	"form2IsAiming": { "type": "Bool", "value": true },
+	"form2IsMoving": { "type": "Bool", "value": false },
+	"form2Timer": { "type": "Float", "value": 0 },
+    ```
+
+	In the `onUpdate` callback for Form 2, we check multiple Conditions based on the value of the properties.
+
+	```json linenums="972"
+	"onUpdate":[
+		{ "action": "Condition", "condition": "form2IsRecovering",
+			"true": [ 
+				{ "action": "SetValue", "name": "form2Timer", "value": "form2Timer + dt", },
+				{ "action": "Condition", "condition": "form2Timer > map(unitPixelPercent, 1f, 0.33f, 10f, 8f, 'QuadIn')",
+					"true": [ 
+						{ "action": "CallSubroutine", "target":"unit", "path": ".form2StartAiming.sub", }, 
+					],},
+			],
+			"false": [ 
+				{ "action": "Condition", "condition": "form2IsAiming",
+					"true": [ 
+						{ "action": "SetValue", "name": "form2Timer", "value": "form2Timer + dt", },
+						{ "action": "Condition", "condition": "form2Timer > 6f",
+							"true": [ 
+								// charge
+								{ "action": "CallSubroutine", "target":"unit", "path": ".speech.sub", "params": { "message": "#hunter.charge_2", "chance":"attempts == 0 ? 1f : map(attempts % 5, 0, 4, 0.1f, 0.45f)", }},
+								{ "action": "SetValue", "name": "form2IsAiming", "value": false },
+								{ "action": "SetValue", "name": "form2IsMoving", "value": true },
+								{ "action": "SetValue", "name": "form2Timer", "value": 0 },
+								{ "action": "CallMethod", "method": "SetFacingLerpSpeedFunc", "params": { "func": "0"}},
+								{ "action": "CallMethod", "method": "SetAccelVectorFunc", "params": { "func": "unitFacingDir * 300f * mapReturn(form2Timer, 0f, map(unitDestroyedPartCount, 0, 10, 7.5f, 4.5f) * select(diffInt, 1.25f, 1f, 0.85f), 0f, 1f, 'Linear') * select(diffInt, 0.4f, 1f, 1.2f)"}},
+								
+								{ "action": "SetValue", "name": "form2NumTimesMoved", "value": "form2NumTimesMoved + 1" },
+							],},
+					],},
+			], },
+
+		{ "action": "Condition", "condition": "form2IsMoving",
+			"true": [ 
+				{ "action": "SetValue", "name": "form2Timer", "value": "form2Timer + dt", },
+				{ "action": "Condition", "condition": "form2Timer > map(unitDestroyedPartCount, 0, 10, 7.5f, 4.5f) * select(diffInt, 1.25f, 1f, 0.85f)",
+					"true": [ { "action": "CallSubroutine", "target":"unit", "path": ".form2HitEdge.sub", }, ],},
+			],},
+    ```
+
+	If `form2IsRecovering` is true, we wait a certain amount of time before calling the subroutine `.form2StartAiming.sub`
+
+	If `form2IsAiming` is true, we wait 6 seconds before setting `form2IsMoving` to true, using `SetFacingLerpSpeedFunc` to set rotation speed to 0, and using `SetAccelVectorFunc` to change the boss' speed.
+
+	If `form2IsMoving` is true, we increment `form2Timer` and call the subroutine `.form2HitEdge.sub` if enough time has elapsed. We also call that subroutine if the boss hits the edge of the stage.
+
+	
+	```json linenums="1934"
+	"form2StartAiming.sub": {
+        "actions": [
+            { "action": "CallSubroutine", "target":"unit", "path": ".speech.sub", "params": { "message": "#hunter.aim_2", "chance":"attempts == 0 ? 0.1f : map((attempts + 2) % 7, 0, 6, 0.05f, 0.4f)", }},
+            { "action": "SetValue", "name": "form2IsRecovering", "value": false },
+            { "action": "SetValue", "name": "form2IsAiming", "value": true },
+            { "action": "SetValue", "name": "form2IsMoving", "value": false },
+            { "action": "SetValue", "name": "form2Timer", "value": 0 },
+            { "action": "CallMethod", "method": "SetAccelVectorFunc", "params": { "func": "vec2(0,0)"}},
+            { "action": "CallMethod", "method": "SetFacingLerpSpeedFunc", "params": { "func": "map(distSqr(playerPos - unitPos), 0f, 100f * 100f, 0.0075f, 0.045f, 'QuadIn') * select(diffInt, 0.7f, 0.95f, 1f) * map(form2Timer, 0f, 2f, 0f, 1f, 'QuadIn')"}},
+
+            { "action": "Condition", "condition": "distSqr(playerPos - unitPos) < 100f * 100f && !stage.DoesBulletExist('redux/hunter/pattern/draggingVine.chainBullet') && numShotPatterns % 5 != 4",
+                "true": [
+                    { "action": "CallSubroutine", "target":"unit", "path": ".attackSpeech.sub", "params": { "message": "#hunter.attack_1", "chanceIncrease":0 }},
+                    { "action": "CallMethod", "method": "ChargePattern", "params": { "path": "redux/hunter/pattern/draggingVine.1", "partType": "core", "chargeTime":"0.5f * select(diffInt, 1.2f, 1f, 0.8f)", "dir":"playerPos - partPos", }},
+                    { "action": "Wait", "time": "3f * select(diffInt, 1.2f, 1f, 0.8f)" },
+                ],},
+
+            { "action": "Condition", "condition": "form2NumTimesMoved % 4 == 3 || form2NumTimesMoved == 9 || form2NumTimesMoved == 21",
+                "true": [ { "action": "CallMethod", "method": "SetTargetFacingAngleFunc", "params": { "func": "vecToAngle(vec2(0f, 0f) - unitPos) + (fastSin(stageTime * 2f) * 10f)"}},],
+                "false": [ { "action": "CallMethod", "method": "SetTargetFacingAngleFunc", "params": { "func": "vecToAngle(playerPos - unitPos)"}},],},
+        ]
+    },
+
+    "form2HitEdge.sub": {
+        "actions": [
+            { "action": "CallMethod", "method": "SetAccelVectorFunc", "params": { "func": "vec2(0,0)"}},
+            { "action": "SetValue", "name": "form2IsRecovering", "value": true },
+            { "action": "SetValue", "name": "form2IsAiming", "value": false },
+            { "action": "SetValue", "name": "form2IsMoving", "value": false },
+            { "action": "SetValue", "name": "form2Timer", "value": 0 },
+        ]
+    },
+    ```
+
+	In `form2StartAiming.sub`, we use `SetAccelVectorFunc` to set the acceleration to `vec2(0, 0)` so the boss doesn't move, and use `SetFacingLerpSpeedFunc` so that the boss will aim at the player.
+
+	Likewise, in `form2HitEdge.sub` we also set the acceleration to 0 so the boss stops moving, and we set the flag `form2IsRecovering` to true.
+
+
+
+
+
+

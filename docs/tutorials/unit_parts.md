@@ -353,7 +353,7 @@ These are the most useful methods:
     ```json
     { "action": "CallMethod", "method": "SetLaserAutoRotate", "params": {
             "part": "gun", 
-            "autoRotate":false // sets the lasers damage to increase over time
+            "autoRotate":false,
         }
     },
     ```

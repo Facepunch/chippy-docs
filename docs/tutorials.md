@@ -2,7 +2,7 @@
 
 >
 <!-- [Quick Start](tutorials/quickstart.md)<br> -->
-[Setup](tutorials/setup.md)<br>
+[Getting Started](tutorials/setup.md)<br>
 ---
 >
 [Bullet Patterns](tutorials/pattern.md)<br>
@@ -22,11 +22,13 @@
 [Workshop](tutorials/workshop.md)<br>
 ---
 
-!!! tip
-    Try using the **Search** bar at the top for full information, since this tutorial leaves out some options.
-
 !!! abstract "Download level scripts"
-    Learn from (or remix) the official bosses and levels: [**chippy_resources.zip**](https://files.facepunch.com/ryleigh/191128-Cya9J6/chippy_resources.zip)
+    Learn from (or remix) the official bosses and levels: [**chippy_resources_redux.zip**](https://files.facepunch.com/ryleigh/220401-Qbdf45/chippy_resources_redux.zip) 
+    
+    (Legacy: [**chippy_resources.zip**](https://files.facepunch.com/ryleigh/191128-Cya9J6/chippy_resources.zip))
 
 !!! question "Ask!"
     If something isn't clear, ask in the [#workshop](https://discord.gg/xNguzDH) channel on [our Discord](https://discord.gg/8pVW9jz) or message **ryleigh**.
+
+!!! tip
+    Try using the **Search** bar at the top for full information, since this tutorial leaves out some options.

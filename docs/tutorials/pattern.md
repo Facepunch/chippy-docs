@@ -657,7 +657,7 @@ A pattern can choose to **link** all bullets in each volley.
 },
 ```
 
-If one linked bullet despawns, all other bullets in the linked volley will despawn - this is useful for powerup patterns, among other things.
+If one linked bullet despawns, all other bullets in the linked volley will despawn - this is useful for powerup patterns, snake-like patterns, and other things.
 
 ## Visual Effects
 

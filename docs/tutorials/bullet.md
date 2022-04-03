@@ -31,7 +31,7 @@ Bullet definitions can be stored in their own json file, but it's usually easier
     When referencing this bullet in a pattern, the `path` would be `MyCampaign/bullet/myBullet`.
 
 ??? example "Included with pattern"
-	This is the entire content of an example bullet file, lets say `MyCampaign/pattern/myPattern.json`.
+	This is the entire content of an example pattern file, lets say `MyCampaign/pattern/myPattern.json`.
     ```json
     {
 	  	"1": {
@@ -65,7 +65,7 @@ Bullet definitions can be stored in their own json file, but it's usually easier
 
 Most properties of a bullet are set as part of a `keyframe`, to simplify changing the state of a bullet between specific configurations. 
 
-However some important properties are set for the bullet as a whole, instead of being set on a keyframe level.
+However some important properties are set for the bullet as a whole, instead of being set per-keyframe.
 
 These are **some** of the most important non-keyframe properties for a bullet.
 
@@ -141,7 +141,7 @@ Bullets have one or more keyframes, containing properties you can change over ti
 
 	This bullet spends `0.5` seconds in its first keyframe, eases the values to the 2nd keyframe with the easing type `QuadOut` (quickly approach target value, then slow down as you reach it), then spends `1` second easing in to the 3rd keyframe with an easing type of `QuadIn` (slowly begin changing to target value, then quickly reach it).
 
-	You can see that the `width` of the bullet quickly reaches the value in keyframe 1 (the second keyframe), before slowly easing into the large `width` in keyframe 2. Since keyframe 2 does not specify a new `length`, `opacity`, etc, the bullet continues to use the last value that was set.
+	You can see that the `width` of the bullet quickly reaches the value in keyframe 1 (the second keyframe), before slowly easing into the large `width` in keyframe 2. Since keyframe 2 does not specify a new `length`, `opacity`, etc, the bullet continues to use the previously set value.
 
 ### Shape
 
@@ -241,7 +241,7 @@ Keyframe Property | Summary
 
 ### Sprite
 
-Bullets need to specify a sprite in their first keyframe. If a different sprite is specified in the next kefyrame, the bullet will blend into it over the current keyframe's duration. All the sprites used by a bullet need to have the same dimensions.
+Bullets must specify a sprite in their first keyframe. If a different sprite is specified in the next kefyrame, the bullet will blend into it over the current keyframe's duration. All the sprites used by a bullet need to have the same dimensions.
 
 ```json
 "keyframes": [
@@ -302,7 +302,7 @@ So instead of appearing with red/green/blue rings, the bullet would be drawn lik
 ### Movement 
 
 A bullet's starting velocity is set with the non-keyframe property `startSpeed`. <br>
-The keyframe property `acceleration` controls how fast they accelerate each frame <br>
+The keyframe property `acceleration` controls how fast they accelerate each frame. <br>
 The keyframe property `frictionPercent` is a value from `0-1` that controls how much of the bullet's speed is lost. A value of `0.1` means that the bullet will lose 10% of its velocity each frame.
 
 #### Changing Direction
@@ -400,6 +400,7 @@ If you want a bullet to interpret `"moveAngle":-90` as an absolute instead of re
 Now, the same bullets as before are all moving to the right on their third keyframe, instead of moving 90° to the right of their current angle.
 
 In other words, bullets normally factor in their starting angle, so that bullet patterns will be 'symmetrical'.<br>
+
 Generally, homing/following bullets will want to set `useAbsoluteAngles` to `true`.
 
 For the record, this is the way angles are set up in Chippy:
@@ -806,7 +807,7 @@ Generally you'll also want to set a value for the non-keyframe properties `total
 
 ## Player Collision
 
-By default, players deal deal damage to the player on collision, either removing a shield or killing them. The bullet is destroyed by the impact unless specified otherwise.
+By default, bullets deal deal damage to the player on collision, either removing a shield or killing them. The bullet is destroyed by the impact unless specified otherwise.
 
 To change what happens on player collision, define the `onHitPlayer` handler:
 ```json
